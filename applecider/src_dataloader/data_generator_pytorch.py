@@ -11,7 +11,7 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
-from src_dataloader.data_preprocessor_pytorch import SpectraProcessor
+from src_dataloader.data_preprocessor import SpectraProcessor
 
 
 # -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- OrganizeData -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
