@@ -11,7 +11,7 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
-from src_dataloader.data_preprocessor import SpectraProcessor
+from src_dataloader.data_preprocessor_pytorch import SpectraProcessor
 
 
 # -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- OrganizeData -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
@@ -119,8 +119,8 @@ class OrganizeData:
         test_df_total = df.sample(n=n_test, random_state=42)
         # randomly sample 1 object from every class
         test_df_random = df.sample(frac=1).drop_duplicates(type_col).sort_index()
-
         test_data_df = pd.concat([test_df_total, test_df_random])
+        test_data_df = test_data_df.drop_duplicates('obj_id')
         # replace classes with numerical values
         test_data_df[new_col] = test_data_df[type_col].map(class_dictionary)
 
@@ -132,6 +132,7 @@ class OrganizeData:
         # randomly sample 1 object from every class
         train_df_random = train_data_df.sample(frac=1).drop_duplicates(type_col).sort_index()
         train_data_df = pd.concat([train_df_total, train_df_random])
+        train_data_df = train_data_df.drop_duplicates('obj_id')
         # replace classes with numerical values
         train_data_df[new_col] = train_data_df[type_col].map(class_dictionary)
         train_data_df.reset_index(drop=True)
@@ -287,7 +288,7 @@ class DataGenerator(torch.utils.data.Dataset):
         images_tensor = torch.tensor(images)
         spectra_tensor = torch.from_numpy(spectra_df.values)
         # convert label to tensor
-        target = torch.tensor(obj_label, dtype=torch.int8)
+        target = torch.tensor(obj_label, dtype=torch.int64)
 
         return photometry_tensor, metadata_tensor, images_tensor, spectra_tensor, target
 
