@@ -1,5 +1,5 @@
 # AppleCider: (page under construction)
-## Applying multimodaL learning to Classify transyent Detections Early
+## Applying multimodaL learning to Classify transient Detections Early
 
 <i>AppleCider's name was inspired by [University of Minnesota's](https://mnhardy.umn.edu/apples) development of iconic apple cultivars. s/o Honeycrisp. </i>
 
