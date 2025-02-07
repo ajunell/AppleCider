@@ -3,10 +3,10 @@ import pandas as pd
 from tqdm.auto import tqdm
 import numpy as np
 
-from src_dataloader.data_preprocessor import AlertProcessor
-from src_dataloader.data_preprocessor import PhotometryProcessor
-from src_dataloader.data_preprocessor import SpectraProcessor
-from src_dataloader.data_preprocessor import DataPreprocessor
+from src.data_preprocessor import AlertProcessor
+from src.data_preprocessor import PhotometryProcessor
+from src.data_preprocessor import SpectraProcessor
+from src.data_preprocessor import DataPreprocessor
             
             
 class TransientDataset():

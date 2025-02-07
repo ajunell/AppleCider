@@ -8,13 +8,10 @@ import plotly.subplots as sp
 import seaborn as sns
 from sklearn.metrics import roc_curve, auc, confusion_matrix
 
-from src_dataloader.transient_dataset import TransientDataset
-from src_dataloader.data_preprocessor import AlertProcessor, PhotometryProcessor
-from src_dataloader.data_preprocessor import DataPreprocessor, SpectraProcessor
-from src_dataloader.data_preprocessor import DataSorter
-
-from src_dataloader.data_generator_pytorch import DataGenerator
-
+from src.transient_dataset import TransientDataset
+from src.data_preprocessor import AlertProcessor, PhotometryProcessor
+from src.data_preprocessor import DataPreprocessor, SpectraProcessor
+from src.data_preprocessor import DataSorter
 
 
 type_color_dict = {
