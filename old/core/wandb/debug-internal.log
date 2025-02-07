@@ -1,0 +1,16 @@
+{"time":"2025-01-28T00:56:35.690059211-08:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2025-01-28T00:56:35.690074039-08:00","level":"INFO","msg":"created symlink","path":"/data/dev/ml_skyportal/AppleCider/AstroM3/core/wandb/run-20250128_005635-ji9svlg0/logs/debug-core.log"}
+{"time":"2025-01-28T00:56:35.795650437-08:00","level":"INFO","msg":"created new stream","id":"ji9svlg0"}
+{"time":"2025-01-28T00:56:35.795674313-08:00","level":"INFO","msg":"stream: started","id":"ji9svlg0"}
+{"time":"2025-01-28T00:56:35.795702977-08:00","level":"INFO","msg":"writer: Do: started","stream_id":"ji9svlg0"}
+{"time":"2025-01-28T00:56:35.7957254-08:00","level":"INFO","msg":"sender: started","stream_id":"ji9svlg0"}
+{"time":"2025-01-28T00:56:35.795734477-08:00","level":"INFO","msg":"handler: started","stream_id":"ji9svlg0"}
+{"time":"2025-01-28T00:56:36.047406586-08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-28T01:08:37.331700242-08:00","level":"INFO","msg":"stream: closing","id":"ji9svlg0"}
+{"time":"2025-01-28T01:08:37.331721573-08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-28T01:08:37.332074174-08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-28T01:08:37.907635717-08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-28T01:08:38.132141685-08:00","level":"INFO","msg":"handler: closed","stream_id":"ji9svlg0"}
+{"time":"2025-01-28T01:08:38.132158026-08:00","level":"INFO","msg":"sender: closed","stream_id":"ji9svlg0"}
+{"time":"2025-01-28T01:08:38.132157305-08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"ji9svlg0"}
+{"time":"2025-01-28T01:08:38.132219413-08:00","level":"INFO","msg":"stream: closed","id":"ji9svlg0"}

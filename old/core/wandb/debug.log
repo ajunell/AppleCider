@@ -1,0 +1,26 @@
+2025-01-28 00:56:35,682 INFO    MainThread:703577 [wandb_setup.py:_flush():79] Current SDK version is 0.18.7
+2025-01-28 00:56:35,682 INFO    MainThread:703577 [wandb_setup.py:_flush():79] Configure stats pid to 703577
+2025-01-28 00:56:35,682 INFO    MainThread:703577 [wandb_setup.py:_flush():79] Loading settings from /home/ztf/.config/wandb/settings
+2025-01-28 00:56:35,682 INFO    MainThread:703577 [wandb_setup.py:_flush():79] Loading settings from /data/dev/ml_skyportal/AppleCider/AstroM3/core/wandb/settings
+2025-01-28 00:56:35,682 INFO    MainThread:703577 [wandb_setup.py:_flush():79] Loading settings from environment variables: {}
+2025-01-28 00:56:35,682 INFO    MainThread:703577 [wandb_setup.py:_flush():79] Applying setup settings: {'mode': None, '_disable_service': None}
+2025-01-28 00:56:35,682 INFO    MainThread:703577 [wandb_setup.py:_flush():79] Inferring run settings from compute environment: {'program_relpath': 'core/tune.py', 'program_abspath': '/data/dev/ml_skyportal/AppleCider/AstroM3/core/tune.py', 'program': '/data/dev/ml_skyportal/AppleCider/AstroM3/core/tune.py'}
+2025-01-28 00:56:35,682 INFO    MainThread:703577 [wandb_setup.py:_flush():79] Applying login settings: {}
+2025-01-28 00:56:35,682 INFO    MainThread:703577 [wandb_init.py:_log_setup():533] Logging user logs to /data/dev/ml_skyportal/AppleCider/AstroM3/core/wandb/run-20250128_005635-ji9svlg0/logs/debug.log
+2025-01-28 00:56:35,682 INFO    MainThread:703577 [wandb_init.py:_log_setup():534] Logging internal logs to /data/dev/ml_skyportal/AppleCider/AstroM3/core/wandb/run-20250128_005635-ji9svlg0/logs/debug-internal.log
+2025-01-28 00:56:35,682 INFO    MainThread:703577 [wandb_init.py:init():619] calling init triggers
+2025-01-28 00:56:35,682 INFO    MainThread:703577 [wandb_init.py:init():626] wandb.init called with sweep_config: {}
+config: {'project': 'TransientsUMN', 'config_from': None, 'random_seed': 42, 'use_wandb': True, 'save_weights': False, 'weights_path': '/data/dev/ml_skyportal/AppleCider/AstroM3/weights/2025-01-28-00-56', 'use_pretrain': None, 'freeze': False, 'preprocessed_path': '/data/dev/ml_skyportal/AppleCider/data_train_redux/', 'spectra_path': '/data/dev/ml_skyportal/AJs_Stuff/(aj)data_all/', 'df_path': '/data/dev/ml_skyportal/AppleCider/data_train.csv', 'step': 'type', 'classes': ['SN Ia', 'SN II', 'SN IIP', 'Cataclysmic', 'AGN', 'SN IIn', 'SN Ic', 'SN Ib', 'SN IIb', 'Tidal Disruption Event'], 'group_labels': False, 'max_samples': 5000, 'num_classes': 10, 'seq_len': 180, 'p_enc_in': 2, 'p_d_model': 128, 'p_dropout': 0.11148293480116411, 'p_factor': 1, 'p_output_attention': False, 'p_n_heads': 4, 'p_d_ff': 512, 'p_activation': 'gelu', 'p_e_layers': 8, 's_dropout': 0.3372399987469613, 's_conv_channels': [1, 64, 64, 32, 32], 's_kernel_size': 3, 's_mp_kernel_size': 4, 'm_hidden_dim': 128, 'm_dropout': 0.2952160030166524, 'meta_cols': range(0, 10), 'scaler_path': '/data/dev/ml_skyportal/AppleCider/AstroM3/core/scaler.pkl', 'input_channels': 3, 'conv1_channels': 64, 'conv2_channels': 16, 'conv_kernel': 3, 'conv_dropout1': 0.45, 'conv_dropout2': 0.65, 'hidden_dim': 128, 'fusion': 'avg', 'batch_size': 256, 'lr': 0.0023467354354428805, 'beta1': 0.9301482598096472, 'beta2': 0.999, 'weight_decay': 9.035121459218222e-05, 'epochs': 50, 'early_stopping_patience': 6, 'scheduler': 'ReduceLROnPlateau', 'gamma': 0.9, 'factor': 0.9757882511155215, 'patience': 3, 'warmup': False, 'warmup_epochs': 10, 'clip_grad': False, 'clip_value': 5, 'mode': 'all', 'study_name': 'psmi'}
+2025-01-28 00:56:35,682 INFO    MainThread:703577 [wandb_init.py:init():669] starting backend
+2025-01-28 00:56:35,682 INFO    MainThread:703577 [wandb_init.py:init():673] sending inform_init request
+2025-01-28 00:56:35,683 INFO    MainThread:703577 [backend.py:_multiprocessing_setup():104] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-01-28 00:56:35,683 INFO    MainThread:703577 [wandb_init.py:init():686] backend started and connected
+2025-01-28 00:56:35,686 INFO    MainThread:703577 [wandb_init.py:init():781] updated telemetry
+2025-01-28 00:56:35,689 INFO    MainThread:703577 [wandb_init.py:init():814] communicating run to backend with 90.0 second timeout
+2025-01-28 00:56:36,045 INFO    MainThread:703577 [wandb_init.py:init():867] starting run threads in backend
+2025-01-28 00:56:36,144 INFO    MainThread:703577 [wandb_run.py:_console_start():2456] atexit reg
+2025-01-28 00:56:36,144 INFO    MainThread:703577 [wandb_run.py:_redirect():2305] redirect: wrap_raw
+2025-01-28 00:56:36,144 INFO    MainThread:703577 [wandb_run.py:_redirect():2370] Wrapping output streams.
+2025-01-28 00:56:36,144 INFO    MainThread:703577 [wandb_run.py:_redirect():2395] Redirects installed.
+2025-01-28 00:56:36,144 INFO    MainThread:703577 [wandb_init.py:init():911] run started, returning control to user process
+2025-01-28 01:08:37,331 WARNING MsgRouterThr:703577 [router.py:message_loop():75] message_loop has been closed

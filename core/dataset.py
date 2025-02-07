@@ -37,9 +37,10 @@ class DataGenerator(Dataset):
 
         # create convenient mapping for label from str to int and from int to str
         if config['group_labels']:
-            self.id2target = {0: 'SN I', 1: 'SN II', 2: 'Cataclysmic', 3: 'AGN', 4: 'Tidal Disruption Event'}
-            self.target2id = {'SN Ia': 0, 'SN II': 1, 'SN IIP': 1, 'Cataclysmic': 2, 'AGN': 3, 'SN IIn': 1, 'SN Ic': 0,
-                              'SN Ib': 0, 'SN IIb': 1, 'Tidal Disruption Event': 4}
+            self.id2target = {0: 'SN I', 1: 'SN II', 2: 'Cataclysmic', 3: 'AGN',
+                              4: 'Tidal Disruption Event', 5: 'Stellar variable' }
+            self.target2id = {'SN Ia': 0, 'SN Ia-91T': 0 , 'SN Ic': 0,  'SN Ib': 0, 'SN II': 1, 'SN IIP': 1, 'SN IIn': 1,
+                              'SN IIb': 1, 'Cataclysmic': 2, 'AGN': 3, 'Tidal Disruption Event': 4, 'Stellar variable': 5,}
         else:
             self.id2target = {i: x for i, x in enumerate(sorted(self.df[self.step].unique()))}
             self.target2id = {v: k for k, v in self.id2target.items()}
@@ -97,38 +98,6 @@ class DataGenerator(Dataset):
     def __len__(self):
         return len(self.df)
 
-    @staticmethod
-    def read_spectra_csv(object_id, base_path):
-        """ get wavelength, flux from spectra csv """
-        file_path = os.path.join(base_path, object_id, 'spectra.csv')
-        spectra_df = pd.read_csv(file_path)
-        spectra_df = spectra_df[['wavelengths', 'fluxes']]
-
-        spectra = spectra_df.to_numpy()
-        spectra = spectra.astype(float)
-
-        return spectra
-
-    @staticmethod
-    def preprocess_spectra(spectra):
-        """ limit wavelength to 4500 - 7980, interpolate and normalize """
-        new_wavelength = np.linspace(4500, 7980, 7980 - 4500 + 1)
-
-        # remove nans from flux
-        spectra = spectra[~np.isnan(spectra).any(axis=1)]
-
-        f = interp1d(spectra[:, 0], spectra[:, 1], kind='linear', bounds_error=False, fill_value='extrapolate')
-        flux = f(new_wavelength)
-
-        mean = np.mean(flux)
-        mad = stats.median_abs_deviation(flux)
-        flux = (flux - mean) / mad
-
-        flux = flux.reshape((1, -1))
-        flux = flux.astype(np.float32)
-
-        return flux
-
     def __getitem__(self, index):
         """ load processed object alerts to get photometry, metadata, images """
         el = self.df.iloc[index]
@@ -150,8 +119,7 @@ class DataGenerator(Dataset):
 
         # TODO create mask dynamically
         photometry_mask = torch.ones(len(photometry))
-
-        spectra = self.read_spectra_csv(el['name'], self.spectra_path)
-        spectra = self.preprocess_spectra(spectra)
+        
+        spectra = sample['sample']
 
         return photometry, photometry_mask, metadata, images, spectra, target
