@@ -7,17 +7,20 @@ from src.data_preprocessor import AlertProcessor
 from src.data_preprocessor import PhotometryProcessor
 from src.data_preprocessor import SpectraProcessor
 from src.data_preprocessor import DataPreprocessor
+
+from torch.nn.utils.rnn import pad_sequence
             
             
 class TransientDataset():
     
-    def __init__(self, preprocessed_path, df_bts=None, base_path=None):
+    def __init__(self, preprocessed_path, df_bts=None, base_path=None, normalize_photometry=True):
         
         self.preprocessed_path = preprocessed_path
         self.df_bts = df_bts
         self.base_path = base_path
         self.data = []
         self.data_preprocess = []
+        self.normalize_photometry = normalize_photometry
 
     def preprocess_data(self, df_bts, base_path):
         ''' preprocess photometry, metadata, images  by creating dictionary for each object alert sample'''
@@ -26,7 +29,7 @@ class TransientDataset():
                  
         for idx, row in tqdm(df_bts.iterrows(), total=df_bts.shape[0], desc="Loading data", leave=True):
             try:
-                obj_id, target= row['obj_id'], row['type']
+                obj_id, target = row['obj_id'], row['type']
                 if any(obj_id in file for file in os.listdir(self.preprocessed_path)):
                     continue
                 ## get photometry, metadata, images
@@ -77,71 +80,72 @@ class TransientDataset():
 
                  
     def process_and_save_sample(args):
-        ''' save dictionary w/processed photometry, metadata, images, spectra to .npy at desired path '''
-                 
+        ''' save dictionary w/processed photometry, metadata, images to .npy at desired path '''
+        
         res_dict = {}
-        object_alert, save_dir = args
         
-        obj_id = object_alert['obj_id']   ## ZTF ID  
-        alerte = object_alert['alerte']   ## alert number
-        type_obj = object_alert['target'] ## object classification
+        sample, save_dir, normalize_photometry = args
+        obj_id = sample['obj_id']
+        ## keeping it in french
+        alerte = sample['alerte']
+        type_obj = sample['target']
+
+        save_path = os.path.join(save_dir, f"{obj_id}_alert_{alerte}.npy")
+        if os.path.exists(save_path):
+            return
         
-        save_path = os.path.join(save_dir, f"{obj_id}_alert_{alerte}.npy")         
-                 
-        photometry = object_alert['photometry']
-        ## remove filters with less than 3
+        photometry = sample['photometry']
+        ## remove filters with 0 points
         photometry = PhotometryProcessor.remove_filter(photometry)
+        
+        if len(photometry) == 0:
+            return
 
         res_df = pd.DataFrame()
-
-        last_mjd = object_alert['photometry']['mjd'].max()
-        object_alert['photometry'].loc[object_alert['photometry']['mjd'] > last_mjd, ['flux', 'flux_error']] = 0    
-        ## pivot table
-        photometry = object_alert['photometry'].pivot_table(index=['mjd'], columns='filter', values=['flux', 'flux_error'])
+        
+        last_mjd = sample['photometry']['mjd'].max()
+        sample['photometry'].loc[sample['photometry']['mjd'] > last_mjd, ['flux', 'flux_error']] = 0
+        photometry = sample['photometry'].pivot_table(index=['mjd'], columns='filter', values=['flux', 'flux_error'])
         photometry = photometry.reset_index()
         photometry.columns = [col[0] if col[0] == 'mjd' else '_'.join(col).strip() for col in photometry.columns.values]
-        photometry['target'] = type_obj
-        photometry['obj_id'] = obj_id   
+        photometry['obj_id'] = obj_id
+
         res_df = pd.concat([res_df, photometry])
         res_df = res_df.reset_index(drop=True, inplace=True)
-
-        ## required photometry columns 
-        columns = ['flux_ztfg', 'flux_error_ztfg', 'flux_ztfr', 'flux_error_ztfr']  
+              
+        columns = ['flux_ztfg', 'flux_error_ztfg', 'flux_ztfr', 'flux_error_ztfr']
+        
         for col in columns:
             if col not in photometry.columns:
-                 photometry[col] = 0.
+                photometry[col] = 0.
+         
+        ## normalize photometry   
+        if normalize_photometry:
+            photometry = PhotometryProcessor.normalize_light_curve(photometry)
 
-        ## ztfr filter
-        ztfg_col = ['mjd', 'flux_ztfg', 'flux_error_ztfg'] 
-        photometry_ztfg = photometry[ztfg_col]
-        photometry_ztfg = photometry_ztfg.dropna(subset=['flux_ztfg'])
-        photometry_ztfg = photometry_ztfg.values    
+        ## get date, flux ztfr, flux ztg
+        useful_columns = ['mjd', 'flux_ztfg', 'flux_ztfr']
+        photometry = photometry[useful_columns].values
+        # remove mjd, only ztfg, ztfr
+        photometry = photometry[:, 1:]
         
-        ## ztfg filter
-        ztfr_col = ['mjd', 'flux_ztfr', 'flux_error_ztfr']
-        photometry_ztfr = photometry[ztfr_col]
-        photometry_ztfr = photometry_ztfr.dropna(subset=['flux_ztfr'])
-        photometry_ztfr = photometry_ztfr.values
-                 
+        ## replace nan with zero
+        photometry[np.isnan(photometry)] = 0
+        
         res_dict.update({
             'obj_id': obj_id,
-            'photometry_ztfr': photometry_ztfr,
-            'photometry_ztfg': photometry_ztfg,
-            'metadata': object_alert['metadata'],
-            'images': object_alert['images'],
-            'spectra': object_alert['spectra'],
-            'target': object_alert['target'],
-            'alerte': alerte})  
-        
+            'photometry': photometry,
+            'metadata': sample['metadata'],
+            'images': sample['images'],
+            'spectra':sample['spectra'],
+            'target': sample['target'],
+            'alerte': alerte})
+
         np.save(save_path, res_dict)
-                 
-                 
+            
     def preprocess_and_save(self):
-        ''' saves preprocessed data to path '''
-        
         os.makedirs(self.preprocessed_path, exist_ok=True)
-        
-        args = [(sample, self.preprocessed_path) for sample in self.data_preprocess]
+        args = [(sample, self.preprocessed_path, self.normalize_photometry) for sample in self.data_preprocess]
  
         [TransientDataset.process_and_save_sample(args) for args in tqdm(args, desc="Processing Objects", leave=True)]
     

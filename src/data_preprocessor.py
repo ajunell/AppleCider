@@ -18,11 +18,15 @@ import random
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 
+# add in pad_sequence package
+from torch.nn.utils.rnn import pad_sequence
 
 
-# -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --  Alert Processor -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
 class AlertProcessor:
-    ''' ☆ procces each object's alert package from ZTF ☆ (see arXiv:1902.02227 for more about alert distribution system) '''
+    
+    """ ☆ procces object's alert package ☆ (see arXiv:1902.02227 for more info) """
+    
     @staticmethod
     def get_alerts(base_path, obj_id):
         return np.load(os.path.join(base_path, obj_id, 'alerts.npy'), allow_pickle=True)
@@ -62,6 +66,7 @@ class AlertProcessor:
 
     @staticmethod
     def get_process_alerts(obj_id, base_path):
+        
         alerts = AlertProcessor.get_alerts(base_path, obj_id)
         metadata_list = []
         images = []
@@ -76,6 +81,7 @@ class AlertProcessor:
 
     @staticmethod
     def select_alerts(data, max_alerts=6):
+        
         ''' sample from maximum of XYZ alerts '''
         def sample_alerts(alerts):
             num_alerts = len(alerts)
@@ -102,9 +108,11 @@ class AlertProcessor:
         return selected_data
 
 
-#  -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --  Photometry Processor -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 
 class PhotometryProcessor:
+    
+    """ ☆ procces object's photometry, metadata """
+    
     @staticmethod
     def clean_photometry(df, df_type):
         ''' cleans photometry dataframe '''
@@ -150,6 +158,7 @@ class PhotometryProcessor:
     @staticmethod
     def add_metadata_to_photometry(photo_df, metadata_df):
         ''' cleans metadata, merges photometry_df with metadata_df'''
+        
         metadata_df_copy = PhotometryProcessor.clean_dataframe(metadata_df.copy())
         df = pd.merge(photo_df, metadata_df_copy, on=['obj_id', 'jd', 'mjd', 'mag', 'magerr', 'snr', 'limiting_mag', 'filter'], how='outer', suffixes=('', '_metadata'))        
         df = df[['obj_id', 'jd', 'mjd', 'mag', 'magerr', 'snr', 'limiting_mag', 'filter', 'type']]
@@ -166,7 +175,7 @@ class PhotometryProcessor:
                 return index - 1
         
         return len(df)
-
+    
     def normalize_light_curve(df):
         valid_index = PhotometryProcessor.find_valid_alert_index(df)
         flux_data = df.loc[:valid_index, ['flux_ztfg', 'flux_ztfr']]
@@ -174,7 +183,7 @@ class PhotometryProcessor:
         normalized_flux = scaler.fit_transform(flux_data)
         df.loc[:valid_index, ['flux_ztfg', 'flux_ztfr']] = normalized_flux
         return df
-
+    
     def remove_filter(photo_df):
         ''' remove filters w/less than 1 '''
         filters = photo_df['filter'].unique()
@@ -186,11 +195,12 @@ class PhotometryProcessor:
         return photo_df
 
     
-# -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- SpectraProcessor -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --    
-    
     
 class SpectraProcessor:
     
+    """ ☆ procces object's spectra (not in alerts.npy) ☆ """
+    
+    @staticmethod
     def get_spectra_df(object_id, base_path):
         ''' for when we want all of the columns in spectra.csv '''
         file_path = os.path.join(base_path, object_id, 'spectra.csv')
@@ -230,11 +240,10 @@ class SpectraProcessor:
 
         return flux
 
-
-# -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- DataSorter -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --    
-    
     
 class DataSorter:
+    
+    """ ☆ filter out objects w/o SEDM spectra, split train test sets and save alert names ☆ """
     
     def get_obj_wSEDM_spectra(obj_id_list, data_dir):
         ''' ☆ list of object ids that have SEDM spectra ☆ '''
@@ -262,11 +271,11 @@ class DataSorter:
 
     def sample_objects_from_df(df, type_col, class_list, data_dir, n_test=20, n_train=40, sedm_spec_only=True, downsample_SNIa=True):
         
-        if sedm_spec_only: # right now only using SEDM spec so this doesn't really matter rn
+        if sedm_spec_only:
             obj_with_sedm_spec = DataSorter.get_obj_wSEDM_spectra(df['obj_id'].to_list(), data_dir)
             # remove objects without sedm spectra
             df = df[df['obj_id'].isin(obj_with_sedm_spec)]
-        if downsample_SNIa:
+        if downsample_SNIa: # redunant since dataset.py does this
             sn_ia = df[df['type'] == 'SN Ia'].sample(n=2091, random_state=42)
             df = pd.concat([df[df['type'] != 'SN Ia'], sn_ia])
 
@@ -294,8 +303,7 @@ class DataSorter:
     
     
     def create_df_of_object_alerts_in_dataset(test_df, train_df, test_data_dir, train_data_dir):
-        '''  ☆ creates df for testing and training sets that has the object IDs, alerts for each object ID, classification,
-            and then the numerical label from class_dictionary  ☆
+        '''  ☆ creates df for testing and training sets that has the object IDs, alerts for each object ID, classification ☆
         
         Parameters
         ----------
@@ -394,12 +402,13 @@ class DataSorter:
         val_files = val_df['file'].tolist()
 
         return train_files, val_files        
-    
-    
 
-# -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- DataPreprocessor -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
 class DataPreprocessor:
-    #@staticmethod
+    
+    """ ☆ additional pre-processing of photometry, metadata ☆ """
+    
+    @staticmethod
     def Mag2Flux(df):
         ''' converts magnitude to flux'''
         df_copy = df.dropna().copy()
@@ -407,7 +416,8 @@ class DataPreprocessor:
         df_copy['flux_error'] = (df_copy['magerr'] / (2.5 / np.log(10))) * df_copy['flux']
         df_copy = df_copy[['obj_id', 'mjd', 'flux', 'flux_error', 'filter', 'type', 'jd']]
         return df_copy
-        
+    
+    @staticmethod    
     def Normalize_mjd(df):
         ''' normalize modified julian date'''
         df_copy = df.copy()
@@ -415,6 +425,7 @@ class DataPreprocessor:
         df_copy.reset_index(drop=True, inplace=True)
         return df_copy
     
+    @staticmethod
     def convert_photometry(photo_df):
         ''' converts magnitude to flux, normalizes modifed Julian date of photometry df '''
         df_gp_ready = DataPreprocessor.Mag2Flux(photo_df)
@@ -435,65 +446,3 @@ class DataPreprocessor:
         columns_metadata = [ "sgscore1", "sgscore2", "distpsnr1", "distpsnr2", "ra", "dec", "nmtchps", 
                               "sharpnr", "scorr", "sky", 'jd' ]
         return metadata_df[columns_metadata].fillna(-999.0)
-
-    def process_and_save_sample(args):
-        ''' save dictionary w/processed photometry, metadata, images to .npy at desired path '''
-        res_dict = {}
-        sample, save_dir = args
-        obj_id = sample['obj_id']
-        alerte = sample['alerte'] # keeping it in french
-        type_obj = sample['type']
-
-        save_path = os.path.join(save_dir, f"{obj_id}_alert_{alerte}.npy")
-        if os.path.exists(save_path):
-            return
-        
-        photometry = sample['photometry']
-        ## remove filters with less than 1 point
-        photometry = PhotometryProcessor.remove_filter(photometry)
-        
-        if len(photometry) == 0:
-            return
-
-        res_df = pd.DataFrame()
-        
-        last_mjd = sample['photometry']['mjd'].max()
-        sample['photometry'].loc[sample['photometry']['mjd'] > last_mjd, ['flux', 'flux_error']] = 0
-        photometry = sample['photometry'].pivot_table(index=['mjd'], columns='filter', values=['flux', 'flux_error'])
-        photometry = photometry.reset_index()
-        photometry.columns = [col[0] if col[0] == 'mjd' else '_'.join(col).strip() for col in photometry.columns.values]
-        photometry['type'] = type_obj
-        photometry['obj_id'] = obj_id
-
-        res_df = pd.concat([res_df, photometry])
-        res_df = res_df.reset_index(drop=True, inplace=True)
-
-        columns = ['flux_ztfg', 'flux_error_ztfg', 'flux_ztfr', 'flux_error_ztfr']
-
-        for col in columns:
-            if col not in photometry.columns:
-                photometry[col] = 0.
-                
-        photometry_final = PhotometryProcessor.normalize_light_curve(photometry)
-
-        ztfr_col = ['mjd', 'flux_ztfr', 'flux_error_ztfr']
-        ztfg_col = ['mjd', 'flux_ztfg', 'flux_error_ztfg']
-
-        photometry_ztfg = photometry_final[ztfg_col]
-        photometry_ztfg = photometry_ztfg.dropna(subset=['flux_ztfg'])
-        photometry_ztfg = photometry_ztfg.values
-
-        photometry_ztfr = photometry_final[ztfr_col]
-        photometry_ztfr = photometry_ztfr.dropna(subset=['flux_ztfr'])
-        photometry_ztfr = photometry_ztfr.values
-
-        res_dict.update({
-            'obj_id': obj_id,
-            'photometry_ztfr': photometry_ztfr,
-            'photometry_ztfg': photometry_ztfg,
-            'metadata': sample['metadata'],
-            'images': sample['images'],
-            'target': sample['target'],
-            'alerte': alerte})
-
-        np.save(save_path, res_dict)
