@@ -13,26 +13,9 @@ from src.data_preprocessor import AlertProcessor, PhotometryProcessor
 from src.data_preprocessor import DataPreprocessor, SpectraProcessor
 from src.data_preprocessor import DataSorter
 
+from tqdm.auto import tqdm
 
-type_color_dict = {
-            # SN I
-            'SN Ia': 'deepskyblue', 'SN Ia-91T': 'deepskyblue', 'SN Ib/c': 'deepskyblue', 'SN Ia-02cx': 'deepskyblue', 'SN Ia-pec': 'deepskyblue', 'SN Ic': 'deepskyblue', 'SN I': 'deepskyblue',
-            'SN Ia-norm': 'deepskyblue', 'SN Ic-BL': 'deepskyblue', 'SN Ibn': 'deepskyblue', 'SN Icn': 'deepskyblue', 'SN Ib-p': 'deepskyblue', 'SN Ia-18byg':'deepskyblue', 'SN Ib': 'deepskyblue',
-            'SN Ic-norm': 'deepskyblue', 'SN Ibn': 'deepskyblue', 'SN Ib/c': 'deepskyblue', 'SN Ic-SLSN': 'deepskyblue', 'SN Ia-02cx': 'deepskyblue', 'SLSN-I': 'deepskyblue', 'SN Ia-91bg': 'deepskyblue',
-            'SN Ib-norm': 'deepskyblue', 'SN Ia-18byg': 'deepskyblue', 'SN Ic.5-SLSN': 'deepskyblue', 'SN Ia-CSM': 'deepskyblue', 'SN Ib-pec':'deepskyblue', 'SN Ia-03fg': 'deepskyblue', 'SN II-norm':'deepskyblue',
-            # SN II
-            'SN II': 'lightblue', 'SN IIP':'lightblue', 'SN IIn': 'lightblue', 'SN IIL': 'lightblue', 'SN IIb': 'lightblue', 'SLSN-II': 'lightblue', 'SN II-pec': 'lightblue',
-            # generic SN
-            'SN': 'blue', 'SN Ca-rich': 'blue',   
-            # galaxy stuff
-            'AGN': 'rebeccapurple', 'QSO': 'darkviolet', 'Galactic Nuclei': 'purple', 'Seyfert': 'plum', 'Blazar': 'thistle',
-            # cataclysmic / tde
-            'Cataclysmic':'goldenrod', 'Polars': 'goldenrod', 'AM CVn': 'goldenrod', 'Tidal Disruption Event': 'gold',
-            # other variables
-            'Stellar variable': 'orange','RR Lyrae': 'orange', 'S Doradus':'salmon', 'Cepheid': 'orange',
-            # other section:
-            'Anomolous': 'hotpink', 'U Gem': 'hotpink', 'Classical Nova':'hotpink', 'Anomolous': 'hotpink', 'FU Ori': 'hotpink', 'YSO': 'hotpink', 'long GRB': 'hotpink', 'Pulsar': 'hotpink',
-            'microlensing': 'hotpink', 'BL Lac': 'hotpink', 'Mira':'hotpink','Nova-like':'hotpink', 'FBOT':'hotpink', 'afterglow': 'hotpink', 'Novae': 'hotpink'}
+type_color_dict = { 'SN Ia': 'deepskyblue', 'SN Ia-91T': 'deepskyblue', 'SN Ib/c': 'deepskyblue', 'SN Ia-02cx': 'deepskyblue', 'SN Ia-pec': 'deepskyblue', 'SN Ic': 'deepskyblue', 'SN I': 'deepskyblue','SN Ia-norm': 'deepskyblue', 'SN Ic-BL': 'deepskyblue', 'SN Ibn': 'deepskyblue', 'SN Icn': 'deepskyblue', 'SN Ib-p': 'deepskyblue', 'SN Ia-18byg':'deepskyblue', 'SN Ib': 'deepskyblue', 'SN Ic-norm': 'deepskyblue', 'SN Ibn': 'deepskyblue', 'SN Ib/c': 'deepskyblue', 'SN Ic-SLSN': 'deepskyblue', 'SN Ia-02cx': 'deepskyblue', 'SLSN-I': 'deepskyblue', 'SN Ia-91bg': 'deepskyblue', 'SN Ib-norm': 'deepskyblue', 'SN Ia-18byg': 'deepskyblue', 'SN Ic.5-SLSN': 'deepskyblue', 'SN Ia-CSM': 'deepskyblue', 'SN Ib-pec':'deepskyblue', 'SN Ia-03fg': 'deepskyblue', 'SN II-norm':'deepskyblue', 'SN II': 'lightblue', 'SN IIP':'lightblue', 'SN IIn': 'lightblue', 'SN IIL': 'lightblue', 'SN IIb': 'lightblue', 'SLSN-II': 'lightblue', 'SN II-pec': 'lightblue', 'SN': 'blue', 'SN Ca-rich': 'blue', 'AGN': 'rebeccapurple', 'QSO': 'darkviolet', 'Galactic Nuclei': 'purple', 'Seyfert': 'plum', 'Blazar': 'thistle',  'Stellar variable': 'orange','RR Lyrae': 'orange', 'S Doradus':'salmon', 'Cepheid': 'orange', 'Cataclysmic':'goldenrod', 'Polars': 'goldenrod', 'AM CVn': 'goldenrod', 'Tidal Disruption Event': 'gold', 'Anomolous': 'hotpink', 'U Gem': 'hotpink', 'Classical Nova':'hotpink', 'FU Ori': 'hotpink', 'YSO': 'hotpink', 'long GRB': 'hotpink', 'Pulsar': 'hotpink', 'microlensing': 'hotpink', 'BL Lac': 'hotpink', 'Mira':'hotpink','Nova-like':'hotpink', 'FBOT':'hotpink', 'afterglow': 'hotpink', 'Novae': 'hotpink'}
 
 sdss_fit_color = {'GALAXY':'purple', 'STAR':'yellow', 0:'red'}
 
@@ -40,11 +23,9 @@ sdss_fit_color = {'GALAXY':'purple', 'STAR':'yellow', 0:'red'}
 # Plot Photometry of object (Magnitude)
 def plot_photometry_magnitude(lc, color_dict=None):
     if color_dict is None:
-        color_dict = {'ztfi': 'y','ztfg': 'green', 'ztfr': 'red', 'sdssg': 'green', 'sdssr': 'red', 'sdssi': 'y', 'atlasc': 'cyan', 'atlaso': 'orange',}
-        
-        color_label = {'ztfi': 'ZTF-i','ztfg': 'ZTF-g', 'ztfr': 'ZTF-r', 'sdssg': 'green', 'sdssr': 'red', 'sdssi': 'y', 'atlasc': 'cyan', 'atlaso': 'orange',}
-        
-        line_label = {'ztfi': 'solid','ztfg': 'dashed', 'ztfr': 'dashdot', 'sdssg': 'green', 'sdssr': 'red', 'sdssi': 'y', 'atlasc': 'cyan', 'atlaso': 'orange',}
+        color_dict = {'ztfi': 'y','ztfg': 'green', 'ztfr': 'red', 'sdssg': 'green', 'sdssr': 'red', 'sdssi': 'y', 'atlasc': 'cyan', 'atlaso': 'orange'}
+        color_label = {'ztfi': 'ZTF-i','ztfg': 'ZTF-g', 'ztfr': 'ZTF-r', 'sdssg': 'green', 'sdssr': 'red', 'sdssi': 'y', 'atlasc': 'cyan', 'atlaso': 'orange'}
+        line_label = {'ztfi': 'solid','ztfg': 'dashed', 'ztfr': 'dashdot', 'sdssg': 'green', 'sdssr': 'red', 'sdssi': 'y', 'atlasc': 'cyan', 'atlaso': 'orange'}
 
     flux_bool = False
     if 'mag' in lc.columns:
@@ -127,7 +108,67 @@ def plot_image_pres(image):
         ax.add_patch(rect)
         ax.axis('off')
     plt.show() 
+
     
+def mass_plot_photometry(obj_id_list, obj_type_df, data_dir, color_dict=None, full_photometry=True, mjd_limit=None):
+    
+    for obj_id in obj_id_list:
+        # get info from alerts    
+        photo_df = PhotometryProcessor.process_csv(obj_id, SEDM_dataset, data_dir)
+        metadata_df, images = AlertProcessor.get_process_alerts(obj_id, data_dir)
+        # do something else i guess
+        photo_df, metadata_df = photo_df.sort_values(by='jd'), metadata_df.sort_values(by='jd')
+        photo_df = PhotometryProcessor.add_metadata_to_photometry(photo_df, metadata_df)
+        # convert magnitude to flux, normalize mjd
+        photo_df = DataPreprocessor.convert_photometry(photo_df)
+        
+        if full_photometry:
+            photo_df = photo_df[photo_df['mjd'] <= mjd_limit]
+            
+        if color_dict is None:
+            color_dict = {'ztfi': 'y','ztfg': 'green', 'ztfr': 'red', 'sdssg': 'green', 'sdssr': 'red', 'sdssi': 'y', 'atlasc': 'cyan', 'atlaso': 'orange'}
+            color_label = {'ztfi': 'ZTF-i','ztfg': 'ZTF-g', 'ztfr': 'ZTF-r', 'sdssg': 'green', 'sdssr': 'red', 'sdssi': 'y', 'atlasc': 'cyan', 'atlaso': 'orange'}
+            line_label = {'ztfi': 'solid','ztfg': 'dashed', 'ztfr': 'dashdot', 'sdssg': 'green', 'sdssr': 'red', 'sdssi': 'y', 'atlasc': 'cyan', 'atlaso': 'orange'}
+    
+        if 'flux' in photo_df.columns:
+            col_norm = 'flux'
+            col_err = 'flux_error'
+            flux_bool = True
+        else:
+            print("No flux column found")
+            return
+        
+        fig, ax1 = plt.subplots(1, 1, figsize=(8,5))
+        ymin, ymax = np.inf, -np.inf
+    
+        for f in set(photo_df['filter']):
+            tf = photo_df[photo_df['filter'] == f]
+            
+            tf_det = tf[tf[col_norm] >= 3.]
+            tf_ul = tf
+            if 'snr' in tf.columns:
+                tf_ul = tf[tf['snr'] < 3]
+    
+            ax1.errorbar(tf_det['mjd'].values, tf_det[col_norm], yerr=tf_det[col_err], color=color_dict[f], markeredgecolor='k',
+                         marker='.',markersize=10, alpha=0.6,label=color_label[f], linestyle=line_label[f])
+            if np.min(tf_det[col_norm]) < ymin:
+                ymin = np.min(tf_det[col_norm])
+            if np.max(tf_det[col_norm]) > ymax:
+                ymax = np.max(tf_det[col_norm])
+            if len(tf_ul) != 0:
+                if np.min(tf_det[col_norm]) < ymin:
+                    ymin = np.min(tf_det[col_norm])
+                if np.max(tf_det[col_norm]) > ymax:
+                    ymax = np.max(tf_det[col_norm])
+                    
+        plt.gca()
+        ax1.set_ylabel("Flux", fontsize=12)
+        ax1.set_xlabel("Time (MJD)", fontsize=12)
+        
+        plt.legend(prop={'size': 14}, handlelength=4)
+        plt.grid(alpha=0.1)
+        ax1.set_title(f"{photo_df['obj_id'].values[0]} - {photo_df['type'].values[0]}", fontsize=12, pad=5)
+        plt.show()    
     
     
 def plot_spectra(obj_id, obj_type_df, data_dir):
