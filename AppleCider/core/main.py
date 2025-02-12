@@ -17,7 +17,6 @@ from AppleCider.core.trainer import Trainer
 # 2-7
 CLASSES = ['SN Ia', 'SN II', 'SN IIP', 'Cataclysmic', 'AGN', 'SN IIn', 'SN Ic', 'SN Ib', 'SN IIb', 'Tidal Disruption Event']
 
-
 def my_collate(batch):
     
     """ photometry, photometry_mask, metadata, images, spectra, labels = train_dataloader)"""
@@ -35,10 +34,7 @@ def my_collate(batch):
     target = [item[5] for item in batch]
     target = torch.LongTensor(target)
     
-    ## works until trainer.py, goes to def val_epoch(self,, then  def get_gradient_norm(self) --> RuntimeError: Caught RuntimeError in DataLoader worker process 0.
-    
     return [photometry, photometry_mask, metadata, images, spectra, target]
-
 
 
 def get_model(config):
@@ -140,12 +136,12 @@ def get_config():
         'freeze': False,
 
         # Data General
-        'preprocessed_path':'/AppleCider_Data/sedm_data_train_2-7/',
-        'df_path': '/AppleCider_Data/data_train_2-7.csv',
+        'preprocessed_path':'/AppleCider_Data/sedm_data_train_raw/',
+        'df_path': '/AppleCider_Data/data_train_raw.csv',
         
         # save train, val file names ...
-        'save_train_files': '/AppleCider_Data/train_files.pkl',
-        'save_val_files': '/AppleCider_Data/val_files.pkl',
+        'save_train_files': '/AppleCider_Data/train_files_raw.pkl',
+        'save_val_files': '/AppleCider_Data/val_files_raw.pkl',
         
         'step': 'type',
         'classes': CLASSES,
@@ -177,7 +173,7 @@ def get_config():
         'm_dropout': 0.2,
         # TODO use actual column names
         'meta_cols': range(10),
-        'scaler_path': 'AppleCider/AppleCider/core/scaler.pkl',
+        'scaler_path': 'AppleCider/AppleCider/core/scaler_raw.pkl',
 
         # Image Model
         'input_channels': 3,

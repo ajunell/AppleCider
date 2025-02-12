@@ -9,7 +9,29 @@ import wandb
 import os
 import optuna
 
-from util.early_stopping import EarlyStopping
+from AppleCider.util.early_stopping import EarlyStopping
+
+
+
+
+# uhhhhhhhhh
+def my_collate(batch):
+    
+    """ photometry, photometry_mask, metadata, images, spectra, labels = train_dataloader)"""
+    
+    # dataset[:5] = photometry, photo_mask, metadata, images, spectra = dataset[:5]
+    photometry = [item[0] for item in batch]
+    photometry_mask = [item[1] for item in batch]
+    
+    metadata = [item[2] for item in batch]
+    images = [item[3] for item in batch]
+    
+    spectra = [item[4] for item in batch]
+    
+    #dataset[5] = label
+    target = [item[5] for item in batch]
+    target = torch.LongTensor(target)
+    return [photometry, photometry_mask, metadata, images, spectra, target]
 
 
 class Trainer:
@@ -73,6 +95,7 @@ class Trainer:
         return sum(self.total_loss) / len(self.total_loss), self.total_correct_predictions / self.total_predictions
 
     def get_logits(self, photometry, photometry_mask, metadata, images, spectra):
+        
         if self.mode == 'photo':
             logits = self.model(photometry, photometry_mask)
         elif self.mode == 'spectra':
@@ -82,15 +105,15 @@ class Trainer:
         elif self.mode == 'image':
             logits = self.model(images)
         else:  # all 4 modalities
-            logits = self.model(photometry, photometry_mask, metadata, images, spectra)
+            logits = self.model(photometry, metadata, images, spectra)
 
         return logits
 
     # TODO Update to 4 elements
     def step_clip(self, photometry, photometry_mask, spectra, metadata):
         """Perform a training step for the CLIP pretraining model"""
-
         logits_ps, logits_sm, logits_mp = self.model(photometry, photometry_mask, spectra, metadata)
+        
         loss_ps, loss_sm, loss_mp = self.criterion(logits_ps, logits_sm, logits_mp)
         loss = loss_ps + loss_sm + loss_mp
 
@@ -100,8 +123,8 @@ class Trainer:
 
     def step(self, photometry, photometry_mask, metadata, images, spectra, labels):
         """Perform a training step for the classification model"""
-
-        logits = self.get_logits(photometry, photometry_mask, metadata, images, spectra)
+        logits = self.get_logits(photometry, photometry_mask, metadata, images, spectra)    
+        
         loss = self.criterion(logits, labels)
 
         self.update_stats(loss, logits, labels)
@@ -121,7 +144,16 @@ class Trainer:
     def train_epoch(self, train_dataloader):
         self.model.train()
         self.zero_stats()
-
+        
+        # error
+        # data = fetcher.fetch(index)
+        # return self.collate_fn(data)
+        # return collate(batch, collate_fn_map=default_collate_fn_map)
+        # return [collate(samples, collate_fn_map=collate_fn_map) for samples in transposed]
+        # return collate_fn_map[elem_type](batch, collate_fn_map=collate_fn_map)
+        # return collate([torch.as_tensor(b) for b in batch], collate_fn_map=collate_fn_map)
+        # return collate_fn_map[elem_type](batch, collate_fn_map=collate_fn_map)
+        
         for photometry, photometry_mask, metadata, images, spectra, labels in tqdm(train_dataloader):
             photometry, photometry_mask = photometry.to(self.device), photometry_mask.to(self.device)
             metadata, images, spectra = metadata.to(self.device), images.to(self.device), spectra.to(self.device)
@@ -160,6 +192,7 @@ class Trainer:
         loss, acc = self.calculate_stats()
 
         return loss, acc
+   
 
     def val_epoch(self, val_dataloader):
         self.model.eval()
@@ -179,6 +212,7 @@ class Trainer:
         loss, acc = self.calculate_stats()
 
         return loss, acc
+    
 
     def train(self, train_dataloader, val_dataloader, epochs):
         best_val_loss = np.inf
@@ -206,8 +240,8 @@ class Trainer:
                 current_lr = self.scheduler.get_last_lr()[0]
 
             if self.use_wandb:
-                wandb.log({'train_loss': train_loss, 'val_loss': val_loss, 'train_acc': train_acc, 'val_acc': val_acc,
-                           'learning_rate': current_lr, 'epoch': epoch})
+                wandb.log({'train_loss': train_loss, 'val_loss': val_loss, 'train_acc': train_acc,
+                           'val_acc': val_acc,'learning_rate': current_lr, 'epoch': epoch})
 
             if best_val_acc < val_acc:
                 best_val_acc = val_acc
@@ -232,7 +266,8 @@ class Trainer:
 
         all_true_labels = []
         all_predicted_labels = []
-
+        
+        
         for photometry, photometry_mask, metadata, images, spectra, labels in tqdm(val_dataloader):
             with torch.no_grad():
                 photometry, photometry_mask = photometry.to(self.device), photometry_mask.to(self.device)
@@ -268,3 +303,50 @@ class Trainer:
             wandb.log({'conf_matrix': wandb.Image(fig)})
 
         return conf_matrix
+    
+    
+  
+    #def evaluate(self, val_dataloader, id2target):
+    #    self.model.eval()
+
+    #    all_true_labels = []
+    #    all_predicted_labels = []
+
+    #    for photometry, metadata, images, spectra, labels in tqdm(val_dataloader):
+    #        with torch.no_grad():
+    #            photometry = photometry.to(self.device)
+    #            metadata, images, spectra = metadata.to(self.device), images.to(self.device), spectra.to(self.device)
+
+    #            logits = self.get_logits(photometry, metadata, images, spectra)
+    #            probabilities = torch.nn.functional.softmax(logits, dim=1)
+    #            _, predicted_labels = torch.max(probabilities, dim=1)
+
+    #            all_true_labels.extend(labels.numpy())
+    #            all_predicted_labels.extend(predicted_labels.cpu().numpy())
+
+    #    conf_matrix = confusion_matrix(all_true_labels, all_predicted_labels)
+    #    conf_matrix_percent = 100 * conf_matrix / conf_matrix.sum(axis=1)[:, np.newaxis]
+
+    #    labels = [id2target[i] for i in range(len(conf_matrix))]
+    #    fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(20, 7))
+
+    #    # Plot absolute values confusion matrix
+    #    sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', xticklabels=labels, yticklabels=labels, ax=axes[0])
+    #    axes[0].set_xlabel('Predicted')
+    #    axes[0].set_ylabel('True')
+    #    axes[0].set_title('Confusion Matrix - Absolute Values')
+
+    #    # Plot percentage values confusion matrix
+    #    sns.heatmap(conf_matrix_percent, annot=True, fmt='.0f', cmap='Blues', xticklabels=labels, yticklabels=labels,
+    #                ax=axes[1])
+    #    axes[1].set_xlabel('Predicted')
+    #    axes[1].set_ylabel('True')
+    #    axes[1].set_title('Confusion Matrix - Percentages')
+
+    #    if self.use_wandb:
+    #        wandb.log({'conf_matrix': wandb.Image(fig)})
+
+    #    return conf_matrix
+    
+    
+    
