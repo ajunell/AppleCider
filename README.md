@@ -10,7 +10,7 @@ multimodal astornomical transient classifer that uses photometry, images, spectr
 # guide for guests:
 
 How does this repo work?
-- it doesn't. please come back later. <br>
+- <s>it doesn't. please come back later.</s> <i>after i resolve another RuntimeError in `002-run-model.ipynb`(not the one currently there, i fixed that one), i'll write up an explanation. </i> <br>
 - there's also a seperate data-centered repo, [AppleCider Data](https://github.com/ajunell/AppleCider_Data) (also private), which is actually organized.
   - it contains:
     - notebooks with stats about the dataset (class distribution, instrument counts, host galaxy spectra info, etc)
