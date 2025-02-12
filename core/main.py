@@ -8,12 +8,37 @@ from torch.optim.lr_scheduler import ExponentialLR, ReduceLROnPlateau, LinearLR
 from torch.utils.data import DataLoader
 from datetime import datetime
 
-from dataset import DataGenerator
-from model import Informer, GalSpecNet, MetaModel, BTSModel, AstroM4
-from loss import CLIPLoss
-from trainer import Trainer
+from AppleCider.core.dataset import DataGenerator
+from AppleCider.core.model import Informer, GalSpecNet, MetaModel, BTSModel, AstroM4
+from AppleCider.core.loss import CLIPLoss
+from AppleCider.core.trainer import Trainer
 
+
+# 2-7
 CLASSES = ['SN Ia', 'SN II', 'SN IIP', 'Cataclysmic', 'AGN', 'SN IIn', 'SN Ic', 'SN Ib', 'SN IIb', 'Tidal Disruption Event']
+
+
+def my_collate(batch):
+    
+    """ photometry, photometry_mask, metadata, images, spectra, labels = train_dataloader)"""
+    
+    ## dataset[:5] = photometry, photo_mask, metadata, images, spectra =dataset[:5]
+    photometry = [item[0] for item in batch]
+    photometry_mask = [item[1] for item in batch]
+    
+    metadata = [item[2] for item in batch]
+    images = [item[3] for item in batch]
+    
+    spectra = [item[4] for item in batch]
+    
+    ## dataset[5] = label
+    target = [item[5] for item in batch]
+    target = torch.LongTensor(target)
+    
+    ## works until trainer.py, goes to def val_epoch(self,, then  def get_gradient_norm(self) --> RuntimeError: Caught RuntimeError in DataLoader worker process 0.
+    
+    return [photometry, photometry_mask, metadata, images, spectra, target]
+
 
 
 def get_model(config):
@@ -70,9 +95,8 @@ def run(config):
     train_dataset = DataGenerator(config, split='train')
     val_dataset = DataGenerator(config, split='val')
 
-    train_dataloader = DataLoader(train_dataset, batch_size=config['batch_size'], shuffle=True, drop_last=True,
-                                  num_workers=4)
-    val_dataloader = DataLoader(val_dataset, batch_size=config['batch_size'], shuffle=False)
+    train_dataloader = DataLoader(train_dataset, batch_size=config['batch_size'], shuffle=True, drop_last=True, collate_fn=my_collate, num_workers=4)
+    val_dataloader = DataLoader(val_dataset, batch_size=config['batch_size'], collate_fn=my_collate, shuffle=False)
 
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     print('Using', device)
@@ -104,21 +128,25 @@ def set_random_seeds(random_seed):
 
 def get_config():
     config = {
-        'project': 'TransientsUMN',
+        'project': 'AppleCider',
         'mode': 'all',    # 'clip' 'photo' 'spectra' 'meta' 'image' 'all'
         'config_from': None,    # 'meridk/AstroCLIPResults/d2u52yml',
         'random_seed': 42,  # 42, 66, 0, 12, 123
         'use_wandb': True,
         'save_weights': False,
-        'weights_path': f'/data/dev/ml_skyportal/AppleCider/AstroM3/weights/{datetime.now().strftime("%Y-%m-%d-%H-%M")}',
+        'weights_path': f'/AppleCider/AppleCider/weights/{datetime.now().strftime("%Y-%m-%d-%H-%M")}',
         # 'use_pretrain': 'CLIP/home/mariia/AstroML/weights/2024-08-14-14-05-zmjau1cu/weights-51.pth',
         'use_pretrain': None,
         'freeze': False,
 
         # Data General
-        'preprocessed_path': '/data/dev/ml_skyportal/AppleCider/data_train_redux/',
-        'spectra_path': '/data/dev/ml_skyportal/AJs_Stuff/(aj)data_all/',
-        'df_path': '/data/dev/ml_skyportal/AppleCider/data_train.csv',
+        'preprocessed_path':'/AppleCider_Data/sedm_data_train_2-7/',
+        'df_path': '/AppleCider_Data/data_train_2-7.csv',
+        
+        # save train, val file names ...
+        'save_train_files': '/AppleCider_Data/train_files.pkl',
+        'save_val_files': '/AppleCider_Data/val_files.pkl',
+        
         'step': 'type',
         'classes': CLASSES,
         'group_labels': True,
@@ -149,7 +177,7 @@ def get_config():
         'm_dropout': 0.2,
         # TODO use actual column names
         'meta_cols': range(10),
-        'scaler_path': '/data/dev/ml_skyportal/AppleCider/AstroM3/core/scaler.pkl',
+        'scaler_path': 'AppleCider/AppleCider/core/scaler.pkl',
 
         # Image Model
         'input_channels': 3,

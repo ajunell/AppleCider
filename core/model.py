@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 
-from models.Informer import DataEmbedding, EncoderLayer, AttentionLayer, ProbAttention, Encoder
+from AppleCider.models.Informer import DataEmbedding, EncoderLayer, AttentionLayer, ProbAttention, Encoder
 
 
 class Informer(nn.Module):
