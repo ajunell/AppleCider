@@ -7,6 +7,10 @@ multimodal astornomical transient classifer that uses photometry, images, spectr
 <i>AppleCider's name was inspired by [University of Minnesota's](https://mnhardy.umn.edu/apples) development of iconic apple cultivars. s/o Honeycrisp. </i>
 
 
+DATASET!!!!!! ->>>>>> says it'll take 4+ hours to upload so check back in 10.....[Data Folder](https://drive.google.com/drive/folders/1pQNjicoyt1B730pK2ay_-ITW-gsVgLpH?usp=share_link)
+
+
+
 # guide for guests:
 
 How does this repo work?
