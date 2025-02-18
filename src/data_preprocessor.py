@@ -171,17 +171,17 @@ class PhotometryProcessor:
     
     def find_valid_alert_index(df):
         for index, row in df.iterrows():
-            if row['flux_ztfg'] == 0 and row['flux_ztfr'] == 0:
+            if row['flux_ztfg'] == 0 and row['flux_ztfr'] == 0 and row['flux_ztfi']:
                 return index - 1
         
         return len(df)
     
     def normalize_light_curve(df):
         valid_index = PhotometryProcessor.find_valid_alert_index(df)
-        flux_data = df.loc[:valid_index, ['flux_ztfg', 'flux_ztfr']]
+        flux_data = df.loc[:valid_index, ['flux_ztfg', 'flux_ztfr', 'flux_ztfi']]
         scaler = StandardScaler() # standardizes by removing mean, scaling to unit variance
         normalized_flux = scaler.fit_transform(flux_data)
-        df.loc[:valid_index, ['flux_ztfg', 'flux_ztfr']] = normalized_flux
+        df.loc[:valid_index, ['flux_ztfg', 'flux_ztfr','flux_ztfi']] = normalized_flux
         return df
     
     def remove_filter(photo_df):
@@ -212,17 +212,17 @@ class SpectraProcessor:
         """ get wavelength, flux from spectra csv """
         file_path = os.path.join(base_path, object_id, 'spectra.csv')
         spectra_df = pd.read_csv(file_path)
-        spectra_df = spectra_df[['wavelengths', 'fluxes']]
-        
-        spectra = spectra_df.to_numpy()
-        spectra = spectra.astype(float)
-        # will need to update again after changing all file names....
-        
-        return spectra
+        spectra_df = spectra_df[['wavelength', 'flux']]
+      
+        return spectra_df
     
     @staticmethod
     def preprocess_spectra(spectra):
         """ limit wavelength to 4500 - 7980, interpolate and normalize """
+        
+        spectra = spectra_df.to_numpy()
+        spectra = spectra.astype(float)
+        
         new_wavelength = np.linspace(4500, 7980, 7980 - 4500 + 1)
 
         # remove nans from flux
@@ -443,6 +443,5 @@ class DataPreprocessor:
     def preprocess_metadata(metadata_df):
         ''' removes metadata duplicates and irrelevant columns '''
         metadata_df = metadata_df.drop_duplicates(subset=['jd'], keep='first')
-        columns_metadata = [ "sgscore1", "sgscore2", "distpsnr1", "distpsnr2", "ra", "dec", "nmtchps", 
-                              "sharpnr", "scorr", "sky", 'jd' ]
+        columns_metadata = [ "sgscore1", "sgscore2", "distpsnr1", "distpsnr2", "ra", "dec", "nmtchps", "sharpnr", "scorr", "sky", 'jd' ]
         return metadata_df[columns_metadata].fillna(-999.0)
