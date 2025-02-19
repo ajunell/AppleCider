@@ -15,10 +15,11 @@ Give me the data:
 # guide for guests:
 
 How does this repo work?
-- <s>it doesn't. please come back later. <i>after i resolve another RuntimeError in `002-run-model.ipynb`(not the one currently there, i fixed that one), i'll write up an explanation. </i> <br></s> for photometry, see `2-19_notebook.ipynb` 
+- <s>it doesn't. please come back later. <i>after i resolve another RuntimeError in `002-run-model.ipynb`(not the one currently there, i fixed that one), i'll write up an explanation. </i> <br> </s> for photometry, see `2-19_notebook.ipynb` 
+
 - there's also a seperate data-centered repo, [AppleCider Data](https://github.com/ajunell/AppleCider_Data) (also private), which is actually organized.
   - it contains:
     - notebooks with stats about the dataset (class distribution, instrument counts, host galaxy spectra info, etc)
-    - all the queries (sans tokens) I used: Kowalski for alerts, Fritz for classification + spectra + additional object information, SDSS for more spectra, and DESI also for more spectra. there are also example notebooks for querying and basic spectra processing (which is really just saving each file format to .csv). note: there is additioanl spectra I got from Yu-Jing, so no query notebooks for that, just processing.
+    - all the queries I used: Kowalski for alerts, Fritz for classification + spectra + additional object information, SDSS for more spectra, and DESI also for more spectra. there are also example notebooks for querying and basic spectra processing (which is really just saving each file format to .csv). note: there is additional spectra I got from Yu-Jing, so no query notebooks for that, just processing.
     - relevant .csv: the classic object id + classifcation, object id + additional info (RA, Dec, named host galaxy, spectra source + spectral classification + spec ids for each survey, etc), object id + host galaxy name + potential SDSS host galaxy spec ID + SDSS file name
   - it does NOT contain data... see AppleCider drive link above
