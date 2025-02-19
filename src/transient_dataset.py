@@ -49,28 +49,19 @@ class TransientDataset():
                 metadata_df_norm = metadata_df.drop(columns=['jd'])
                 
                 ## get wavelength, flux from spectra.csv
-                #print("spectra read")
                 spectra = SpectraProcessor.read_spectra_csv(obj_id, base_path)
-                #print("spectra.values")
-                #spectra = SpectraProcessor.preprocess_spectra(spectra)
-                spectra = spectra.values
-
-                ## find first valid photometry index
-                start_index = PhotometryProcessor.get_first_valid_index(photo_df)
-                if start_index == -1:
-                    continue
+                spectra = SpectraProcessor.preprocess_spectra(spectra)
                 
+                ## decide "alerts" to sample from 
                 alert_indices = list(range(len(metadata_df) // 2, len(metadata_df)))
-                if len(alert_indices) > 10:
-                    alert_indices = np.round(np.linspace(len(metadata_df) // 2, len(metadata_df) - 1, 10)).astype(int)
-                
+          
                 for i in alert_indices:
                     photo_ready = DataPreprocessor.cut_photometry(photo_df, metadata_df, i)
                     if photo_ready is None:
                         break
+                    ## get matching index for metadata, image    
                     get_index = metadata_df_norm.iloc[i].name
                    
-                        
                     self.data_preprocess.append({
                             'obj_id': obj_id,
                             'alerte': i,
@@ -92,25 +83,19 @@ class TransientDataset():
         
         sample, save_dir = args
         obj_id = sample['obj_id']
-        ## keeping it in french
-        alerte = sample['alerte']
+        alerte = sample['alerte']    ## keep it in french
         type_obj = sample['target']
+        
+        photometry = sample['photometry']
+        if len(photometry) == 0:
+            return
 
         save_path = os.path.join(save_dir, f"{obj_id}_alert_{alerte}.npy")
         if os.path.exists(save_path):
             return
-        
-        photometry = sample['photometry']
-        ## remove filters with 0 points
-        photometry = PhotometryProcessor.remove_filter(photometry)
-        
-        if len(photometry) == 0:
-            return
 
         res_df = pd.DataFrame()
         
-        last_mjd = sample['photometry']['mjd'].max()
-        sample['photometry'].loc[sample['photometry']['mjd'] > last_mjd, ['flux', 'flux_error']] = 0
         photometry = sample['photometry'].pivot_table(index=['mjd'], columns='filter', values=['flux', 'flux_error'])
         photometry = photometry.reset_index()
         photometry.columns = [col[0] if col[0] == 'mjd' else '_'.join(col).strip() for col in photometry.columns.values]
@@ -119,24 +104,21 @@ class TransientDataset():
         res_df = pd.concat([res_df, photometry])
         res_df = res_df.reset_index(drop=True, inplace=True)
               
-        columns = ['flux_ztfg', 'flux_error_ztfg', 'flux_ztfr', 'flux_error_ztfr', 'flux_ztfi', 'flux_error_ztfi']
-        
+        ## if you want flux error sometime, don't forget to add back in to column list
+        columns = ['flux_ztfg', 'flux_ztfr', 'flux_ztfi']
         for col in columns:
             if col not in photometry.columns:
                 photometry[col] = 0.
-         
-        ## normalize photometry   
-        #if normalize_photometry:
+        
+        ## if you want flux error sometime, don't forget to add back in to column list
+        photometry = photometry[['obj_id', 'mjd', 'flux_ztfg', 'flux_ztfr', 'flux_ztfi']]
+        photometry = photometry.fillna(0)
+        
         photometry = PhotometryProcessor.normalize_light_curve(photometry)
 
-        ## get date, flux ztfr, flux ztg
+        ## keep only mjd, flux ztfr, flux ztfg, flux_ztfi
         useful_columns = ['mjd', 'flux_ztfg', 'flux_ztfr', 'flux_ztfi']
         photometry = photometry[useful_columns].values
-        # remove mjd, only ztfg, ztfr
-        #photometry = photometry[:, 1:]
-        
-        ## replace nan with zero
-        #photometry[np.isnan(photometry)] = 0
         
         res_dict.update({
                 'obj_id': obj_id,
@@ -153,5 +135,4 @@ class TransientDataset():
         os.makedirs(self.preprocessed_path, exist_ok=True)
         args = [(sample, self.preprocessed_path) for sample in self.data_preprocess]
  
-        [TransientDataset.process_and_save_sample(args) for args in tqdm(args, desc="Processing Objects", leave=True)]
-    
+        [TransientDataset.process_and_save_sample(args) for args in tqdm(args, desc="Saving Preprocessed Alerts", leave=True)]

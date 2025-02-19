@@ -22,9 +22,7 @@ from sklearn.model_selection import train_test_split
 from torch.nn.utils.rnn import pad_sequence
 
 
-
 class AlertProcessor:
-    
     """ ☆ procces object's alert package ☆ (see arXiv:1902.02227 for more info) """
     
     @staticmethod
@@ -66,7 +64,6 @@ class AlertProcessor:
 
     @staticmethod
     def get_process_alerts(obj_id, base_path):
-        
         alerts = AlertProcessor.get_alerts(base_path, obj_id)
         metadata_list = []
         images = []
@@ -110,7 +107,6 @@ class AlertProcessor:
 
 
 class PhotometryProcessor:
-    
     """ ☆ procces object's photometry, metadata """
     
     @staticmethod
@@ -131,8 +127,8 @@ class PhotometryProcessor:
             'scorr': 'snr',
             'diffmaglim': 'limiting_mag' })
         df['filter'] = df['filter'].replace({1: 'ztfg', 2: 'ztfr', 3: 'ztfi'})
-        ## remove i filter
-        df = df[df['filter'] != 'ztfi']
+        ### remove i filter
+        #df = df[df['filter'] != 'ztfi']
         df['mjd'] = df['jd'] - 2400000.5
         df = df[['obj_id', 'jd', 'mjd', 'mag', 'magerr', 'snr', 'limiting_mag', 'filter']]
         return df
@@ -146,7 +142,7 @@ class PhotometryProcessor:
     @staticmethod
     def get_first_valid_index(df, min_points=1):
         '''counts occurences of each filter, finds index that meets minimum number of points in each filter'''
-        filter_counts = {'ztfr': 0, 'ztfg': 0}
+        filter_counts = {'ztfr': 0, 'ztfg': 0, 'ztfi':0}
         for i in range(len(df)):
             current_filter = df['filter'].iloc[i]
             if current_filter in filter_counts:
@@ -158,7 +154,6 @@ class PhotometryProcessor:
     @staticmethod
     def add_metadata_to_photometry(photo_df, metadata_df):
         ''' cleans metadata, merges photometry_df with metadata_df'''
-        
         metadata_df_copy = PhotometryProcessor.clean_dataframe(metadata_df.copy())
         df = pd.merge(photo_df, metadata_df_copy, on=['obj_id', 'jd', 'mjd', 'mag', 'magerr', 'snr', 'limiting_mag', 'filter'], how='outer', suffixes=('', '_metadata'))        
         df = df[['obj_id', 'jd', 'mjd', 'mag', 'magerr', 'snr', 'limiting_mag', 'filter', 'type']]
@@ -171,33 +166,26 @@ class PhotometryProcessor:
     
     def find_valid_alert_index(df):
         for index, row in df.iterrows():
-            if row['flux_ztfg'] == 0 and row['flux_ztfr'] == 0 and row['flux_ztfi']:
+            if row['flux_ztfg'] == 0 and row['flux_ztfr'] == 0 and row['flux_ztfi'] == 0:
                 return index - 1
-        
         return len(df)
     
     def normalize_light_curve(df):
-        valid_index = PhotometryProcessor.find_valid_alert_index(df)
-        flux_data = df.loc[:valid_index, ['flux_ztfg', 'flux_ztfr', 'flux_ztfi']]
+        #valid_index = find_valid_alert_index(df)
+        #flux_data = df.loc[:valid_index, ['flux_ztfg', 'flux_ztfr', 'flux_ztfi']]
+        #scaler = StandardScaler() # standardizes by removing mean, scaling to unit variance
+        #normalized_flux = scaler.fit_transform(flux_data)
+        #df.loc[:valid_index, ['flux_ztfg', 'flux_ztfr','flux_ztfi']] = normalized_flux
+        
+        flux_data = df.loc[:len(df), ['flux_ztfg', 'flux_ztfr', 'flux_ztfi']]
         scaler = StandardScaler() # standardizes by removing mean, scaling to unit variance
         normalized_flux = scaler.fit_transform(flux_data)
-        df.loc[:valid_index, ['flux_ztfg', 'flux_ztfr','flux_ztfi']] = normalized_flux
+        df.loc[:len(df), ['flux_ztfg', 'flux_ztfr','flux_ztfi']] = normalized_flux
+  
         return df
     
-    def remove_filter(photo_df):
-        ''' remove filters w/less than 1 '''
-        filters = photo_df['filter'].unique()
-        for filt in filters:
-            if len(photo_df[photo_df['filter'] == filt]) < 1:
-                photo_df = photo_df[photo_df['filter'] != filt]
-        
-        photo_df = photo_df.reset_index(drop=True)
-        return photo_df
 
-    
-    
 class SpectraProcessor:
-    
     """ ☆ procces object's spectra (not in alerts.npy) ☆ """
     
     @staticmethod
@@ -220,7 +208,7 @@ class SpectraProcessor:
     def preprocess_spectra(spectra):
         """ limit wavelength to 4500 - 7980, interpolate and normalize """
         
-        spectra = spectra_df.to_numpy()
+        spectra = spectra.to_numpy()
         spectra = spectra.astype(float)
         
         new_wavelength = np.linspace(4500, 7980, 7980 - 4500 + 1)
@@ -405,7 +393,6 @@ class DataSorter:
 
 
 class DataPreprocessor:
-    
     """ ☆ additional pre-processing of photometry, metadata ☆ """
     
     @staticmethod
