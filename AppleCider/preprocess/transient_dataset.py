@@ -1,0 +1,173 @@
+import os
+import pandas as pd
+from tqdm.auto import tqdm
+import numpy as np
+
+from AppleCider.preprocess.data_preprocessor import AlertProcessor
+from AppleCider.preprocess.data_preprocessor import PhotometryProcessor
+from AppleCider.preprocess.data_preprocessor import SpectraProcessor
+from AppleCider.preprocess.data_preprocessor import DataPreprocessor
+
+from torch.nn.utils.rnn import pad_sequence
+            
+            
+class TransientDataset():
+    
+    def __init__(self, preprocessed_path, df_bts=None, base_path=None, max_mjd=None, normalize_light_curve=True, include_spectra=True):
+        
+        self.preprocessed_path = preprocessed_path
+        self.df_bts = df_bts
+        self.base_path = base_path
+        self.data = []
+        self.data_preprocess = []
+        self.max_mjd = max_mjd
+        self.normalize_light_curve = normalize_light_curve
+        self.include_spectra = include_spectra
+
+    def preprocess_data(self, df_bts, base_path, max_mjd, include_spectra, normalize_light_curve):
+        ''' preprocess photometry, metadata, images  by creating dictionary for each object alert sample'''
+        
+        self.df_bts, self.data_preprocess, self.base_path = df_bts, [], base_path
+                 
+        for idx, row in tqdm(df_bts.iterrows(), total=df_bts.shape[0], desc="Loading data", leave=True):
+            try:
+                obj_id, target = row['obj_id'], row['type']
+                if any(obj_id in file for file in os.listdir(self.preprocessed_path)):
+                    continue
+                ## get photometry, metadata, images
+                photo_df, metadata_df, images = PhotometryProcessor.process_csv(obj_id, df_bts, base_path), *AlertProcessor.get_process_alerts(obj_id, base_path)
+                photo_df, metadata_df = photo_df.sort_values(by='jd'), metadata_df.sort_values(by='jd')
+                photo_df = PhotometryProcessor.add_metadata_to_photometry(photo_df, metadata_df)
+                ## convert magnitude to flux, flux error
+                photo_df = DataPreprocessor.convert_photometry(photo_df)
+
+                # cut photometry down to max_mjd 
+                max_ = min(photo_df['mjd'].max(), max_mjd)
+                photo_df = photo_df[photo_df['mjd'] <= max_]
+                metadata_df = metadata_df[metadata_df['jd'] <= photo_df['jd'].max()]
+
+                metadata_df = DataPreprocessor.preprocess_metadata(metadata_df)
+                metadata_df_norm = metadata_df.drop(columns=['jd'])
+                
+                ## decide "alerts" to sample from 
+                alert_indices = list(range(len(metadata_df) // 2, len(metadata_df)))   
+                
+                if len(alert_indices) > 3:
+                    alert_indices = np.round(np.linspace(len(metadata_df) // 2, len(metadata_df) - 1, 4)).astype(int)
+                
+                ## preventing 'photo_ready is None' before it can happen and gives us photometry filled with zeros
+                if (alert_indices == [0]) and (len(photo_df) <= 1) :
+                    print(f"Failed alert index slice. {obj_id}: {len(photo_df)} point in light curve, alert index 0, when mjd <= {max_mjd}.")
+             
+                else:
+                    
+                    for i in alert_indices:
+                        photo_ready = DataPreprocessor.cut_photometry(photo_df, metadata_df, i, max_mjd)
+                        if photo_ready is None:
+                            print(f"{obj_id} FAILED. BREAK!")
+                            break
+                        
+                        ## get matching index for metadata, image    
+                        get_index = metadata_df_norm.iloc[i].name
+                       
+                        if include_spectra:
+                            ## get wavelength, flux from spectra.csv
+                            spectra = SpectraProcessor.read_spectra_csv(obj_id, base_path)
+                            spectra = SpectraProcessor.preprocess_spectra(spectra)
+                            self.data_preprocess.append({
+                                    'obj_id': obj_id,
+                                    'alerte': i,
+                                    'photometry': photo_ready,
+                                    'metadata': metadata_df_norm.iloc[i],
+                                    'images': images[get_index],
+                                    'spectra': spectra,
+                                    'target': target})
+                        
+                        else:
+                            self.data_preprocess.append({
+                                    'obj_id': obj_id,
+                                    'alerte': i,
+                                    'photometry': photo_ready,
+                                    'metadata': metadata_df_norm.iloc[i],
+                                    'images': images[get_index],
+                                    'target': target})
+
+            except Exception as e:
+                print(f"Error processing {obj_id} at index {idx}: {e}")
+
+                 
+    def process_and_save_sample(args):
+        ''' save dictionary w/processed photometry, metadata, images to .npy at desired path '''
+        
+        res_dict = {}
+        
+        sample, save_dir, include_spectra, normalize_light_curve = args
+        obj_id = sample['obj_id']
+        alerte = sample['alerte']    ## keep it in french
+        type_obj = sample['target']
+        
+        photometry = sample['photometry']
+        if len(photometry) == 0:
+            return
+
+        save_path = os.path.join(save_dir, f"{obj_id}_alert_{alerte}.npy")
+        if os.path.exists(save_path):
+            return
+
+        res_df = pd.DataFrame()
+        photometry = sample['photometry'].pivot_table(index=['mjd'], columns='filter', values=['flux', 'flux_error'])
+        photometry = photometry.reset_index()
+        photometry.columns = [col[0] if col[0] == 'mjd' else '_'.join(col).strip() for col in photometry.columns.values]
+        photometry['obj_id'] = obj_id
+
+        res_df = pd.concat([res_df, photometry])
+        res_df = res_df.reset_index(drop=True, inplace=True)
+              
+        ## if you want flux error sometime, don't forget to add back in to column list
+        columns = ['flux_ztfg', 'flux_ztfr', 'flux_ztfi']
+        
+        for col in columns:
+            if col not in photometry.columns:
+                photometry[col] = 0.
+        
+        ## if you want flux error sometime, don't forget to add back in to column list
+        photometry = photometry[['obj_id', 'mjd', 'flux_ztfg', 'flux_ztfr', 'flux_ztfi']]
+        photometry = photometry.fillna(0)
+        
+        if normalize_light_curve:
+            photometry = PhotometryProcessor.normalize_light_curve(photometry)
+
+        ## get date, flux ztfr, flux ztfg, flux_ztfi
+        useful_columns = ['mjd', 'flux_ztfg', 'flux_ztfr', 'flux_ztfi']
+        photometry = photometry[useful_columns].values
+        
+        
+        if include_spectra:
+            res_dict.update({
+                'obj_id': obj_id,
+                'photometry': photometry,
+                'metadata': sample['metadata'],
+                'images': sample['images'],
+                'spectra':sample['spectra'],
+                'target': sample['target'],
+                'alerte': alerte})
+            np.save(save_path, res_dict)
+            
+        else:
+            res_dict.update({
+                'obj_id': obj_id,
+                'photometry': photometry,
+                'metadata': sample['metadata'],
+                'images': sample['images'],
+                'target': sample['target'],
+                'alerte': alerte})
+            np.save(save_path, res_dict)
+        
+    def preprocess_and_save(self):
+        os.makedirs(self.preprocessed_path, exist_ok=True)
+        args = [(sample, self.preprocessed_path, self.include_spectra, self.normalize_light_curve) for sample in self.data_preprocess]
+ 
+        [TransientDataset.process_and_save_sample(args) for args in tqdm(args, desc="Processing Objects", leave=True)]
+    
+      
+    
