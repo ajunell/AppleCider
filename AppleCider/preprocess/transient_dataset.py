@@ -24,10 +24,10 @@ class TransientDataset():
         self.normalize_light_curve = normalize_light_curve
         self.include_spectra = include_spectra
 
-    def preprocess_data(self, df_bts, base_path, max_mjd, include_spectra, normalize_light_curve):
+    def preprocess_data(self, df_bts, base_path, max_mjd):
         ''' preprocess photometry, metadata, images  by creating dictionary for each object alert sample'''
         
-        self.df_bts, self.data_preprocess, self.base_path = df_bts, [], base_path
+        self.df_bts, self.data_preprocess, self.base_path, self.max_mjd = df_bts, [], base_path, max_mjd
                  
         for idx, row in tqdm(df_bts.iterrows(), total=df_bts.shape[0], desc="Loading data", leave=True):
             try:
@@ -41,7 +41,7 @@ class TransientDataset():
                 ## convert magnitude to flux, flux error
                 photo_df = DataPreprocessor.convert_photometry(photo_df)
 
-                # cut photometry down to max_mjd 
+                ## cut photometry down to max_mjd
                 max_ = min(photo_df['mjd'].max(), max_mjd)
                 photo_df = photo_df[photo_df['mjd'] <= max_]
                 metadata_df = metadata_df[metadata_df['jd'] <= photo_df['jd'].max()]
@@ -50,14 +50,15 @@ class TransientDataset():
                 metadata_df_norm = metadata_df.drop(columns=['jd'])
                 
                 ## decide "alerts" to sample from 
-                alert_indices = list(range(len(metadata_df) // 2, len(metadata_df)))   
+                alert_indices = list(range(len(metadata_df) // 2, len(metadata_df)))
                 
                 if len(alert_indices) > 3:
-                    alert_indices = np.round(np.linspace(len(metadata_df) // 2, len(metadata_df) - 1, 4)).astype(int)
+                    alert_indices = np.round(np.linspace(len(metadata_df) // 2, len(metadata_df) - 1, 5)).astype(int)
                 
                 ## preventing 'photo_ready is None' before it can happen and gives us photometry filled with zeros
-                if (alert_indices == [0]) and (len(photo_df) <= 1) :
-                    print(f"Failed alert index slice. {obj_id}: {len(photo_df)} point in light curve, alert index 0, when mjd <= {max_mjd}.")
+                if all(alert == 0 for alert in alert_indices):
+                    if len(photo_df) <= 1:
+                        print(f"Failed alert index slice. {obj_id}: {len(photo_df)} point in light curve, alert index 0, when mjd <= {max_mjd}.")
              
                 else:
                     
@@ -70,10 +71,11 @@ class TransientDataset():
                         ## get matching index for metadata, image    
                         get_index = metadata_df_norm.iloc[i].name
                        
-                        if include_spectra:
+                        if self.include_spectra:
                             ## get wavelength, flux from spectra.csv
                             spectra = SpectraProcessor.read_spectra_csv(obj_id, base_path)
                             spectra = SpectraProcessor.preprocess_spectra(spectra)
+                            
                             self.data_preprocess.append({
                                     'obj_id': obj_id,
                                     'alerte': i,

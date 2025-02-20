@@ -265,32 +265,30 @@ class DataSorter:
         
         if sedm_spec_only:
             obj_with_sedm_spec = DataSorter.get_obj_wSEDM_spectra(df['obj_id'].to_list(), data_dir)
-            # remove objects without sedm spectra
+            ## remove objects without sedm spectra
             df = df[df['obj_id'].isin(obj_with_sedm_spec)]
         if downsample_SNIa: # redunant since dataset.py does this
             sn_ia = df[df['type'] == 'SN Ia'].sample(n=600, random_state=42)
             df = pd.concat([df[df['type'] != 'SN Ia'], sn_ia])
-
-        # remove objects not in the acceptable class list (class_list)
+    
+        ## remove objects not in the acceptable class list (class_list)
         df = df[df[type_col].isin(class_list)]
-
-        # TEST
+        
+        ## TEST
         test_df_total = df.sample(n=n_test, random_state=42)
-        # randomly sample 1 object from every class
+        ## randomly sample 1 object from every class
         test_df_random = df.sample(frac=1).drop_duplicates(type_col).sort_index()
-        test_data_df = pd.concat([test_df_total, test_df_random])
+        ## force sample more TDE:
+        TDE_ = ['Tidal Disruption Event'] ; SN_ = ['SN IIb'] ; SN__ = ['SN Ib']
+        test_df_TDE = df.query(f'type=={TDE_}').sample(n=8) ; test_df_SNIb = df.query(f'type=={SN__}').sample(n=8) ; test_df_SNIIb = df.query(f'type=={SN_}').sample(n=8)
+        test_data_df = pd.concat([test_df_total, test_df_random, test_df_TDE, test_df_SNIb, test_df_SNIIb])
         test_data_df = test_data_df.drop_duplicates('obj_id')
-
-        # TRAIN
+    
+        ## TRAIN
         train_data_df = DataSorter.remove_test_data(df, test_data_df)
-        # sample n from df
-        train_df_total = train_data_df.sample(n=n_train, random_state=42)
-        # randomly sample 1 object from every class
-        train_df_random = train_data_df.sample(frac=1).drop_duplicates(type_col).sort_index()
-        train_data_df = pd.concat([train_df_total, train_df_random])
         train_data_df = train_data_df.drop_duplicates('obj_id')
         train_data_df.reset_index(drop=True)
-
+    
         return test_data_df.reset_index(drop=True),  train_data_df.reset_index(drop=True)
     
     
