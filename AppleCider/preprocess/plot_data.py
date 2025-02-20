@@ -173,6 +173,83 @@ def mass_plot_photometry(obj_id_list, SEDM_dataset, data_dir, max_mjd=10,color_d
         plt.show()
     
     
+def compare_tensor_photometry(photometry, obj_id, SEDM_dataset, data_dir):
+    
+    ''' basically just check to that an object's original photometry
+        matches with the photometry tensor from the dataset generator '''
+    
+    ## photometry from train_dataset[#]
+    dataset_dates = photometry[:,0]
+    dataset_ztfg = photometry[:,1]    ## ztf-g
+    dataset_ztfr = photometry[:,2]    ## ztf-r
+    dataset_ztfi = photometry[:,3]    ## ztf-i
+    
+    ## now, get the object's pre-processed photometry, process it a little bit to get flux
+    photo_df = PhotometryProcessor.process_csv(obj_id, SEDM_dataset, data_dir)
+    metadata_df, images = AlertProcessor.get_process_alerts(obj_id, data_dir)
+    photo_df, metadata_df = photo_df.sort_values(by='jd'), metadata_df.sort_values(by='jd')
+    photo_df = PhotometryProcessor.add_metadata_to_photometry(photo_df, metadata_df)
+    ## convert magnitude to flux, normalize mjd
+    photo_df = DataPreprocessor.convert_photometry(photo_df)
+    photo_df = photo_df[photo_df['mjd'] <= 10]     ## only want photometry by first 10 alerts
+    
+    ## for plotting:
+    color_dict = {'ztfi': 'y','ztfg': 'green', 'ztfr': 'red', 'sdssg': 'green', 'sdssr': 'red', 'sdssi': 'y', 'atlasc': 'cyan', 'atlaso': 'orange'}
+    color_label = {'ztfi': 'ZTF-i','ztfg': 'ZTF-g', 'ztfr': 'ZTF-r', 'sdssg': 'green', 'sdssr': 'red', 'sdssi': 'y', 'atlasc': 'cyan', 'atlaso': 'orange'}
+    line_label = {'ztfi': 'solid','ztfg': 'dashed', 'ztfr': 'dashdot', 'sdssg': 'green', 'sdssr': 'red', 'sdssi': 'y', 'atlasc': 'cyan', 'atlaso': 'orange'}
+    
+    if 'flux' in photo_df.columns:
+        col_norm = 'flux'
+        col_err = 'flux_error'
+        flux_bool = True
+
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10,4))
+    fig.tight_layout()
+    plt.subplots_adjust(wspace=0.3, hspace=2.4)
+    ymin, ymax = np.inf, -np.inf
+    
+    for f in set(photo_df['filter']):
+        tf = photo_df[photo_df['filter'] == f]
+        
+        tf_det = tf[tf[col_norm] >= 3.]
+        tf_ul = tf
+        if 'snr' in tf.columns:
+            tf_ul = tf[tf['snr'] < 3]
+    
+        ## slightly processed photometry
+        ax1.errorbar(tf_det['mjd'].values, tf_det[col_norm], yerr=tf_det[col_err], color=color_dict[f], markeredgecolor='k',
+                     marker='*',markersize=20, alpha=0.6,label=color_label[f], linestyle=line_label[f])
+        if np.min(tf_det[col_norm]) < ymin:
+            ymin = np.min(tf_det[col_norm])
+        if np.max(tf_det[col_norm]) > ymax:
+            ymax = np.max(tf_det[col_norm])
+    
+        if len(tf_ul) != 0:
+            if np.min(tf_det[col_norm]) < ymin:
+                ymin = np.min(tf_det[col_norm])
+            if np.max(tf_det[col_norm]) > ymax:
+                ymax = np.max(tf_det[col_norm])
+                
+    ## dataphotometry
+    ax2.scatter(dataset_dates,dataset_ztfg, marker='v',alpha=0.75,c='green', s=120, edgecolor='black', label='ztf-g')
+    ax2.scatter(dataset_dates,dataset_ztfr, marker='^',alpha=0.75,c='r', s=120, edgecolor='black', label='ztf-r')
+    ax2.scatter(dataset_dates,dataset_ztfi, marker='>',alpha=0.75,c='y', s=120,edgecolor='black', label='ztf-i')
+    
+    ax2.set_ylabel("Normalized Flux", fontsize=12) ; ax2.set_xlabel("Time (MJD)", fontsize=12)
+    ax2.set_title('Dataset Photometry')
+    
+    ax1.set_ylabel("Flux", fontsize=12) ; ax1.set_xlabel("Time (MJD)", fontsize=12)
+    ax1.set_title(f'{obj_id} Photometry')
+    
+    ax1.grid(alpha=0.1) ; ax2.grid(alpha=0.1)
+    ax1.legend(prop={'size': 12}, handlelength=4) ; ax2.legend(prop={'size': 12}, handlelength=4)
+    plt.show()
+        
+        
+    
+    
+    
+    
     
 def plot_spectra(obj_id, obj_type_df, data_dir):
         
@@ -252,99 +329,82 @@ def plot_spectra(obj_id, obj_type_df, data_dir):
 #    fig.show()
 
 # Plot Photometry
-def plot_photometry(obj_id, alerte=None, type_obj=None):
-    df_bts = pd.read_csv('obj_type_steps.csv')
-    base_path = '(aj)data_all/'
-    photo_df, metadata_df, _ = PhotometryProcessor.process_csv(obj_id, df_bts, base_path), *AlertProcessor.get_process_alerts(obj_id, base_path)
-    photo_df, metadata_df = photo_df.sort_values(by='jd'), metadata_df.sort_values(by='jd')
-    photo_df = PhotometryProcessor.add_metadata_to_photometry(photo_df, metadata_df)
-    photo_df = DataPreprocessor.convert_photometry(photo_df)
-
-    max_mjd = min(photo_df['mjd'].max(), 90)
-    photo_ready = photo_df[photo_df['mjd'] <= max_mjd]
-    metadata_df = metadata_df[metadata_df['jd'] <= photo_ready['jd'].max()]
-
-
-    kernel = pickle.load(open('kernel.pkl', 'rb'))
-    gp_final = gp.process_gaussian(photo_ready, kernel=kernel, number_gp=200)
-
-    for i, jd in enumerate(metadata_df['jd'], start=1):
-        photo_ready.loc[photo_ready['jd'] == jd, 'alert_num'] = i
-
-    if 'flux_ztfi' not in gp_final.columns:
-        gp_final['flux_ztfi'] = 0
-        gp_final['flux_error_ztfi'] = 0
-
-    if 'flux_ztfg' not in gp_final.columns:
-        gp_final['flux_ztfg'] = 0
-        gp_final['flux_error_ztfg'] = 0
-
-    if 'flux_ztfr' not in gp_final.columns:
-        gp_final['flux_ztfr'] = 0
-        gp_final['flux_error_ztfr'] = 0  
-
-    return photo_ready, gp_final
-
-
-
-# Plot Alerts for Objects in the Training set
-def plot_df(data_df, nb_max=10):
-    data_df = data_df.sort_values('file')
-    data_df = data_df.drop_duplicates(subset='name', keep='last')
-    data_df = data_df.sample(frac=1).reset_index(drop=True)
-
-    nb = len(data_df)
-    if nb_max < nb:
-        nb = nb_max
-
-    for i in range(nb):
-        obj_id = data_df.iloc[i]['name']
-        alerte = int(data_df.iloc[i]['file'].split('_')[-1].split('.')[0])
-        type_obj = data_df.iloc[i][step]
-        plot_photometry(obj_id, alerte=None, type_obj=type_obj)
+#def plot_photometry(obj_id, alerte=None, type_obj=None):
+#    df_bts = pd.read_csv('obj_type_steps.csv')
+#    base_path = '(aj)data_all/'
+#    photo_df, metadata_df, _ = PhotometryProcessor.process_csv(obj_id, df_bts, base_path), *AlertProcessor.get_process_alerts(obj_id, base_path)
+#    photo_df, metadata_df = photo_df.sort_values(by='jd'), metadata_df.sort_values(by='jd')
+#    photo_df = PhotometryProcessor.add_metadata_to_photometry(photo_df, metadata_df)
+#    photo_df = DataPreprocessor.convert_photometry(photo_df)
+#
+#    max_mjd = min(photo_df['mjd'].max(), 90)
+#    photo_ready = photo_df[photo_df['mjd'] <= max_mjd]
+#    metadata_df = metadata_df[metadata_df['jd'] <= photo_ready['jd'].max()]
+#
+#
+#    kernel = pickle.load(open('kernel.pkl', 'rb'))
+#    gp_final = gp.process_gaussian(photo_ready, kernel=kernel, number_gp=200)
+#
+#    for i, jd in enumerate(metadata_df['jd'], start=1):
+#        photo_ready.loc[photo_ready['jd'] == jd, 'alert_num'] = i
+#
+#    if 'flux_ztfi' not in gp_final.columns:
+#        gp_final['flux_ztfi'] = 0
+#        gp_final['flux_error_ztfi'] = 0
+#
+#    if 'flux_ztfg' not in gp_final.columns:
+#        gp_final['flux_ztfg'] = 0
+#        gp_final['flux_error_ztfg'] = 0
+#
+#    if 'flux_ztfr' not in gp_final.columns:
+#        gp_final['flux_ztfr'] = 0
+#        gp_final['flux_error_ztfr'] = 0  
+#
+#    return photo_ready, gp_final
+#
 
 
 # Plot Model Accuracy & Losses
-def plot_history(history):
-    if not isinstance(history, dict):
-        history = history.history
-    fig = sp.make_subplots(rows=1, cols=2, subplot_titles=('Model accuracy', 'Model loss'), shared_xaxes=True)
-    # Accuracy
-    fig.add_trace(go.Scatter(y=history['accuracy'], mode='lines', name='Train Accuracy'), row=1, col=1)
-    fig.add_trace(go.Scatter(y=history['val_accuracy'], mode='lines', name='Validation Accuracy'), row=1, col=1)
-    # Losses
-    fig.add_trace(go.Scatter(y=history['loss'], mode='lines', name='Train Loss'), row=1, col=2)
-    fig.add_trace(go.Scatter(y=history['val_loss'], mode='lines', name='Validation Loss'), row=1, col=2)
-    fig.update_xaxes(title_text='Epoch', row=1, col=1)
-    fig.update_xaxes(title_text='Epoch', row=1, col=2)
-    fig.update_yaxes(title_text='Accuracy', row=1, col=1)
-    fig.update_yaxes(title_text='Loss', row=1, col=2)
-    fig.update_layout(title='Training History', height=400, width=700, showlegend=True)
-    fig.show()
-
-# Plot ROC Curve
-def plot_roc(y_true, y_pred):
-    fpr, tpr, thresholds = roc_curve(y_true, y_pred)
-    roc_auc = auc(fpr, tpr)
-    plt.figure(figsize=(8, 6))
-    plt.plot(fpr, tpr, color='darkorange', lw=2, label='ROC curve (AUC = %0.2f)' % roc_auc)
-    plt.plot([0, 1], [0, 1], color='navy', lw=2, linestyle='--')
-    plt.xlim([0.0, 1.0]) ; plt.ylim([0.0, 1.05])
-    plt.xlabel('False Positive Rate') ; plt.ylabel('True Positive Rate')
-    plt.title('Receiver Operating Characteristic (ROC)')
-    plt.legend(loc="lower right")
-    plt.show()
-
-# Plot Confusion Matrix
-def plot_confusion_matrix(y_true, y_pred_max, labels):
-    cm = confusion_matrix(y_true, y_pred_max)
-    plt.figure(figsize=(10, 8))
-    sns.heatmap(cm, annot=True, fmt='d', cmap='Greens', xticklabels=['Not SN', 'SN'], yticklabels=['Not SN', 'SN'])
-    plt.xticks(rotation=0) ; plt.yticks(rotation=0)
-    plt.xlabel('Predicted Type', labelpad=30, fontsize=12)
-    plt.ylabel('Actual Type', labelpad=28, fontsize=12)
-    plt.title('Confusion Matrix', fontsize=14, pad=10)
-    plt.show()
+#def plot_history(history):
+#    if not isinstance(history, dict):
+#        history = history.history
+#    fig = sp.make_subplots(rows=1, cols=2, subplot_titles=('Model accuracy', 'Model loss'), shared_xaxes=True)
+#    # Accuracy
+#    fig.add_trace(go.Scatter(y=history['accuracy'], mode='lines', name='Train Accuracy'), row=1, col=1)
+#    fig.add_trace(go.Scatter(y=history['val_accuracy'], mode='lines', name='Validation Accuracy'), row=1, col=1)
+#    # Losses
+#    fig.add_trace(go.Scatter(y=history['loss'], mode='lines', name='Train Loss'), row=1, col=2)
+#    fig.add_trace(go.Scatter(y=history['val_loss'], mode='lines', name='Validation Loss'), row=1, col=2)
+#    fig.update_xaxes(title_text='Epoch', row=1, col=1)
+#    fig.update_xaxes(title_text='Epoch', row=1, col=2)
+#    fig.update_yaxes(title_text='Accuracy', row=1, col=1)
+#    fig.update_yaxes(title_text='Loss', row=1, col=2)
+#    fig.update_layout(title='Training History', height=400, width=700, showlegend=True)
+#    fig.show()
+#
+## Plot ROC Curve
+#def plot_roc(y_true, y_pred):
+#    fpr, tpr, thresholds = roc_curve(y_true, y_pred)
+#    roc_auc = auc(fpr, tpr)
+#    plt.figure(figsize=(8, 6))
+#    plt.plot(fpr, tpr, color='darkorange', lw=2, label='ROC curve (AUC = %0.2f)' % roc_auc)
+#    plt.plot([0, 1], [0, 1], color='navy', lw=2, linestyle='--')
+#    plt.xlim([0.0, 1.0]) ; plt.ylim([0.0, 1.05])
+#    plt.xlabel('False Positive Rate') ; plt.ylabel('True Positive Rate')
+#    plt.title('Receiver Operating Characteristic (ROC)')
+#    plt.legend(loc="lower right")
+#    plt.show()
+#
+## Plot Confusion Matrix
+#def plot_confusion_matrix(y_true, y_pred_max, labels):
+#    cm = confusion_matrix(y_true, y_pred_max)
+#    plt.figure(figsize=(10, 8))
+#    sns.heatmap(cm, annot=True, fmt='d', cmap='Greens', xticklabels=['Not SN', 'SN'], yticklabels=['Not SN', 'SN'])
+#    plt.xticks(rotation=0) ; plt.yticks(rotation=0)
+#    plt.xlabel('Predicted Type', labelpad=30, fontsize=12)
+#    plt.ylabel('Actual Type', labelpad=28, fontsize=12)
+#    plt.title('Confusion Matrix', fontsize=14, pad=10)
+#    plt.show()
 
 # Plot Confusion Matrix, ROC together:
 def plot_pred_set(y_true, y_pred_max, labels):
