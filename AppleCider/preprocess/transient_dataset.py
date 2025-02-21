@@ -53,17 +53,20 @@ class TransientDataset():
                 alert_indices = list(range(len(metadata_df) // 2, len(metadata_df)))
                 
                 if len(alert_indices) > 3:
-                    alert_indices = np.round(np.linspace(len(metadata_df) // 2, len(metadata_df) - 1, 5)).astype(int)
+                    alert_indices = np.round(np.linspace(len(metadata_df) // 2, len(metadata_df) - 1, 10)).astype(int)
                 
                 ## preventing 'photo_ready is None' before it can happen and gives us photometry filled with zeros
                 if all(alert == 0 for alert in alert_indices):
                     if len(photo_df) <= 1:
-                        print(f"Failed alert index slice. {obj_id}: {len(photo_df)} point in light curve, alert index 0, when mjd <= {max_mjd}.")
-             
+                        print(f"Failed alert index slice. No alert saved for {obj_id}: {len(photo_df)} point in light curve.")
                 else:
                     
                     for i in alert_indices:
                         photo_ready = DataPreprocessor.cut_photometry(photo_df, metadata_df, i, max_mjd)
+                        ## skip saving current alert if photometry only has 1 point 
+                        if len(photo_ready) <=1:
+                            print(f"{obj_id} failed min photometry requirements. skip alert at index {i}!")
+                            continue
                         if photo_ready is None:
                             print(f"{obj_id} FAILED. BREAK!")
                             break

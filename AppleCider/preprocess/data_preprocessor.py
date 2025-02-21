@@ -283,11 +283,14 @@ class DataSorter:
         test_df_TDE = df.query(f'type=={TDE_}').sample(n=8) ; test_df_SNIb = df.query(f'type=={SN__}').sample(n=8) ; test_df_SNIIb = df.query(f'type=={SN_}').sample(n=8)
         test_data_df = pd.concat([test_df_total, test_df_random, test_df_TDE, test_df_SNIb, test_df_SNIIb])
         test_data_df = test_data_df.drop_duplicates('obj_id')
-    
+
         ## TRAIN
         train_data_df = DataSorter.remove_test_data(df, test_data_df)
         train_data_df = train_data_df.drop_duplicates('obj_id')
         train_data_df.reset_index(drop=True)
+        
+        print("train: ",len(train_data_df), "objects")
+        print("test: ",len(test_data_df), "objects")
     
         return test_data_df.reset_index(drop=True),  train_data_df.reset_index(drop=True)
     
