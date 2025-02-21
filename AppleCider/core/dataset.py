@@ -9,6 +9,11 @@ from sklearn.model_selection import train_test_split
 from scipy.interpolate import interp1d
 from scipy import stats
 
+import pickle
+from torch import nn
+
+
+
 
 class DataGenerator(Dataset):
 
@@ -22,70 +27,49 @@ class DataGenerator(Dataset):
         self.classes = config['classes']
         self.max_samples = config['max_samples']
         self.scaler = joblib.load(config['scaler_path'])
-        #self.scaler = config['scaler_path']
-     
-        # 2/10: save files 
-        #self.train_files = config['save_train_files']
-        #self.val_files = config['save_val_files']
+        
+        self.train_files = config['train_files_path']
+        self.val_files = config['val_files_path']
 
         if self.split == 'train' or self.split == 'val':
             self.df = pd.read_csv(config['df_path'])
         else:
             # TODO Fix later
             raise ValueError('Split must be either train or val. FIX THIS LATER')
-
-        self._filter_classes()
-        self._limit_samples()
+        
         self._split()
 
-        # create convenient mapping for label from str to int and from int to str
+        ## create convenient mapping for label from str to int and from int to str
         if config['group_labels']:
             self.id2target = {0: 'SN I', 1: 'SN II', 2: 'Cataclysmic', 3: 'AGN', 4: 'Tidal Disruption Event'}
             self.target2id = {'SN Ia': 0 , 'SN Ic': 0,  'SN Ib': 0, 'SN II': 1, 'SN IIP': 1, 'SN IIn': 1, 'SN IIb': 1, 'Cataclysmic': 2, 'AGN': 3, 'Tidal Disruption Event': 4}
-        
         else:
             self.id2target = {i: x for i, x in enumerate(sorted(self.df[self.step].unique()))}
             self.target2id = {v: k for k, v in self.id2target.items()}
 
         self.num_classes = len(self.id2target)
 
-    def _filter_classes(self):
-        """ filter classes if necessary """
-        if self.classes:
-            print(f'Left only with classes: {self.classes}')
-            self.df = self.df[self.df[self.step].isin(self.classes)]
-
-    def _limit_samples(self):
-        """ downsample samples for each class if max_samples is set """
-        if self.max_samples:
-            for cls in self.df[self.step].unique():
-                df_cls = self.df[self.df[self.step] == cls]
-                df_not_cls = self.df[self.df[self.step] != cls]
-
-                if len(df_cls) > self.max_samples:
-                    print(f'Down sampled class {cls} from {len(df_cls)} to {self.max_samples}')
-                    df_cls_down = df_cls.sample(n=self.max_samples, random_state=self.random_seed)
-                    self.df = pd.concat([df_not_cls, df_cls_down], ignore_index=True)
-
     def _split(self):
-        """ split into train and val based on name """
-        unique_names = self.df['name'].unique()
-        train_names, val_names = train_test_split(unique_names, test_size=0.2, random_state=self.random_seed)
+        """ sort train, val based on alert names in already created pkl from preprocessing steps """
 
         if self.split == 'train':
-            self.df = self.df[self.df['name'].isin(train_names)]
-            # save train file names
-            #joblib.dump(train_names, self.train_files)
+            with open(self.train_files, 'rb') as file:
+               train_files = pickle.load(file)            
+            self.df = self.df[self.df['file'].isin(train_files)]
+        
+        elif self.split == 'val':
+            with open(self.val_files, 'rb') as file:
+               val_files = pickle.load(file) 
+            self.df = self.df[self.df['file'].isin(val_files)]
         else:
-            self.df = self.df[self.df['name'].isin(val_names)]
-            # save val file names
-            #joblib.dump(val_names, self.val_files)
+            print("uhhhh hello??? where are your files")
 
     def __len__(self):
         return len(self.df)
 
     def __getitem__(self, index):
         """ load processed object alerts to get photometry, metadata, images, spectra """
+        
         el = self.df.iloc[index]
         target = self.target2id[el[self.step]]
 
@@ -100,13 +84,26 @@ class DataGenerator(Dataset):
         images = np.transpose(images, (2, 0, 1))
         images = images.astype(np.float32)
 
-        # TODO add the last channel back
-        ## removed mjd, flux error in pre-processing steps 
+        ## photometry formating: mjd, ztf-g, ztf-r, ztf-i
         photometry = sample['photometry']
+        photometry_tensor = torch.tensor(photometry, dtype=torch.float32)
+        photo_len = len(photometry_tensor)
+        max_photo = 225                      ## maximum photometry length from an alert
+        add_dim = max_photo - photo_len
+
+        ## padded photometry so all photometry the same length
+        if photo_len <= 225:
+            photometry_padded = nn.ConstantPad1d((0, 0, 0, add_dim), 0)(photometry_tensor)
+        else:
+            # check max photo length from alerts again! 
+            print("too much photometry. try again!", photo_len) 
         
-        # TODO create mask dynamically
-        photometry_mask = torch.ones(len(photometry))
+        photometry_mask = torch.ones((photometry_padded.size(0), photometry_padded.size(1)))
         
         spectra = sample['spectra']
+        
+        metadata = torch.tensor(metadata)
+        spectra = torch.tensor(spectra)
+        images = torch.tensor(images)
 
-        return photometry, photometry_mask, metadata, images, spectra, target
+        return photometry_padded, photometry_mask, metadata, images, spectra, target
