@@ -14,24 +14,7 @@ from AppleCider.util.early_stopping import EarlyStopping
 
 
 
-# uhhhhhhhhh
-def my_collate(batch):
-    
-    """ photometry, photometry_mask, metadata, images, spectra, labels = train_dataloader)"""
-    
-    # dataset[:5] = photometry, photo_mask, metadata, images, spectra = dataset[:5]
-    photometry = [item[0] for item in batch]
-    photometry_mask = [item[1] for item in batch]
-    
-    metadata = [item[2] for item in batch]
-    images = [item[3] for item in batch]
-    
-    spectra = [item[4] for item in batch]
-    
-    #dataset[5] = label
-    target = [item[5] for item in batch]
-    target = torch.LongTensor(target)
-    return [photometry, photometry_mask, metadata, images, spectra, target]
+
 
 
 class Trainer:
@@ -144,15 +127,6 @@ class Trainer:
     def train_epoch(self, train_dataloader):
         self.model.train()
         self.zero_stats()
-        
-        # error
-        # data = fetcher.fetch(index)
-        # return self.collate_fn(data)
-        # return collate(batch, collate_fn_map=default_collate_fn_map)
-        # return [collate(samples, collate_fn_map=collate_fn_map) for samples in transposed]
-        # return collate_fn_map[elem_type](batch, collate_fn_map=collate_fn_map)
-        # return collate([torch.as_tensor(b) for b in batch], collate_fn_map=collate_fn_map)
-        # return collate_fn_map[elem_type](batch, collate_fn_map=collate_fn_map)
         
         for photometry, photometry_mask, metadata, images, spectra, labels in tqdm(train_dataloader):
             photometry, photometry_mask = photometry.to(self.device), photometry_mask.to(self.device)
