@@ -20,7 +20,6 @@ from AppleCider.core.trainer import Trainer
 CLASSES = ['SN Ia', 'SN II', 'SN IIP', 'Cataclysmic', 'AGN', 'SN IIn', 'SN Ic', 'SN Ib', 'SN IIb', 'Tidal Disruption Event']
 
 
-
 def collate_func(data):
     photometry, photometry_mask, metadata, images, spectra, labels = zip(*data)
     
@@ -108,8 +107,8 @@ def get_config(trial):
         'freeze': False,
 
         # Data General
-        'preprocessed_path': '/Users/junell/Documents/AppleCider_Data/sedm_data_train_raw/',
-        'df_path': '/Users/junell/Documents/AppleCider_Data/data_train_raw.csv',
+        'preprocessed_path': '/Users/junell/Documents/AppleCider_Data/data_train/',
+        'df_path': '/Users/junell/Documents/AppleCider/data_train.csv',
         'step': 'type',
         'classes': CLASSES,
         'group_labels': False,
@@ -139,7 +138,7 @@ def get_config(trial):
         'm_dropout': 0.2,
         # TODO use actual column names
         'meta_cols': range(10),
-        'scaler_path': '/Users/junell/Documents/AppleCider/AppleCider/core/scaler_raw.pkl',
+        'scaler_path': '/Users/junell/Documents/AppleCider/AppleCider/core/scaler.pkl',
 
         # Image Model
         'input_channels': 3,

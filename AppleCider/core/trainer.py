@@ -13,10 +13,6 @@ from AppleCider.util.early_stopping import EarlyStopping
 
 
 
-
-
-
-
 class Trainer:
     def __init__(self, model, optimizer, scheduler, warmup_scheduler, criterion, device, config, trial=None):
         self.model = model
