@@ -17,28 +17,23 @@ from AppleCider.core.model import Informer, GalSpecNet, MetaModel, BTSModel, Ast
 from AppleCider.core.loss import CLIPLoss
 from AppleCider.core.trainer import Trainer
 
-CLASSES = ['SN Ia', 'SN Ia-91T', 'SN II', 'SN IIP', 'Cataclysmic', 'AGN', 'SN IIn', 'SN Ic', 'SN Ib', 'SN IIb', 'Tidal Disruption Event']
+CLASSES = ['SN Ia', 'SN II', 'SN IIP', 'Cataclysmic', 'AGN', 'SN IIn', 'SN Ic', 'SN Ib', 'SN IIb', 'Tidal Disruption Event']
 
 
 
-# uhhhhhhhhh
-def my_collate(batch):
+def collate_func(data):
+    photometry, photometry_mask, metadata, images, spectra, labels = zip(*data)
     
-    """ photometry, photometry_mask, metadata, images, spectra, labels = train_dataloader)"""
+    labels = torch.tensor(labels, dtype=torch.long)
     
-    # dataset[:5] = photometry, photo_mask, metadata, images, spectra = dataset[:5]
-    photometry = [item[0] for item in batch]
-    photometry_mask = [item[1] for item in batch]
+    photometry = torch.stack(photometry)
+    photometry_mask =  torch.stack(photometry_mask)
+    metadata = torch.stack(metadata)
+    images = torch.stack(images)
+    spectra = torch.stack(spectra)
     
-    metadata = [item[2] for item in batch]
-    images = [item[3] for item in batch]
-    
-    spectra = [item[4] for item in batch]
-    
-    #dataset[5] = label
-    target = [item[5] for item in batch]
-    target = torch.LongTensor(target)
-    return [photometry, photometry_mask, metadata, images, spectra, target]
+    # works like this:
+    return photometry, photometry_mask, metadata, images, spectra, labels
 
 
 def get_model(config):
