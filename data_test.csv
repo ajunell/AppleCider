@@ -1,4 +1,6 @@
 name,file,type
+ZTF17aaaobyl,ZTF17aaaobyl_alert_2.npy,Cataclysmic
+ZTF17aaaobyl,ZTF17aaaobyl_alert_3.npy,Cataclysmic
 ZTF18aaavffc,ZTF18aaavffc_alert_1.npy,AGN
 ZTF18aabiwhf,ZTF18aabiwhf_alert_4.npy,Cataclysmic
 ZTF18aabiwhf,ZTF18aabiwhf_alert_5.npy,Cataclysmic
@@ -13,24 +15,51 @@ ZTF18aachojf,ZTF18aachojf_alert_1.npy,AGN
 ZTF18aadnqwz,ZTF18aadnqwz_alert_10.npy,AGN
 ZTF18aadnqwz,ZTF18aadnqwz_alert_5.npy,AGN
 ZTF18aadnqwz,ZTF18aadnqwz_alert_6.npy,AGN
+ZTF18aadnqwz,ZTF18aadnqwz_alert_7.npy,AGN
 ZTF18aadnqwz,ZTF18aadnqwz_alert_8.npy,AGN
 ZTF18aadnqwz,ZTF18aadnqwz_alert_9.npy,AGN
+ZTF18aaexyql,ZTF18aaexyql_alert_4.npy,SN Ib
+ZTF18aaexyql,ZTF18aaexyql_alert_5.npy,SN Ib
+ZTF18aaexyql,ZTF18aaexyql_alert_6.npy,SN Ib
+ZTF18aaexyql,ZTF18aaexyql_alert_7.npy,SN Ib
+ZTF18aagrdcs,ZTF18aagrdcs_alert_14.npy,SN Ib
+ZTF18aagrdcs,ZTF18aagrdcs_alert_15.npy,SN Ib
+ZTF18aagrdcs,ZTF18aagrdcs_alert_17.npy,SN Ib
+ZTF18aagrdcs,ZTF18aagrdcs_alert_18.npy,SN Ib
+ZTF18aagrdcs,ZTF18aagrdcs_alert_20.npy,SN Ib
+ZTF18aagrdcs,ZTF18aagrdcs_alert_21.npy,SN Ib
+ZTF18aagrdcs,ZTF18aagrdcs_alert_23.npy,SN Ib
+ZTF18aagrdcs,ZTF18aagrdcs_alert_24.npy,SN Ib
+ZTF18aagrdcs,ZTF18aagrdcs_alert_26.npy,SN Ib
+ZTF18aagrdcs,ZTF18aagrdcs_alert_27.npy,SN Ib
+ZTF18aahoprl,ZTF18aahoprl_alert_1.npy,AGN
+ZTF18aahoprl,ZTF18aahoprl_alert_2.npy,AGN
 ZTF18aahshhp,ZTF18aahshhp_alert_1.npy,SN Ia
 ZTF18aahshhp,ZTF18aahshhp_alert_2.npy,SN Ia
 ZTF18aaojsvk,ZTF18aaojsvk_alert_2.npy,AGN
 ZTF18aaojsvk,ZTF18aaojsvk_alert_3.npy,AGN
 ZTF18aatlfus,ZTF18aatlfus_alert_16.npy,SN IIP
+ZTF18aatlfus,ZTF18aatlfus_alert_18.npy,SN IIP
 ZTF18aatlfus,ZTF18aatlfus_alert_20.npy,SN IIP
-ZTF18aatlfus,ZTF18aatlfus_alert_24.npy,SN IIP
+ZTF18aatlfus,ZTF18aatlfus_alert_21.npy,SN IIP
+ZTF18aatlfus,ZTF18aatlfus_alert_23.npy,SN IIP
+ZTF18aatlfus,ZTF18aatlfus_alert_25.npy,SN IIP
+ZTF18aatlfus,ZTF18aatlfus_alert_27.npy,SN IIP
 ZTF18aatlfus,ZTF18aatlfus_alert_28.npy,SN IIP
+ZTF18aatlfus,ZTF18aatlfus_alert_30.npy,SN IIP
 ZTF18aatlfus,ZTF18aatlfus_alert_32.npy,SN IIP
 ZTF18aatycgd,ZTF18aatycgd_alert_3.npy,Cataclysmic
 ZTF18aatycgd,ZTF18aatycgd_alert_4.npy,Cataclysmic
 ZTF18aatycgd,ZTF18aatycgd_alert_5.npy,Cataclysmic
 ZTF18aatyqds,ZTF18aatyqds_alert_39.npy,SN IIP
-ZTF18aatyqds,ZTF18aatyqds_alert_49.npy,SN IIP
-ZTF18aatyqds,ZTF18aatyqds_alert_58.npy,SN IIP
-ZTF18aatyqds,ZTF18aatyqds_alert_68.npy,SN IIP
+ZTF18aatyqds,ZTF18aatyqds_alert_43.npy,SN IIP
+ZTF18aatyqds,ZTF18aatyqds_alert_48.npy,SN IIP
+ZTF18aatyqds,ZTF18aatyqds_alert_52.npy,SN IIP
+ZTF18aatyqds,ZTF18aatyqds_alert_56.npy,SN IIP
+ZTF18aatyqds,ZTF18aatyqds_alert_61.npy,SN IIP
+ZTF18aatyqds,ZTF18aatyqds_alert_65.npy,SN IIP
+ZTF18aatyqds,ZTF18aatyqds_alert_69.npy,SN IIP
+ZTF18aatyqds,ZTF18aatyqds_alert_74.npy,SN IIP
 ZTF18aatyqds,ZTF18aatyqds_alert_78.npy,SN IIP
 ZTF18aauvmnq,ZTF18aauvmnq_alert_1.npy,SN Ia
 ZTF18aawpcel,ZTF18aawpcel_alert_5.npy,SN Ia
@@ -39,82 +68,160 @@ ZTF18aawpcel,ZTF18aawpcel_alert_7.npy,SN Ia
 ZTF18aawpcel,ZTF18aawpcel_alert_8.npy,SN Ia
 ZTF18aawpcel,ZTF18aawpcel_alert_9.npy,SN Ia
 ZTF18aawyjjq,ZTF18aawyjjq_alert_15.npy,SN IIP
-ZTF18aawyjjq,ZTF18aawyjjq_alert_19.npy,SN IIP
+ZTF18aawyjjq,ZTF18aawyjjq_alert_17.npy,SN IIP
+ZTF18aawyjjq,ZTF18aawyjjq_alert_18.npy,SN IIP
+ZTF18aawyjjq,ZTF18aawyjjq_alert_20.npy,SN IIP
 ZTF18aawyjjq,ZTF18aawyjjq_alert_22.npy,SN IIP
-ZTF18aawyjjq,ZTF18aawyjjq_alert_26.npy,SN IIP
+ZTF18aawyjjq,ZTF18aawyjjq_alert_23.npy,SN IIP
+ZTF18aawyjjq,ZTF18aawyjjq_alert_25.npy,SN IIP
+ZTF18aawyjjq,ZTF18aawyjjq_alert_27.npy,SN IIP
+ZTF18aawyjjq,ZTF18aawyjjq_alert_28.npy,SN IIP
 ZTF18aawyjjq,ZTF18aawyjjq_alert_30.npy,SN IIP
+ZTF18aaymybb,ZTF18aaymybb_alert_10.npy,AGN
 ZTF18aaymybb,ZTF18aaymybb_alert_11.npy,AGN
+ZTF18aaymybb,ZTF18aaymybb_alert_12.npy,AGN
+ZTF18aaymybb,ZTF18aaymybb_alert_13.npy,AGN
 ZTF18aaymybb,ZTF18aaymybb_alert_14.npy,AGN
+ZTF18aaymybb,ZTF18aaymybb_alert_15.npy,AGN
 ZTF18aaymybb,ZTF18aaymybb_alert_16.npy,AGN
+ZTF18aaymybb,ZTF18aaymybb_alert_17.npy,AGN
 ZTF18aaymybb,ZTF18aaymybb_alert_18.npy,AGN
 ZTF18aaymybb,ZTF18aaymybb_alert_9.npy,AGN
 ZTF18aazhkfk,ZTF18aazhkfk_alert_1.npy,Cataclysmic
 ZTF18aazhkfk,ZTF18aazhkfk_alert_2.npy,Cataclysmic
 ZTF18aazrdpr,ZTF18aazrdpr_alert_14.npy,Cataclysmic
-ZTF18aazrdpr,ZTF18aazrdpr_alert_18.npy,Cataclysmic
-ZTF18aazrdpr,ZTF18aazrdpr_alert_21.npy,Cataclysmic
-ZTF18aazrdpr,ZTF18aazrdpr_alert_24.npy,Cataclysmic
+ZTF18aazrdpr,ZTF18aazrdpr_alert_16.npy,Cataclysmic
+ZTF18aazrdpr,ZTF18aazrdpr_alert_17.npy,Cataclysmic
+ZTF18aazrdpr,ZTF18aazrdpr_alert_19.npy,Cataclysmic
+ZTF18aazrdpr,ZTF18aazrdpr_alert_20.npy,Cataclysmic
+ZTF18aazrdpr,ZTF18aazrdpr_alert_22.npy,Cataclysmic
+ZTF18aazrdpr,ZTF18aazrdpr_alert_23.npy,Cataclysmic
+ZTF18aazrdpr,ZTF18aazrdpr_alert_25.npy,Cataclysmic
+ZTF18aazrdpr,ZTF18aazrdpr_alert_26.npy,Cataclysmic
 ZTF18aazrdpr,ZTF18aazrdpr_alert_28.npy,Cataclysmic
 ZTF18abbukfd,ZTF18abbukfd_alert_1.npy,AGN
+ZTF18abcbvxc,ZTF18abcbvxc_alert_10.npy,AGN
+ZTF18abcbvxc,ZTF18abcbvxc_alert_11.npy,AGN
+ZTF18abcbvxc,ZTF18abcbvxc_alert_12.npy,AGN
+ZTF18abcbvxc,ZTF18abcbvxc_alert_13.npy,AGN
+ZTF18abcbvxc,ZTF18abcbvxc_alert_14.npy,AGN
+ZTF18abcbvxc,ZTF18abcbvxc_alert_16.npy,AGN
+ZTF18abcbvxc,ZTF18abcbvxc_alert_17.npy,AGN
+ZTF18abcbvxc,ZTF18abcbvxc_alert_18.npy,AGN
+ZTF18abcbvxc,ZTF18abcbvxc_alert_19.npy,AGN
+ZTF18abcbvxc,ZTF18abcbvxc_alert_20.npy,AGN
 ZTF18abcezmh,ZTF18abcezmh_alert_26.npy,SN IIP
+ZTF18abcezmh,ZTF18abcezmh_alert_29.npy,SN IIP
 ZTF18abcezmh,ZTF18abcezmh_alert_32.npy,SN IIP
-ZTF18abcezmh,ZTF18abcezmh_alert_38.npy,SN IIP
+ZTF18abcezmh,ZTF18abcezmh_alert_34.npy,SN IIP
+ZTF18abcezmh,ZTF18abcezmh_alert_37.npy,SN IIP
+ZTF18abcezmh,ZTF18abcezmh_alert_40.npy,SN IIP
+ZTF18abcezmh,ZTF18abcezmh_alert_43.npy,SN IIP
 ZTF18abcezmh,ZTF18abcezmh_alert_45.npy,SN IIP
+ZTF18abcezmh,ZTF18abcezmh_alert_48.npy,SN IIP
 ZTF18abcezmh,ZTF18abcezmh_alert_51.npy,SN IIP
 ZTF18abcfdzu,ZTF18abcfdzu_alert_28.npy,SN IIn
-ZTF18abcfdzu,ZTF18abcfdzu_alert_35.npy,SN IIn
-ZTF18abcfdzu,ZTF18abcfdzu_alert_42.npy,SN IIn
-ZTF18abcfdzu,ZTF18abcfdzu_alert_49.npy,SN IIn
+ZTF18abcfdzu,ZTF18abcfdzu_alert_31.npy,SN IIn
+ZTF18abcfdzu,ZTF18abcfdzu_alert_34.npy,SN IIn
+ZTF18abcfdzu,ZTF18abcfdzu_alert_37.npy,SN IIn
+ZTF18abcfdzu,ZTF18abcfdzu_alert_40.npy,SN IIn
+ZTF18abcfdzu,ZTF18abcfdzu_alert_44.npy,SN IIn
+ZTF18abcfdzu,ZTF18abcfdzu_alert_47.npy,SN IIn
+ZTF18abcfdzu,ZTF18abcfdzu_alert_50.npy,SN IIn
+ZTF18abcfdzu,ZTF18abcfdzu_alert_53.npy,SN IIn
 ZTF18abcfdzu,ZTF18abcfdzu_alert_56.npy,SN IIn
 ZTF18abcpmwh,ZTF18abcpmwh_alert_3.npy,SN IIP
 ZTF18abcpmwh,ZTF18abcpmwh_alert_4.npy,SN IIP
 ZTF18abcpmwh,ZTF18abcpmwh_alert_5.npy,SN IIP
 ZTF18abddrhd,ZTF18abddrhd_alert_10.npy,SN Ia
+ZTF18abddrhd,ZTF18abddrhd_alert_11.npy,SN Ia
 ZTF18abddrhd,ZTF18abddrhd_alert_12.npy,SN Ia
 ZTF18abddrhd,ZTF18abddrhd_alert_13.npy,SN Ia
 ZTF18abddrhd,ZTF18abddrhd_alert_7.npy,SN Ia
 ZTF18abddrhd,ZTF18abddrhd_alert_8.npy,SN Ia
+ZTF18abddrhd,ZTF18abddrhd_alert_9.npy,SN Ia
+ZTF18abdkkwa,ZTF18abdkkwa_alert_20.npy,SN Ic
+ZTF18abdkkwa,ZTF18abdkkwa_alert_22.npy,SN Ic
+ZTF18abdkkwa,ZTF18abdkkwa_alert_24.npy,SN Ic
+ZTF18abdkkwa,ZTF18abdkkwa_alert_26.npy,SN Ic
+ZTF18abdkkwa,ZTF18abdkkwa_alert_28.npy,SN Ic
+ZTF18abdkkwa,ZTF18abdkkwa_alert_31.npy,SN Ic
+ZTF18abdkkwa,ZTF18abdkkwa_alert_33.npy,SN Ic
+ZTF18abdkkwa,ZTF18abdkkwa_alert_35.npy,SN Ic
+ZTF18abdkkwa,ZTF18abdkkwa_alert_37.npy,SN Ic
+ZTF18abdkkwa,ZTF18abdkkwa_alert_39.npy,SN Ic
 ZTF18abgkjff,ZTF18abgkjff_alert_1.npy,SN Ia
 ZTF18abhqaxd,ZTF18abhqaxd_alert_10.npy,Cataclysmic
+ZTF18abhqaxd,ZTF18abhqaxd_alert_11.npy,Cataclysmic
 ZTF18abhqaxd,ZTF18abhqaxd_alert_12.npy,Cataclysmic
 ZTF18abhqaxd,ZTF18abhqaxd_alert_13.npy,Cataclysmic
+ZTF18abhqaxd,ZTF18abhqaxd_alert_14.npy,Cataclysmic
 ZTF18abhqaxd,ZTF18abhqaxd_alert_15.npy,Cataclysmic
 ZTF18abhqaxd,ZTF18abhqaxd_alert_8.npy,Cataclysmic
+ZTF18abhqaxd,ZTF18abhqaxd_alert_9.npy,Cataclysmic
 ZTF18abjkryl,ZTF18abjkryl_alert_1.npy,SN IIP
 ZTF18abjkryl,ZTF18abjkryl_alert_2.npy,SN IIP
+ZTF18abjrbza,ZTF18abjrbza_alert_1.npy,SN Ic
 ZTF18abjsybd,ZTF18abjsybd_alert_3.npy,Cataclysmic
 ZTF18abjsybd,ZTF18abjsybd_alert_4.npy,Cataclysmic
 ZTF18abjsybd,ZTF18abjsybd_alert_5.npy,Cataclysmic
 ZTF18abjzaic,ZTF18abjzaic_alert_13.npy,Cataclysmic
+ZTF18abjzaic,ZTF18abjzaic_alert_14.npy,Cataclysmic
 ZTF18abjzaic,ZTF18abjzaic_alert_16.npy,Cataclysmic
+ZTF18abjzaic,ZTF18abjzaic_alert_17.npy,Cataclysmic
+ZTF18abjzaic,ZTF18abjzaic_alert_19.npy,Cataclysmic
 ZTF18abjzaic,ZTF18abjzaic_alert_20.npy,Cataclysmic
+ZTF18abjzaic,ZTF18abjzaic_alert_22.npy,Cataclysmic
 ZTF18abjzaic,ZTF18abjzaic_alert_23.npy,Cataclysmic
+ZTF18abjzaic,ZTF18abjzaic_alert_25.npy,Cataclysmic
 ZTF18abjzaic,ZTF18abjzaic_alert_26.npy,Cataclysmic
 ZTF18ablvjom,ZTF18ablvjom_alert_1.npy,AGN
 ZTF18ablwhde,ZTF18ablwhde_alert_1.npy,Cataclysmic
 ZTF18ablwhde,ZTF18ablwhde_alert_2.npy,Cataclysmic
 ZTF18ablwuyy,ZTF18ablwuyy_alert_2.npy,Cataclysmic
 ZTF18ablwuyy,ZTF18ablwuyy_alert_3.npy,Cataclysmic
+ZTF18abojrnv,ZTF18abojrnv_alert_3.npy,Cataclysmic
+ZTF18abojrnv,ZTF18abojrnv_alert_4.npy,Cataclysmic
+ZTF18abojrnv,ZTF18abojrnv_alert_5.npy,Cataclysmic
 ZTF18abqboud,ZTF18abqboud_alert_27.npy,Cataclysmic
-ZTF18abqboud,ZTF18abqboud_alert_34.npy,Cataclysmic
-ZTF18abqboud,ZTF18abqboud_alert_40.npy,Cataclysmic
-ZTF18abqboud,ZTF18abqboud_alert_46.npy,Cataclysmic
+ZTF18abqboud,ZTF18abqboud_alert_30.npy,Cataclysmic
+ZTF18abqboud,ZTF18abqboud_alert_33.npy,Cataclysmic
+ZTF18abqboud,ZTF18abqboud_alert_36.npy,Cataclysmic
+ZTF18abqboud,ZTF18abqboud_alert_39.npy,Cataclysmic
+ZTF18abqboud,ZTF18abqboud_alert_41.npy,Cataclysmic
+ZTF18abqboud,ZTF18abqboud_alert_44.npy,Cataclysmic
+ZTF18abqboud,ZTF18abqboud_alert_47.npy,Cataclysmic
+ZTF18abqboud,ZTF18abqboud_alert_50.npy,Cataclysmic
 ZTF18abqboud,ZTF18abqboud_alert_53.npy,Cataclysmic
 ZTF18absclsr,ZTF18absclsr_alert_2.npy,SN IIP
 ZTF18absclsr,ZTF18absclsr_alert_3.npy,SN IIP
 ZTF18abscyji,ZTF18abscyji_alert_2.npy,SN IIP
 ZTF18abscyji,ZTF18abscyji_alert_3.npy,SN IIP
 ZTF18abtfvsk,ZTF18abtfvsk_alert_12.npy,SN Ia
-ZTF18abtfvsk,ZTF18abtfvsk_alert_15.npy,SN Ia
+ZTF18abtfvsk,ZTF18abtfvsk_alert_13.npy,SN Ia
+ZTF18abtfvsk,ZTF18abtfvsk_alert_14.npy,SN Ia
+ZTF18abtfvsk,ZTF18abtfvsk_alert_16.npy,SN Ia
+ZTF18abtfvsk,ZTF18abtfvsk_alert_17.npy,SN Ia
 ZTF18abtfvsk,ZTF18abtfvsk_alert_18.npy,SN Ia
-ZTF18abtfvsk,ZTF18abtfvsk_alert_20.npy,SN Ia
+ZTF18abtfvsk,ZTF18abtfvsk_alert_19.npy,SN Ia
+ZTF18abtfvsk,ZTF18abtfvsk_alert_21.npy,SN Ia
+ZTF18abtfvsk,ZTF18abtfvsk_alert_22.npy,SN Ia
 ZTF18abtfvsk,ZTF18abtfvsk_alert_23.npy,SN Ia
+ZTF18abtosxg,ZTF18abtosxg_alert_3.npy,Cataclysmic
+ZTF18abtosxg,ZTF18abtosxg_alert_4.npy,Cataclysmic
+ZTF18abtosxg,ZTF18abtosxg_alert_5.npy,Cataclysmic
+ZTF18abtosxg,ZTF18abtosxg_alert_6.npy,Cataclysmic
 ZTF18abtvlxd,ZTF18abtvlxd_alert_2.npy,Cataclysmic
 ZTF18abtvlxd,ZTF18abtvlxd_alert_3.npy,Cataclysmic
 ZTF18abvkmgw,ZTF18abvkmgw_alert_11.npy,SN IIP
+ZTF18abvkmgw,ZTF18abvkmgw_alert_12.npy,SN IIP
+ZTF18abvkmgw,ZTF18abvkmgw_alert_13.npy,SN IIP
 ZTF18abvkmgw,ZTF18abvkmgw_alert_14.npy,SN IIP
-ZTF18abvkmgw,ZTF18abvkmgw_alert_16.npy,SN IIP
+ZTF18abvkmgw,ZTF18abvkmgw_alert_15.npy,SN IIP
+ZTF18abvkmgw,ZTF18abvkmgw_alert_17.npy,SN IIP
 ZTF18abvkmgw,ZTF18abvkmgw_alert_18.npy,SN IIP
+ZTF18abvkmgw,ZTF18abvkmgw_alert_19.npy,SN IIP
+ZTF18abvkmgw,ZTF18abvkmgw_alert_20.npy,SN IIP
 ZTF18abvkmgw,ZTF18abvkmgw_alert_21.npy,SN IIP
 ZTF18abvpiim,ZTF18abvpiim_alert_1.npy,Cataclysmic
 ZTF18abvpiim,ZTF18abvpiim_alert_2.npy,Cataclysmic
@@ -133,9 +240,21 @@ ZTF18abwjzpq,ZTF18abwjzpq_alert_11.npy,Cataclysmic
 ZTF18abwjzpq,ZTF18abwjzpq_alert_6.npy,Cataclysmic
 ZTF18abwjzpq,ZTF18abwjzpq_alert_7.npy,Cataclysmic
 ZTF18abwjzpq,ZTF18abwjzpq_alert_8.npy,Cataclysmic
+ZTF18abwjzpq,ZTF18abwjzpq_alert_9.npy,Cataclysmic
+ZTF18abwkrbl,ZTF18abwkrbl_alert_11.npy,SN IIb
+ZTF18abwkrbl,ZTF18abwkrbl_alert_12.npy,SN IIb
+ZTF18abwkrbl,ZTF18abwkrbl_alert_13.npy,SN IIb
+ZTF18abwkrbl,ZTF18abwkrbl_alert_15.npy,SN IIb
+ZTF18abwkrbl,ZTF18abwkrbl_alert_16.npy,SN IIb
+ZTF18abwkrbl,ZTF18abwkrbl_alert_17.npy,SN IIb
+ZTF18abwkrbl,ZTF18abwkrbl_alert_18.npy,SN IIb
+ZTF18abwkrbl,ZTF18abwkrbl_alert_20.npy,SN IIb
+ZTF18abwkrbl,ZTF18abwkrbl_alert_21.npy,SN IIb
+ZTF18abwkrbl,ZTF18abwkrbl_alert_22.npy,SN IIb
 ZTF18abxqemv,ZTF18abxqemv_alert_10.npy,SN IIP
 ZTF18abxqemv,ZTF18abxqemv_alert_5.npy,SN IIP
 ZTF18abxqemv,ZTF18abxqemv_alert_6.npy,SN IIP
+ZTF18abxqemv,ZTF18abxqemv_alert_7.npy,SN IIP
 ZTF18abxqemv,ZTF18abxqemv_alert_8.npy,SN IIP
 ZTF18abxqemv,ZTF18abxqemv_alert_9.npy,SN IIP
 ZTF18abygcwk,ZTF18abygcwk_alert_4.npy,Cataclysmic
@@ -143,24 +262,32 @@ ZTF18abygcwk,ZTF18abygcwk_alert_5.npy,Cataclysmic
 ZTF18abygcwk,ZTF18abygcwk_alert_6.npy,Cataclysmic
 ZTF18abygcwk,ZTF18abygcwk_alert_7.npy,Cataclysmic
 ZTF18abyvenk,ZTF18abyvenk_alert_15.npy,SN IIP
-ZTF18abyvenk,ZTF18abyvenk_alert_19.npy,SN IIP
+ZTF18abyvenk,ZTF18abyvenk_alert_17.npy,SN IIP
+ZTF18abyvenk,ZTF18abyvenk_alert_18.npy,SN IIP
+ZTF18abyvenk,ZTF18abyvenk_alert_20.npy,SN IIP
 ZTF18abyvenk,ZTF18abyvenk_alert_22.npy,SN IIP
-ZTF18abyvenk,ZTF18abyvenk_alert_26.npy,SN IIP
+ZTF18abyvenk,ZTF18abyvenk_alert_23.npy,SN IIP
+ZTF18abyvenk,ZTF18abyvenk_alert_25.npy,SN IIP
+ZTF18abyvenk,ZTF18abyvenk_alert_27.npy,SN IIP
+ZTF18abyvenk,ZTF18abyvenk_alert_28.npy,SN IIP
 ZTF18abyvenk,ZTF18abyvenk_alert_30.npy,SN IIP
 ZTF18acahuph,ZTF18acahuph_alert_2.npy,SN Ia
 ZTF18acahuph,ZTF18acahuph_alert_3.npy,SN Ia
-ZTF18acahvwm,ZTF18acahvwm_alert_1.npy,SN IIb
 ZTF18acaisao,ZTF18acaisao_alert_10.npy,Cataclysmic
 ZTF18acaisao,ZTF18acaisao_alert_11.npy,Cataclysmic
 ZTF18acaisao,ZTF18acaisao_alert_6.npy,Cataclysmic
 ZTF18acaisao,ZTF18acaisao_alert_7.npy,Cataclysmic
 ZTF18acaisao,ZTF18acaisao_alert_8.npy,Cataclysmic
-ZTF18acaqdaa,ZTF18acaqdaa_alert_1.npy,Tidal Disruption Event
-ZTF18acaqdaa,ZTF18acaqdaa_alert_2.npy,Tidal Disruption Event
+ZTF18acaisao,ZTF18acaisao_alert_9.npy,Cataclysmic
 ZTF18acbxkop,ZTF18acbxkop_alert_14.npy,SN IIP
-ZTF18acbxkop,ZTF18acbxkop_alert_18.npy,SN IIP
-ZTF18acbxkop,ZTF18acbxkop_alert_21.npy,SN IIP
-ZTF18acbxkop,ZTF18acbxkop_alert_24.npy,SN IIP
+ZTF18acbxkop,ZTF18acbxkop_alert_16.npy,SN IIP
+ZTF18acbxkop,ZTF18acbxkop_alert_17.npy,SN IIP
+ZTF18acbxkop,ZTF18acbxkop_alert_19.npy,SN IIP
+ZTF18acbxkop,ZTF18acbxkop_alert_20.npy,SN IIP
+ZTF18acbxkop,ZTF18acbxkop_alert_22.npy,SN IIP
+ZTF18acbxkop,ZTF18acbxkop_alert_23.npy,SN IIP
+ZTF18acbxkop,ZTF18acbxkop_alert_25.npy,SN IIP
+ZTF18acbxkop,ZTF18acbxkop_alert_26.npy,SN IIP
 ZTF18acbxkop,ZTF18acbxkop_alert_28.npy,SN IIP
 ZTF18acbxudr,ZTF18acbxudr_alert_4.npy,SN IIP
 ZTF18acbxudr,ZTF18acbxudr_alert_5.npy,SN IIP
@@ -168,15 +295,15 @@ ZTF18acbxudr,ZTF18acbxudr_alert_6.npy,SN IIP
 ZTF18acbxudr,ZTF18acbxudr_alert_7.npy,SN IIP
 ZTF18acbxudr,ZTF18acbxudr_alert_8.npy,SN IIP
 ZTF18acbzvpg,ZTF18acbzvpg_alert_10.npy,SN IIb
+ZTF18acbzvpg,ZTF18acbzvpg_alert_11.npy,SN IIb
 ZTF18acbzvpg,ZTF18acbzvpg_alert_12.npy,SN IIb
+ZTF18acbzvpg,ZTF18acbzvpg_alert_13.npy,SN IIb
 ZTF18acbzvpg,ZTF18acbzvpg_alert_14.npy,SN IIb
+ZTF18acbzvpg,ZTF18acbzvpg_alert_15.npy,SN IIb
+ZTF18acbzvpg,ZTF18acbzvpg_alert_16.npy,SN IIb
 ZTF18acbzvpg,ZTF18acbzvpg_alert_17.npy,SN IIb
+ZTF18acbzvpg,ZTF18acbzvpg_alert_18.npy,SN IIb
 ZTF18acbzvpg,ZTF18acbzvpg_alert_19.npy,SN IIb
-ZTF18accaqrr,ZTF18accaqrr_alert_23.npy,SN Ib
-ZTF18accaqrr,ZTF18accaqrr_alert_28.npy,SN Ib
-ZTF18accaqrr,ZTF18accaqrr_alert_34.npy,SN Ib
-ZTF18accaqrr,ZTF18accaqrr_alert_40.npy,SN Ib
-ZTF18accaqrr,ZTF18accaqrr_alert_45.npy,SN Ib
 ZTF18accdxpa,ZTF18accdxpa_alert_3.npy,SN Ia
 ZTF18accdxpa,ZTF18accdxpa_alert_4.npy,SN Ia
 ZTF18accdxpa,ZTF18accdxpa_alert_5.npy,SN Ia
@@ -188,15 +315,24 @@ ZTF18acgqweq,ZTF18acgqweq_alert_4.npy,AGN
 ZTF18acgqweq,ZTF18acgqweq_alert_5.npy,AGN
 ZTF18acgqweq,ZTF18acgqweq_alert_6.npy,AGN
 ZTF18acgqweq,ZTF18acgqweq_alert_7.npy,AGN
+ZTF18acgvhxo,ZTF18acgvhxo_alert_3.npy,AGN
+ZTF18acgvhxo,ZTF18acgvhxo_alert_4.npy,AGN
+ZTF18acgvhxo,ZTF18acgvhxo_alert_5.npy,AGN
+ZTF18acgvhxo,ZTF18acgvhxo_alert_6.npy,AGN
 ZTF18acnaicl,ZTF18acnaicl_alert_4.npy,Cataclysmic
 ZTF18acnaicl,ZTF18acnaicl_alert_5.npy,Cataclysmic
 ZTF18acnaicl,ZTF18acnaicl_alert_6.npy,Cataclysmic
 ZTF18acnaicl,ZTF18acnaicl_alert_7.npy,Cataclysmic
 ZTF18acnaicl,ZTF18acnaicl_alert_8.npy,Cataclysmic
 ZTF18acnmifq,ZTF18acnmifq_alert_10.npy,SN IIP
+ZTF18acnmifq,ZTF18acnmifq_alert_11.npy,SN IIP
 ZTF18acnmifq,ZTF18acnmifq_alert_12.npy,SN IIP
+ZTF18acnmifq,ZTF18acnmifq_alert_13.npy,SN IIP
 ZTF18acnmifq,ZTF18acnmifq_alert_14.npy,SN IIP
+ZTF18acnmifq,ZTF18acnmifq_alert_15.npy,SN IIP
+ZTF18acnmifq,ZTF18acnmifq_alert_16.npy,SN IIP
 ZTF18acnmifq,ZTF18acnmifq_alert_17.npy,SN IIP
+ZTF18acnmifq,ZTF18acnmifq_alert_18.npy,SN IIP
 ZTF18acnmifq,ZTF18acnmifq_alert_19.npy,SN IIP
 ZTF18acrcizr,ZTF18acrcizr_alert_5.npy,SN Ia
 ZTF18acrcizr,ZTF18acrcizr_alert_6.npy,SN Ia
@@ -204,14 +340,24 @@ ZTF18acrcizr,ZTF18acrcizr_alert_7.npy,SN Ia
 ZTF18acrcizr,ZTF18acrcizr_alert_8.npy,SN Ia
 ZTF18acrcizr,ZTF18acrcizr_alert_9.npy,SN Ia
 ZTF18acusegd,ZTF18acusegd_alert_17.npy,SN Ia
+ZTF18acusegd,ZTF18acusegd_alert_19.npy,SN Ia
 ZTF18acusegd,ZTF18acusegd_alert_21.npy,SN Ia
+ZTF18acusegd,ZTF18acusegd_alert_23.npy,SN Ia
+ZTF18acusegd,ZTF18acusegd_alert_25.npy,SN Ia
 ZTF18acusegd,ZTF18acusegd_alert_26.npy,SN Ia
+ZTF18acusegd,ZTF18acusegd_alert_28.npy,SN Ia
 ZTF18acusegd,ZTF18acusegd_alert_30.npy,SN Ia
+ZTF18acusegd,ZTF18acusegd_alert_32.npy,SN Ia
 ZTF18acusegd,ZTF18acusegd_alert_34.npy,SN Ia
 ZTF18acvilwk,ZTF18acvilwk_alert_10.npy,SN IIP
+ZTF18acvilwk,ZTF18acvilwk_alert_11.npy,SN IIP
 ZTF18acvilwk,ZTF18acvilwk_alert_12.npy,SN IIP
-ZTF18acvilwk,ZTF18acvilwk_alert_15.npy,SN IIP
+ZTF18acvilwk,ZTF18acvilwk_alert_13.npy,SN IIP
+ZTF18acvilwk,ZTF18acvilwk_alert_14.npy,SN IIP
+ZTF18acvilwk,ZTF18acvilwk_alert_16.npy,SN IIP
+ZTF18acvilwk,ZTF18acvilwk_alert_17.npy,SN IIP
 ZTF18acvilwk,ZTF18acvilwk_alert_18.npy,SN IIP
+ZTF18acvilwk,ZTF18acvilwk_alert_19.npy,SN IIP
 ZTF18acvilwk,ZTF18acvilwk_alert_20.npy,SN IIP
 ZTF18acyarki,ZTF18acyarki_alert_1.npy,SN Ia
 ZTF18adachwf,ZTF18adachwf_alert_1.npy,SN IIP
@@ -223,46 +369,52 @@ ZTF18adbckox,ZTF18adbckox_alert_4.npy,SN Ia
 ZTF18adbckox,ZTF18adbckox_alert_5.npy,SN Ia
 ZTF18adbckox,ZTF18adbckox_alert_6.npy,SN Ia
 ZTF19aabhktg,ZTF19aabhktg_alert_1.npy,Cataclysmic
-ZTF19aakkths,ZTF19aakkths_alert_1.npy,SN IIb
-ZTF19aakkths,ZTF19aakkths_alert_2.npy,SN IIb
 ZTF19aamkfvy,ZTF19aamkfvy_alert_10.npy,SN IIP
 ZTF19aamkfvy,ZTF19aamkfvy_alert_11.npy,SN IIP
 ZTF19aamkfvy,ZTF19aamkfvy_alert_6.npy,SN IIP
 ZTF19aamkfvy,ZTF19aamkfvy_alert_7.npy,SN IIP
 ZTF19aamkfvy,ZTF19aamkfvy_alert_8.npy,SN IIP
+ZTF19aamkfvy,ZTF19aamkfvy_alert_9.npy,SN IIP
 ZTF19aamkmxv,ZTF19aamkmxv_alert_10.npy,SN IIn
+ZTF19aamkmxv,ZTF19aamkmxv_alert_11.npy,SN IIn
 ZTF19aamkmxv,ZTF19aamkmxv_alert_12.npy,SN IIn
+ZTF19aamkmxv,ZTF19aamkmxv_alert_13.npy,SN IIn
 ZTF19aamkmxv,ZTF19aamkmxv_alert_14.npy,SN IIn
+ZTF19aamkmxv,ZTF19aamkmxv_alert_15.npy,SN IIn
 ZTF19aamkmxv,ZTF19aamkmxv_alert_16.npy,SN IIn
 ZTF19aamkmxv,ZTF19aamkmxv_alert_8.npy,SN IIn
+ZTF19aamkmxv,ZTF19aamkmxv_alert_9.npy,SN IIn
 ZTF19aanetjx,ZTF19aanetjx_alert_2.npy,SN Ia
 ZTF19aanetjx,ZTF19aanetjx_alert_3.npy,SN Ia
 ZTF19aanetjx,ZTF19aanetjx_alert_4.npy,SN Ia
 ZTF19aanijpu,ZTF19aanijpu_alert_10.npy,SN Ic
 ZTF19aanijpu,ZTF19aanijpu_alert_5.npy,SN Ic
 ZTF19aanijpu,ZTF19aanijpu_alert_6.npy,SN Ic
+ZTF19aanijpu,ZTF19aanijpu_alert_7.npy,SN Ic
 ZTF19aanijpu,ZTF19aanijpu_alert_8.npy,SN Ic
 ZTF19aanijpu,ZTF19aanijpu_alert_9.npy,SN Ic
-ZTF19aapceyj,ZTF19aapceyj_alert_10.npy,SN Ic
-ZTF19aapceyj,ZTF19aapceyj_alert_12.npy,SN Ic
-ZTF19aapceyj,ZTF19aapceyj_alert_14.npy,SN Ic
-ZTF19aapceyj,ZTF19aapceyj_alert_7.npy,SN Ic
-ZTF19aapceyj,ZTF19aapceyj_alert_9.npy,SN Ic
+ZTF19aaniore,ZTF19aaniore_alert_16.npy,SN IIP
+ZTF19aaniore,ZTF19aaniore_alert_18.npy,SN IIP
+ZTF19aaniore,ZTF19aaniore_alert_19.npy,SN IIP
+ZTF19aaniore,ZTF19aaniore_alert_21.npy,SN IIP
+ZTF19aaniore,ZTF19aaniore_alert_23.npy,SN IIP
+ZTF19aaniore,ZTF19aaniore_alert_24.npy,SN IIP
+ZTF19aaniore,ZTF19aaniore_alert_26.npy,SN IIP
+ZTF19aaniore,ZTF19aaniore_alert_28.npy,SN IIP
+ZTF19aaniore,ZTF19aaniore_alert_29.npy,SN IIP
+ZTF19aaniore,ZTF19aaniore_alert_31.npy,SN IIP
 ZTF19aaqxosb,ZTF19aaqxosb_alert_5.npy,SN IIP
 ZTF19aaqxosb,ZTF19aaqxosb_alert_6.npy,SN IIP
 ZTF19aaqxosb,ZTF19aaqxosb_alert_7.npy,SN IIP
 ZTF19aaqxosb,ZTF19aaqxosb_alert_8.npy,SN IIP
 ZTF19aaqxosb,ZTF19aaqxosb_alert_9.npy,SN IIP
-ZTF19aarioci,ZTF19aarioci_alert_12.npy,Tidal Disruption Event
-ZTF19aarioci,ZTF19aarioci_alert_15.npy,Tidal Disruption Event
-ZTF19aarioci,ZTF19aarioci_alert_18.npy,Tidal Disruption Event
-ZTF19aarioci,ZTF19aarioci_alert_20.npy,Tidal Disruption Event
-ZTF19aarioci,ZTF19aarioci_alert_23.npy,Tidal Disruption Event
+ZTF19aariwfe,ZTF19aariwfe_alert_1.npy,SN IIP
 ZTF19aarjfqe,ZTF19aarjfqe_alert_1.npy,SN IIP
 ZTF19aarjfqe,ZTF19aarjfqe_alert_2.npy,SN IIP
 ZTF19aathllr,ZTF19aathllr_alert_2.npy,SN IIP
 ZTF19aathllr,ZTF19aathllr_alert_3.npy,SN IIP
 ZTF19aathllr,ZTF19aathllr_alert_4.npy,SN IIP
+ZTF19aattvhh,ZTF19aattvhh_alert_1.npy,Cataclysmic
 ZTF19aauishy,ZTF19aauishy_alert_4.npy,SN IIP
 ZTF19aauishy,ZTF19aauishy_alert_5.npy,SN IIP
 ZTF19aauishy,ZTF19aauishy_alert_6.npy,SN IIP
@@ -272,6 +424,10 @@ ZTF19aavjzrz,ZTF19aavjzrz_alert_11.npy,SN IIP
 ZTF19aavjzrz,ZTF19aavjzrz_alert_6.npy,SN IIP
 ZTF19aavjzrz,ZTF19aavjzrz_alert_7.npy,SN IIP
 ZTF19aavjzrz,ZTF19aavjzrz_alert_8.npy,SN IIP
+ZTF19aavjzrz,ZTF19aavjzrz_alert_9.npy,SN IIP
+ZTF19aawfkeg,ZTF19aawfkeg_alert_2.npy,SN IIP
+ZTF19aawfkeg,ZTF19aawfkeg_alert_3.npy,SN IIP
+ZTF19aawfkeg,ZTF19aawfkeg_alert_4.npy,SN IIP
 ZTF19aawsdlq,ZTF19aawsdlq_alert_1.npy,SN IIP
 ZTF19aawsdlq,ZTF19aawsdlq_alert_2.npy,SN IIP
 ZTF19aaxnrkb,ZTF19aaxnrkb_alert_2.npy,Cataclysmic
@@ -286,8 +442,9 @@ ZTF19aaykqsk,ZTF19aaykqsk_alert_3.npy,SN IIP
 ZTF19aayrosj,ZTF19aayrosj_alert_2.npy,SN IIP
 ZTF19aayrosj,ZTF19aayrosj_alert_3.npy,SN IIP
 ZTF19aayrosj,ZTF19aayrosj_alert_4.npy,SN IIP
-ZTF19aazdsgo,ZTF19aazdsgo_alert_1.npy,SN Ib
-ZTF19aazdsgo,ZTF19aazdsgo_alert_2.npy,SN Ib
+ZTF19aazwnwy,ZTF19aazwnwy_alert_2.npy,SN IIb
+ZTF19aazwnwy,ZTF19aazwnwy_alert_3.npy,SN IIb
+ZTF19aazwnwy,ZTF19aazwnwy_alert_4.npy,SN IIb
 ZTF19aazyvub,ZTF19aazyvub_alert_1.npy,SN IIP
 ZTF19aazyvub,ZTF19aazyvub_alert_2.npy,SN IIP
 ZTF19abbnamr,ZTF19abbnamr_alert_4.npy,SN IIP
@@ -298,6 +455,7 @@ ZTF19abbnamr,ZTF19abbnamr_alert_8.npy,SN IIP
 ZTF19abcfzdy,ZTF19abcfzdy_alert_10.npy,SN Ia
 ZTF19abcfzdy,ZTF19abcfzdy_alert_5.npy,SN Ia
 ZTF19abcfzdy,ZTF19abcfzdy_alert_6.npy,SN Ia
+ZTF19abcfzdy,ZTF19abcfzdy_alert_7.npy,SN Ia
 ZTF19abcfzdy,ZTF19abcfzdy_alert_8.npy,SN Ia
 ZTF19abcfzdy,ZTF19abcfzdy_alert_9.npy,SN Ia
 ZTF19abdkgwo,ZTF19abdkgwo_alert_4.npy,SN IIn
@@ -305,10 +463,17 @@ ZTF19abdkgwo,ZTF19abdkgwo_alert_5.npy,SN IIn
 ZTF19abdkgwo,ZTF19abdkgwo_alert_6.npy,SN IIn
 ZTF19abdkgwo,ZTF19abdkgwo_alert_7.npy,SN IIn
 ZTF19abdkgwo,ZTF19abdkgwo_alert_8.npy,SN IIn
+ZTF19abgbbzy,ZTF19abgbbzy_alert_1.npy,SN IIb
+ZTF19abgbbzy,ZTF19abgbbzy_alert_2.npy,SN IIb
 ZTF19abgmkef,ZTF19abgmkef_alert_3.npy,SN IIP
 ZTF19abgmkef,ZTF19abgmkef_alert_4.npy,SN IIP
 ZTF19abgmkef,ZTF19abgmkef_alert_5.npy,SN IIP
 ZTF19abgmkef,ZTF19abgmkef_alert_6.npy,SN IIP
+ZTF19abidbya,ZTF19abidbya_alert_3.npy,Tidal Disruption Event
+ZTF19abidbya,ZTF19abidbya_alert_4.npy,Tidal Disruption Event
+ZTF19abidbya,ZTF19abidbya_alert_5.npy,Tidal Disruption Event
+ZTF19abjbtbm,ZTF19abjbtbm_alert_1.npy,SN IIP
+ZTF19abjbtbm,ZTF19abjbtbm_alert_2.npy,SN IIP
 ZTF19abjpntj,ZTF19abjpntj_alert_5.npy,SN IIP
 ZTF19abjpntj,ZTF19abjpntj_alert_6.npy,SN IIP
 ZTF19abjpntj,ZTF19abjpntj_alert_7.npy,SN IIP
@@ -318,9 +483,14 @@ ZTF19abpaskr,ZTF19abpaskr_alert_3.npy,Cataclysmic
 ZTF19abpaskr,ZTF19abpaskr_alert_4.npy,Cataclysmic
 ZTF19abpaskr,ZTF19abpaskr_alert_5.npy,Cataclysmic
 ZTF19abpnpcy,ZTF19abpnpcy_alert_28.npy,Cataclysmic
-ZTF19abpnpcy,ZTF19abpnpcy_alert_35.npy,Cataclysmic
-ZTF19abpnpcy,ZTF19abpnpcy_alert_42.npy,Cataclysmic
-ZTF19abpnpcy,ZTF19abpnpcy_alert_49.npy,Cataclysmic
+ZTF19abpnpcy,ZTF19abpnpcy_alert_31.npy,Cataclysmic
+ZTF19abpnpcy,ZTF19abpnpcy_alert_34.npy,Cataclysmic
+ZTF19abpnpcy,ZTF19abpnpcy_alert_37.npy,Cataclysmic
+ZTF19abpnpcy,ZTF19abpnpcy_alert_40.npy,Cataclysmic
+ZTF19abpnpcy,ZTF19abpnpcy_alert_44.npy,Cataclysmic
+ZTF19abpnpcy,ZTF19abpnpcy_alert_47.npy,Cataclysmic
+ZTF19abpnpcy,ZTF19abpnpcy_alert_50.npy,Cataclysmic
+ZTF19abpnpcy,ZTF19abpnpcy_alert_53.npy,Cataclysmic
 ZTF19abpnpcy,ZTF19abpnpcy_alert_56.npy,Cataclysmic
 ZTF19abqmsbk,ZTF19abqmsbk_alert_1.npy,SN Ic
 ZTF19abqmsbk,ZTF19abqmsbk_alert_2.npy,SN Ic
@@ -336,31 +506,43 @@ ZTF19abtsnyy,ZTF19abtsnyy_alert_2.npy,SN Ic
 ZTF19abtsnyy,ZTF19abtsnyy_alert_3.npy,SN Ic
 ZTF19abttstb,ZTF19abttstb_alert_2.npy,SN Ia
 ZTF19abttstb,ZTF19abttstb_alert_3.npy,SN Ia
+ZTF19abucwzt,ZTF19abucwzt_alert_2.npy,SN Ib
+ZTF19abucwzt,ZTF19abucwzt_alert_3.npy,SN Ib
 ZTF19abwsfsl,ZTF19abwsfsl_alert_1.npy,Cataclysmic
 ZTF19abxnycf,ZTF19abxnycf_alert_3.npy,SN IIP
 ZTF19abxnycf,ZTF19abxnycf_alert_4.npy,SN IIP
 ZTF19abxnycf,ZTF19abxnycf_alert_5.npy,SN IIP
 ZTF19abxtdgh,ZTF19abxtdgh_alert_10.npy,SN Ia
+ZTF19abxtdgh,ZTF19abxtdgh_alert_11.npy,SN Ia
 ZTF19abxtdgh,ZTF19abxtdgh_alert_12.npy,SN Ia
 ZTF19abxtdgh,ZTF19abxtdgh_alert_13.npy,SN Ia
+ZTF19abxtdgh,ZTF19abxtdgh_alert_14.npy,SN Ia
 ZTF19abxtdgh,ZTF19abxtdgh_alert_15.npy,SN Ia
 ZTF19abxtdgh,ZTF19abxtdgh_alert_8.npy,SN Ia
+ZTF19abxtdgh,ZTF19abxtdgh_alert_9.npy,SN Ia
+ZTF19abyigib,ZTF19abyigib_alert_2.npy,SN Ia
+ZTF19abyigib,ZTF19abyigib_alert_3.npy,SN Ia
 ZTF19abyuzch,ZTF19abyuzch_alert_10.npy,SN IIP
+ZTF19abyuzch,ZTF19abyuzch_alert_11.npy,SN IIP
 ZTF19abyuzch,ZTF19abyuzch_alert_12.npy,SN IIP
+ZTF19abyuzch,ZTF19abyuzch_alert_13.npy,SN IIP
 ZTF19abyuzch,ZTF19abyuzch_alert_14.npy,SN IIP
+ZTF19abyuzch,ZTF19abyuzch_alert_15.npy,SN IIP
+ZTF19abyuzch,ZTF19abyuzch_alert_16.npy,SN IIP
 ZTF19abyuzch,ZTF19abyuzch_alert_17.npy,SN IIP
+ZTF19abyuzch,ZTF19abyuzch_alert_18.npy,SN IIP
 ZTF19abyuzch,ZTF19abyuzch_alert_19.npy,SN IIP
+ZTF19abzpvaj,ZTF19abzpvaj_alert_10.npy,SN IIn
 ZTF19abzpvaj,ZTF19abzpvaj_alert_11.npy,SN IIn
+ZTF19abzpvaj,ZTF19abzpvaj_alert_12.npy,SN IIn
+ZTF19abzpvaj,ZTF19abzpvaj_alert_13.npy,SN IIn
 ZTF19abzpvaj,ZTF19abzpvaj_alert_14.npy,SN IIn
+ZTF19abzpvaj,ZTF19abzpvaj_alert_15.npy,SN IIn
 ZTF19abzpvaj,ZTF19abzpvaj_alert_16.npy,SN IIn
+ZTF19abzpvaj,ZTF19abzpvaj_alert_17.npy,SN IIn
 ZTF19abzpvaj,ZTF19abzpvaj_alert_18.npy,SN IIn
 ZTF19abzpvaj,ZTF19abzpvaj_alert_9.npy,SN IIn
 ZTF19abzrdup,ZTF19abzrdup_alert_1.npy,SN IIP
-ZTF19abztknu,ZTF19abztknu_alert_10.npy,SN Ib
-ZTF19abztknu,ZTF19abztknu_alert_12.npy,SN Ib
-ZTF19abztknu,ZTF19abztknu_alert_13.npy,SN Ib
-ZTF19abztknu,ZTF19abztknu_alert_7.npy,SN Ib
-ZTF19abztknu,ZTF19abztknu_alert_8.npy,SN Ib
 ZTF19abzwtiu,ZTF19abzwtiu_alert_3.npy,SN Ia
 ZTF19abzwtiu,ZTF19abzwtiu_alert_4.npy,SN Ia
 ZTF19abzwtiu,ZTF19abzwtiu_alert_5.npy,SN Ia
@@ -386,9 +568,13 @@ ZTF19aceqvhl,ZTF19aceqvhl_alert_3.npy,SN Ic
 ZTF19aceqvhl,ZTF19aceqvhl_alert_4.npy,SN Ic
 ZTF19aceqvhl,ZTF19aceqvhl_alert_5.npy,SN Ic
 ZTF19aceqvhl,ZTF19aceqvhl_alert_6.npy,SN Ic
+ZTF19acevlfc,ZTF19acevlfc_alert_10.npy,Cataclysmic
 ZTF19acevlfc,ZTF19acevlfc_alert_11.npy,Cataclysmic
+ZTF19acevlfc,ZTF19acevlfc_alert_12.npy,Cataclysmic
 ZTF19acevlfc,ZTF19acevlfc_alert_13.npy,Cataclysmic
+ZTF19acevlfc,ZTF19acevlfc_alert_14.npy,Cataclysmic
 ZTF19acevlfc,ZTF19acevlfc_alert_15.npy,Cataclysmic
+ZTF19acevlfc,ZTF19acevlfc_alert_16.npy,Cataclysmic
 ZTF19acevlfc,ZTF19acevlfc_alert_17.npy,Cataclysmic
 ZTF19acevlfc,ZTF19acevlfc_alert_9.npy,Cataclysmic
 ZTF19acfejbj,ZTF19acfejbj_alert_3.npy,SN IIP
@@ -396,80 +582,144 @@ ZTF19acfejbj,ZTF19acfejbj_alert_4.npy,SN IIP
 ZTF19acfejbj,ZTF19acfejbj_alert_5.npy,SN IIP
 ZTF19acfejbj,ZTF19acfejbj_alert_6.npy,SN IIP
 ZTF19acgbkzr,ZTF19acgbkzr_alert_13.npy,SN IIP
+ZTF19acgbkzr,ZTF19acgbkzr_alert_14.npy,SN IIP
 ZTF19acgbkzr,ZTF19acgbkzr_alert_16.npy,SN IIP
-ZTF19acgbkzr,ZTF19acgbkzr_alert_19.npy,SN IIP
+ZTF19acgbkzr,ZTF19acgbkzr_alert_17.npy,SN IIP
+ZTF19acgbkzr,ZTF19acgbkzr_alert_18.npy,SN IIP
+ZTF19acgbkzr,ZTF19acgbkzr_alert_20.npy,SN IIP
+ZTF19acgbkzr,ZTF19acgbkzr_alert_21.npy,SN IIP
 ZTF19acgbkzr,ZTF19acgbkzr_alert_22.npy,SN IIP
+ZTF19acgbkzr,ZTF19acgbkzr_alert_24.npy,SN IIP
 ZTF19acgbkzr,ZTF19acgbkzr_alert_25.npy,SN IIP
 ZTF19acgfvvi,ZTF19acgfvvi_alert_4.npy,SN IIP
 ZTF19acgfvvi,ZTF19acgfvvi_alert_5.npy,SN IIP
 ZTF19acgfvvi,ZTF19acgfvvi_alert_6.npy,SN IIP
 ZTF19acgfvvi,ZTF19acgfvvi_alert_7.npy,SN IIP
 ZTF19acgfvvi,ZTF19acgfvvi_alert_8.npy,SN IIP
+ZTF19acgjosf,ZTF19acgjosf_alert_2.npy,SN Ib
+ZTF19acgjosf,ZTF19acgjosf_alert_3.npy,SN Ib
+ZTF19acgjosf,ZTF19acgjosf_alert_4.npy,SN Ib
 ZTF19achbhfc,ZTF19achbhfc_alert_10.npy,Cataclysmic
+ZTF19achbhfc,ZTF19achbhfc_alert_11.npy,Cataclysmic
 ZTF19achbhfc,ZTF19achbhfc_alert_12.npy,Cataclysmic
+ZTF19achbhfc,ZTF19achbhfc_alert_13.npy,Cataclysmic
 ZTF19achbhfc,ZTF19achbhfc_alert_14.npy,Cataclysmic
+ZTF19achbhfc,ZTF19achbhfc_alert_15.npy,Cataclysmic
+ZTF19achbhfc,ZTF19achbhfc_alert_16.npy,Cataclysmic
 ZTF19achbhfc,ZTF19achbhfc_alert_17.npy,Cataclysmic
+ZTF19achbhfc,ZTF19achbhfc_alert_18.npy,Cataclysmic
 ZTF19achbhfc,ZTF19achbhfc_alert_19.npy,Cataclysmic
+ZTF19acjwqvo,ZTF19acjwqvo_alert_5.npy,SN Ia
+ZTF19acjwqvo,ZTF19acjwqvo_alert_6.npy,SN Ia
+ZTF19acjwqvo,ZTF19acjwqvo_alert_7.npy,SN Ia
+ZTF19acjwqvo,ZTF19acjwqvo_alert_8.npy,SN Ia
+ZTF19acjwqvo,ZTF19acjwqvo_alert_9.npy,SN Ia
+ZTF19ackjene,ZTF19ackjene_alert_2.npy,SN IIb
+ZTF19ackjene,ZTF19ackjene_alert_3.npy,SN IIb
 ZTF19aclhpiz,ZTF19aclhpiz_alert_1.npy,SN II
 ZTF19aclhpiz,ZTF19aclhpiz_alert_2.npy,SN II
+ZTF19aclobbu,ZTF19aclobbu_alert_29.npy,SN IIP
+ZTF19aclobbu,ZTF19aclobbu_alert_32.npy,SN IIP
+ZTF19aclobbu,ZTF19aclobbu_alert_35.npy,SN IIP
+ZTF19aclobbu,ZTF19aclobbu_alert_38.npy,SN IIP
+ZTF19aclobbu,ZTF19aclobbu_alert_41.npy,SN IIP
+ZTF19aclobbu,ZTF19aclobbu_alert_45.npy,SN IIP
+ZTF19aclobbu,ZTF19aclobbu_alert_48.npy,SN IIP
+ZTF19aclobbu,ZTF19aclobbu_alert_51.npy,SN IIP
+ZTF19aclobbu,ZTF19aclobbu_alert_54.npy,SN IIP
+ZTF19aclobbu,ZTF19aclobbu_alert_57.npy,SN IIP
 ZTF19acmwkul,ZTF19acmwkul_alert_4.npy,SN Ia
 ZTF19acmwkul,ZTF19acmwkul_alert_5.npy,SN Ia
 ZTF19acmwkul,ZTF19acmwkul_alert_6.npy,SN Ia
 ZTF19acmwkul,ZTF19acmwkul_alert_7.npy,SN Ia
 ZTF19acnfjyw,ZTF19acnfjyw_alert_13.npy,SN Ia
+ZTF19acnfjyw,ZTF19acnfjyw_alert_14.npy,SN Ia
 ZTF19acnfjyw,ZTF19acnfjyw_alert_16.npy,SN Ia
-ZTF19acnfjyw,ZTF19acnfjyw_alert_19.npy,SN Ia
+ZTF19acnfjyw,ZTF19acnfjyw_alert_17.npy,SN Ia
+ZTF19acnfjyw,ZTF19acnfjyw_alert_18.npy,SN Ia
+ZTF19acnfjyw,ZTF19acnfjyw_alert_20.npy,SN Ia
+ZTF19acnfjyw,ZTF19acnfjyw_alert_21.npy,SN Ia
 ZTF19acnfjyw,ZTF19acnfjyw_alert_22.npy,SN Ia
+ZTF19acnfjyw,ZTF19acnfjyw_alert_24.npy,SN Ia
 ZTF19acnfjyw,ZTF19acnfjyw_alert_25.npy,SN Ia
+ZTF19acrcznb,ZTF19acrcznb_alert_3.npy,Cataclysmic
+ZTF19acrcznb,ZTF19acrcznb_alert_4.npy,Cataclysmic
+ZTF19acrcznb,ZTF19acrcznb_alert_5.npy,Cataclysmic
+ZTF19acrcznb,ZTF19acrcznb_alert_6.npy,Cataclysmic
+ZTF19actedby,ZTF19actedby_alert_10.npy,AGN
 ZTF19actedby,ZTF19actedby_alert_11.npy,AGN
+ZTF19actedby,ZTF19actedby_alert_12.npy,AGN
 ZTF19actedby,ZTF19actedby_alert_13.npy,AGN
+ZTF19actedby,ZTF19actedby_alert_14.npy,AGN
 ZTF19actedby,ZTF19actedby_alert_15.npy,AGN
+ZTF19actedby,ZTF19actedby_alert_16.npy,AGN
 ZTF19actedby,ZTF19actedby_alert_17.npy,AGN
 ZTF19actedby,ZTF19actedby_alert_9.npy,AGN
 ZTF19acvmcdd,ZTF19acvmcdd_alert_39.npy,SN IIP
-ZTF19acvmcdd,ZTF19acvmcdd_alert_49.npy,SN IIP
-ZTF19acvmcdd,ZTF19acvmcdd_alert_58.npy,SN IIP
-ZTF19acvmcdd,ZTF19acvmcdd_alert_68.npy,SN IIP
+ZTF19acvmcdd,ZTF19acvmcdd_alert_43.npy,SN IIP
+ZTF19acvmcdd,ZTF19acvmcdd_alert_48.npy,SN IIP
+ZTF19acvmcdd,ZTF19acvmcdd_alert_52.npy,SN IIP
+ZTF19acvmcdd,ZTF19acvmcdd_alert_56.npy,SN IIP
+ZTF19acvmcdd,ZTF19acvmcdd_alert_61.npy,SN IIP
+ZTF19acvmcdd,ZTF19acvmcdd_alert_65.npy,SN IIP
+ZTF19acvmcdd,ZTF19acvmcdd_alert_69.npy,SN IIP
+ZTF19acvmcdd,ZTF19acvmcdd_alert_74.npy,SN IIP
 ZTF19acvmcdd,ZTF19acvmcdd_alert_78.npy,SN IIP
 ZTF19acxldra,ZTF19acxldra_alert_4.npy,SN Ia
 ZTF19acxldra,ZTF19acxldra_alert_5.npy,SN Ia
 ZTF19acxldra,ZTF19acxldra_alert_6.npy,SN Ia
 ZTF19acxldra,ZTF19acxldra_alert_7.npy,SN Ia
+ZTF19acxmfay,ZTF19acxmfay_alert_1.npy,SN IIP
 ZTF19acxphhl,ZTF19acxphhl_alert_15.npy,SN Ia
+ZTF19acxphhl,ZTF19acxphhl_alert_17.npy,SN Ia
 ZTF19acxphhl,ZTF19acxphhl_alert_18.npy,SN Ia
-ZTF19acxphhl,ZTF19acxphhl_alert_22.npy,SN Ia
+ZTF19acxphhl,ZTF19acxphhl_alert_20.npy,SN Ia
+ZTF19acxphhl,ZTF19acxphhl_alert_21.npy,SN Ia
+ZTF19acxphhl,ZTF19acxphhl_alert_23.npy,SN Ia
+ZTF19acxphhl,ZTF19acxphhl_alert_24.npy,SN Ia
 ZTF19acxphhl,ZTF19acxphhl_alert_26.npy,SN Ia
+ZTF19acxphhl,ZTF19acxphhl_alert_27.npy,SN Ia
 ZTF19acxphhl,ZTF19acxphhl_alert_29.npy,SN Ia
 ZTF19acyogrm,ZTF19acyogrm_alert_2.npy,SN Ic
 ZTF19acyogrm,ZTF19acyogrm_alert_3.npy,SN Ic
 ZTF19acyogrm,ZTF19acyogrm_alert_4.npy,SN Ic
+ZTF19acyplkt,ZTF19acyplkt_alert_2.npy,SN IIP
+ZTF19acyplkt,ZTF19acyplkt_alert_3.npy,SN IIP
 ZTF19adbqznr,ZTF19adbqznr_alert_108.npy,Cataclysmic
-ZTF19adbqznr,ZTF19adbqznr_alert_135.npy,Cataclysmic
-ZTF19adbqznr,ZTF19adbqznr_alert_162.npy,Cataclysmic
-ZTF19adbqznr,ZTF19adbqznr_alert_188.npy,Cataclysmic
+ZTF19adbqznr,ZTF19adbqznr_alert_120.npy,Cataclysmic
+ZTF19adbqznr,ZTF19adbqznr_alert_132.npy,Cataclysmic
+ZTF19adbqznr,ZTF19adbqznr_alert_144.npy,Cataclysmic
+ZTF19adbqznr,ZTF19adbqznr_alert_156.npy,Cataclysmic
+ZTF19adbqznr,ZTF19adbqznr_alert_167.npy,Cataclysmic
+ZTF19adbqznr,ZTF19adbqznr_alert_179.npy,Cataclysmic
+ZTF19adbqznr,ZTF19adbqznr_alert_191.npy,Cataclysmic
+ZTF19adbqznr,ZTF19adbqznr_alert_203.npy,Cataclysmic
 ZTF19adbqznr,ZTF19adbqznr_alert_215.npy,Cataclysmic
+ZTF20aaaxghv,ZTF20aaaxghv_alert_1.npy,SN Ib
+ZTF20aacdfyv,ZTF20aacdfyv_alert_1.npy,SN Ic
 ZTF20aadcbvz,ZTF20aadcbvz_alert_1.npy,SN II
 ZTF20aadcbvz,ZTF20aadcbvz_alert_2.npy,SN II
 ZTF20aaetirf,ZTF20aaetirf_alert_1.npy,SN Ic
-ZTF20aahirfz,ZTF20aahirfz_alert_2.npy,SN IIP
-ZTF20aahirfz,ZTF20aahirfz_alert_3.npy,SN IIP
-ZTF20aahirfz,ZTF20aahirfz_alert_4.npy,SN IIP
 ZTF20aaiahra,ZTF20aaiahra_alert_1.npy,SN Ib
-ZTF20aajcdad,ZTF20aajcdad_alert_12.npy,SN Ib
-ZTF20aajcdad,ZTF20aajcdad_alert_15.npy,SN Ib
-ZTF20aajcdad,ZTF20aajcdad_alert_18.npy,SN Ib
-ZTF20aajcdad,ZTF20aajcdad_alert_21.npy,SN Ib
-ZTF20aajcdad,ZTF20aajcdad_alert_24.npy,SN Ib
 ZTF20aaoldej,ZTF20aaoldej_alert_28.npy,SN IIP
-ZTF20aaoldej,ZTF20aaoldej_alert_35.npy,SN IIP
-ZTF20aaoldej,ZTF20aaoldej_alert_42.npy,SN IIP
-ZTF20aaoldej,ZTF20aaoldej_alert_49.npy,SN IIP
+ZTF20aaoldej,ZTF20aaoldej_alert_31.npy,SN IIP
+ZTF20aaoldej,ZTF20aaoldej_alert_34.npy,SN IIP
+ZTF20aaoldej,ZTF20aaoldej_alert_37.npy,SN IIP
+ZTF20aaoldej,ZTF20aaoldej_alert_40.npy,SN IIP
+ZTF20aaoldej,ZTF20aaoldej_alert_44.npy,SN IIP
+ZTF20aaoldej,ZTF20aaoldej_alert_47.npy,SN IIP
+ZTF20aaoldej,ZTF20aaoldej_alert_50.npy,SN IIP
+ZTF20aaoldej,ZTF20aaoldej_alert_53.npy,SN IIP
 ZTF20aaoldej,ZTF20aaoldej_alert_56.npy,SN IIP
-ZTF20aapnqbw,ZTF20aapnqbw_alert_1.npy,SN Ib
 ZTF20aatqesi,ZTF20aatqesi_alert_13.npy,SN IIP
+ZTF20aatqesi,ZTF20aatqesi_alert_14.npy,SN IIP
 ZTF20aatqesi,ZTF20aatqesi_alert_16.npy,SN IIP
+ZTF20aatqesi,ZTF20aatqesi_alert_17.npy,SN IIP
+ZTF20aatqesi,ZTF20aatqesi_alert_19.npy,SN IIP
 ZTF20aatqesi,ZTF20aatqesi_alert_20.npy,SN IIP
+ZTF20aatqesi,ZTF20aatqesi_alert_22.npy,SN IIP
 ZTF20aatqesi,ZTF20aatqesi_alert_23.npy,SN IIP
+ZTF20aatqesi,ZTF20aatqesi_alert_25.npy,SN IIP
 ZTF20aatqesi,ZTF20aatqesi_alert_26.npy,SN IIP
 ZTF20aattqle,ZTF20aattqle_alert_2.npy,SN IIP
 ZTF20aattqle,ZTF20aattqle_alert_3.npy,SN IIP
@@ -481,40 +731,69 @@ ZTF20aaurfwa,ZTF20aaurfwa_alert_11.npy,SN IIn
 ZTF20aaurfwa,ZTF20aaurfwa_alert_6.npy,SN IIn
 ZTF20aaurfwa,ZTF20aaurfwa_alert_7.npy,SN IIn
 ZTF20aaurfwa,ZTF20aaurfwa_alert_8.npy,SN IIn
+ZTF20aaurfwa,ZTF20aaurfwa_alert_9.npy,SN IIn
 ZTF20aauwysn,ZTF20aauwysn_alert_2.npy,Cataclysmic
 ZTF20aauwysn,ZTF20aauwysn_alert_3.npy,Cataclysmic
 ZTF20aavdoqi,ZTF20aavdoqi_alert_1.npy,AGN
 ZTF20aavdoqi,ZTF20aavdoqi_alert_2.npy,AGN
+ZTF20aavhyel,ZTF20aavhyel_alert_2.npy,SN Ic
+ZTF20aavhyel,ZTF20aavhyel_alert_3.npy,SN Ic
+ZTF20aavhyel,ZTF20aavhyel_alert_4.npy,SN Ic
 ZTF20aavptjf,ZTF20aavptjf_alert_16.npy,SN IIP
-ZTF20aavptjf,ZTF20aavptjf_alert_20.npy,SN IIP
+ZTF20aavptjf,ZTF20aavptjf_alert_18.npy,SN IIP
+ZTF20aavptjf,ZTF20aavptjf_alert_19.npy,SN IIP
+ZTF20aavptjf,ZTF20aavptjf_alert_21.npy,SN IIP
+ZTF20aavptjf,ZTF20aavptjf_alert_23.npy,SN IIP
 ZTF20aavptjf,ZTF20aavptjf_alert_24.npy,SN IIP
-ZTF20aavptjf,ZTF20aavptjf_alert_27.npy,SN IIP
+ZTF20aavptjf,ZTF20aavptjf_alert_26.npy,SN IIP
+ZTF20aavptjf,ZTF20aavptjf_alert_28.npy,SN IIP
+ZTF20aavptjf,ZTF20aavptjf_alert_29.npy,SN IIP
 ZTF20aavptjf,ZTF20aavptjf_alert_31.npy,SN IIP
+ZTF20aavzffg,ZTF20aavzffg_alert_10.npy,SN Ib
+ZTF20aavzffg,ZTF20aavzffg_alert_5.npy,SN Ib
+ZTF20aavzffg,ZTF20aavzffg_alert_6.npy,SN Ib
+ZTF20aavzffg,ZTF20aavzffg_alert_7.npy,SN Ib
+ZTF20aavzffg,ZTF20aavzffg_alert_8.npy,SN Ib
+ZTF20aavzffg,ZTF20aavzffg_alert_9.npy,SN Ib
+ZTF20aawjbsf,ZTF20aawjbsf_alert_3.npy,SN IIP
+ZTF20aawjbsf,ZTF20aawjbsf_alert_4.npy,SN IIP
+ZTF20aawjbsf,ZTF20aawjbsf_alert_5.npy,SN IIP
 ZTF20aawmlfq,ZTF20aawmlfq_alert_10.npy,SN Ia
+ZTF20aawmlfq,ZTF20aawmlfq_alert_11.npy,SN Ia
 ZTF20aawmlfq,ZTF20aawmlfq_alert_12.npy,SN Ia
 ZTF20aawmlfq,ZTF20aawmlfq_alert_6.npy,SN Ia
+ZTF20aawmlfq,ZTF20aawmlfq_alert_7.npy,SN Ia
 ZTF20aawmlfq,ZTF20aawmlfq_alert_8.npy,SN Ia
 ZTF20aawmlfq,ZTF20aawmlfq_alert_9.npy,SN Ia
 ZTF20aayrobw,ZTF20aayrobw_alert_10.npy,SN IIP
+ZTF20aayrobw,ZTF20aayrobw_alert_11.npy,SN IIP
 ZTF20aayrobw,ZTF20aayrobw_alert_12.npy,SN IIP
 ZTF20aayrobw,ZTF20aayrobw_alert_13.npy,SN IIP
+ZTF20aayrobw,ZTF20aayrobw_alert_14.npy,SN IIP
 ZTF20aayrobw,ZTF20aayrobw_alert_15.npy,SN IIP
 ZTF20aayrobw,ZTF20aayrobw_alert_8.npy,SN IIP
+ZTF20aayrobw,ZTF20aayrobw_alert_9.npy,SN IIP
 ZTF20aayvmyh,ZTF20aayvmyh_alert_2.npy,SN IIn
 ZTF20aayvmyh,ZTF20aayvmyh_alert_3.npy,SN IIn
 ZTF20aazkxcw,ZTF20aazkxcw_alert_3.npy,SN Ia
 ZTF20aazkxcw,ZTF20aazkxcw_alert_4.npy,SN Ia
 ZTF20aazkxcw,ZTF20aazkxcw_alert_5.npy,SN Ia
-ZTF20abbpkng,ZTF20abbpkng_alert_11.npy,SN Ib
-ZTF20abbpkng,ZTF20abbpkng_alert_14.npy,SN Ib
-ZTF20abbpkng,ZTF20abbpkng_alert_16.npy,SN Ib
-ZTF20abbpkng,ZTF20abbpkng_alert_19.npy,SN Ib
-ZTF20abbpkng,ZTF20abbpkng_alert_22.npy,SN Ib
+ZTF20aazpyhy,ZTF20aazpyhy_alert_10.npy,SN Ic
+ZTF20aazpyhy,ZTF20aazpyhy_alert_11.npy,SN Ic
+ZTF20aazpyhy,ZTF20aazpyhy_alert_12.npy,SN Ic
+ZTF20aazpyhy,ZTF20aazpyhy_alert_6.npy,SN Ic
+ZTF20aazpyhy,ZTF20aazpyhy_alert_7.npy,SN Ic
+ZTF20aazpyhy,ZTF20aazpyhy_alert_8.npy,SN Ic
+ZTF20aazpyhy,ZTF20aazpyhy_alert_9.npy,SN Ic
 ZTF20abbpkpa,ZTF20abbpkpa_alert_10.npy,SN IIP
+ZTF20abbpkpa,ZTF20abbpkpa_alert_11.npy,SN IIP
 ZTF20abbpkpa,ZTF20abbpkpa_alert_12.npy,SN IIP
+ZTF20abbpkpa,ZTF20abbpkpa_alert_13.npy,SN IIP
 ZTF20abbpkpa,ZTF20abbpkpa_alert_14.npy,SN IIP
+ZTF20abbpkpa,ZTF20abbpkpa_alert_15.npy,SN IIP
 ZTF20abbpkpa,ZTF20abbpkpa_alert_16.npy,SN IIP
 ZTF20abbpkpa,ZTF20abbpkpa_alert_8.npy,SN IIP
+ZTF20abbpkpa,ZTF20abbpkpa_alert_9.npy,SN IIP
 ZTF20abbumno,ZTF20abbumno_alert_2.npy,SN II
 ZTF20abbumno,ZTF20abbumno_alert_3.npy,SN II
 ZTF20abeezca,ZTF20abeezca_alert_2.npy,SN Ic
@@ -522,10 +801,18 @@ ZTF20abeezca,ZTF20abeezca_alert_3.npy,SN Ic
 ZTF20abeohfn,ZTF20abeohfn_alert_3.npy,SN IIP
 ZTF20abeohfn,ZTF20abeohfn_alert_4.npy,SN IIP
 ZTF20abeohfn,ZTF20abeohfn_alert_5.npy,SN IIP
+ZTF20abexfvz,ZTF20abexfvz_alert_2.npy,Cataclysmic
+ZTF20abexfvz,ZTF20abexfvz_alert_3.npy,Cataclysmic
+ZTF20abexfvz,ZTF20abexfvz_alert_4.npy,Cataclysmic
 ZTF20abezylf,ZTF20abezylf_alert_15.npy,Cataclysmic
+ZTF20abezylf,ZTF20abezylf_alert_17.npy,Cataclysmic
 ZTF20abezylf,ZTF20abezylf_alert_18.npy,Cataclysmic
-ZTF20abezylf,ZTF20abezylf_alert_22.npy,Cataclysmic
+ZTF20abezylf,ZTF20abezylf_alert_20.npy,Cataclysmic
+ZTF20abezylf,ZTF20abezylf_alert_21.npy,Cataclysmic
+ZTF20abezylf,ZTF20abezylf_alert_23.npy,Cataclysmic
+ZTF20abezylf,ZTF20abezylf_alert_24.npy,Cataclysmic
 ZTF20abezylf,ZTF20abezylf_alert_26.npy,Cataclysmic
+ZTF20abezylf,ZTF20abezylf_alert_27.npy,Cataclysmic
 ZTF20abezylf,ZTF20abezylf_alert_29.npy,Cataclysmic
 ZTF20abgbdeh,ZTF20abgbdeh_alert_1.npy,SN Ia
 ZTF20abgbdeh,ZTF20abgbdeh_alert_2.npy,SN Ia
@@ -537,44 +824,87 @@ ZTF20abgxwyt,ZTF20abgxwyt_alert_4.npy,Cataclysmic
 ZTF20abhfrxt,ZTF20abhfrxt_alert_3.npy,Cataclysmic
 ZTF20abhfrxt,ZTF20abhfrxt_alert_4.npy,Cataclysmic
 ZTF20abhfrxt,ZTF20abhfrxt_alert_5.npy,Cataclysmic
-ZTF20abjwvae,ZTF20abjwvae_alert_3.npy,Tidal Disruption Event
-ZTF20abjwvae,ZTF20abjwvae_alert_4.npy,Tidal Disruption Event
-ZTF20abjwvae,ZTF20abjwvae_alert_5.npy,Tidal Disruption Event
+ZTF20abjkvyt,ZTF20abjkvyt_alert_4.npy,SN Ia
+ZTF20abjkvyt,ZTF20abjkvyt_alert_5.npy,SN Ia
+ZTF20abjkvyt,ZTF20abjkvyt_alert_6.npy,SN Ia
+ZTF20abjkvyt,ZTF20abjkvyt_alert_7.npy,SN Ia
+ZTF20abjkvyt,ZTF20abjkvyt_alert_8.npy,SN Ia
+ZTF20abjsyqu,ZTF20abjsyqu_alert_4.npy,Cataclysmic
+ZTF20abjsyqu,ZTF20abjsyqu_alert_5.npy,Cataclysmic
+ZTF20abjsyqu,ZTF20abjsyqu_alert_6.npy,Cataclysmic
+ZTF20abjsyqu,ZTF20abjsyqu_alert_7.npy,Cataclysmic
 ZTF20abjyorg,ZTF20abjyorg_alert_1.npy,SN IIP
-ZTF20abkcrzm,ZTF20abkcrzm_alert_114.npy,Cataclysmic
-ZTF20abkcrzm,ZTF20abkcrzm_alert_133.npy,Cataclysmic
+ZTF20abkcrzm,ZTF20abkcrzm_alert_101.npy,Cataclysmic
+ZTF20abkcrzm,ZTF20abkcrzm_alert_110.npy,Cataclysmic
+ZTF20abkcrzm,ZTF20abkcrzm_alert_118.npy,Cataclysmic
+ZTF20abkcrzm,ZTF20abkcrzm_alert_127.npy,Cataclysmic
+ZTF20abkcrzm,ZTF20abkcrzm_alert_135.npy,Cataclysmic
+ZTF20abkcrzm,ZTF20abkcrzm_alert_144.npy,Cataclysmic
 ZTF20abkcrzm,ZTF20abkcrzm_alert_152.npy,Cataclysmic
 ZTF20abkcrzm,ZTF20abkcrzm_alert_76.npy,Cataclysmic
-ZTF20abkcrzm,ZTF20abkcrzm_alert_95.npy,Cataclysmic
+ZTF20abkcrzm,ZTF20abkcrzm_alert_84.npy,Cataclysmic
+ZTF20abkcrzm,ZTF20abkcrzm_alert_93.npy,Cataclysmic
 ZTF20abkhtbc,ZTF20abkhtbc_alert_2.npy,SN Ia
 ZTF20abkhtbc,ZTF20abkhtbc_alert_3.npy,SN Ia
 ZTF20ablqacl,ZTF20ablqacl_alert_2.npy,SN IIP
 ZTF20ablqacl,ZTF20ablqacl_alert_3.npy,SN IIP
 ZTF20ablqacl,ZTF20ablqacl_alert_4.npy,SN IIP
+ZTF20ablqbvc,ZTF20ablqbvc_alert_4.npy,SN Ia
+ZTF20ablqbvc,ZTF20ablqbvc_alert_5.npy,SN Ia
+ZTF20ablqbvc,ZTF20ablqbvc_alert_6.npy,SN Ia
+ZTF20ablqbvc,ZTF20ablqbvc_alert_7.npy,SN Ia
+ZTF20ablqbvc,ZTF20ablqbvc_alert_8.npy,SN Ia
+ZTF20abmectx,ZTF20abmectx_alert_3.npy,SN Ia
+ZTF20abmectx,ZTF20abmectx_alert_4.npy,SN Ia
+ZTF20abmectx,ZTF20abmectx_alert_5.npy,SN Ia
+ZTF20abmectx,ZTF20abmectx_alert_6.npy,SN Ia
 ZTF20abonvte,ZTF20abonvte_alert_10.npy,SN IIn
+ZTF20abonvte,ZTF20abonvte_alert_11.npy,SN IIn
 ZTF20abonvte,ZTF20abonvte_alert_12.npy,SN IIn
+ZTF20abonvte,ZTF20abonvte_alert_13.npy,SN IIn
 ZTF20abonvte,ZTF20abonvte_alert_14.npy,SN IIn
+ZTF20abonvte,ZTF20abonvte_alert_15.npy,SN IIn
 ZTF20abonvte,ZTF20abonvte_alert_16.npy,SN IIn
 ZTF20abonvte,ZTF20abonvte_alert_8.npy,SN IIn
+ZTF20abonvte,ZTF20abonvte_alert_9.npy,SN IIn
 ZTF20abopngr,ZTF20abopngr_alert_10.npy,Cataclysmic
+ZTF20abopngr,ZTF20abopngr_alert_11.npy,Cataclysmic
 ZTF20abopngr,ZTF20abopngr_alert_12.npy,Cataclysmic
+ZTF20abopngr,ZTF20abopngr_alert_13.npy,Cataclysmic
 ZTF20abopngr,ZTF20abopngr_alert_14.npy,Cataclysmic
+ZTF20abopngr,ZTF20abopngr_alert_15.npy,Cataclysmic
+ZTF20abopngr,ZTF20abopngr_alert_16.npy,Cataclysmic
 ZTF20abopngr,ZTF20abopngr_alert_17.npy,Cataclysmic
+ZTF20abopngr,ZTF20abopngr_alert_18.npy,Cataclysmic
 ZTF20abopngr,ZTF20abopngr_alert_19.npy,Cataclysmic
 ZTF20absgwch,ZTF20absgwch_alert_13.npy,SN II
+ZTF20absgwch,ZTF20absgwch_alert_14.npy,SN II
 ZTF20absgwch,ZTF20absgwch_alert_16.npy,SN II
-ZTF20absgwch,ZTF20absgwch_alert_19.npy,SN II
+ZTF20absgwch,ZTF20absgwch_alert_17.npy,SN II
+ZTF20absgwch,ZTF20absgwch_alert_18.npy,SN II
+ZTF20absgwch,ZTF20absgwch_alert_20.npy,SN II
+ZTF20absgwch,ZTF20absgwch_alert_21.npy,SN II
 ZTF20absgwch,ZTF20absgwch_alert_22.npy,SN II
+ZTF20absgwch,ZTF20absgwch_alert_24.npy,SN II
 ZTF20absgwch,ZTF20absgwch_alert_25.npy,SN II
+ZTF20abvtybi,ZTF20abvtybi_alert_10.npy,SN IIP
 ZTF20abvtybi,ZTF20abvtybi_alert_11.npy,SN IIP
+ZTF20abvtybi,ZTF20abvtybi_alert_12.npy,SN IIP
 ZTF20abvtybi,ZTF20abvtybi_alert_13.npy,SN IIP
+ZTF20abvtybi,ZTF20abvtybi_alert_14.npy,SN IIP
 ZTF20abvtybi,ZTF20abvtybi_alert_15.npy,SN IIP
+ZTF20abvtybi,ZTF20abvtybi_alert_16.npy,SN IIP
 ZTF20abvtybi,ZTF20abvtybi_alert_17.npy,SN IIP
 ZTF20abvtybi,ZTF20abvtybi_alert_9.npy,SN IIP
 ZTF20abxmwwd,ZTF20abxmwwd_alert_30.npy,SN IIP
-ZTF20abxmwwd,ZTF20abxmwwd_alert_37.npy,SN IIP
-ZTF20abxmwwd,ZTF20abxmwwd_alert_44.npy,SN IIP
-ZTF20abxmwwd,ZTF20abxmwwd_alert_52.npy,SN IIP
+ZTF20abxmwwd,ZTF20abxmwwd_alert_33.npy,SN IIP
+ZTF20abxmwwd,ZTF20abxmwwd_alert_36.npy,SN IIP
+ZTF20abxmwwd,ZTF20abxmwwd_alert_40.npy,SN IIP
+ZTF20abxmwwd,ZTF20abxmwwd_alert_43.npy,SN IIP
+ZTF20abxmwwd,ZTF20abxmwwd_alert_46.npy,SN IIP
+ZTF20abxmwwd,ZTF20abxmwwd_alert_49.npy,SN IIP
+ZTF20abxmwwd,ZTF20abxmwwd_alert_53.npy,SN IIP
+ZTF20abxmwwd,ZTF20abxmwwd_alert_56.npy,SN IIP
 ZTF20abxmwwd,ZTF20abxmwwd_alert_59.npy,SN IIP
 ZTF20abxyaaf,ZTF20abxyaaf_alert_3.npy,SN Ic
 ZTF20abxyaaf,ZTF20abxyaaf_alert_4.npy,SN Ic
@@ -585,32 +915,49 @@ ZTF20abyylgi,ZTF20abyylgi_alert_2.npy,SN IIP
 ZTF20abzoaas,ZTF20abzoaas_alert_10.npy,SN IIP
 ZTF20abzoaas,ZTF20abzoaas_alert_5.npy,SN IIP
 ZTF20abzoaas,ZTF20abzoaas_alert_6.npy,SN IIP
+ZTF20abzoaas,ZTF20abzoaas_alert_7.npy,SN IIP
 ZTF20abzoaas,ZTF20abzoaas_alert_8.npy,SN IIP
 ZTF20abzoaas,ZTF20abzoaas_alert_9.npy,SN IIP
 ZTF20abztkiv,ZTF20abztkiv_alert_10.npy,SN IIP
+ZTF20abztkiv,ZTF20abztkiv_alert_11.npy,SN IIP
 ZTF20abztkiv,ZTF20abztkiv_alert_12.npy,SN IIP
 ZTF20abztkiv,ZTF20abztkiv_alert_6.npy,SN IIP
+ZTF20abztkiv,ZTF20abztkiv_alert_7.npy,SN IIP
 ZTF20abztkiv,ZTF20abztkiv_alert_8.npy,SN IIP
 ZTF20abztkiv,ZTF20abztkiv_alert_9.npy,SN IIP
 ZTF20acbiwri,ZTF20acbiwri_alert_10.npy,SN IIP
+ZTF20acbiwri,ZTF20acbiwri_alert_11.npy,SN IIP
 ZTF20acbiwri,ZTF20acbiwri_alert_12.npy,SN IIP
 ZTF20acbiwri,ZTF20acbiwri_alert_13.npy,SN IIP
 ZTF20acbiwri,ZTF20acbiwri_alert_7.npy,SN IIP
 ZTF20acbiwri,ZTF20acbiwri_alert_8.npy,SN IIP
+ZTF20acbiwri,ZTF20acbiwri_alert_9.npy,SN IIP
 ZTF20accrldu,ZTF20accrldu_alert_10.npy,SN IIP
+ZTF20accrldu,ZTF20accrldu_alert_11.npy,SN IIP
 ZTF20accrldu,ZTF20accrldu_alert_12.npy,SN IIP
 ZTF20accrldu,ZTF20accrldu_alert_13.npy,SN IIP
+ZTF20accrldu,ZTF20accrldu_alert_14.npy,SN IIP
 ZTF20accrldu,ZTF20accrldu_alert_15.npy,SN IIP
 ZTF20accrldu,ZTF20accrldu_alert_8.npy,SN IIP
+ZTF20accrldu,ZTF20accrldu_alert_9.npy,SN IIP
 ZTF20acfnnxv,ZTF20acfnnxv_alert_3.npy,Cataclysmic
 ZTF20acfnnxv,ZTF20acfnnxv_alert_4.npy,Cataclysmic
 ZTF20acfnnxv,ZTF20acfnnxv_alert_5.npy,Cataclysmic
 ZTF20acfnnxv,ZTF20acfnnxv_alert_6.npy,Cataclysmic
+ZTF20acfqngt,ZTF20acfqngt_alert_4.npy,SN Ic
+ZTF20acfqngt,ZTF20acfqngt_alert_5.npy,SN Ic
+ZTF20acfqngt,ZTF20acfqngt_alert_6.npy,SN Ic
+ZTF20acfqngt,ZTF20acfqngt_alert_7.npy,SN Ic
 ZTF20acgnenc,ZTF20acgnenc_alert_10.npy,SN IIP
+ZTF20acgnenc,ZTF20acgnenc_alert_11.npy,SN IIP
 ZTF20acgnenc,ZTF20acgnenc_alert_12.npy,SN IIP
 ZTF20acgnenc,ZTF20acgnenc_alert_13.npy,SN IIP
+ZTF20acgnenc,ZTF20acgnenc_alert_14.npy,SN IIP
 ZTF20acgnenc,ZTF20acgnenc_alert_15.npy,SN IIP
 ZTF20acgnenc,ZTF20acgnenc_alert_8.npy,SN IIP
+ZTF20acgnenc,ZTF20acgnenc_alert_9.npy,SN IIP
+ZTF20acgpngg,ZTF20acgpngg_alert_2.npy,SN Ia
+ZTF20acgpngg,ZTF20acgpngg_alert_3.npy,SN Ia
 ZTF20acgremo,ZTF20acgremo_alert_3.npy,SN Ia
 ZTF20acgremo,ZTF20acgremo_alert_4.npy,SN Ia
 ZTF20acgremo,ZTF20acgremo_alert_5.npy,SN Ia
@@ -619,6 +966,7 @@ ZTF20achaxsk,ZTF20achaxsk_alert_11.npy,SN II
 ZTF20achaxsk,ZTF20achaxsk_alert_6.npy,SN II
 ZTF20achaxsk,ZTF20achaxsk_alert_7.npy,SN II
 ZTF20achaxsk,ZTF20achaxsk_alert_8.npy,SN II
+ZTF20achaxsk,ZTF20achaxsk_alert_9.npy,SN II
 ZTF20aciwrpn,ZTF20aciwrpn_alert_4.npy,SN IIn
 ZTF20aciwrpn,ZTF20aciwrpn_alert_5.npy,SN IIn
 ZTF20aciwrpn,ZTF20aciwrpn_alert_6.npy,SN IIn
@@ -635,6 +983,7 @@ ZTF20acnyxln,ZTF20acnyxln_alert_11.npy,SN Ia
 ZTF20acnyxln,ZTF20acnyxln_alert_6.npy,SN Ia
 ZTF20acnyxln,ZTF20acnyxln_alert_7.npy,SN Ia
 ZTF20acnyxln,ZTF20acnyxln_alert_8.npy,SN Ia
+ZTF20acnyxln,ZTF20acnyxln_alert_9.npy,SN Ia
 ZTF20acpbboa,ZTF20acpbboa_alert_3.npy,SN II
 ZTF20acpbboa,ZTF20acpbboa_alert_4.npy,SN II
 ZTF20acpbboa,ZTF20acpbboa_alert_5.npy,SN II
@@ -646,6 +995,7 @@ ZTF20acpvbbh,ZTF20acpvbbh_alert_8.npy,SN II
 ZTF20acqelhh,ZTF20acqelhh_alert_10.npy,SN Ia
 ZTF20acqelhh,ZTF20acqelhh_alert_5.npy,SN Ia
 ZTF20acqelhh,ZTF20acqelhh_alert_6.npy,SN Ia
+ZTF20acqelhh,ZTF20acqelhh_alert_7.npy,SN Ia
 ZTF20acqelhh,ZTF20acqelhh_alert_8.npy,SN Ia
 ZTF20acqelhh,ZTF20acqelhh_alert_9.npy,SN Ia
 ZTF20acqnfzn,ZTF20acqnfzn_alert_3.npy,SN II
@@ -653,34 +1003,66 @@ ZTF20acqnfzn,ZTF20acqnfzn_alert_4.npy,SN II
 ZTF20acqnfzn,ZTF20acqnfzn_alert_5.npy,SN II
 ZTF20acqnfzn,ZTF20acqnfzn_alert_6.npy,SN II
 ZTF20actkmks,ZTF20actkmks_alert_10.npy,SN II
+ZTF20actkmks,ZTF20actkmks_alert_11.npy,SN II
 ZTF20actkmks,ZTF20actkmks_alert_12.npy,SN II
 ZTF20actkmks,ZTF20actkmks_alert_6.npy,SN II
+ZTF20actkmks,ZTF20actkmks_alert_7.npy,SN II
 ZTF20actkmks,ZTF20actkmks_alert_8.npy,SN II
 ZTF20actkmks,ZTF20actkmks_alert_9.npy,SN II
 ZTF20actodrq,ZTF20actodrq_alert_11.npy,SN II
+ZTF20actodrq,ZTF20actodrq_alert_12.npy,SN II
+ZTF20actodrq,ZTF20actodrq_alert_13.npy,SN II
 ZTF20actodrq,ZTF20actodrq_alert_14.npy,SN II
-ZTF20actodrq,ZTF20actodrq_alert_16.npy,SN II
+ZTF20actodrq,ZTF20actodrq_alert_15.npy,SN II
+ZTF20actodrq,ZTF20actodrq_alert_17.npy,SN II
 ZTF20actodrq,ZTF20actodrq_alert_18.npy,SN II
+ZTF20actodrq,ZTF20actodrq_alert_19.npy,SN II
+ZTF20actodrq,ZTF20actodrq_alert_20.npy,SN II
 ZTF20actodrq,ZTF20actodrq_alert_21.npy,SN II
+ZTF20actqnhg,ZTF20actqnhg_alert_4.npy,SN II
+ZTF20actqnhg,ZTF20actqnhg_alert_5.npy,SN II
+ZTF20actqnhg,ZTF20actqnhg_alert_6.npy,SN II
+ZTF20actqnhg,ZTF20actqnhg_alert_7.npy,SN II
+ZTF20actqnhg,ZTF20actqnhg_alert_8.npy,SN II
 ZTF20acuaqlf,ZTF20acuaqlf_alert_10.npy,SN II
 ZTF20acuaqlf,ZTF20acuaqlf_alert_5.npy,SN II
 ZTF20acuaqlf,ZTF20acuaqlf_alert_6.npy,SN II
+ZTF20acuaqlf,ZTF20acuaqlf_alert_7.npy,SN II
 ZTF20acuaqlf,ZTF20acuaqlf_alert_8.npy,SN II
 ZTF20acuaqlf,ZTF20acuaqlf_alert_9.npy,SN II
+ZTF20acufmte,ZTF20acufmte_alert_10.npy,SN II
+ZTF20acufmte,ZTF20acufmte_alert_11.npy,SN II
+ZTF20acufmte,ZTF20acufmte_alert_12.npy,SN II
+ZTF20acufmte,ZTF20acufmte_alert_13.npy,SN II
+ZTF20acufmte,ZTF20acufmte_alert_14.npy,SN II
+ZTF20acufmte,ZTF20acufmte_alert_15.npy,SN II
+ZTF20acufmte,ZTF20acufmte_alert_16.npy,SN II
+ZTF20acufmte,ZTF20acufmte_alert_17.npy,SN II
+ZTF20acufmte,ZTF20acufmte_alert_18.npy,SN II
+ZTF20acufmte,ZTF20acufmte_alert_9.npy,SN II
 ZTF20acugxbm,ZTF20acugxbm_alert_3.npy,SN Ia
 ZTF20acugxbm,ZTF20acugxbm_alert_4.npy,SN Ia
 ZTF20acugxbm,ZTF20acugxbm_alert_5.npy,SN Ia
 ZTF20acusqsp,ZTF20acusqsp_alert_2.npy,SN Ia
 ZTF20acusqsp,ZTF20acusqsp_alert_3.npy,SN Ia
 ZTF20acusqsp,ZTF20acusqsp_alert_4.npy,SN Ia
-ZTF20acwytxn,ZTF20acwytxn_alert_10.npy,Tidal Disruption Event
-ZTF20acwytxn,ZTF20acwytxn_alert_12.npy,Tidal Disruption Event
-ZTF20acwytxn,ZTF20acwytxn_alert_13.npy,Tidal Disruption Event
-ZTF20acwytxn,ZTF20acwytxn_alert_15.npy,Tidal Disruption Event
-ZTF20acwytxn,ZTF20acwytxn_alert_8.npy,Tidal Disruption Event
+ZTF20acwmpsj,ZTF20acwmpsj_alert_19.npy,SN Ia
+ZTF20acwmpsj,ZTF20acwmpsj_alert_21.npy,SN Ia
+ZTF20acwmpsj,ZTF20acwmpsj_alert_23.npy,SN Ia
+ZTF20acwmpsj,ZTF20acwmpsj_alert_25.npy,SN Ia
+ZTF20acwmpsj,ZTF20acwmpsj_alert_27.npy,SN Ia
+ZTF20acwmpsj,ZTF20acwmpsj_alert_30.npy,SN Ia
+ZTF20acwmpsj,ZTF20acwmpsj_alert_32.npy,SN Ia
+ZTF20acwmpsj,ZTF20acwmpsj_alert_34.npy,SN Ia
+ZTF20acwmpsj,ZTF20acwmpsj_alert_36.npy,SN Ia
+ZTF20acwmpsj,ZTF20acwmpsj_alert_38.npy,SN Ia
+ZTF20acxtgek,ZTF20acxtgek_alert_10.npy,SN II
 ZTF20acxtgek,ZTF20acxtgek_alert_11.npy,SN II
+ZTF20acxtgek,ZTF20acxtgek_alert_12.npy,SN II
 ZTF20acxtgek,ZTF20acxtgek_alert_13.npy,SN II
+ZTF20acxtgek,ZTF20acxtgek_alert_14.npy,SN II
 ZTF20acxtgek,ZTF20acxtgek_alert_15.npy,SN II
+ZTF20acxtgek,ZTF20acxtgek_alert_16.npy,SN II
 ZTF20acxtgek,ZTF20acxtgek_alert_17.npy,SN II
 ZTF20acxtgek,ZTF20acxtgek_alert_9.npy,SN II
 ZTF20acywefl,ZTF20acywefl_alert_4.npy,SN Ia
@@ -689,19 +1071,32 @@ ZTF20acywefl,ZTF20acywefl_alert_6.npy,SN Ia
 ZTF20acywefl,ZTF20acywefl_alert_7.npy,SN Ia
 ZTF20acywefl,ZTF20acywefl_alert_8.npy,SN Ia
 ZTF21aaagypx,ZTF21aaagypx_alert_10.npy,SN II
+ZTF21aaagypx,ZTF21aaagypx_alert_11.npy,SN II
 ZTF21aaagypx,ZTF21aaagypx_alert_12.npy,SN II
 ZTF21aaagypx,ZTF21aaagypx_alert_6.npy,SN II
+ZTF21aaagypx,ZTF21aaagypx_alert_7.npy,SN II
 ZTF21aaagypx,ZTF21aaagypx_alert_8.npy,SN II
 ZTF21aaagypx,ZTF21aaagypx_alert_9.npy,SN II
+ZTF21aabxjqr,ZTF21aabxjqr_alert_10.npy,SN IIb
+ZTF21aabxjqr,ZTF21aabxjqr_alert_11.npy,SN IIb
+ZTF21aabxjqr,ZTF21aabxjqr_alert_6.npy,SN IIb
+ZTF21aabxjqr,ZTF21aabxjqr_alert_7.npy,SN IIb
+ZTF21aabxjqr,ZTF21aabxjqr_alert_8.npy,SN IIb
+ZTF21aabxjqr,ZTF21aabxjqr_alert_9.npy,SN IIb
 ZTF21aadkhte,ZTF21aadkhte_alert_5.npy,SN II
 ZTF21aadkhte,ZTF21aadkhte_alert_6.npy,SN II
 ZTF21aadkhte,ZTF21aadkhte_alert_7.npy,SN II
 ZTF21aadkhte,ZTF21aadkhte_alert_8.npy,SN II
 ZTF21aadkhte,ZTF21aadkhte_alert_9.npy,SN II
 ZTF21aagtekf,ZTF21aagtekf_alert_10.npy,SN II
+ZTF21aagtekf,ZTF21aagtekf_alert_11.npy,SN II
 ZTF21aagtekf,ZTF21aagtekf_alert_12.npy,SN II
-ZTF21aagtekf,ZTF21aagtekf_alert_15.npy,SN II
+ZTF21aagtekf,ZTF21aagtekf_alert_13.npy,SN II
+ZTF21aagtekf,ZTF21aagtekf_alert_14.npy,SN II
+ZTF21aagtekf,ZTF21aagtekf_alert_16.npy,SN II
+ZTF21aagtekf,ZTF21aagtekf_alert_17.npy,SN II
 ZTF21aagtekf,ZTF21aagtekf_alert_18.npy,SN II
+ZTF21aagtekf,ZTF21aagtekf_alert_19.npy,SN II
 ZTF21aagtekf,ZTF21aagtekf_alert_20.npy,SN II
 ZTF21aajdbhw,ZTF21aajdbhw_alert_4.npy,SN Ia
 ZTF21aajdbhw,ZTF21aajdbhw_alert_5.npy,SN Ia
@@ -717,15 +1112,19 @@ ZTF21aalodzw,ZTF21aalodzw_alert_4.npy,SN II
 ZTF21aalodzw,ZTF21aalodzw_alert_5.npy,SN II
 ZTF21aalodzw,ZTF21aalodzw_alert_6.npy,SN II
 ZTF21aamzuxi,ZTF21aamzuxi_alert_10.npy,SN II
+ZTF21aamzuxi,ZTF21aamzuxi_alert_11.npy,SN II
 ZTF21aamzuxi,ZTF21aamzuxi_alert_12.npy,SN II
 ZTF21aamzuxi,ZTF21aamzuxi_alert_13.npy,SN II
+ZTF21aamzuxi,ZTF21aamzuxi_alert_14.npy,SN II
 ZTF21aamzuxi,ZTF21aamzuxi_alert_15.npy,SN II
 ZTF21aamzuxi,ZTF21aamzuxi_alert_8.npy,SN II
+ZTF21aamzuxi,ZTF21aamzuxi_alert_9.npy,SN II
 ZTF21aanwbhk,ZTF21aanwbhk_alert_2.npy,SN Ia
 ZTF21aanwbhk,ZTF21aanwbhk_alert_3.npy,SN Ia
 ZTF21aapjphz,ZTF21aapjphz_alert_10.npy,SN II
 ZTF21aapjphz,ZTF21aapjphz_alert_5.npy,SN II
 ZTF21aapjphz,ZTF21aapjphz_alert_6.npy,SN II
+ZTF21aapjphz,ZTF21aapjphz_alert_7.npy,SN II
 ZTF21aapjphz,ZTF21aapjphz_alert_8.npy,SN II
 ZTF21aapjphz,ZTF21aapjphz_alert_9.npy,SN II
 ZTF21aaqldsj,ZTF21aaqldsj_alert_4.npy,SN II
@@ -733,18 +1132,30 @@ ZTF21aaqldsj,ZTF21aaqldsj_alert_5.npy,SN II
 ZTF21aaqldsj,ZTF21aaqldsj_alert_6.npy,SN II
 ZTF21aaqldsj,ZTF21aaqldsj_alert_7.npy,SN II
 ZTF21aarnjyd,ZTF21aarnjyd_alert_15.npy,SN Ib
+ZTF21aarnjyd,ZTF21aarnjyd_alert_17.npy,SN Ib
 ZTF21aarnjyd,ZTF21aarnjyd_alert_18.npy,SN Ib
-ZTF21aarnjyd,ZTF21aarnjyd_alert_22.npy,SN Ib
+ZTF21aarnjyd,ZTF21aarnjyd_alert_20.npy,SN Ib
+ZTF21aarnjyd,ZTF21aarnjyd_alert_21.npy,SN Ib
+ZTF21aarnjyd,ZTF21aarnjyd_alert_23.npy,SN Ib
+ZTF21aarnjyd,ZTF21aarnjyd_alert_24.npy,SN Ib
 ZTF21aarnjyd,ZTF21aarnjyd_alert_26.npy,SN Ib
+ZTF21aarnjyd,ZTF21aarnjyd_alert_27.npy,SN Ib
 ZTF21aarnjyd,ZTF21aarnjyd_alert_29.npy,SN Ib
 ZTF21aaugbus,ZTF21aaugbus_alert_12.npy,SN Ia
+ZTF21aaugbus,ZTF21aaugbus_alert_13.npy,SN Ia
 ZTF21aaugbus,ZTF21aaugbus_alert_15.npy,SN Ia
-ZTF21aaugbus,ZTF21aaugbus_alert_18.npy,SN Ia
+ZTF21aaugbus,ZTF21aaugbus_alert_16.npy,SN Ia
+ZTF21aaugbus,ZTF21aaugbus_alert_17.npy,SN Ia
+ZTF21aaugbus,ZTF21aaugbus_alert_19.npy,SN Ia
+ZTF21aaugbus,ZTF21aaugbus_alert_20.npy,SN Ia
 ZTF21aaugbus,ZTF21aaugbus_alert_21.npy,SN Ia
+ZTF21aaugbus,ZTF21aaugbus_alert_23.npy,SN Ia
 ZTF21aaugbus,ZTF21aaugbus_alert_24.npy,SN Ia
 ZTF21aawgzda,ZTF21aawgzda_alert_10.npy,SN II
+ZTF21aawgzda,ZTF21aawgzda_alert_11.npy,SN II
 ZTF21aawgzda,ZTF21aawgzda_alert_12.npy,SN II
 ZTF21aawgzda,ZTF21aawgzda_alert_6.npy,SN II
+ZTF21aawgzda,ZTF21aawgzda_alert_7.npy,SN II
 ZTF21aawgzda,ZTF21aawgzda_alert_8.npy,SN II
 ZTF21aawgzda,ZTF21aawgzda_alert_9.npy,SN II
 ZTF21aaxtctv,ZTF21aaxtctv_alert_10.npy,SN Ic
@@ -752,87 +1163,135 @@ ZTF21aaxtctv,ZTF21aaxtctv_alert_11.npy,SN Ic
 ZTF21aaxtctv,ZTF21aaxtctv_alert_6.npy,SN Ic
 ZTF21aaxtctv,ZTF21aaxtctv_alert_7.npy,SN Ic
 ZTF21aaxtctv,ZTF21aaxtctv_alert_8.npy,SN Ic
-ZTF21aayddkn,ZTF21aayddkn_alert_11.npy,SN Ib
-ZTF21aayddkn,ZTF21aayddkn_alert_14.npy,SN Ib
-ZTF21aayddkn,ZTF21aayddkn_alert_16.npy,SN Ib
-ZTF21aayddkn,ZTF21aayddkn_alert_19.npy,SN Ib
-ZTF21aayddkn,ZTF21aayddkn_alert_22.npy,SN Ib
+ZTF21aaxtctv,ZTF21aaxtctv_alert_9.npy,SN Ic
 ZTF21aazcjbh,ZTF21aazcjbh_alert_10.npy,SN Ia
+ZTF21aazcjbh,ZTF21aazcjbh_alert_11.npy,SN Ia
 ZTF21aazcjbh,ZTF21aazcjbh_alert_12.npy,SN Ia
 ZTF21aazcjbh,ZTF21aazcjbh_alert_13.npy,SN Ia
 ZTF21aazcjbh,ZTF21aazcjbh_alert_7.npy,SN Ia
 ZTF21aazcjbh,ZTF21aazcjbh_alert_8.npy,SN Ia
+ZTF21aazcjbh,ZTF21aazcjbh_alert_9.npy,SN Ia
 ZTF21abbvvmf,ZTF21abbvvmf_alert_10.npy,SN IIb
+ZTF21abbvvmf,ZTF21abbvvmf_alert_11.npy,SN IIb
 ZTF21abbvvmf,ZTF21abbvvmf_alert_12.npy,SN IIb
+ZTF21abbvvmf,ZTF21abbvvmf_alert_13.npy,SN IIb
 ZTF21abbvvmf,ZTF21abbvvmf_alert_14.npy,SN IIb
+ZTF21abbvvmf,ZTF21abbvvmf_alert_15.npy,SN IIb
+ZTF21abbvvmf,ZTF21abbvvmf_alert_16.npy,SN IIb
 ZTF21abbvvmf,ZTF21abbvvmf_alert_17.npy,SN IIb
+ZTF21abbvvmf,ZTF21abbvvmf_alert_18.npy,SN IIb
 ZTF21abbvvmf,ZTF21abbvvmf_alert_19.npy,SN IIb
 ZTF21abcmtev,ZTF21abcmtev_alert_11.npy,SN II
-ZTF21abcmtev,ZTF21abcmtev_alert_14.npy,SN II
+ZTF21abcmtev,ZTF21abcmtev_alert_12.npy,SN II
+ZTF21abcmtev,ZTF21abcmtev_alert_13.npy,SN II
+ZTF21abcmtev,ZTF21abcmtev_alert_15.npy,SN II
 ZTF21abcmtev,ZTF21abcmtev_alert_16.npy,SN II
-ZTF21abcmtev,ZTF21abcmtev_alert_19.npy,SN II
+ZTF21abcmtev,ZTF21abcmtev_alert_17.npy,SN II
+ZTF21abcmtev,ZTF21abcmtev_alert_18.npy,SN II
+ZTF21abcmtev,ZTF21abcmtev_alert_20.npy,SN II
+ZTF21abcmtev,ZTF21abcmtev_alert_21.npy,SN II
 ZTF21abcmtev,ZTF21abcmtev_alert_22.npy,SN II
 ZTF21abcpazz,ZTF21abcpazz_alert_12.npy,SN Ia
+ZTF21abcpazz,ZTF21abcpazz_alert_13.npy,SN Ia
 ZTF21abcpazz,ZTF21abcpazz_alert_15.npy,SN Ia
-ZTF21abcpazz,ZTF21abcpazz_alert_18.npy,SN Ia
+ZTF21abcpazz,ZTF21abcpazz_alert_16.npy,SN Ia
+ZTF21abcpazz,ZTF21abcpazz_alert_17.npy,SN Ia
+ZTF21abcpazz,ZTF21abcpazz_alert_19.npy,SN Ia
+ZTF21abcpazz,ZTF21abcpazz_alert_20.npy,SN Ia
 ZTF21abcpazz,ZTF21abcpazz_alert_21.npy,SN Ia
+ZTF21abcpazz,ZTF21abcpazz_alert_23.npy,SN Ia
 ZTF21abcpazz,ZTF21abcpazz_alert_24.npy,SN Ia
+ZTF21abcxswe,ZTF21abcxswe_alert_3.npy,SN Ia
+ZTF21abcxswe,ZTF21abcxswe_alert_4.npy,SN Ia
+ZTF21abcxswe,ZTF21abcxswe_alert_5.npy,SN Ia
 ZTF21abczimc,ZTF21abczimc_alert_19.npy,SN II
-ZTF21abczimc,ZTF21abczimc_alert_24.npy,SN II
-ZTF21abczimc,ZTF21abczimc_alert_28.npy,SN II
-ZTF21abczimc,ZTF21abczimc_alert_32.npy,SN II
+ZTF21abczimc,ZTF21abczimc_alert_21.npy,SN II
+ZTF21abczimc,ZTF21abczimc_alert_23.npy,SN II
+ZTF21abczimc,ZTF21abczimc_alert_25.npy,SN II
+ZTF21abczimc,ZTF21abczimc_alert_27.npy,SN II
+ZTF21abczimc,ZTF21abczimc_alert_29.npy,SN II
+ZTF21abczimc,ZTF21abczimc_alert_31.npy,SN II
+ZTF21abczimc,ZTF21abczimc_alert_33.npy,SN II
+ZTF21abczimc,ZTF21abczimc_alert_35.npy,SN II
 ZTF21abczimc,ZTF21abczimc_alert_37.npy,SN II
-ZTF21abfoace,ZTF21abfoace_alert_12.npy,SN IIb
-ZTF21abfoace,ZTF21abfoace_alert_15.npy,SN IIb
-ZTF21abfoace,ZTF21abfoace_alert_18.npy,SN IIb
-ZTF21abfoace,ZTF21abfoace_alert_21.npy,SN IIb
-ZTF21abfoace,ZTF21abfoace_alert_24.npy,SN IIb
+ZTF21abhqqwq,ZTF21abhqqwq_alert_3.npy,SN Ia
+ZTF21abhqqwq,ZTF21abhqqwq_alert_4.npy,SN Ia
+ZTF21abhqqwq,ZTF21abhqqwq_alert_5.npy,SN Ia
+ZTF21abhqqwq,ZTF21abhqqwq_alert_6.npy,SN Ia
 ZTF21abidrcn,ZTF21abidrcn_alert_10.npy,SN IIb
+ZTF21abidrcn,ZTF21abidrcn_alert_11.npy,SN IIb
 ZTF21abidrcn,ZTF21abidrcn_alert_12.npy,SN IIb
 ZTF21abidrcn,ZTF21abidrcn_alert_13.npy,SN IIb
 ZTF21abidrcn,ZTF21abidrcn_alert_7.npy,SN IIb
 ZTF21abidrcn,ZTF21abidrcn_alert_8.npy,SN IIb
+ZTF21abidrcn,ZTF21abidrcn_alert_9.npy,SN IIb
 ZTF21abioeyq,ZTF21abioeyq_alert_14.npy,SN II
-ZTF21abioeyq,ZTF21abioeyq_alert_18.npy,SN II
-ZTF21abioeyq,ZTF21abioeyq_alert_21.npy,SN II
-ZTF21abioeyq,ZTF21abioeyq_alert_24.npy,SN II
+ZTF21abioeyq,ZTF21abioeyq_alert_16.npy,SN II
+ZTF21abioeyq,ZTF21abioeyq_alert_17.npy,SN II
+ZTF21abioeyq,ZTF21abioeyq_alert_19.npy,SN II
+ZTF21abioeyq,ZTF21abioeyq_alert_20.npy,SN II
+ZTF21abioeyq,ZTF21abioeyq_alert_22.npy,SN II
+ZTF21abioeyq,ZTF21abioeyq_alert_23.npy,SN II
+ZTF21abioeyq,ZTF21abioeyq_alert_25.npy,SN II
+ZTF21abioeyq,ZTF21abioeyq_alert_26.npy,SN II
 ZTF21abioeyq,ZTF21abioeyq_alert_28.npy,SN II
 ZTF21abjrysr,ZTF21abjrysr_alert_4.npy,Tidal Disruption Event
 ZTF21abjrysr,ZTF21abjrysr_alert_5.npy,Tidal Disruption Event
 ZTF21abjrysr,ZTF21abjrysr_alert_6.npy,Tidal Disruption Event
 ZTF21abjrysr,ZTF21abjrysr_alert_7.npy,Tidal Disruption Event
+ZTF21abjvukz,ZTF21abjvukz_alert_1.npy,SN IIn
+ZTF21abjvukz,ZTF21abjvukz_alert_2.npy,SN IIn
 ZTF21abkoccb,ZTF21abkoccb_alert_1.npy,SN II
+ZTF21abmxiuf,ZTF21abmxiuf_alert_3.npy,SN Ib
+ZTF21abmxiuf,ZTF21abmxiuf_alert_4.npy,SN Ib
+ZTF21abmxiuf,ZTF21abmxiuf_alert_5.npy,SN Ib
 ZTF21abnvlnj,ZTF21abnvlnj_alert_4.npy,SN II
 ZTF21abnvlnj,ZTF21abnvlnj_alert_5.npy,SN II
 ZTF21abnvlnj,ZTF21abnvlnj_alert_6.npy,SN II
 ZTF21abnvlnj,ZTF21abnvlnj_alert_7.npy,SN II
 ZTF21abpapvy,ZTF21abpapvy_alert_25.npy,SN Ia
-ZTF21abpapvy,ZTF21abpapvy_alert_31.npy,SN Ia
-ZTF21abpapvy,ZTF21abpapvy_alert_37.npy,SN Ia
-ZTF21abpapvy,ZTF21abpapvy_alert_43.npy,SN Ia
+ZTF21abpapvy,ZTF21abpapvy_alert_28.npy,SN Ia
+ZTF21abpapvy,ZTF21abpapvy_alert_30.npy,SN Ia
+ZTF21abpapvy,ZTF21abpapvy_alert_33.npy,SN Ia
+ZTF21abpapvy,ZTF21abpapvy_alert_36.npy,SN Ia
+ZTF21abpapvy,ZTF21abpapvy_alert_38.npy,SN Ia
+ZTF21abpapvy,ZTF21abpapvy_alert_41.npy,SN Ia
+ZTF21abpapvy,ZTF21abpapvy_alert_44.npy,SN Ia
+ZTF21abpapvy,ZTF21abpapvy_alert_46.npy,SN Ia
 ZTF21abpapvy,ZTF21abpapvy_alert_49.npy,SN Ia
+ZTF21abqtckk,ZTF21abqtckk_alert_2.npy,Tidal Disruption Event
+ZTF21abqtckk,ZTF21abqtckk_alert_3.npy,Tidal Disruption Event
+ZTF21abqtckk,ZTF21abqtckk_alert_4.npy,Tidal Disruption Event
 ZTF21abrluay,ZTF21abrluay_alert_21.npy,SN II
+ZTF21abrluay,ZTF21abrluay_alert_23.npy,SN II
 ZTF21abrluay,ZTF21abrluay_alert_26.npy,SN II
-ZTF21abrluay,ZTF21abrluay_alert_32.npy,SN II
+ZTF21abrluay,ZTF21abrluay_alert_28.npy,SN II
+ZTF21abrluay,ZTF21abrluay_alert_30.npy,SN II
+ZTF21abrluay,ZTF21abrluay_alert_33.npy,SN II
+ZTF21abrluay,ZTF21abrluay_alert_35.npy,SN II
 ZTF21abrluay,ZTF21abrluay_alert_37.npy,SN II
+ZTF21abrluay,ZTF21abrluay_alert_40.npy,SN II
 ZTF21abrluay,ZTF21abrluay_alert_42.npy,SN II
+ZTF21abrylwg,ZTF21abrylwg_alert_2.npy,SN Ia
+ZTF21abrylwg,ZTF21abrylwg_alert_3.npy,SN Ia
+ZTF21abrylwg,ZTF21abrylwg_alert_4.npy,SN Ia
+ZTF21abtcgoh,ZTF21abtcgoh_alert_2.npy,SN II
+ZTF21abtcgoh,ZTF21abtcgoh_alert_3.npy,SN II
 ZTF21abtdvpg,ZTF21abtdvpg_alert_10.npy,SN IIn
 ZTF21abtdvpg,ZTF21abtdvpg_alert_11.npy,SN IIn
 ZTF21abtdvpg,ZTF21abtdvpg_alert_6.npy,SN IIn
 ZTF21abtdvpg,ZTF21abtdvpg_alert_7.npy,SN IIn
 ZTF21abtdvpg,ZTF21abtdvpg_alert_8.npy,SN IIn
+ZTF21abtdvpg,ZTF21abtdvpg_alert_9.npy,SN IIn
 ZTF21abtxnir,ZTF21abtxnir_alert_10.npy,SN Ia
 ZTF21abtxnir,ZTF21abtxnir_alert_5.npy,SN Ia
 ZTF21abtxnir,ZTF21abtxnir_alert_6.npy,SN Ia
+ZTF21abtxnir,ZTF21abtxnir_alert_7.npy,SN Ia
 ZTF21abtxnir,ZTF21abtxnir_alert_8.npy,SN Ia
 ZTF21abtxnir,ZTF21abtxnir_alert_9.npy,SN Ia
 ZTF21abultbr,ZTF21abultbr_alert_3.npy,SN II
 ZTF21abultbr,ZTF21abultbr_alert_4.npy,SN II
 ZTF21abultbr,ZTF21abultbr_alert_5.npy,SN II
-ZTF21abvbdyr,ZTF21abvbdyr_alert_1.npy,SN IIb
-ZTF21acafvhf,ZTF21acafvhf_alert_3.npy,Tidal Disruption Event
-ZTF21acafvhf,ZTF21acafvhf_alert_4.npy,Tidal Disruption Event
-ZTF21acafvhf,ZTF21acafvhf_alert_5.npy,Tidal Disruption Event
 ZTF21acdajtx,ZTF21acdajtx_alert_4.npy,SN Ia
 ZTF21acdajtx,ZTF21acdajtx_alert_5.npy,SN Ia
 ZTF21acdajtx,ZTF21acdajtx_alert_6.npy,SN Ia
@@ -842,14 +1301,21 @@ ZTF21acdbcxy,ZTF21acdbcxy_alert_1.npy,SN II
 ZTF21acgrrnl,ZTF21acgrrnl_alert_10.npy,SN II
 ZTF21acgrrnl,ZTF21acgrrnl_alert_5.npy,SN II
 ZTF21acgrrnl,ZTF21acgrrnl_alert_6.npy,SN II
+ZTF21acgrrnl,ZTF21acgrrnl_alert_7.npy,SN II
 ZTF21acgrrnl,ZTF21acgrrnl_alert_8.npy,SN II
 ZTF21acgrrnl,ZTF21acgrrnl_alert_9.npy,SN II
 ZTF21aciiaio,ZTF21aciiaio_alert_3.npy,SN II
 ZTF21aciiaio,ZTF21aciiaio_alert_4.npy,SN II
 ZTF21aciiaio,ZTF21aciiaio_alert_5.npy,SN II
 ZTF21aciiaio,ZTF21aciiaio_alert_6.npy,SN II
-ZTF21aciustc,ZTF21aciustc_alert_1.npy,SN Ib
-ZTF21aciustc,ZTF21aciustc_alert_2.npy,SN Ib
+ZTF21acitbcw,ZTF21acitbcw_alert_10.npy,SN Ic
+ZTF21acitbcw,ZTF21acitbcw_alert_11.npy,SN Ic
+ZTF21acitbcw,ZTF21acitbcw_alert_12.npy,SN Ic
+ZTF21acitbcw,ZTF21acitbcw_alert_13.npy,SN Ic
+ZTF21acitbcw,ZTF21acitbcw_alert_14.npy,SN Ic
+ZTF21acitbcw,ZTF21acitbcw_alert_15.npy,SN Ic
+ZTF21acitbcw,ZTF21acitbcw_alert_8.npy,SN Ic
+ZTF21acitbcw,ZTF21acitbcw_alert_9.npy,SN Ic
 ZTF21aciwixf,ZTF21aciwixf_alert_3.npy,SN Ib
 ZTF21aciwixf,ZTF21aciwixf_alert_4.npy,SN Ib
 ZTF21aciwixf,ZTF21aciwixf_alert_5.npy,SN Ib
@@ -861,18 +1327,16 @@ ZTF21aclcfej,ZTF21aclcfej_alert_11.npy,SN II
 ZTF21aclcfej,ZTF21aclcfej_alert_6.npy,SN II
 ZTF21aclcfej,ZTF21aclcfej_alert_7.npy,SN II
 ZTF21aclcfej,ZTF21aclcfej_alert_8.npy,SN II
+ZTF21aclcfej,ZTF21aclcfej_alert_9.npy,SN II
 ZTF21acmnpqa,ZTF21acmnpqa_alert_3.npy,SN Ia
 ZTF21acmnpqa,ZTF21acmnpqa_alert_4.npy,SN Ia
 ZTF21acmnpqa,ZTF21acmnpqa_alert_5.npy,SN Ia
 ZTF21acmnpqa,ZTF21acmnpqa_alert_6.npy,SN Ia
-ZTF21acnfoqn,ZTF21acnfoqn_alert_10.npy,SN IIn
-ZTF21acnfoqn,ZTF21acnfoqn_alert_11.npy,SN IIn
-ZTF21acnfoqn,ZTF21acnfoqn_alert_6.npy,SN IIn
-ZTF21acnfoqn,ZTF21acnfoqn_alert_7.npy,SN IIn
-ZTF21acnfoqn,ZTF21acnfoqn_alert_8.npy,SN IIn
 ZTF21acphceb,ZTF21acphceb_alert_10.npy,SN II
+ZTF21acphceb,ZTF21acphceb_alert_11.npy,SN II
 ZTF21acphceb,ZTF21acphceb_alert_12.npy,SN II
 ZTF21acphceb,ZTF21acphceb_alert_6.npy,SN II
+ZTF21acphceb,ZTF21acphceb_alert_7.npy,SN II
 ZTF21acphceb,ZTF21acphceb_alert_8.npy,SN II
 ZTF21acphceb,ZTF21acphceb_alert_9.npy,SN II
 ZTF22aaabovl,ZTF22aaabovl_alert_1.npy,Tidal Disruption Event
@@ -886,10 +1350,22 @@ ZTF22aaagqvw,ZTF22aaagqvw_alert_7.npy,SN Ic
 ZTF22aaaifcx,ZTF22aaaifcx_alert_10.npy,SN II
 ZTF22aaaifcx,ZTF22aaaifcx_alert_5.npy,SN II
 ZTF22aaaifcx,ZTF22aaaifcx_alert_6.npy,SN II
+ZTF22aaaifcx,ZTF22aaaifcx_alert_7.npy,SN II
 ZTF22aaaifcx,ZTF22aaaifcx_alert_8.npy,SN II
 ZTF22aaaifcx,ZTF22aaaifcx_alert_9.npy,SN II
-ZTF22aabrkjs,ZTF22aabrkjs_alert_2.npy,SN II
-ZTF22aabrkjs,ZTF22aabrkjs_alert_3.npy,SN II
+ZTF22aaaivxh,ZTF22aaaivxh_alert_3.npy,SN Ia
+ZTF22aaaivxh,ZTF22aaaivxh_alert_4.npy,SN Ia
+ZTF22aaaivxh,ZTF22aaaivxh_alert_5.npy,SN Ia
+ZTF22aaaivxh,ZTF22aaaivxh_alert_6.npy,SN Ia
+ZTF22aabnzsk,ZTF22aabnzsk_alert_10.npy,SN Ib
+ZTF22aabnzsk,ZTF22aabnzsk_alert_11.npy,SN Ib
+ZTF22aabnzsk,ZTF22aabnzsk_alert_12.npy,SN Ib
+ZTF22aabnzsk,ZTF22aabnzsk_alert_13.npy,SN Ib
+ZTF22aabnzsk,ZTF22aabnzsk_alert_14.npy,SN Ib
+ZTF22aabnzsk,ZTF22aabnzsk_alert_15.npy,SN Ib
+ZTF22aabnzsk,ZTF22aabnzsk_alert_16.npy,SN Ib
+ZTF22aabnzsk,ZTF22aabnzsk_alert_8.npy,SN Ib
+ZTF22aabnzsk,ZTF22aabnzsk_alert_9.npy,SN Ib
 ZTF22aabzsqo,ZTF22aabzsqo_alert_4.npy,SN II
 ZTF22aabzsqo,ZTF22aabzsqo_alert_5.npy,SN II
 ZTF22aabzsqo,ZTF22aabzsqo_alert_6.npy,SN II
@@ -908,28 +1384,62 @@ ZTF22aadljkb,ZTF22aadljkb_alert_9.npy,SN II
 ZTF22aadolby,ZTF22aadolby_alert_10.npy,SN II
 ZTF22aadolby,ZTF22aadolby_alert_5.npy,SN II
 ZTF22aadolby,ZTF22aadolby_alert_6.npy,SN II
+ZTF22aadolby,ZTF22aadolby_alert_7.npy,SN II
 ZTF22aadolby,ZTF22aadolby_alert_8.npy,SN II
 ZTF22aadolby,ZTF22aadolby_alert_9.npy,SN II
+ZTF22aaebkwd,ZTF22aaebkwd_alert_10.npy,SN Ib
+ZTF22aaebkwd,ZTF22aaebkwd_alert_11.npy,SN Ib
+ZTF22aaebkwd,ZTF22aaebkwd_alert_12.npy,SN Ib
+ZTF22aaebkwd,ZTF22aaebkwd_alert_13.npy,SN Ib
+ZTF22aaebkwd,ZTF22aaebkwd_alert_14.npy,SN Ib
+ZTF22aaebkwd,ZTF22aaebkwd_alert_16.npy,SN Ib
+ZTF22aaebkwd,ZTF22aaebkwd_alert_17.npy,SN Ib
+ZTF22aaebkwd,ZTF22aaebkwd_alert_18.npy,SN Ib
+ZTF22aaebkwd,ZTF22aaebkwd_alert_19.npy,SN Ib
+ZTF22aaebkwd,ZTF22aaebkwd_alert_20.npy,SN Ib
+ZTF22aaemoot,ZTF22aaemoot_alert_1.npy,SN IIb
+ZTF22aaemoot,ZTF22aaemoot_alert_2.npy,SN IIb
 ZTF22aafiwtv,ZTF22aafiwtv_alert_4.npy,SN Ia
 ZTF22aafiwtv,ZTF22aafiwtv_alert_5.npy,SN Ia
 ZTF22aafiwtv,ZTF22aafiwtv_alert_6.npy,SN Ia
 ZTF22aafiwtv,ZTF22aafiwtv_alert_7.npy,SN Ia
 ZTF22aafiwtv,ZTF22aafiwtv_alert_8.npy,SN Ia
+ZTF22aagyuao,ZTF22aagyuao_alert_10.npy,Tidal Disruption Event
+ZTF22aagyuao,ZTF22aagyuao_alert_11.npy,Tidal Disruption Event
+ZTF22aagyuao,ZTF22aagyuao_alert_12.npy,Tidal Disruption Event
+ZTF22aagyuao,ZTF22aagyuao_alert_6.npy,Tidal Disruption Event
+ZTF22aagyuao,ZTF22aagyuao_alert_7.npy,Tidal Disruption Event
+ZTF22aagyuao,ZTF22aagyuao_alert_8.npy,Tidal Disruption Event
+ZTF22aagyuao,ZTF22aagyuao_alert_9.npy,Tidal Disruption Event
 ZTF22aagzmcz,ZTF22aagzmcz_alert_1.npy,SN Ic
 ZTF22aahhlnd,ZTF22aahhlnd_alert_10.npy,SN Ia
+ZTF22aahhlnd,ZTF22aahhlnd_alert_11.npy,SN Ia
 ZTF22aahhlnd,ZTF22aahhlnd_alert_12.npy,SN Ia
+ZTF22aahhlnd,ZTF22aahhlnd_alert_13.npy,SN Ia
 ZTF22aahhlnd,ZTF22aahhlnd_alert_14.npy,SN Ia
 ZTF22aahhlnd,ZTF22aahhlnd_alert_7.npy,SN Ia
+ZTF22aahhlnd,ZTF22aahhlnd_alert_8.npy,SN Ia
 ZTF22aahhlnd,ZTF22aahhlnd_alert_9.npy,SN Ia
+ZTF22aajhlaj,ZTF22aajhlaj_alert_29.npy,SN II
+ZTF22aajhlaj,ZTF22aajhlaj_alert_32.npy,SN II
+ZTF22aajhlaj,ZTF22aajhlaj_alert_35.npy,SN II
+ZTF22aajhlaj,ZTF22aajhlaj_alert_38.npy,SN II
+ZTF22aajhlaj,ZTF22aajhlaj_alert_41.npy,SN II
+ZTF22aajhlaj,ZTF22aajhlaj_alert_45.npy,SN II
+ZTF22aajhlaj,ZTF22aajhlaj_alert_48.npy,SN II
+ZTF22aajhlaj,ZTF22aajhlaj_alert_51.npy,SN II
+ZTF22aajhlaj,ZTF22aajhlaj_alert_54.npy,SN II
+ZTF22aajhlaj,ZTF22aajhlaj_alert_57.npy,SN II
+ZTF22aakzred,ZTF22aakzred_alert_2.npy,SN Ia
+ZTF22aakzred,ZTF22aakzred_alert_3.npy,SN Ia
+ZTF22aakzred,ZTF22aakzred_alert_4.npy,SN Ia
+ZTF22aanyggd,ZTF22aanyggd_alert_1.npy,SN II
 ZTF22aaoqlos,ZTF22aaoqlos_alert_10.npy,SN Ia
 ZTF22aaoqlos,ZTF22aaoqlos_alert_5.npy,SN Ia
 ZTF22aaoqlos,ZTF22aaoqlos_alert_6.npy,SN Ia
+ZTF22aaoqlos,ZTF22aaoqlos_alert_7.npy,SN Ia
 ZTF22aaoqlos,ZTF22aaoqlos_alert_8.npy,SN Ia
 ZTF22aaoqlos,ZTF22aaoqlos_alert_9.npy,SN Ia
-ZTF22aaotgrc,ZTF22aaotgrc_alert_4.npy,SN IIb
-ZTF22aaotgrc,ZTF22aaotgrc_alert_5.npy,SN IIb
-ZTF22aaotgrc,ZTF22aaotgrc_alert_6.npy,SN IIb
-ZTF22aaotgrc,ZTF22aaotgrc_alert_7.npy,SN IIb
 ZTF22aarrawv,ZTF22aarrawv_alert_3.npy,SN IIn
 ZTF22aarrawv,ZTF22aarrawv_alert_4.npy,SN IIn
 ZTF22aarrawv,ZTF22aarrawv_alert_5.npy,SN IIn
@@ -939,21 +1449,40 @@ ZTF22aasjwqv,ZTF22aasjwqv_alert_11.npy,SN IIb
 ZTF22aasjwqv,ZTF22aasjwqv_alert_6.npy,SN IIb
 ZTF22aasjwqv,ZTF22aasjwqv_alert_7.npy,SN IIb
 ZTF22aasjwqv,ZTF22aasjwqv_alert_8.npy,SN IIb
+ZTF22aasjwqv,ZTF22aasjwqv_alert_9.npy,SN IIb
 ZTF22aatghyo,ZTF22aatghyo_alert_3.npy,SN Ia
 ZTF22aatghyo,ZTF22aatghyo_alert_4.npy,SN Ia
 ZTF22aatghyo,ZTF22aatghyo_alert_5.npy,SN Ia
 ZTF22aawzdti,ZTF22aawzdti_alert_3.npy,SN Ia
 ZTF22aawzdti,ZTF22aawzdti_alert_4.npy,SN Ia
 ZTF22aawzdti,ZTF22aawzdti_alert_5.npy,SN Ia
+ZTF22aaxtias,ZTF22aaxtias_alert_10.npy,SN Ib
+ZTF22aaxtias,ZTF22aaxtias_alert_5.npy,SN Ib
+ZTF22aaxtias,ZTF22aaxtias_alert_6.npy,SN Ib
+ZTF22aaxtias,ZTF22aaxtias_alert_7.npy,SN Ib
+ZTF22aaxtias,ZTF22aaxtias_alert_8.npy,SN Ib
+ZTF22aaxtias,ZTF22aaxtias_alert_9.npy,SN Ib
+ZTF22aaygscd,ZTF22aaygscd_alert_1.npy,SN II
+ZTF22aaygscd,ZTF22aaygscd_alert_2.npy,SN II
 ZTF22aazjgoi,ZTF22aazjgoi_alert_10.npy,SN Ia
+ZTF22aazjgoi,ZTF22aazjgoi_alert_11.npy,SN Ia
 ZTF22aazjgoi,ZTF22aazjgoi_alert_12.npy,SN Ia
-ZTF22aazjgoi,ZTF22aazjgoi_alert_15.npy,SN Ia
+ZTF22aazjgoi,ZTF22aazjgoi_alert_13.npy,SN Ia
+ZTF22aazjgoi,ZTF22aazjgoi_alert_14.npy,SN Ia
+ZTF22aazjgoi,ZTF22aazjgoi_alert_16.npy,SN Ia
+ZTF22aazjgoi,ZTF22aazjgoi_alert_17.npy,SN Ia
 ZTF22aazjgoi,ZTF22aazjgoi_alert_18.npy,SN Ia
+ZTF22aazjgoi,ZTF22aazjgoi_alert_19.npy,SN Ia
 ZTF22aazjgoi,ZTF22aazjgoi_alert_20.npy,SN Ia
 ZTF22abbdxho,ZTF22abbdxho_alert_11.npy,SN Ic
-ZTF22abbdxho,ZTF22abbdxho_alert_14.npy,SN Ic
+ZTF22abbdxho,ZTF22abbdxho_alert_12.npy,SN Ic
+ZTF22abbdxho,ZTF22abbdxho_alert_13.npy,SN Ic
+ZTF22abbdxho,ZTF22abbdxho_alert_15.npy,SN Ic
 ZTF22abbdxho,ZTF22abbdxho_alert_16.npy,SN Ic
-ZTF22abbdxho,ZTF22abbdxho_alert_19.npy,SN Ic
+ZTF22abbdxho,ZTF22abbdxho_alert_17.npy,SN Ic
+ZTF22abbdxho,ZTF22abbdxho_alert_18.npy,SN Ic
+ZTF22abbdxho,ZTF22abbdxho_alert_20.npy,SN Ic
+ZTF22abbdxho,ZTF22abbdxho_alert_21.npy,SN Ic
 ZTF22abbdxho,ZTF22abbdxho_alert_22.npy,SN Ic
 ZTF22abcklkb,ZTF22abcklkb_alert_4.npy,SN Ia
 ZTF22abcklkb,ZTF22abcklkb_alert_5.npy,SN Ia
@@ -964,21 +1493,35 @@ ZTF22abjaqoq,ZTF22abjaqoq_alert_5.npy,SN Ia
 ZTF22abjaqoq,ZTF22abjaqoq_alert_6.npy,SN Ia
 ZTF22abjaqoq,ZTF22abjaqoq_alert_7.npy,SN Ia
 ZTF22abjaqoq,ZTF22abjaqoq_alert_8.npy,SN Ia
+ZTF22abmxsoc,ZTF22abmxsoc_alert_5.npy,SN Ic
+ZTF22abmxsoc,ZTF22abmxsoc_alert_6.npy,SN Ic
+ZTF22abmxsoc,ZTF22abmxsoc_alert_7.npy,SN Ic
+ZTF22abmxsoc,ZTF22abmxsoc_alert_8.npy,SN Ic
+ZTF22abmxsoc,ZTF22abmxsoc_alert_9.npy,SN Ic
 ZTF22abnvncn,ZTF22abnvncn_alert_10.npy,SN IIb
+ZTF22abnvncn,ZTF22abnvncn_alert_11.npy,SN IIb
 ZTF22abnvncn,ZTF22abnvncn_alert_12.npy,SN IIb
 ZTF22abnvncn,ZTF22abnvncn_alert_6.npy,SN IIb
+ZTF22abnvncn,ZTF22abnvncn_alert_7.npy,SN IIb
 ZTF22abnvncn,ZTF22abnvncn_alert_8.npy,SN IIb
 ZTF22abnvncn,ZTF22abnvncn_alert_9.npy,SN IIb
 ZTF22abqqjih,ZTF22abqqjih_alert_3.npy,SN Ia
 ZTF22abqqjih,ZTF22abqqjih_alert_4.npy,SN Ia
 ZTF22abqqjih,ZTF22abqqjih_alert_5.npy,SN Ia
+ZTF22absibqa,ZTF22absibqa_alert_2.npy,SN Ib
+ZTF22absibqa,ZTF22absibqa_alert_3.npy,SN Ib
 ZTF22abteujl,ZTF22abteujl_alert_2.npy,SN II
 ZTF22abteujl,ZTF22abteujl_alert_3.npy,SN II
 ZTF22abteujl,ZTF22abteujl_alert_4.npy,SN II
 ZTF22abtfczg,ZTF22abtfczg_alert_11.npy,SN II
-ZTF22abtfczg,ZTF22abtfczg_alert_14.npy,SN II
+ZTF22abtfczg,ZTF22abtfczg_alert_12.npy,SN II
+ZTF22abtfczg,ZTF22abtfczg_alert_13.npy,SN II
+ZTF22abtfczg,ZTF22abtfczg_alert_15.npy,SN II
 ZTF22abtfczg,ZTF22abtfczg_alert_16.npy,SN II
-ZTF22abtfczg,ZTF22abtfczg_alert_19.npy,SN II
+ZTF22abtfczg,ZTF22abtfczg_alert_17.npy,SN II
+ZTF22abtfczg,ZTF22abtfczg_alert_18.npy,SN II
+ZTF22abtfczg,ZTF22abtfczg_alert_20.npy,SN II
+ZTF22abtfczg,ZTF22abtfczg_alert_21.npy,SN II
 ZTF22abtfczg,ZTF22abtfczg_alert_22.npy,SN II
 ZTF22abtvgfs,ZTF22abtvgfs_alert_5.npy,SN Ia
 ZTF22abtvgfs,ZTF22abtvgfs_alert_6.npy,SN Ia
@@ -996,11 +1539,16 @@ ZTF22abvmasw,ZTF22abvmasw_alert_2.npy,SN II
 ZTF22abvmasw,ZTF22abvmasw_alert_3.npy,SN II
 ZTF22abyohff,ZTF22abyohff_alert_2.npy,SN II
 ZTF22abyohff,ZTF22abyohff_alert_3.npy,SN II
+ZTF22abyuzmp,ZTF22abyuzmp_alert_3.npy,SN Ic
+ZTF22abyuzmp,ZTF22abyuzmp_alert_4.npy,SN Ic
+ZTF22abyuzmp,ZTF22abyuzmp_alert_5.npy,SN Ic
+ZTF22abyuzmp,ZTF22abyuzmp_alert_6.npy,SN Ic
 ZTF22abzejiv,ZTF22abzejiv_alert_10.npy,SN Ic
 ZTF22abzejiv,ZTF22abzejiv_alert_11.npy,SN Ic
 ZTF22abzejiv,ZTF22abzejiv_alert_6.npy,SN Ic
 ZTF22abzejiv,ZTF22abzejiv_alert_7.npy,SN Ic
 ZTF22abzejiv,ZTF22abzejiv_alert_8.npy,SN Ic
+ZTF22abzejiv,ZTF22abzejiv_alert_9.npy,SN Ic
 ZTF22abzskmw,ZTF22abzskmw_alert_1.npy,SN Ia
 ZTF22abzskmw,ZTF22abzskmw_alert_2.npy,SN Ia
 ZTF22abztcly,ZTF22abztcly_alert_3.npy,SN Ic
@@ -1020,8 +1568,20 @@ ZTF23aaaznjk,ZTF23aaaznjk_alert_3.npy,SN Ic
 ZTF23aaaznjk,ZTF23aaaznjk_alert_4.npy,SN Ic
 ZTF23aabngtm,ZTF23aabngtm_alert_1.npy,SN II
 ZTF23aabngtm,ZTF23aabngtm_alert_2.npy,SN II
+ZTF23aadcbay,ZTF23aadcbay_alert_2.npy,Tidal Disruption Event
+ZTF23aadcbay,ZTF23aadcbay_alert_3.npy,Tidal Disruption Event
+ZTF23aadchqd,ZTF23aadchqd_alert_1.npy,SN IIn
+ZTF23aadcltm,ZTF23aadcltm_alert_2.npy,SN II
+ZTF23aadcltm,ZTF23aadcltm_alert_3.npy,SN II
+ZTF23aadcltm,ZTF23aadcltm_alert_4.npy,SN II
 ZTF23aadjoew,ZTF23aadjoew_alert_2.npy,SN Ic
 ZTF23aadjoew,ZTF23aadjoew_alert_3.npy,SN Ic
+ZTF23aadjwkw,ZTF23aadjwkw_alert_10.npy,SN Ia
+ZTF23aadjwkw,ZTF23aadjwkw_alert_5.npy,SN Ia
+ZTF23aadjwkw,ZTF23aadjwkw_alert_6.npy,SN Ia
+ZTF23aadjwkw,ZTF23aadjwkw_alert_7.npy,SN Ia
+ZTF23aadjwkw,ZTF23aadjwkw_alert_8.npy,SN Ia
+ZTF23aadjwkw,ZTF23aadjwkw_alert_9.npy,SN Ia
 ZTF23aadwhmn,ZTF23aadwhmn_alert_1.npy,SN Ia
 ZTF23aaekejj,ZTF23aaekejj_alert_4.npy,SN Ia
 ZTF23aaekejj,ZTF23aaekejj_alert_5.npy,SN Ia
@@ -1035,6 +1595,12 @@ ZTF23aaeqonb,ZTF23aaeqonb_alert_8.npy,SN II
 ZTF23aaiytpy,ZTF23aaiytpy_alert_3.npy,SN Ia
 ZTF23aaiytpy,ZTF23aaiytpy_alert_4.npy,SN Ia
 ZTF23aaiytpy,ZTF23aaiytpy_alert_5.npy,SN Ia
+ZTF23aajbkan,ZTF23aajbkan_alert_10.npy,SN II
+ZTF23aajbkan,ZTF23aajbkan_alert_5.npy,SN II
+ZTF23aajbkan,ZTF23aajbkan_alert_6.npy,SN II
+ZTF23aajbkan,ZTF23aajbkan_alert_7.npy,SN II
+ZTF23aajbkan,ZTF23aajbkan_alert_8.npy,SN II
+ZTF23aajbkan,ZTF23aajbkan_alert_9.npy,SN II
 ZTF23aajjzml,ZTF23aajjzml_alert_3.npy,SN II
 ZTF23aajjzml,ZTF23aajjzml_alert_4.npy,SN II
 ZTF23aajjzml,ZTF23aajjzml_alert_5.npy,SN II
@@ -1047,17 +1613,24 @@ ZTF23aalsied,ZTF23aalsied_alert_9.npy,SN Ia
 ZTF23aamvyyl,ZTF23aamvyyl_alert_2.npy,SN Ia
 ZTF23aamvyyl,ZTF23aamvyyl_alert_3.npy,SN Ia
 ZTF23aamzucf,ZTF23aamzucf_alert_17.npy,SN Ia
+ZTF23aamzucf,ZTF23aamzucf_alert_19.npy,SN Ia
 ZTF23aamzucf,ZTF23aamzucf_alert_21.npy,SN Ia
+ZTF23aamzucf,ZTF23aamzucf_alert_23.npy,SN Ia
+ZTF23aamzucf,ZTF23aamzucf_alert_25.npy,SN Ia
 ZTF23aamzucf,ZTF23aamzucf_alert_26.npy,SN Ia
+ZTF23aamzucf,ZTF23aamzucf_alert_28.npy,SN Ia
 ZTF23aamzucf,ZTF23aamzucf_alert_30.npy,SN Ia
+ZTF23aamzucf,ZTF23aamzucf_alert_32.npy,SN Ia
 ZTF23aamzucf,ZTF23aamzucf_alert_34.npy,SN Ia
 ZTF23aandrpy,ZTF23aandrpy_alert_2.npy,SN Ia
 ZTF23aandrpy,ZTF23aandrpy_alert_3.npy,SN Ia
-ZTF23aanqoyo,ZTF23aanqoyo_alert_4.npy,SN Ib
-ZTF23aanqoyo,ZTF23aanqoyo_alert_5.npy,SN Ib
-ZTF23aanqoyo,ZTF23aanqoyo_alert_6.npy,SN Ib
-ZTF23aanqoyo,ZTF23aanqoyo_alert_7.npy,SN Ib
-ZTF23aanqoyo,ZTF23aanqoyo_alert_8.npy,SN Ib
+ZTF23aapbrrq,ZTF23aapbrrq_alert_10.npy,SN Ib
+ZTF23aapbrrq,ZTF23aapbrrq_alert_11.npy,SN Ib
+ZTF23aapbrrq,ZTF23aapbrrq_alert_12.npy,SN Ib
+ZTF23aapbrrq,ZTF23aapbrrq_alert_13.npy,SN Ib
+ZTF23aapbrrq,ZTF23aapbrrq_alert_7.npy,SN Ib
+ZTF23aapbrrq,ZTF23aapbrrq_alert_8.npy,SN Ib
+ZTF23aapbrrq,ZTF23aapbrrq_alert_9.npy,SN Ib
 ZTF23aapsuva,ZTF23aapsuva_alert_2.npy,SN IIn
 ZTF23aapsuva,ZTF23aapsuva_alert_3.npy,SN IIn
 ZTF23aapsuva,ZTF23aapsuva_alert_4.npy,SN IIn
@@ -1070,46 +1643,65 @@ ZTF23aaqmauw,ZTF23aaqmauw_alert_7.npy,SN IIn
 ZTF23aaufzym,ZTF23aaufzym_alert_1.npy,SN II
 ZTF23aaufzym,ZTF23aaufzym_alert_2.npy,SN II
 ZTF23aawtmcf,ZTF23aawtmcf_alert_11.npy,SN Ic
-ZTF23aawtmcf,ZTF23aawtmcf_alert_14.npy,SN Ic
+ZTF23aawtmcf,ZTF23aawtmcf_alert_12.npy,SN Ic
+ZTF23aawtmcf,ZTF23aawtmcf_alert_13.npy,SN Ic
+ZTF23aawtmcf,ZTF23aawtmcf_alert_15.npy,SN Ic
 ZTF23aawtmcf,ZTF23aawtmcf_alert_16.npy,SN Ic
-ZTF23aawtmcf,ZTF23aawtmcf_alert_19.npy,SN Ic
+ZTF23aawtmcf,ZTF23aawtmcf_alert_17.npy,SN Ic
+ZTF23aawtmcf,ZTF23aawtmcf_alert_18.npy,SN Ic
+ZTF23aawtmcf,ZTF23aawtmcf_alert_20.npy,SN Ic
+ZTF23aawtmcf,ZTF23aawtmcf_alert_21.npy,SN Ic
 ZTF23aawtmcf,ZTF23aawtmcf_alert_22.npy,SN Ic
 ZTF23aaxuvkn,ZTF23aaxuvkn_alert_10.npy,SN Ib
+ZTF23aaxuvkn,ZTF23aaxuvkn_alert_11.npy,SN Ib
 ZTF23aaxuvkn,ZTF23aaxuvkn_alert_12.npy,SN Ib
 ZTF23aaxuvkn,ZTF23aaxuvkn_alert_13.npy,SN Ib
+ZTF23aaxuvkn,ZTF23aaxuvkn_alert_14.npy,SN Ib
 ZTF23aaxuvkn,ZTF23aaxuvkn_alert_15.npy,SN Ib
 ZTF23aaxuvkn,ZTF23aaxuvkn_alert_8.npy,SN Ib
+ZTF23aaxuvkn,ZTF23aaxuvkn_alert_9.npy,SN Ib
 ZTF23aaznqky,ZTF23aaznqky_alert_15.npy,SN II
+ZTF23aaznqky,ZTF23aaznqky_alert_17.npy,SN II
 ZTF23aaznqky,ZTF23aaznqky_alert_18.npy,SN II
-ZTF23aaznqky,ZTF23aaznqky_alert_22.npy,SN II
+ZTF23aaznqky,ZTF23aaznqky_alert_20.npy,SN II
+ZTF23aaznqky,ZTF23aaznqky_alert_21.npy,SN II
+ZTF23aaznqky,ZTF23aaznqky_alert_23.npy,SN II
+ZTF23aaznqky,ZTF23aaznqky_alert_24.npy,SN II
 ZTF23aaznqky,ZTF23aaznqky_alert_26.npy,SN II
+ZTF23aaznqky,ZTF23aaznqky_alert_27.npy,SN II
 ZTF23aaznqky,ZTF23aaznqky_alert_29.npy,SN II
 ZTF23aazprcc,ZTF23aazprcc_alert_3.npy,SN II
 ZTF23aazprcc,ZTF23aazprcc_alert_4.npy,SN II
 ZTF23aazprcc,ZTF23aazprcc_alert_5.npy,SN II
 ZTF23abayogx,ZTF23abayogx_alert_16.npy,SN Ia
-ZTF23abayogx,ZTF23abayogx_alert_20.npy,SN Ia
+ZTF23abayogx,ZTF23abayogx_alert_18.npy,SN Ia
+ZTF23abayogx,ZTF23abayogx_alert_19.npy,SN Ia
+ZTF23abayogx,ZTF23abayogx_alert_21.npy,SN Ia
+ZTF23abayogx,ZTF23abayogx_alert_23.npy,SN Ia
 ZTF23abayogx,ZTF23abayogx_alert_24.npy,SN Ia
-ZTF23abayogx,ZTF23abayogx_alert_27.npy,SN Ia
+ZTF23abayogx,ZTF23abayogx_alert_26.npy,SN Ia
+ZTF23abayogx,ZTF23abayogx_alert_28.npy,SN Ia
+ZTF23abayogx,ZTF23abayogx_alert_29.npy,SN Ia
 ZTF23abayogx,ZTF23abayogx_alert_31.npy,SN Ia
 ZTF23abbanlv,ZTF23abbanlv_alert_4.npy,SN II
 ZTF23abbanlv,ZTF23abbanlv_alert_5.npy,SN II
 ZTF23abbanlv,ZTF23abbanlv_alert_6.npy,SN II
 ZTF23abbanlv,ZTF23abbanlv_alert_7.npy,SN II
 ZTF23abbanlv,ZTF23abbanlv_alert_8.npy,SN II
-ZTF23abfpegt,ZTF23abfpegt_alert_20.npy,SN IIb
-ZTF23abfpegt,ZTF23abfpegt_alert_25.npy,SN IIb
-ZTF23abfpegt,ZTF23abfpegt_alert_30.npy,SN IIb
-ZTF23abfpegt,ZTF23abfpegt_alert_35.npy,SN IIb
-ZTF23abfpegt,ZTF23abfpegt_alert_40.npy,SN IIb
 ZTF23abghttj,ZTF23abghttj_alert_10.npy,SN II
+ZTF23abghttj,ZTF23abghttj_alert_11.npy,SN II
 ZTF23abghttj,ZTF23abghttj_alert_12.npy,SN II
-ZTF23abghttj,ZTF23abghttj_alert_15.npy,SN II
+ZTF23abghttj,ZTF23abghttj_alert_13.npy,SN II
+ZTF23abghttj,ZTF23abghttj_alert_14.npy,SN II
+ZTF23abghttj,ZTF23abghttj_alert_16.npy,SN II
+ZTF23abghttj,ZTF23abghttj_alert_17.npy,SN II
 ZTF23abghttj,ZTF23abghttj_alert_18.npy,SN II
+ZTF23abghttj,ZTF23abghttj_alert_19.npy,SN II
 ZTF23abghttj,ZTF23abghttj_alert_20.npy,SN II
 ZTF23abivaby,ZTF23abivaby_alert_10.npy,SN Ia
 ZTF23abivaby,ZTF23abivaby_alert_5.npy,SN Ia
 ZTF23abivaby,ZTF23abivaby_alert_6.npy,SN Ia
+ZTF23abivaby,ZTF23abivaby_alert_7.npy,SN Ia
 ZTF23abivaby,ZTF23abivaby_alert_8.npy,SN Ia
 ZTF23abivaby,ZTF23abivaby_alert_9.npy,SN Ia
 ZTF23abjfpng,ZTF23abjfpng_alert_10.npy,SN II
@@ -1117,26 +1709,38 @@ ZTF23abjfpng,ZTF23abjfpng_alert_11.npy,SN II
 ZTF23abjfpng,ZTF23abjfpng_alert_6.npy,SN II
 ZTF23abjfpng,ZTF23abjfpng_alert_7.npy,SN II
 ZTF23abjfpng,ZTF23abjfpng_alert_8.npy,SN II
+ZTF23abjfpng,ZTF23abjfpng_alert_9.npy,SN II
 ZTF23abjhvzr,ZTF23abjhvzr_alert_24.npy,SN Ia
-ZTF23abjhvzr,ZTF23abjhvzr_alert_30.npy,SN Ia
-ZTF23abjhvzr,ZTF23abjhvzr_alert_36.npy,SN Ia
-ZTF23abjhvzr,ZTF23abjhvzr_alert_41.npy,SN Ia
+ZTF23abjhvzr,ZTF23abjhvzr_alert_27.npy,SN Ia
+ZTF23abjhvzr,ZTF23abjhvzr_alert_29.npy,SN Ia
+ZTF23abjhvzr,ZTF23abjhvzr_alert_32.npy,SN Ia
+ZTF23abjhvzr,ZTF23abjhvzr_alert_34.npy,SN Ia
+ZTF23abjhvzr,ZTF23abjhvzr_alert_37.npy,SN Ia
+ZTF23abjhvzr,ZTF23abjhvzr_alert_39.npy,SN Ia
+ZTF23abjhvzr,ZTF23abjhvzr_alert_42.npy,SN Ia
+ZTF23abjhvzr,ZTF23abjhvzr_alert_44.npy,SN Ia
 ZTF23abjhvzr,ZTF23abjhvzr_alert_47.npy,SN Ia
 ZTF23abjthou,ZTF23abjthou_alert_10.npy,SN II
+ZTF23abjthou,ZTF23abjthou_alert_11.npy,SN II
 ZTF23abjthou,ZTF23abjthou_alert_12.npy,SN II
 ZTF23abjthou,ZTF23abjthou_alert_13.npy,SN II
+ZTF23abjthou,ZTF23abjthou_alert_14.npy,SN II
 ZTF23abjthou,ZTF23abjthou_alert_15.npy,SN II
 ZTF23abjthou,ZTF23abjthou_alert_8.npy,SN II
+ZTF23abjthou,ZTF23abjthou_alert_9.npy,SN II
 ZTF23abjvuwc,ZTF23abjvuwc_alert_5.npy,SN IIn
 ZTF23abjvuwc,ZTF23abjvuwc_alert_6.npy,SN IIn
 ZTF23abjvuwc,ZTF23abjvuwc_alert_7.npy,SN IIn
 ZTF23abjvuwc,ZTF23abjvuwc_alert_8.npy,SN IIn
 ZTF23abjvuwc,ZTF23abjvuwc_alert_9.npy,SN IIn
 ZTF23abkdzxh,ZTF23abkdzxh_alert_10.npy,SN II
+ZTF23abkdzxh,ZTF23abkdzxh_alert_11.npy,SN II
 ZTF23abkdzxh,ZTF23abkdzxh_alert_12.npy,SN II
 ZTF23abkdzxh,ZTF23abkdzxh_alert_13.npy,SN II
+ZTF23abkdzxh,ZTF23abkdzxh_alert_14.npy,SN II
 ZTF23abkdzxh,ZTF23abkdzxh_alert_15.npy,SN II
 ZTF23abkdzxh,ZTF23abkdzxh_alert_8.npy,SN II
+ZTF23abkdzxh,ZTF23abkdzxh_alert_9.npy,SN II
 ZTF23ablaxwm,ZTF23ablaxwm_alert_2.npy,SN II
 ZTF23ablaxwm,ZTF23ablaxwm_alert_3.npy,SN II
 ZTF23ablaxwm,ZTF23ablaxwm_alert_4.npy,SN II
@@ -1155,16 +1759,26 @@ ZTF23absirul,ZTF23absirul_alert_2.npy,SN IIP
 ZTF23abtdizt,ZTF23abtdizt_alert_10.npy,SN IIb
 ZTF23abtdizt,ZTF23abtdizt_alert_5.npy,SN IIb
 ZTF23abtdizt,ZTF23abtdizt_alert_6.npy,SN IIb
+ZTF23abtdizt,ZTF23abtdizt_alert_7.npy,SN IIb
 ZTF23abtdizt,ZTF23abtdizt_alert_8.npy,SN IIb
 ZTF23abtdizt,ZTF23abtdizt_alert_9.npy,SN IIb
+ZTF23abvommm,ZTF23abvommm_alert_10.npy,SN II
+ZTF23abvommm,ZTF23abvommm_alert_5.npy,SN II
+ZTF23abvommm,ZTF23abvommm_alert_6.npy,SN II
+ZTF23abvommm,ZTF23abvommm_alert_7.npy,SN II
+ZTF23abvommm,ZTF23abvommm_alert_8.npy,SN II
+ZTF23abvommm,ZTF23abvommm_alert_9.npy,SN II
+ZTF23abvzhwa,ZTF23abvzhwa_alert_3.npy,SN Ia
+ZTF23abvzhwa,ZTF23abvzhwa_alert_4.npy,SN Ia
+ZTF23abvzhwa,ZTF23abvzhwa_alert_5.npy,SN Ia
 ZTF24aaabljq,ZTF24aaabljq_alert_10.npy,SN IIn
+ZTF24aaabljq,ZTF24aaabljq_alert_11.npy,SN IIn
 ZTF24aaabljq,ZTF24aaabljq_alert_12.npy,SN IIn
 ZTF24aaabljq,ZTF24aaabljq_alert_13.npy,SN IIn
+ZTF24aaabljq,ZTF24aaabljq_alert_14.npy,SN IIn
 ZTF24aaabljq,ZTF24aaabljq_alert_15.npy,SN IIn
 ZTF24aaabljq,ZTF24aaabljq_alert_8.npy,SN IIn
-ZTF24aaahxwr,ZTF24aaahxwr_alert_3.npy,Tidal Disruption Event
-ZTF24aaahxwr,ZTF24aaahxwr_alert_4.npy,Tidal Disruption Event
-ZTF24aaahxwr,ZTF24aaahxwr_alert_5.npy,Tidal Disruption Event
+ZTF24aaabljq,ZTF24aaabljq_alert_9.npy,SN IIn
 ZTF24aabppgn,ZTF24aabppgn_alert_2.npy,SN II
 ZTF24aabppgn,ZTF24aabppgn_alert_3.npy,SN II
 ZTF24aabpzuz,ZTF24aabpzuz_alert_4.npy,SN II
@@ -1179,12 +1793,25 @@ ZTF24aaedncr,ZTF24aaedncr_alert_1.npy,SN Ia
 ZTF24aaekmnz,ZTF24aaekmnz_alert_2.npy,SN II
 ZTF24aaekmnz,ZTF24aaekmnz_alert_3.npy,SN II
 ZTF24aaekmnz,ZTF24aaekmnz_alert_4.npy,SN II
+ZTF24aafnwpr,ZTF24aafnwpr_alert_3.npy,SN Ia
+ZTF24aafnwpr,ZTF24aafnwpr_alert_4.npy,SN Ia
+ZTF24aafnwpr,ZTF24aafnwpr_alert_5.npy,SN Ia
+ZTF24aagssbr,ZTF24aagssbr_alert_3.npy,SN Ia
+ZTF24aagssbr,ZTF24aagssbr_alert_4.npy,SN Ia
+ZTF24aagssbr,ZTF24aagssbr_alert_5.npy,SN Ia
+ZTF24aagssbr,ZTF24aagssbr_alert_6.npy,SN Ia
 ZTF24aahdikd,ZTF24aahdikd_alert_1.npy,SN Ia
 ZTF24aahiabd,ZTF24aahiabd_alert_10.npy,SN II
 ZTF24aahiabd,ZTF24aahiabd_alert_11.npy,SN II
 ZTF24aahiabd,ZTF24aahiabd_alert_6.npy,SN II
 ZTF24aahiabd,ZTF24aahiabd_alert_7.npy,SN II
 ZTF24aahiabd,ZTF24aahiabd_alert_8.npy,SN II
+ZTF24aahiabd,ZTF24aahiabd_alert_9.npy,SN II
+ZTF24aakaiqs,ZTF24aakaiqs_alert_5.npy,SN Ib
+ZTF24aakaiqs,ZTF24aakaiqs_alert_6.npy,SN Ib
+ZTF24aakaiqs,ZTF24aakaiqs_alert_7.npy,SN Ib
+ZTF24aakaiqs,ZTF24aakaiqs_alert_8.npy,SN Ib
+ZTF24aakaiqs,ZTF24aakaiqs_alert_9.npy,SN Ib
 ZTF24aanppvy,ZTF24aanppvy_alert_4.npy,SN II
 ZTF24aanppvy,ZTF24aanppvy_alert_5.npy,SN II
 ZTF24aanppvy,ZTF24aanppvy_alert_6.npy,SN II
@@ -1196,31 +1823,37 @@ ZTF24aaosqgf,ZTF24aaosqgf_alert_6.npy,SN II
 ZTF24aaosqgf,ZTF24aaosqgf_alert_7.npy,SN II
 ZTF24aaosqgf,ZTF24aaosqgf_alert_8.npy,SN II
 ZTF24aaoupgb,ZTF24aaoupgb_alert_13.npy,SN II
+ZTF24aaoupgb,ZTF24aaoupgb_alert_14.npy,SN II
 ZTF24aaoupgb,ZTF24aaoupgb_alert_16.npy,SN II
-ZTF24aaoupgb,ZTF24aaoupgb_alert_19.npy,SN II
+ZTF24aaoupgb,ZTF24aaoupgb_alert_17.npy,SN II
+ZTF24aaoupgb,ZTF24aaoupgb_alert_18.npy,SN II
+ZTF24aaoupgb,ZTF24aaoupgb_alert_20.npy,SN II
+ZTF24aaoupgb,ZTF24aaoupgb_alert_21.npy,SN II
 ZTF24aaoupgb,ZTF24aaoupgb_alert_22.npy,SN II
+ZTF24aaoupgb,ZTF24aaoupgb_alert_24.npy,SN II
 ZTF24aaoupgb,ZTF24aaoupgb_alert_25.npy,SN II
 ZTF24aaqkvyl,ZTF24aaqkvyl_alert_4.npy,SN II
 ZTF24aaqkvyl,ZTF24aaqkvyl_alert_5.npy,SN II
 ZTF24aaqkvyl,ZTF24aaqkvyl_alert_6.npy,SN II
 ZTF24aaqkvyl,ZTF24aaqkvyl_alert_7.npy,SN II
 ZTF24aaqkvyl,ZTF24aaqkvyl_alert_8.npy,SN II
-ZTF24aasdtkt,ZTF24aasdtkt_alert_4.npy,SN IIb
-ZTF24aasdtkt,ZTF24aasdtkt_alert_5.npy,SN IIb
-ZTF24aasdtkt,ZTF24aasdtkt_alert_6.npy,SN IIb
-ZTF24aasdtkt,ZTF24aasdtkt_alert_7.npy,SN IIb
-ZTF24aasdtkt,ZTF24aasdtkt_alert_8.npy,SN IIb
 ZTF24aatieok,ZTF24aatieok_alert_10.npy,SN IIb
+ZTF24aatieok,ZTF24aatieok_alert_11.npy,SN IIb
 ZTF24aatieok,ZTF24aatieok_alert_12.npy,SN IIb
+ZTF24aatieok,ZTF24aatieok_alert_13.npy,SN IIb
 ZTF24aatieok,ZTF24aatieok_alert_14.npy,SN IIb
 ZTF24aatieok,ZTF24aatieok_alert_7.npy,SN IIb
+ZTF24aatieok,ZTF24aatieok_alert_8.npy,SN IIb
 ZTF24aatieok,ZTF24aatieok_alert_9.npy,SN IIb
 ZTF24aatifzm,ZTF24aatifzm_alert_1.npy,SN II
 ZTF24aatifzm,ZTF24aatifzm_alert_2.npy,SN II
 ZTF24aawshuy,ZTF24aawshuy_alert_10.npy,SN Ia
+ZTF24aawshuy,ZTF24aawshuy_alert_11.npy,SN Ia
 ZTF24aawshuy,ZTF24aawshuy_alert_12.npy,SN Ia
+ZTF24aawshuy,ZTF24aawshuy_alert_13.npy,SN Ia
 ZTF24aawshuy,ZTF24aawshuy_alert_14.npy,SN Ia
 ZTF24aawshuy,ZTF24aawshuy_alert_7.npy,SN Ia
+ZTF24aawshuy,ZTF24aawshuy_alert_8.npy,SN Ia
 ZTF24aawshuy,ZTF24aawshuy_alert_9.npy,SN Ia
 ZTF24aaxnvou,ZTF24aaxnvou_alert_4.npy,SN II
 ZTF24aaxnvou,ZTF24aaxnvou_alert_5.npy,SN II
@@ -1229,9 +1862,13 @@ ZTF24aaxnvou,ZTF24aaxnvou_alert_7.npy,SN II
 ZTF24aaxnvou,ZTF24aaxnvou_alert_8.npy,SN II
 ZTF24aayfivu,ZTF24aayfivu_alert_2.npy,SN Ia
 ZTF24aayfivu,ZTF24aayfivu_alert_3.npy,SN Ia
+ZTF24aaymkrs,ZTF24aaymkrs_alert_10.npy,SN Ib
 ZTF24aaymkrs,ZTF24aaymkrs_alert_11.npy,SN Ib
+ZTF24aaymkrs,ZTF24aaymkrs_alert_12.npy,SN Ib
 ZTF24aaymkrs,ZTF24aaymkrs_alert_13.npy,SN Ib
+ZTF24aaymkrs,ZTF24aaymkrs_alert_14.npy,SN Ib
 ZTF24aaymkrs,ZTF24aaymkrs_alert_15.npy,SN Ib
+ZTF24aaymkrs,ZTF24aaymkrs_alert_16.npy,SN Ib
 ZTF24aaymkrs,ZTF24aaymkrs_alert_17.npy,SN Ib
 ZTF24aaymkrs,ZTF24aaymkrs_alert_9.npy,SN Ib
 ZTF24abbiqob,ZTF24abbiqob_alert_10.npy,SN Ia
@@ -1239,3 +1876,4 @@ ZTF24abbiqob,ZTF24abbiqob_alert_11.npy,SN Ia
 ZTF24abbiqob,ZTF24abbiqob_alert_6.npy,SN Ia
 ZTF24abbiqob,ZTF24abbiqob_alert_7.npy,SN Ia
 ZTF24abbiqob,ZTF24abbiqob_alert_8.npy,SN Ia
+ZTF24abbiqob,ZTF24abbiqob_alert_9.npy,SN Ia
