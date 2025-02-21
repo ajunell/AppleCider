@@ -13,15 +13,18 @@ Give me the data:
 - [AppleCider Data](https://drive.google.com/drive/folders/13x2KGVOHwkO_VmrcNHnEnuQgT0yT_BL_?usp=sharing)
   - folder formated basically same as on Theophile's machine: each object has it's own folder which contains photometry.csv, alerts.npy, spectra.csv
   - you can use `SEDM_folder` the same as it's used in the repo (just change paths to wherever `SEDM_folder` is on your machine)
+ 
+  <br>
 
 How does this repo work?
-- `AppleCider/preprocess`: for preprocessing objects in dataset into multiple alerts. see [notebooks/001-data-processing.ipynb](https://github.com/ajunell/AppleCider/blob/main/notebooks/001-data-processing.ipynb) for how to use the preprocessing steps / what the processed alerts look like. 
+- `AppleCider/preprocess`: for preprocessing objects in dataset into multiple alerts. see [notebooks/001-data-processing.ipynb](https://github.com/ajunell/AppleCider/blob/main/notebooks/001-data-processing.ipynb) for how to use the preprocessing steps / what the processed alerts look like.
+- `/AppleCider/core`: for model stuff, see [002-AppleCider-photometry.ipynb](https://github.com/ajunell/AppleCider/blob/main/notebooks/002-AppleCider-photometry.ipynb), [notebooks/003-AppleCider-metadata.ipynb](https://github.com/ajunell/AppleCider/blob/main/notebooks/003-AppleCider-metadata.ipynb), [notebooks/005-data-processing.ipynb](https://github.com/ajunell/AppleCider/blob/main/notebooks/001-data-processing.ipynb)
 
 
 
 
 
-
+<br><br><br><br>
 - <s> it doesn't. please come back later. <i>after i resolve another RuntimeError in `002-run-model.ipynb`(not the one currently there, i fixed that one), i'll write up an explanation. </i> <br>  for photometry, see `2-19_notebook.ipynb` </s>
 
 - there's also a seperate data-centered repo, [AppleCider Data](https://github.com/ajunell/AppleCider_Data) (also private), which is actually organized.
