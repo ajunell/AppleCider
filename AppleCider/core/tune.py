@@ -6,11 +6,12 @@ import torch
 from torch.optim import Adam
 from torch.optim.lr_scheduler import ExponentialLR, ReduceLROnPlateau, LinearLR
 from torch.utils.data import DataLoader
+from torch import nn
 from datetime import datetime
 import optuna
 from optuna.exceptions import DuplicatedStudyError
 
-
+from tqdm.auto import tqdm
 
 from AppleCider.core.dataset import DataGenerator
 from AppleCider.core.model import Informer, GalSpecNet, MetaModel, BTSModel, AstroM4
