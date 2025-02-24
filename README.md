@@ -1,6 +1,6 @@
 # AppleCider: (page under construction)
 ## Applying multimodal learning to Classify transient Detections Early
-multimodal astornomical transient classifer that uses photometry, images, spectra, and metadata. architecture based on [AstroM3](https://arxiv.org/abs/2411.08842) & [BTSbot](https://iopscience.iop.org/article/10.3847/1538-4357/ad5666)
+multimodal transient classifer that uses photometry, images, spectra, and metadata. architecture based on [AstroM3](https://arxiv.org/abs/2411.08842) & [BTSbot](https://iopscience.iop.org/article/10.3847/1538-4357/ad5666)
 
 (logo coming soon)
 
@@ -17,6 +17,7 @@ Give me the data:
   <br>
 
 How does this repo work?
+- `000-drink-AppleCider.ipynb` bare bones way to run model (no graphs, only has config & line to run the model). although, it does require preprocessed data....
 - `AppleCider/preprocess`: for preprocessing objects in dataset into multiple alerts. see [notebooks/001-data-processing.ipynb](https://github.com/ajunell/AppleCider/blob/main/notebooks/001-data-processing.ipynb) for how to use the preprocessing steps / what the processed alerts look like.
 - `/AppleCider/core`: for model stuff, see [002-AppleCider-photometry.ipynb](https://github.com/ajunell/AppleCider/blob/main/notebooks/002-AppleCider-photometry.ipynb), [notebooks/003-AppleCider-metadata.ipynb](https://github.com/ajunell/AppleCider/blob/main/notebooks/003-AppleCider-metadata.ipynb), [notebooks/005-data-processing.ipynb](https://github.com/ajunell/AppleCider/blob/main/notebooks/001-data-processing.ipynb)
 
