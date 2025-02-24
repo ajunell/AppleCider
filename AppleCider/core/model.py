@@ -1,7 +1,17 @@
 import torch
 import torch.nn as nn
-
 from AppleCider.models.Informer import DataEmbedding, EncoderLayer, AttentionLayer, ProbAttention, Encoder
+
+# add 2/21:
+from torch.optim import Adam
+from torch.optim.lr_scheduler import ExponentialLR, ReduceLROnPlateau, LinearLR
+from torch.utils.data import DataLoader
+from datetime import datetime
+import optuna
+from optuna.exceptions import DuplicatedStudyError
+
+from tqdm.auto import tqdm
+
 
 
 class Informer(nn.Module):
@@ -40,17 +50,21 @@ class Informer(nn.Module):
             ) for _ in range(self.e_layers)
         ]
         self.encoder = Encoder(attn_layers, norm_layer=torch.nn.LayerNorm(self.d_model))
+
         self.dropout = nn.Dropout(self.dropout)
 
         if self.classification:
             self.fc = nn.Linear(config['seq_len'] * config['p_d_model'], config['num_classes'])
 
     def forward(self, x_enc, x_mark_enc):
+        #print("Informer.forward(self, x_enc, x_mark_enc):")
+       
         enc_out = self.enc_embedding(x_enc)
         enc_out, attns = self.encoder(enc_out, attn_mask=None)
-
+    
         enc_out = self.dropout(enc_out)
-        output = enc_out * x_mark_enc.unsqueeze(-1)  # zero-out padding embeddings
+        output = enc_out * x_mark_enc  # zero-out padding embeddings
+        
         output = output.reshape(output.shape[0], -1)  # (batch_size, seq_length * d_model)
 
         if self.classification:
@@ -87,6 +101,9 @@ class GalSpecNet(nn.Module):
             self.fc = nn.Linear(1632, config['num_classes'])
 
     def forward(self, x):
+        
+        #print("GalSpecNet")
+        
         for layer in self.layers:
             x = layer(x)
 
@@ -121,6 +138,9 @@ class MetaModel(nn.Module):
             self.fc = nn.Linear(self.hidden_dim, config['num_classes'])
 
     def forward(self, x):
+        
+        #print("MetaModel")
+        
         x = self.model(x)
 
         if self.classification:
@@ -177,6 +197,9 @@ class BTSModel(nn.Module):
             self.fc = nn.Linear(784, config['num_classes'])
 
     def forward(self, x):
+        
+        #print("BTSModel")
+        
         x = self.block1(x)
         x = self.block2(x)
         x = x.view(x.shape[0], -1)
@@ -199,9 +222,12 @@ class AstroM4(nn.Module):
         self.image_encoder = BTSModel(config)
 
         self.photometry_proj = nn.Linear(config['seq_len'] * config['p_d_model'], config['hidden_dim'])
-        self.spectra_proj = nn.Linear(1632, config['hidden_dim'])
+        
+        self.spectra_proj = nn.Linear(1632, config['hidden_dim']) 
+        
         self.metadata_proj = nn.Linear(config['m_hidden_dim'], config['hidden_dim'])
-        self.image_proj = nn.Linear(784, config['hidden_dim'])
+
+        self.image_proj = nn.Linear(784, config['hidden_dim']) 
 
         # TODO add other logits
         self.logit_scale_ps = nn.Parameter(torch.log(torch.ones([]) * 100))
@@ -214,28 +240,49 @@ class AstroM4(nn.Module):
             self.fc = nn.Linear(in_features, config['num_classes'])
 
     def get_embeddings(self, photometry, photometry_mask, metadata, images, spectra):
+        
+        #print("AstroM4.get_embeddings(self, photometry, photometry_mask, metadata, images, spectra):")
+    
         p_emb = self.photometry_proj(self.photometry_encoder(photometry, photometry_mask))
+        #print("p_emb: ", p_emb.shape)
+        
         s_emb = self.spectra_proj(self.spectra_encoder(spectra))
+        #print("s_emb: ",s_emb.shape)
+        
         m_emb = self.metadata_proj(self.metadata_encoder(metadata))
+        #print("m_emb: ",m_emb.shape)
+        
         i_emb = self.image_proj(self.image_encoder(images))
+        #print("i_emb: ",i_emb.shape)
+        
 
         # normalize features
         p_emb = p_emb / p_emb.norm(dim=-1, keepdim=True)
         s_emb = s_emb / s_emb.norm(dim=-1, keepdim=True)
         m_emb = m_emb / m_emb.norm(dim=-1, keepdim=True)
+        m_emb = m_emb / m_emb.norm(dim=-1, keepdim=True)
         i_emb = i_emb / i_emb.norm(dim=-1, keepdim=True)
-
-        return p_emb, s_emb, m_emb, i_emb
+        
+        ## original:
+        #return p_emb, s_emb, m_emb, i_emb
+        return p_emb, m_emb, i_emb, s_emb
 
     def forward(self, photometry, photometry_mask, metadata, images, spectra):
-        p_emb, s_emb, m_emb, i_emb = self.get_embeddings(photometry, photometry_mask, metadata, images, spectra)
+        ## original:
+        # p_emb, s_emb, m_emb, i_emb = self.get_embeddings(photometry, photometry_mask, metadata, images, spectra)
+        
+        #print("AstroM4.forward(self, photometry, photometry_mask, metadata, images, spectra)")
+        
+        p_emb, m_emb, i_emb, s_emb = self.get_embeddings(photometry, photometry_mask, metadata, images, spectra)
 
         if self.classification:
 
             if self.fusion == 'concat':
-                emb = torch.cat((p_emb, s_emb, m_emb, i_emb), dim=1)
+                # emb = torch.cat((p_emb, s_emb, m_emb, i_emb), dim=1)
+                emb = torch.cat((p_emb, m_emb, i_emb, s_emb), dim=1)
             elif self.fusion == 'avg':
-                emb = (p_emb + s_emb + m_emb + i_emb) / 4
+                # emb = (p_emb + s_emb + m_emb + i_emb) / 4
+                emb = (p_emb + m_emb + i_emb + s_emb) / 4
             else:
                 raise NotImplementedError
 
