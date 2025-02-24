@@ -13,6 +13,7 @@ import pickle
 from torch import nn
 
 
+from tqdm.auto import tqdm
 
 
 class DataGenerator(Dataset):

@@ -12,6 +12,9 @@ class TokenEmbedding(nn.Module):
 
         self.tokenConv = nn.Conv1d(in_channels=c_in, out_channels=d_model,
                                    kernel_size=3, padding=1, padding_mode='circular', bias=False)
+        
+        #print("TokenEmbedding")
+        
         for m in self.modules():
             if isinstance(m, nn.Conv1d):
                 nn.init.kaiming_normal_(m.weight, mode='fan_in', nonlinearity='leaky_relu')
@@ -22,35 +25,42 @@ class TokenEmbedding(nn.Module):
 
 
 class PositionalEmbedding(nn.Module):
+    
     def __init__(self, d_model, max_len=5000):
         super(PositionalEmbedding, self).__init__()
-
+        
+        #print("class PositionalEmbedding(nn.Module)")
+        
         # Compute the positional encodings once in log space.
         pe = torch.zeros(max_len, d_model).float()
         pe.require_grad = False
 
         position = torch.arange(0, max_len).float().unsqueeze(1)
         div_term = (torch.arange(0, d_model, 2).float() * -(math.log(10000.0) / d_model)).exp()
-
+        
         pe[:, 0::2] = torch.sin(position * div_term)
         pe[:, 1::2] = torch.cos(position * div_term)
 
         pe = pe.unsqueeze(0)
+       
         self.register_buffer('pe', pe)
+       
 
     def forward(self, x):
         return self.pe[:, :x.size(1)]
 
 
+    
 class DataEmbedding(nn.Module):
     def __init__(self, c_in, d_model, dropout=0.1):
         super(DataEmbedding, self).__init__()
-
         self.value_embedding = TokenEmbedding(c_in=c_in, d_model=d_model)
         self.position_embedding = PositionalEmbedding(d_model=d_model)
         self.dropout = nn.Dropout(p=dropout)
 
     def forward(self, x):
+        #print("class DataEmbedding")
+       
         x = self.value_embedding(x) + self.position_embedding(x)
 
         return self.dropout(x)
@@ -58,6 +68,7 @@ class DataEmbedding(nn.Module):
 
 class ProbMask:
     def __init__(self, B, H, L, index, scores, device='cpu'):
+        #print("class ProbMask")
         _mask = torch.ones(L, scores.shape[-1], dtype=torch.bool).to(device).triu(1)
         _mask_ex = _mask[None, None, :].expand(B, H, L, scores.shape[-1])
         indicator = _mask_ex[torch.arange(B)[:, None, None], torch.arange(H)[None, :, None], index, :].to(device)
@@ -76,18 +87,23 @@ class ProbAttention(nn.Module):
         self.mask_flag = mask_flag
         self.output_attention = output_attention
         self.dropout = nn.Dropout(attention_dropout)
+    
 
     def _prob_QK(self, Q, K, sample_k, n_top):  # n_top: c*ln(L_q)
         # Q [B, H, L, D]
         B, H, L_K, E = K.shape
         _, _, L_Q, _ = Q.shape
-
+        
+        #print("class ProbAttention: _prob_Q")
+       
         # calculate the sampled Q_K
         K_expand = K.unsqueeze(-3).expand(B, H, L_Q, L_K, E)
         # real U = U_part(factor*ln(L_k))*L_q
         index_sample = torch.randint(L_K, (L_Q, sample_k))
         K_sample = K_expand[:, :, torch.arange(L_Q).unsqueeze(1), index_sample, :]
         Q_K_sample = torch.matmul(Q.unsqueeze(-2), K_sample.transpose(-2, -1)).squeeze()
+        
+        #print(f"Shape of Q: {Q.shape}, Shape of K: {K.shape}, Shape of K_sample: {K_sample.shape}")
 
         # find the Top_k query with sparsity measurement
         M = Q_K_sample.max(-1)[0] - torch.div(Q_K_sample.sum(-1), L_K)
@@ -100,6 +116,8 @@ class ProbAttention(nn.Module):
         return Q_K, M_top
 
     def _get_initial_context(self, V, L_Q):
+        
+        #print("class ProbAttention: _get_initial_context")
         B, H, L_V, D = V.shape
         if not self.mask_flag:
             # V_sum = V.sum(dim=-2)
@@ -114,6 +132,7 @@ class ProbAttention(nn.Module):
 
     def _update_context(self, context_in, V, scores, index, L_Q, attn_mask):
         B, H, L_V, D = V.shape
+        #print("class ProbAttention: update_context")
 
         if self.mask_flag:
             attn_mask = ProbMask(B, H, L_Q, index, scores, device=V.device)
@@ -136,7 +155,9 @@ class ProbAttention(nn.Module):
     def forward(self, queries, keys, values, attn_mask, tau=None, delta=None):
         B, L_Q, H, D = queries.shape
         _, L_K, _, _ = keys.shape
-
+        
+        #print("class ProbAttention: forward(self, queries, keys, values, attn_mask, tau=None, delta=None")
+        
         queries = queries.transpose(2, 1)
         keys = keys.transpose(2, 1)
         values = values.transpose(2, 1)
@@ -167,6 +188,7 @@ class AttentionLayer(nn.Module):
     def __init__(self, attention, d_model, n_heads, d_keys=None, d_values=None):
         super(AttentionLayer, self).__init__()
 
+
         d_keys = d_keys or (d_model // n_heads)
         d_values = d_values or (d_model // n_heads)
 
@@ -178,6 +200,9 @@ class AttentionLayer(nn.Module):
         self.n_heads = n_heads
 
     def forward(self, queries, keys, values, attn_mask, tau=None, delta=None):
+        
+        #print("class AttentionLayer: forward(self, queries, keys, values, attn_mask, tau=None, delta=None):")
+        
         B, L, _ = queries.shape
         _, S, _ = keys.shape
         H = self.n_heads
@@ -185,7 +210,7 @@ class AttentionLayer(nn.Module):
         queries = self.query_projection(queries).view(B, L, H, -1)
         keys = self.key_projection(keys).view(B, S, H, -1)
         values = self.value_projection(values).view(B, S, H, -1)
-
+        
         out, attn = self.inner_attention(queries, keys, values, attn_mask, tau=tau, delta=delta)
         out = out.view(B, L, -1)
 
@@ -206,9 +231,13 @@ class EncoderLayer(nn.Module):
         self.activation = F.relu if activation == 'relu' else F.gelu
 
     def forward(self, x, attn_mask=None, tau=None, delta=None):
+        
+        #print("class EncoderLayer: forward(self, x, attn_mask=None, tau=None, delta=None)")
+
         new_x, attn = self.attention(x, x, x, attn_mask=attn_mask, tau=tau, delta=delta)
         x = x + self.dropout(new_x)
         y = x = self.norm1(x)
+        
         y = self.dropout(self.activation(self.conv1(y.transpose(-1, 1))))
         y = self.dropout(self.conv2(y).transpose(-1, 1))
 
@@ -222,6 +251,7 @@ class Encoder(nn.Module):
         self.norm = norm_layer
 
     def forward(self, x, attn_mask=None, tau=None, delta=None):
+        
         attns = []
         for attn_layer in self.attn_layers:
             x, attn = attn_layer(x, attn_mask=attn_mask, tau=tau, delta=delta)
@@ -233,47 +263,58 @@ class Encoder(nn.Module):
         return x, attns
 
 
-class Informer(nn.Module):
-    """
-    Informer with Propspare attention in O(LlogL) complexity
-    Paper link: https://ojs.aaai.org/index.php/AAAI/article/view/17325/17132
-    """
-    def __init__(self, enc_in=144, d_model=512, dropout=0.1, factor=1, output_attention=False, n_heads=8, d_ff=2048,
-                 activation='gelu', e_layers=2, seq_len=200, num_class=2):
-        super(Informer, self).__init__()
-
-        # self.enc_embedding = DataEmbedding(enc_in, d_model, dropout)
-        self.enc_embedding = DataEmbedding(enc_in, d_model)
-
-        attn_layers = [
-            EncoderLayer(
-                AttentionLayer(
-                    ProbAttention(False, factor, attention_dropout=dropout, output_attention=output_attention),
-                    d_model,
-                    n_heads
-                ),
-                d_model,
-                d_ff,
-                dropout=dropout,
-                activation=activation
-            ) for _ in range(e_layers)
-        ]
-        self.encoder = Encoder(attn_layers, norm_layer=torch.nn.LayerNorm(d_model))
-
-        self.act = F.gelu
-        self.dropout = nn.Dropout(dropout)
-        self.projection = nn.Linear(d_model * seq_len, num_class)
-
-    def forward(self, x_enc, x_mark_enc):
-        # enc
-        enc_out = self.enc_embedding(x_enc)
-        enc_out, attns = self.encoder(enc_out, attn_mask=None)
-
-        # Output
-        output = self.act(enc_out)  # the output transformer encoder/decoder embeddings don't include non-linearity
-        output = self.dropout(output)
-        output = output * x_mark_enc.unsqueeze(-1)  # zero-out padding embeddings
-        output = output.reshape(output.shape[0], -1)  # (batch_size, seq_length * d_model)
-        output = self.projection(output)  # (batch_size, num_classes)
-
-        return output
+#class Informer(nn.Module):
+#    """
+#    Informer with Propspare attention in O(LlogL) complexity
+#    Paper link: https://ojs.aaai.org/index.php/AAAI/article/view/17325/17132
+#    """
+#    def __init__(self, enc_in=144, d_model=512, dropout=0.1, factor=1, output_attention=False, n_heads=8, d_ff=2048,
+#                 activation='gelu', e_layers=4, seq_len=200, num_class=4):
+#        super(Informer, self).__init__()
+#
+#        self.enc_embedding = DataEmbedding(enc_in, d_model, dropout)
+#        #self.enc_embedding = DataEmbedding(enc_in, d_model)
+#
+#        attn_layers = [
+#            EncoderLayer(
+#                AttentionLayer(
+#                    ProbAttention(False, factor, attention_dropout=dropout, output_attention=output_attention),
+#                    d_model,
+#                    n_heads
+#                ),
+#                d_model,
+#                d_ff,
+#                dropout=dropout,
+#                activation=activation
+#            ) for _ in range(e_layers)
+#        ]
+#        self.encoder = Encoder(attn_layers, norm_layer=torch.nn.LayerNorm(d_model))
+#
+#        self.act = F.gelu
+#        self.dropout = nn.Dropout(dropout)
+#        self.projection = nn.Linear(d_model * seq_len, num_class)
+#
+#    def forward(self, x_enc, x_mark_enc):
+#        # enc
+#        print(x_enc)
+#        enc_out = self.enc_embedding(x_enc)
+#        print("model",enc_out)
+#        enc_out, attns = self.encoder(enc_out, attn_mask=None)
+#
+#        # Output
+#        output = self.act(enc_out)  # the output transformer encoder/decoder embeddings don't include non-linearity
+#        print("output = self.act(enc_out) ", output)
+#        print("output.shape", output.shape)
+#        output = self.dropout(output)
+#        print("output = self.dropout(output) ", output)
+#        print("output.shape", output.shape)
+#        
+#        print("x_mark_enc: ", x_mark_enc)
+#        print("x_mark_enc.shape",x_mark_enc.shape,"\n")
+#        
+#        output = output * x_mark_enc.unsqueeze(-1)  # zero-out padding embeddings
+#        output = output.reshape(output.shape[0], -1)  # (batch_size, seq_length * d_model)
+#        output = self.projection(output)  # (batch_size, num_classes)
+#
+#        return output
+#
