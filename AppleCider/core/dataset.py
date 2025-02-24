@@ -27,11 +27,17 @@ class DataGenerator(Dataset):
         self.random_seed = config['random_seed']
         self.classes = config['classes']
         self.max_samples = config['max_samples']
-        self.scaler = joblib.load(config['scaler_path'])
+        self.mode = config['mode']
         
         self.train_files = config['train_files_path']
         self.val_files = config['val_files_path']
 
+        if self.mode == 'meta' or self.mode == 'all':
+            if self.scaler is None:
+                raise ValueError('No scaler path. Add path.')
+            else:
+                self.scaler = joblib.load(config['scaler_path'])
+         
         if self.split == 'train' or self.split == 'val':
             self.df = pd.read_csv(config['df_path'])
         else:
@@ -73,13 +79,16 @@ class DataGenerator(Dataset):
         
         el = self.df.iloc[index]
         target = self.target2id[el[self.step]]
+        target = torch.tensor(target).type(torch.LongTensor)  
 
         file_path = os.path.join(self.preprocessed_path, el['file'])
         sample = np.load(file_path, allow_pickle=True).item()
 
         metadata = sample['metadata'].to_numpy()
-        metadata = self.scaler.transform(metadata.reshape(1, -1))[0]
-        metadata = metadata.astype(np.float32)
+        
+        if self.mode == 'meta' or self.mode == 'all':
+            metadata = self.scaler.transform(metadata.reshape(1, -1))[0]
+            metadata = metadata.astype(np.float32)
 
         images = sample['images']
         images = np.transpose(images, (2, 0, 1))
