@@ -33,13 +33,13 @@ class DataGenerator(Dataset):
         self.val_files = config['val_files_path']
 
         if self.mode == 'meta' or self.mode == 'all':
+            self.scaler = joblib.load(config['scaler_path'])
             if self.scaler is None:
                 raise ValueError('No scaler path. Add path.')
-            else:
-                self.scaler = joblib.load(config['scaler_path'])
          
         if self.split == 'train' or self.split == 'val':
             self.df = pd.read_csv(config['df_path'])
+        
         else:
             # TODO Fix later
             raise ValueError('Split must be either train or val. FIX THIS LATER')
