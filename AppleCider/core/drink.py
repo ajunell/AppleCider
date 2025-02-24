@@ -73,10 +73,13 @@ def get_model(config):
 
 
 def get_schedulers(config, optimizer):
+    
     if config['scheduler'] == 'ExponentialLR':
         scheduler = ExponentialLR(optimizer, gamma=config['gamma'])
+    
     elif config['scheduler'] == 'ReduceLROnPlateau':
         scheduler = ReduceLROnPlateau(optimizer, mode='min', factor=config['factor'], patience=config['patience'])
+    
     else:
         raise NotImplementedError(f"Scheduler {config['scheduler']} not implemented")
 
@@ -200,7 +203,7 @@ class Trainer:
         self.model.train()
         self.zero_stats()
         
-        for photometry, photometry_mask, metadata, images, spectra, labels in tqdm(train_dataloader):
+        for photometry, photometry_mask, metadata, images, spectra, labels in tqdm(train_dataloader, desc='Train'):
             photometry, photometry_mask = photometry.to(self.device), photometry_mask.to(self.device)
             metadata, images, spectra = metadata.to(self.device), images.to(self.device), spectra.to(self.device)
             labels = labels.to(self.device)    
@@ -245,7 +248,7 @@ class Trainer:
         self.zero_stats()
 
         with torch.no_grad():
-            for photometry, photometry_mask, metadata, images, spectra, labels in tqdm(val_dataloader):
+            for photometry, photometry_mask, metadata, images, spectra, labels in tqdm(val_dataloader, desc='Validation'):
                 photometry, photometry_mask = photometry.to(self.device), photometry_mask.to(self.device)
                 metadata, images, spectra = metadata.to(self.device), images.to(self.device), spectra.to(self.device)
                 labels = labels.to(self.device)
@@ -314,7 +317,7 @@ class Trainer:
         all_predicted_labels = []
         
         
-        for photometry, photometry_mask, metadata, images, spectra, labels in tqdm(val_dataloader):
+        for photometry, photometry_mask, metadata, images, spectra, labels in tqdm(val_dataloader, desc='validation'):
             with torch.no_grad():
                 photometry, photometry_mask = photometry.to(self.device), photometry_mask.to(self.device)
                 metadata, images, spectra = metadata.to(self.device), images.to(self.device), spectra.to(self.device)
@@ -384,12 +387,15 @@ def run(config):
     model = model.to(device)
     
     optimizer = Adam(model.parameters(), lr=config['lr'], betas=(config['beta1'], config['beta2'] ))
-    #warmup_scheduler = LinearLR(optimizer, start_factor=1e-5, end_factor=1, total_iters=config['warmup_epochs'])
+    warmup_scheduler = LinearLR(optimizer, start_factor=1e-5, end_factor=1, total_iters=config['warmup_epochs'])
     
-    #scheduler = ReduceLROnPlateau(optimizer, mode='min', factor=config['factor'], patience=config['patience'])
+    scheduler = ReduceLROnPlateau(optimizer, mode='min', factor=config['factor'], patience=config['patience'])
+    
     criterion = torch.nn.CrossEntropyLoss()
-  
-    scheduler, warmup_scheduler = get_schedulers(config, optimizer)
+    
+    
+    # this doesn't work right now....
+    #scheduler, warmup_scheduler = get_schedulers(config, optimizer)
     
     trainer = Trainer(model=model, optimizer=optimizer, scheduler=scheduler, warmup_scheduler=warmup_scheduler,
                       criterion=criterion, device=device, config=config)
