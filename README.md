@@ -7,11 +7,7 @@ AppleCider (applying multimodal Learning to classify transient detections early)
 
 
 ## guide for guests:
-
-<ins>Give me the data:</ins>
-- [AppleCider Data](https://drive.google.com/drive/folders/13x2KGVOHwkO_VmrcNHnEnuQgT0yT_BL_?usp=sharing): `SEDM_folder` is formated basically same as on Theophile's machine: each object has it's own folder which contains `photometry.csv`, `alerts.npy`, `spectra.csv`
-- this is NOT the preprocessed data
-<br> 
+public version of AppleCider (this repo) makes use of objects from the [ZTF Bright Transient Survey](https://sites.astro.caltech.edu/ztf/bts/bts.php)<br><br>
 
 
 <ins>What do I really need to download from this repo?</ins>
@@ -26,17 +22,8 @@ AppleCider (applying multimodal Learning to classify transient detections early)
 <ins>How to drink Apple Cider</ins>:
 - `drink-AppleCider.ipynb`: bare bones notebook to run the model, contains three cells: imports, config, function to run the model. requires processed data (see `001-data-processing.ipynb` for formatting of data)
 - `/notebooks/006-AppleCider-multimodal`: walk through AppleCider. includes printed examples of processed data, example use of `DataGenerator` + `DataLoader`, graph original photometry vs processed photometry, mass graph images + photometry + spectra and print metadata columns for alerts in `DataGenerator`. 
-  - if you want to look at the individual modalities, see the other notebooks in the folder 
+  - if you want to look at the individual modalities, see the other notebooks in the folder
 
 
 
 
-<br><br><br>
-
-### AppleCider Data Repo
-
-- there's also a seperate data-centered repo, [AppleCider Data](https://github.com/ajunell/AppleCider_Data) (also private), which is actually organized. it contains:
-  - notebooks with stats about the dataset (class distribution, instrument counts, host galaxy spectra info, etc)
-  - all the queries I used: Kowalski for alerts, Fritz for classification + spectra + additional object information, SDSS for more spectra, and DESI also for more spectra. there are also example notebooks for querying and basic spectra processing (which is really just saving each file format to .csv). note: there is additional spectra I got from Yu-Jing, so no query notebooks for that, just processing.
-  - relevant .csv: the classic object id + classifcation, object id + additional info (RA, Dec, named host galaxy, spectra source + spectral classification + spec ids for each survey, etc), object id + host galaxy name + potential SDSS host galaxy spec ID + SDSS file name
- - it does NOT contain data... see AppleCider drive link above
