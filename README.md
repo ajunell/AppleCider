@@ -7,11 +7,7 @@ AppleCider (applying multimodal Learning to classify transient detections early)
 
 
 ## guide for guests:
-
-<ins>Give me the data:</ins>
-- [AppleCider Data](https://drive.google.com/drive/folders/13x2KGVOHwkO_VmrcNHnEnuQgT0yT_BL_?usp=sharing): `SEDM_folder` is formated basically same as on Theophile's machine: each object has it's own folder which contains `photometry.csv`, `alerts.npy`, `spectra.csv`
-- this is NOT the preprocessed data
-<br> 
+public version of AppleCider (this repo) makes use of objects from the [ZTF Bright Transient Survey](https://sites.astro.caltech.edu/ztf/bts/bts.php)<br><br>
 
 
 <ins>What do I really need to download from this repo?</ins>
@@ -27,7 +23,6 @@ AppleCider (applying multimodal Learning to classify transient detections early)
 - `drink-AppleCider.ipynb`: bare bones notebook to run the model, contains three cells: imports, config, function to run the model. requires processed data (see `001-data-processing.ipynb` for formatting of data)
 - `/notebooks/006-AppleCider-multimodal`: walk through AppleCider. includes printed examples of processed data, example use of `DataGenerator` + `DataLoader`, graph original photometry vs processed photometry, mass graph images + photometry + spectra and print metadata columns for alerts in `DataGenerator`. 
   - if you want to look at the individual modalities, see the other notebooks in the folder 
-
 
 
 
