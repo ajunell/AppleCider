@@ -100,7 +100,7 @@ def plot_image(image, vmin_set, vmax_set):
     
     
     
-class plot_image():    
+class plot_images():    
 
     def plot_image_pres(image):
         """ use to graph images of objects after basic preprocessing"""
