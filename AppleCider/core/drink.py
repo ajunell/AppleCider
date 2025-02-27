@@ -3,20 +3,13 @@ from matplotlib import pyplot as plt
 from sklearn.metrics import confusion_matrix
 import os
 import optuna
-from optuna.exceptions import DuplicatedStudyError
-
-from sklearn.model_selection import train_test_split
-from scipy.interpolate import interp1d
 from scipy import stats
 
-import pandas as pd
 from tqdm.auto import tqdm
 import wandb
-import random
 import numpy as np
 import pickle
 import joblib
-
 
 import torch
 from torch import nn
@@ -30,8 +23,6 @@ from datetime import datetime
 
 from AppleCider.core.dataset import DataGenerator
 from AppleCider.core.model import Informer, GalSpecNet, MetaModel, BTSModel, AstroM4
-from AppleCider.core.loss import CLIPLoss
-#from AppleCider.core.trainer import Trainer
 from AppleCider.models.Informer import DataEmbedding, EncoderLayer, AttentionLayer, ProbAttention, Encoder
 from AppleCider.util.early_stopping import EarlyStopping
 
@@ -354,21 +345,21 @@ class Trainer:
         return conf_matrix
     
     
-CLASSES = ['SN Ia', 'SN II', 'SN IIP', 'Cataclysmic', 'AGN', 'SN IIn', 'SN Ic', 'SN Ib', 'SN IIb', 'Tidal Disruption Event']
-
-
-def collate_func(data):
-    photometry, photometry_mask, metadata, images, spectra, labels = zip(*data)
     
-    labels = torch.tensor(labels, dtype=torch.long)
+def collate_func(data):
+    
+    photometry, metadata, images, spectra, labels = zip(*data)
+    
+    labels = torch.tensor(labels, dtype=torch.int64)
     
     photometry = torch.stack(photometry)
-    photometry_mask =  torch.stack(photometry_mask)
+    photometry_mask = torch.ones((photometry.size(0), photometry.size(1)))
+    
     metadata = torch.stack(metadata)
     images = torch.stack(images)
     spectra = torch.stack(spectra)
     
-    # works like this:
+    
     return photometry, photometry_mask, metadata, images, spectra, labels
     
     
@@ -393,9 +384,6 @@ def run(config):
     
     criterion = torch.nn.CrossEntropyLoss()
     
-    
-    # this doesn't work right now....
-    #scheduler, warmup_scheduler = get_schedulers(config, optimizer)
     
     trainer = Trainer(model=model, optimizer=optimizer, scheduler=scheduler, warmup_scheduler=warmup_scheduler,
                       criterion=criterion, device=device, config=config)
