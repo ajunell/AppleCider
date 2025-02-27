@@ -221,7 +221,7 @@ class plot_dataset:
         obj_label = data_match_df['type']
         obj_alert = data_match_df['file']
         
-        photometry, photometry_mask, metadata, images, spectra, label = dataset[index]
+        photometry, metadata, images, spectra, label = dataset[index]
         
         print(f"{obj_id}: {obj_alert}")
         print("metadata columns: \n sgscore1, sgscore2, distpsnr1, distpsnr2, ra, dec, nmtchps, sharpnr, scorr, sky \n", metadata)
