@@ -13,8 +13,6 @@ class TokenEmbedding(nn.Module):
         self.tokenConv = nn.Conv1d(in_channels=c_in, out_channels=d_model,
                                    kernel_size=3, padding=1, padding_mode='circular', bias=False)
         
-        #print("TokenEmbedding")
-        
         for m in self.modules():
             if isinstance(m, nn.Conv1d):
                 nn.init.kaiming_normal_(m.weight, mode='fan_in', nonlinearity='leaky_relu')
@@ -28,8 +26,6 @@ class PositionalEmbedding(nn.Module):
     
     def __init__(self, d_model, max_len=5000):
         super(PositionalEmbedding, self).__init__()
-        
-        #print("class PositionalEmbedding(nn.Module)")
         
         # Compute the positional encodings once in log space.
         pe = torch.zeros(max_len, d_model).float()
@@ -59,7 +55,6 @@ class DataEmbedding(nn.Module):
         self.dropout = nn.Dropout(p=dropout)
 
     def forward(self, x):
-        #print("class DataEmbedding")
        
         x = self.value_embedding(x) + self.position_embedding(x)
 
@@ -94,8 +89,6 @@ class ProbAttention(nn.Module):
         B, H, L_K, E = K.shape
         _, _, L_Q, _ = Q.shape
         
-        #print("class ProbAttention: _prob_Q")
-       
         # calculate the sampled Q_K
         K_expand = K.unsqueeze(-3).expand(B, H, L_Q, L_K, E)
         # real U = U_part(factor*ln(L_k))*L_q
@@ -103,7 +96,6 @@ class ProbAttention(nn.Module):
         K_sample = K_expand[:, :, torch.arange(L_Q).unsqueeze(1), index_sample, :]
         Q_K_sample = torch.matmul(Q.unsqueeze(-2), K_sample.transpose(-2, -1)).squeeze()
         
-        #print(f"Shape of Q: {Q.shape}, Shape of K: {K.shape}, Shape of K_sample: {K_sample.shape}")
 
         # find the Top_k query with sparsity measurement
         M = Q_K_sample.max(-1)[0] - torch.div(Q_K_sample.sum(-1), L_K)
@@ -117,7 +109,6 @@ class ProbAttention(nn.Module):
 
     def _get_initial_context(self, V, L_Q):
         
-        #print("class ProbAttention: _get_initial_context")
         B, H, L_V, D = V.shape
         if not self.mask_flag:
             # V_sum = V.sum(dim=-2)
@@ -132,7 +123,6 @@ class ProbAttention(nn.Module):
 
     def _update_context(self, context_in, V, scores, index, L_Q, attn_mask):
         B, H, L_V, D = V.shape
-        #print("class ProbAttention: update_context")
 
         if self.mask_flag:
             attn_mask = ProbMask(B, H, L_Q, index, scores, device=V.device)
@@ -155,8 +145,6 @@ class ProbAttention(nn.Module):
     def forward(self, queries, keys, values, attn_mask, tau=None, delta=None):
         B, L_Q, H, D = queries.shape
         _, L_K, _, _ = keys.shape
-        
-        #print("class ProbAttention: forward(self, queries, keys, values, attn_mask, tau=None, delta=None")
         
         queries = queries.transpose(2, 1)
         keys = keys.transpose(2, 1)
@@ -201,8 +189,6 @@ class AttentionLayer(nn.Module):
 
     def forward(self, queries, keys, values, attn_mask, tau=None, delta=None):
         
-        #print("class AttentionLayer: forward(self, queries, keys, values, attn_mask, tau=None, delta=None):")
-        
         B, L, _ = queries.shape
         _, S, _ = keys.shape
         H = self.n_heads
@@ -232,7 +218,6 @@ class EncoderLayer(nn.Module):
 
     def forward(self, x, attn_mask=None, tau=None, delta=None):
         
-        #print("class EncoderLayer: forward(self, x, attn_mask=None, tau=None, delta=None)")
 
         new_x, attn = self.attention(x, x, x, attn_mask=attn_mask, tau=tau, delta=delta)
         x = x + self.dropout(new_x)
