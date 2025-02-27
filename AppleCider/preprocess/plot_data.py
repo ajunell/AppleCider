@@ -87,7 +87,7 @@ def plot_image(image, vmin_set, vmax_set):
     titles = ['Science Image', 'Reference Image', 'Difference']
 
     for i, ax in enumerate(axes):
-        ax.imshow(image[:, :, i], cmap='magma', vmin=vmin_set, vmax=vmax_set)
+        ax.imshow(image[:, :, i], cmap='viridis_r', vmin=vmin_set, vmax=vmax_set)
         ax.set_title(titles[i], fontsize=14)
         # ADD BOX, IT WORKS:
         rect = patches.Rectangle((24, 24), 15, 15, linewidth=3, edgecolor='y', facecolor='none')
@@ -109,7 +109,7 @@ class plot_images():
         titles = ['Science Image', 'Reference Image', 'Difference']
     
         for i, ax in enumerate(axes):
-            ax.imshow(image[:, :, i], cmap='magma', vmin=0.0, vmax=.0999 )
+            ax.imshow(image[:, :, i], cmap='viridis_r', vmin=0.0, vmax=.0999 )
             ax.set_title(titles[i], fontsize=14)
             # ADD BOX, IT WORKS:
             rect = patches.Rectangle((24, 24), 15, 15, linewidth=3, edgecolor='y', facecolor='none')
