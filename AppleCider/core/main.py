@@ -110,27 +110,24 @@ def get_config():
     config = {
         'project': 'AppleCider',
         'mode': 'all',    # 'clip' 'photo' 'spectra' 'meta' 'image' 'all'
-        'config_from': None,    # 'meridk/AstroCLIPResults/d2u52yml',
+        'config_from': None,   
         'random_seed': 42,  # 42, 66, 0, 12, 123
         'use_wandb': True,
         'save_weights': False,
         'weights_path': f'/AppleCider/AppleCider/weights/{datetime.now().strftime("%Y-%m-%d-%H-%M")}',
-        # 'use_pretrain': 'CLIP/home/mariia/AstroML/weights/2024-08-14-14-05-zmjau1cu/weights-51.pth',
-        'use_pretrain': None,
         'freeze': False,
 
         ## Data General
-        'preprocessed_path':'/AppleCider_Data/data_train/',
-        'df_path': '/AppleCider/data_train.csv',
+        'preprocessed_path':'/data_train_BTS/',
+        'df_path': '/csv-pkl/data_train_BTS.csv',
         
         ## train, validation file path
-        'train_files_path': '/Users/junell/Documents/AppleCider/train_files.pkl',
-        'val_files_path': '/Users/junell/Documents/AppleCider/val_files.pkl',
+        'train_files_path': '/csv-pkl/train_files_BTS.pkl',
+        'val_files_path': '/csv-pkl/val_files_BTS.pkl',
         
         'step': 'type',
         'classes': CLASSES,
         'group_labels': True,
-        # TODO if labels are grouped max samples should be on a grouped label?
         'max_samples': 5000,
         'num_classes': len(CLASSES),
 
@@ -157,7 +154,7 @@ def get_config():
         'm_dropout': 0.2,
         ## TODO use actual column names
         'meta_cols': range(10),
-        'scaler_path': 'AppleCider/AppleCider/core/scaler.pkl',
+        'scaler_path': '/csv-pkl/scaler_BTS.pkl',
 
         ## Image Model
         'input_channels': 3,
