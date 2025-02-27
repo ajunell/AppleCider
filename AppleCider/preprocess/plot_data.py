@@ -207,28 +207,22 @@ def mass_plot_photometry(obj_id_list, SEDM_dataset, data_dir, max_mjd=10,color_d
 class plot_dataset:
 
 
-    def plot_dataset_item(dataset, index, data_df):
+    def plot_dataset_item(dataset, dataset_index):
         """
         Plots photometry, images, and spectra for a specific dataset item in a single row.
-    
-        Parameters:
-        dataset: The dataset object containing data items.
-        item_id (int): The ID of the dataset item to plot.
         """
         
-        data_match_df = data_df.iloc[index]
-        obj_id = data_match_df['name']
-        obj_label = data_match_df['type']
-        obj_alert = data_match_df['file']
+        photometry, metadata, images, spectra, target = dataset[dataset_index]
         
-        photometry, metadata, images, spectra, label = dataset[index]
+        class_map = {'SN Ia':0 ,'SN Ic':1,  'SN Ib':2 , 'SN II': 3, 'SN IIP': 4, 'SN IIn': 5,
+                 'SN IIb': 6, 'Cataclysmic': 7, 'AGN': 8, 'Tidal Disruption Event': 9}
+        obj_label = [key for key, value in class_map.items() if value == target][0]
         
-        print(f"{obj_id}: {obj_alert}")
         print("metadata columns: \n sgscore1, sgscore2, distpsnr1, distpsnr2, ra, dec, nmtchps, sharpnr, scorr, sky \n", metadata)
         
         fig = plt.figure(figsize=(24, 6))
-        fig.suptitle(f'{obj_id}, {obj_label}: {obj_alert}', y=1.02, fontsize=20)
-        
+        fig.suptitle(f'dataset: {obj_label}', y=1.02, fontsize=20)
+    
         gs = GridSpec(1, 5, width_ratios=[1, 1, 1, 1.5, 1.5])
     
         ax_img1 = fig.add_subplot(gs[0, 0])
@@ -245,8 +239,8 @@ class plot_dataset:
         ax_img3.imshow(images[2, :, :], cmap='viridis_r')
         ax_img3.axis('off')
         ax_img3.set_title('Difference')
-        
-        
+    
+    
         ## photometry from train_dataset[#]
         dataset_dates = photometry[:,0] ; dataset_ztfg = photometry[:,1]
         dataset_ztfr = photometry[:,2] ; dataset_ztfi = photometry[:,3]
@@ -268,6 +262,78 @@ class plot_dataset:
     
         plt.tight_layout()
         plt.show()
+        
+        
+    def plot_dataset_item_named(dataset, dataset_index,train_files):
+        """
+        Plots photometry, images, and spectra for a specific dataset item in a single row.
+    
+        Parameters:
+        dataset: The dataset object containing data items.
+        item_id (int): The ID of the dataset item to plot.
+        """
+    
+        train_files_sort = sorted(train_files)
+        
+        
+        obj_id = train_files_sort[dataset_index][:12]
+        obj_alert = train_files_sort[dataset_index]
+    
+        photometry, metadata, images, spectra, target = dataset[dataset_index]
+        
+        class_map = {'SN Ia':0 ,'SN Ic':1,  'SN Ib':2 , 'SN II': 3, 'SN IIP': 4, 'SN IIn': 5,
+                     'SN IIb': 6, 'Cataclysmic': 7, 'AGN': 8, 'Tidal Disruption Event': 9}
+        
+        obj_label = [key for key, value in class_map.items() if value == target][0]
+        
+        print(f"{obj_id}: {obj_alert}")
+        print("metadata columns: \n sgscore1, sgscore2, distpsnr1, distpsnr2, ra, dec, nmtchps, sharpnr, scorr, sky \n", metadata)
+        
+        fig = plt.figure(figsize=(24, 6))
+        fig.suptitle(f'{obj_id}, {obj_label}:       {obj_alert}', y=1.02, fontsize=20)
+        
+        gs = GridSpec(1, 5, width_ratios=[1, 1, 1, 1.5, 1.5])
+    
+        ax_img1 = fig.add_subplot(gs[0, 0])
+        ax_img1.imshow(images[0, :, :], cmap='viridis_r')
+        ax_img1.axis('off')
+        ax_img1.set_title('Science Image')
+    
+        ax_img2 = fig.add_subplot(gs[0, 1])
+        ax_img2.imshow(images[1, :, :], cmap='viridis_r')
+        ax_img2.axis('off')
+        ax_img2.set_title('Reference Image')
+    
+        ax_img3 = fig.add_subplot(gs[0, 2])
+        ax_img3.imshow(images[2, :, :], cmap='viridis_r')
+        ax_img3.axis('off')
+        ax_img3.set_title('Difference')
+        
+        ## photometry from train_dataset[#]
+        dataset_dates = photometry[:,0] ; dataset_ztfg = photometry[:,1]
+        dataset_ztfr = photometry[:,2] ; dataset_ztfi = photometry[:,3]
+    
+        ax_photometry = fig.add_subplot(gs[0, 3])
+        ax_photometry.scatter(dataset_dates,dataset_ztfg ,label='ztf-g',marker='v',alpha=0.75,c='green',edgecolor='black',s=200)
+        ax_photometry.scatter(dataset_dates,dataset_ztfr ,label='ztf-r',marker='^',alpha=0.75,c='red',edgecolor='black',s=200)
+        ax_photometry.scatter(dataset_dates,dataset_ztfi, label='ztf-i',marker='>',alpha=0.75,c='yellow',edgecolor='black',s=200)
+        ax_photometry.set_title('Photometry')
+        ax_photometry.grid(alpha=0.15)
+        ax_photometry.legend()
+    
+        ax_spectra = fig.add_subplot(gs[0, 4])
+        ax_spectra.plot(spectra[0], label='Spectra', color='yellowgreen')
+        ax_spectra.set_title('Spectra')
+        ax_spectra.grid(alpha=0.15)
+        ax_spectra.legend()
+    
+        plt.tight_layout()
+        plt.show()
+    
+        
+        
+        
+        
         
     def compare_dataset_photometry(photometry, obj_id, SEDM_dataset, data_dir):
         
