@@ -13,28 +13,8 @@ from AppleCider.core.model import Informer, GalSpecNet, MetaModel, BTSModel, Ast
 from AppleCider.core.loss import CLIPLoss
 from AppleCider.core.trainer import Trainer
 
-
-# 2-7
-CLASSES = ['SN Ia', 'SN II', 'SN IIP', 'Cataclysmic', 'AGN', 'SN IIn', 'SN Ic', 'SN Ib', 'SN IIb', 'Tidal Disruption Event']
-
-def my_collate(batch):
-    
-    """ photometry, photometry_mask, metadata, images, spectra, labels = train_dataloader)"""
-    
-    ## dataset[:5] = photometry, photo_mask, metadata, images, spectra =dataset[:5]
-    photometry = [item[0] for item in batch]
-    photometry_mask = [item[1] for item in batch]
-    
-    metadata = [item[2] for item in batch]
-    images = [item[3] for item in batch]
-    
-    spectra = [item[4] for item in batch]
-    
-    ## dataset[5] = label
-    target = [item[5] for item in batch]
-    target = torch.LongTensor(target)
-    
-    return [photometry, photometry_mask, metadata, images, spectra, target]
+import optuna
+from optuna.exceptions import DuplicatedStudyError
 
 
 def get_model(config):
@@ -121,6 +101,10 @@ def set_random_seeds(random_seed):
     torch.backends.cudnn.deterministic = True
     torch.backends.cudnn.benchmark = False
 
+    
+    
+CLASSES = ['SN Ia', 'SN II', 'SN IIP', 'Cataclysmic', 'AGN', 'SN IIn', 'SN Ic', 'SN Ib', 'SN IIb', 'Tidal Disruption Event']    
+    
 
 def get_config():
     config = {
@@ -135,13 +119,13 @@ def get_config():
         'use_pretrain': None,
         'freeze': False,
 
-        # Data General
-        'preprocessed_path':'/AppleCider_Data/sedm_data_train_raw/',
-        'df_path': '/AppleCider_Data/data_train_raw.csv',
+        ## Data General
+        'preprocessed_path':'/AppleCider_Data/data_train/',
+        'df_path': '/AppleCider/data_train.csv',
         
-        # save train, val file names ...
-        'save_train_files': '/AppleCider_Data/train_files_raw.pkl',
-        'save_val_files': '/AppleCider_Data/val_files_raw.pkl',
+        ## train, validation file path
+        'train_files_path': '/Users/junell/Documents/AppleCider/train_files.pkl',
+        'val_files_path': '/Users/junell/Documents/AppleCider/val_files.pkl',
         
         'step': 'type',
         'classes': CLASSES,
@@ -150,32 +134,32 @@ def get_config():
         'max_samples': 5000,
         'num_classes': len(CLASSES),
 
-        # Photometry Model
-        'seq_len': 180,
-        'p_enc_in': 2,
+        ## Photometry Model
+        'seq_len': 230,
+        'p_enc_in': 4,
         'p_d_model': 128,
         'p_dropout': 0.2,
         'p_factor': 1,
         'p_output_attention': False,
-        'p_n_heads': 4,
+        'p_n_heads': 12,
         'p_d_ff': 512,
         'p_activation': 'gelu',
         'p_e_layers': 8,
 
-        # Spectra Model
+        ## Spectra Model
         's_dropout': 0.2,
         's_conv_channels': [1, 64, 64, 32, 32],
         's_kernel_size': 3,
         's_mp_kernel_size': 4,
 
-        # Metadata Model
+        ## Metadata Model
         'm_hidden_dim': 256,
         'm_dropout': 0.2,
-        # TODO use actual column names
+        ## TODO use actual column names
         'meta_cols': range(10),
-        'scaler_path': 'AppleCider/AppleCider/core/scaler_raw.pkl',
+        'scaler_path': 'AppleCider/AppleCider/core/scaler.pkl',
 
-        # Image Model
+        ## Image Model
         'input_channels': 3,
         'conv1_channels': 64,
         'conv2_channels': 16,
@@ -183,11 +167,11 @@ def get_config():
         'conv_dropout1': 0.45,
         'conv_dropout2': 0.65,
 
-        # MultiModal Model
-        'hidden_dim': 128,
+        ## MultiModal Model
+        'hidden_dim': 512,
         'fusion': 'avg',  # 'avg', 'concat'
 
-        # Training
+        ## Training
         'batch_size': 512,
         'lr': 0.001,
         'beta1': 0.9,

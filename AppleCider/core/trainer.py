@@ -10,6 +10,8 @@ import os
 import optuna
 
 from AppleCider.util.early_stopping import EarlyStopping
+from torch.optim import Adam
+from torch.optim.lr_scheduler import ExponentialLR, ReduceLROnPlateau, LinearLR
 
 
 
@@ -84,7 +86,8 @@ class Trainer:
         elif self.mode == 'image':
             logits = self.model(images)
         else:  # all 4 modalities
-            logits = self.model(photometry, metadata, images, spectra)
+            #logits = self.model(photometry, metadata, images, spectra)
+            logits = self.model(photometry, photometry_mask, metadata, images, spectra)
 
         return logits
 
@@ -102,7 +105,7 @@ class Trainer:
 
     def step(self, photometry, photometry_mask, metadata, images, spectra, labels):
         """Perform a training step for the classification model"""
-        logits = self.get_logits(photometry, photometry_mask, metadata, images, spectra)    
+        logits = self.get_logits(photometry, photometry_mask, metadata, images, spectra)   
         
         loss = self.criterion(logits, labels)
 
@@ -274,49 +277,4 @@ class Trainer:
 
         return conf_matrix
     
-    
   
-    #def evaluate(self, val_dataloader, id2target):
-    #    self.model.eval()
-
-    #    all_true_labels = []
-    #    all_predicted_labels = []
-
-    #    for photometry, metadata, images, spectra, labels in tqdm(val_dataloader):
-    #        with torch.no_grad():
-    #            photometry = photometry.to(self.device)
-    #            metadata, images, spectra = metadata.to(self.device), images.to(self.device), spectra.to(self.device)
-
-    #            logits = self.get_logits(photometry, metadata, images, spectra)
-    #            probabilities = torch.nn.functional.softmax(logits, dim=1)
-    #            _, predicted_labels = torch.max(probabilities, dim=1)
-
-    #            all_true_labels.extend(labels.numpy())
-    #            all_predicted_labels.extend(predicted_labels.cpu().numpy())
-
-    #    conf_matrix = confusion_matrix(all_true_labels, all_predicted_labels)
-    #    conf_matrix_percent = 100 * conf_matrix / conf_matrix.sum(axis=1)[:, np.newaxis]
-
-    #    labels = [id2target[i] for i in range(len(conf_matrix))]
-    #    fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(20, 7))
-
-    #    # Plot absolute values confusion matrix
-    #    sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', xticklabels=labels, yticklabels=labels, ax=axes[0])
-    #    axes[0].set_xlabel('Predicted')
-    #    axes[0].set_ylabel('True')
-    #    axes[0].set_title('Confusion Matrix - Absolute Values')
-
-    #    # Plot percentage values confusion matrix
-    #    sns.heatmap(conf_matrix_percent, annot=True, fmt='.0f', cmap='Blues', xticklabels=labels, yticklabels=labels,
-    #                ax=axes[1])
-    #    axes[1].set_xlabel('Predicted')
-    #    axes[1].set_ylabel('True')
-    #    axes[1].set_title('Confusion Matrix - Percentages')
-
-    #    if self.use_wandb:
-    #        wandb.log({'conf_matrix': wandb.Image(fig)})
-
-    #    return conf_matrix
-    
-    
-    

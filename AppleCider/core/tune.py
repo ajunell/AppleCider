@@ -17,23 +17,8 @@ from AppleCider.core.dataset import DataGenerator
 from AppleCider.core.model import Informer, GalSpecNet, MetaModel, BTSModel, AstroM4
 from AppleCider.core.loss import CLIPLoss
 from AppleCider.core.trainer import Trainer
+import AppleCider.core.drink as drink
 
-CLASSES = ['SN Ia', 'SN II', 'SN IIP', 'Cataclysmic', 'AGN', 'SN IIn', 'SN Ic', 'SN Ib', 'SN IIb', 'Tidal Disruption Event']
-
-
-def collate_func(data):
-    photometry, photometry_mask, metadata, images, spectra, labels = zip(*data)
-    
-    labels = torch.tensor(labels, dtype=torch.long)
-    
-    photometry = torch.stack(photometry)
-    photometry_mask =  torch.stack(photometry_mask)
-    metadata = torch.stack(metadata)
-    images = torch.stack(images)
-    spectra = torch.stack(spectra)
-    
-    # works like this:
-    return photometry, photometry_mask, metadata, images, spectra, labels
 
 
 def get_model(config):
@@ -98,18 +83,18 @@ def set_random_seeds(random_seed):
 def get_config(trial):
     config = {
         'project': 'AppleCider',
-        'config_from': None,  # 'meridk/AstroCLIPResults/d2u52yml',
+        'config_from': None,
         'random_seed': 42,  # 42, 66, 0, 12, 123
         'use_wandb': True,
         'save_weights': False,
-        'weights_path': f'/Users/junell/Documents/AppleCider/AppleCider/weights/{datetime.now().strftime("%Y-%m-%d-%H-%M")}',
+        'weights_path': f'/AppleCider/weights/{datetime.now().strftime("%Y-%m-%d-%H-%M")}',
         # 'use_pretrain': 'CLIP/home/mariia/AstroML/weights/2024-08-14-14-05-zmjau1cu/weights-51.pth',
         'use_pretrain': None,
         'freeze': False,
 
         # Data General
-        'preprocessed_path': '/Users/junell/Documents/AppleCider_Data/data_train/',
-        'df_path': '/Users/junell/Documents/AppleCider/data_train.csv',
+        'preprocessed_path': '/data_train_BTS/',
+        'df_path': '/AppleCider/data_train_BTS.csv',
         'step': 'type',
         'classes': CLASSES,
         'group_labels': False,
@@ -117,13 +102,13 @@ def get_config(trial):
         'num_classes': len(CLASSES),
 
         # Photometry Model
-        'seq_len': 180,
-        'p_enc_in': 2,
+        'seq_len': 230,
+        'p_enc_in': 4,
         'p_d_model': 128,
         'p_dropout': 0.2,
         'p_factor': 1,
         'p_output_attention': False,
-        'p_n_heads': 4,
+        'p_n_heads': 12,
         'p_d_ff': 512,
         'p_activation': 'gelu',
         'p_e_layers': 8,
@@ -135,11 +120,11 @@ def get_config(trial):
         's_mp_kernel_size': 4,
 
         # Metadata Model
-        'm_hidden_dim': 128,
+        'm_hidden_dim': 512,
         'm_dropout': 0.2,
         # TODO use actual column names
         'meta_cols': range(10),
-        'scaler_path': '/Users/junell/Documents/AppleCider/AppleCider/core/scaler.pkl',
+        'scaler_path': '/csv-pkl/scaler_BTS.pkl',
 
         # Image Model
         'input_channels': 3,
@@ -154,7 +139,7 @@ def get_config(trial):
         'fusion': 'avg',  # 'avg', 'concat'
 
         # Training
-        'batch_size': 256,
+        'batch_size': 512,
         'lr': 0.001,
         'beta1': 0.9,
         'beta2': 0.999,
@@ -201,12 +186,6 @@ def get_config(trial):
     else:
         raise NotImplementedError(f"Unknown study name {STUDY_NAME}")
 
-    if 'clip' in STUDY_NAME and STUDY_NAME != 'clip':    # ('metaclip', 'photoclip', 'spectraclip', 'psmiclip')
-        # TODO change the path
-        config['use_pretrain'] = 'CLIP/home/mariia/AstroML/weights/2024-09-12-13-21-03ai5zsz/weights-best.pth'
-    else:
-        config['use_pretrain'] = None
-
     if config['mode'] in ('photo', 'all', 'clip'):
         config['p_dropout'] = trial.suggest_float('p_dropout', 0.0, 0.4)
 
@@ -230,8 +209,8 @@ def run(config, trial):
     train_dataset = DataGenerator(config, split='train')
     val_dataset = DataGenerator(config, split='val')
 
-    train_dataloader = DataLoader(train_dataset, batch_size=config['batch_size'], shuffle=True, drop_last=True, num_workers=4, collate_fn=my_collate)
-    val_dataloader = DataLoader(val_dataset, batch_size=config['batch_size'], shuffle=False, collate_fn=my_collate)
+    train_dataloader = DataLoader(train_dataset, batch_size=config['batch_size'], shuffle=True, drop_last=True, collate_fn=drink.collate_func)
+    val_dataloader = DataLoader(val_dataset, batch_size=config['batch_size'], shuffle=False, collate_fn=drink.collate_func)
 
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     print('Using', device)
