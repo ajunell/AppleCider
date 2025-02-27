@@ -12,11 +12,10 @@ public version of AppleCider (this repo) makes use of objects from the [ZTF Brig
 
 <ins>What do I really need to download from this repo?</ins>
 - everything in the`AppleCider` folder (core, models, preprocess)
-- plus the loose file(s) in the repo:
-  - `SEDM_dataset.csv` <br>
+- plus files in `csv-pkl`:
+  - `SEDM_BrightTransientSurvey.csv` <br>
   - depending on if you want to truly re-do the data preprocessing steps (outlined in `001-data-processing.ipynb`) or jump ahead using files already in the repo, you will need some version of:
-    - `data_train.csv`, `data_test.csv`,
-    - `test_files.pkl`, `train_files.pkl`, `val_files.pkl`
+    - `data_train_BTS.csv`, `data_test_BTS.csv`
 <br>
 
 <ins>How to drink Apple Cider</ins>:
