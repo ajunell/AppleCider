@@ -232,8 +232,6 @@ class AstroM4(nn.Module):
             self.fc = nn.Linear(in_features, config['num_classes'])
 
     def get_embeddings(self, photometry, photometry_mask, metadata, images, spectra):
-        
-        #print("AstroM4.get_embeddings(self, photometry, photometry_mask, metadata, images, spectra):")
     
         p_emb = self.photometry_proj(self.photometry_encoder(photometry, photometry_mask))
         s_emb = self.spectra_proj(self.spectra_encoder(spectra))
@@ -249,8 +247,6 @@ class AstroM4(nn.Module):
         return p_emb, m_emb, i_emb, s_emb
 
     def forward(self, photometry, photometry_mask, metadata, images, spectra):
-        
-        #print("AstroM4.forward(self, photometry, photometry_mask, metadata, images, spectra)")
         
         p_emb, m_emb, i_emb, s_emb = self.get_embeddings(photometry, photometry_mask, metadata, images, spectra)
 

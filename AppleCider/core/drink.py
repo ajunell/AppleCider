@@ -382,7 +382,17 @@ def run(config):
     
     scheduler = ReduceLROnPlateau(optimizer, mode='min', factor=config['factor'], patience=config['patience'])
     
-    criterion = torch.nn.CrossEntropyLoss()
+    if config['class_weights']:
+        if os.path.isfile(config['class_weights_path']):
+            # open the weights pkl
+            with open(config['class_weights_path'], 'rb') as file:
+                weights = pickle.load(file)
+            weight_tensor = torch.tensor(weights, dtype=torch.float32)
+            criterion = torch.nn.CrossEntropyLoss(weight=weight_tensor)
+        else:
+            raise ValueError(f'class weights=True, but no class weight file at {config['class_weights_path']} exists')
+    else:
+        criterion = torch.nn.CrossEntropyLoss()
     
     
     trainer = Trainer(model=model, optimizer=optimizer, scheduler=scheduler, warmup_scheduler=warmup_scheduler,
@@ -390,5 +400,6 @@ def run(config):
     trainer.train(train_dataloader, val_dataloader, epochs=config['epochs'])
     
     if config['mode'] != 'clip':
-        trainer.evaluate(val_dataloader, id2target=train_dataset.id2target)
+        #trainer.evaluate(val_dataloader, id2target=train_dataset.id2target)
+        trainer.evaluate(val_dataloader, id2target=train_dataset.target2id) 
 
