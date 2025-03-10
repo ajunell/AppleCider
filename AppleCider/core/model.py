@@ -1,16 +1,18 @@
 import torch
 import torch.nn as nn
-from AppleCider.models.Informer import DataEmbedding, EncoderLayer, AttentionLayer, ProbAttention, Encoder
-
+from torch.utils.data import DataLoader
 from torch.optim import Adam
 from torch.optim.lr_scheduler import ExponentialLR, ReduceLROnPlateau, LinearLR
-from torch.utils.data import DataLoader
+
 from datetime import datetime
 import optuna
 from optuna.exceptions import DuplicatedStudyError
-
 from tqdm.auto import tqdm
 
+
+from AppleCider.core.dataset import DataGenerator
+from AppleCider.core.trainer import Trainer
+from AppleCider.models.Informer import DataEmbedding, EncoderLayer, AttentionLayer, ProbAttention, Encoder
 
 
 class Informer(nn.Module):
@@ -72,6 +74,12 @@ class Informer(nn.Module):
 
 
 class GalSpecNet(nn.Module):
+    
+    """
+    GalSpecNet
+    Paper link: https://doi.org/10.1093/mnras/stad2913
+    """
+    
     def __init__(self, config):
         super(GalSpecNet, self).__init__()
 
@@ -113,6 +121,12 @@ class GalSpecNet(nn.Module):
 
 
 class MetaModel(nn.Module):
+    
+    """
+    Metadata model from AstroM3
+    Paper link: https://arxiv.org/abs/2411.08842
+    """""
+    
     def __init__(self, config):
         super(MetaModel, self).__init__()
 
@@ -144,6 +158,12 @@ class MetaModel(nn.Module):
 
 
 class BTSModel(nn.Module):
+    
+    """
+    Image model from BTSbot for science, reference, difference images 
+    Paper link: https://arxiv.org/abs/2411.08842
+    """""
+    
     def __init__(self, config):
         super(BTSModel, self).__init__()
 
@@ -202,9 +222,14 @@ class BTSModel(nn.Module):
         return x
 
 
-class AstroM4(nn.Module):
+class AppleCider(nn.Module):
+    
+    """
+    AppleCider = AstroM3 (photometry, metadata, spectra) + BTSbot (images)
+    """
+    
     def __init__(self, config):
-        super(AstroM4, self).__init__()
+        super(AppleCider self).__init__()
 
         self.classification = True if config['mode'] == 'all' else False
 
@@ -274,3 +299,74 @@ class AstroM4(nn.Module):
             # logits_mp = logit_scale_mp * m_emb @ p_emb.T
             #
             # return logits_ps, logits_sm, logits_mp
+            
+            
+            
+class ZwickyCider(nn.Module):
+    
+    """
+    ZwickyCider = AppleCider - spectra.
+    for ZTF classification purposes
+    """
+    
+    def __init__(self, config):
+        super(ZwickyCider, self).__init__()
+
+        self.classification = True if config['mode'] == 'ztf' else False
+
+        self.photometry_encoder = Informer(config)
+        self.metadata_encoder = MetaModel(config)
+        self.image_encoder = BTSModel(config)
+
+        self.photometry_proj = nn.Linear(config['seq_len'] * config['p_d_model'], config['hidden_dim'])
+        self.metadata_proj = nn.Linear(config['m_hidden_dim'], config['hidden_dim'])
+        self.image_proj = nn.Linear(784, config['hidden_dim']) 
+
+        self.logit_scale_pi = nn.Parameter(torch.log(torch.ones([]) * 100))
+        self.logit_scale_im = nn.Parameter(torch.log(torch.ones([]) * 100))
+        self.logit_scale_mp = nn.Parameter(torch.log(torch.ones([]) * 100))
+
+        if self.classification:
+            self.fusion = config['fusion']
+            in_features = config['hidden_dim'] * 3 if self.fusion == 'concat' else config['hidden_dim']
+            self.fc = nn.Linear(in_features, config['num_classes'])
+
+    def get_embeddings(self, photometry, photometry_mask, metadata, images):
+    
+        p_emb = self.photometry_proj(self.photometry_encoder(photometry, photometry_mask))
+        m_emb = self.metadata_proj(self.metadata_encoder(metadata))
+        i_emb = self.image_proj(self.image_encoder(images))
+
+        # normalize features
+        p_emb = p_emb / p_emb.norm(dim=-1, keepdim=True)
+        m_emb = m_emb / m_emb.norm(dim=-1, keepdim=True)
+        i_emb = i_emb / i_emb.norm(dim=-1, keepdim=True)
+        
+        return p_emb, m_emb, i_emb
+
+    def forward(self, photometry, photometry_mask, metadata, images):
+        
+        p_emb, m_emb, i_emb = self.get_embeddings(photometry, photometry_mask, metadata, images)
+
+        if self.classification:
+            if self.fusion == 'concat':
+                emb = torch.cat((p_emb, m_emb, i_emb), dim=1)
+            elif self.fusion == 'avg':
+                emb = (p_emb + m_emb + i_emb) / 3
+            else:
+                raise NotImplementedError
+
+            logits = self.fc(emb)
+
+            return logits
+        
+        else:
+            logit_scale_pi = torch.clamp(self.logit_scale_pi.exp(), min=1, max=100)
+            logit_scale_im = torch.clamp(self.logit_scale_im.exp(), min=1, max=100)
+            logit_scale_mp = torch.clamp(self.logit_scale_mp.exp(), min=1, max=100)
+            
+            logits_pi = logit_scale_pi * p_emb @ i_emb.T
+            logits_im = logit_scale_im * i_emb @ m_emb.T
+            logits_mp = logit_scale_mp * m_emb @ p_emb.T
+            
+            return logits_pi, logiti_sm, logits_mp

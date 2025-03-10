@@ -8,8 +8,6 @@ from AppleCider.preprocess.data_preprocessor import PhotometryProcessor
 from AppleCider.preprocess.data_preprocessor import SpectraProcessor
 from AppleCider.preprocess.data_preprocessor import DataPreprocessor
 
-from torch.nn.utils.rnn import pad_sequence
-            
             
 class TransientDataset():
     
@@ -49,54 +47,59 @@ class TransientDataset():
                 metadata_df = DataPreprocessor.preprocess_metadata(metadata_df)
                 metadata_df_norm = metadata_df.drop(columns=['jd'])
                 
-                ## decide "alerts" to sample from 
-                alert_indices = list(range(len(metadata_df) // 2, len(metadata_df)))
+               
+                start_index = PhotometryProcessor.get_first_valid_index(photo_df)
                 
-                if len(alert_indices) > 3:
-                    alert_indices = np.round(np.linspace(len(metadata_df) // 2, len(metadata_df) - 1, 10)).astype(int)
+                if start_index == -1:
+                    print(f"{obj_id} start_index == -1")
+                    continue    
+            
+                ## list of valid alert index for 10 days of photometry
+                alert_indices = list(range(start_index, len(metadata_df)))
+                ## get last valid alert index
+                last_alert = alert_indices[-1]
+                print(f"{obj_id}: alert {last_alert}")
                 
-                ## preventing 'photo_ready is None' before it can happen and gives us photometry filled with zeros
-                if all(alert == 0 for alert in alert_indices):
-                    if len(photo_df) <= 1:
-                        print(f"Failed alert index slice. No alert saved for {obj_id}: {len(photo_df)} point in light curve.")
+                  if len(photo_df) <= 1:
+                    print(f"Failed min photometry requirement. No alert saved for {obj_id} at {last_alert}.")
+                
                 else:
+                    photo_ready = DataPreprocessor.cut_photometry(photo_df, metadata_df, i, max_mjd)
+                    ## skip saving current alert if photometry only has 1 point 
+                    if len(photo_ready) <=1:
+                        print(f"{obj_id} failed min photometry requirements. skip alert at index {i}!")
+                        continue
+                    if photo_ready is None:
+                        print(f"{obj_id} FAILED. BREAK!")
+                        break
                     
-                    for i in alert_indices:
-                        photo_ready = DataPreprocessor.cut_photometry(photo_df, metadata_df, i, max_mjd)
-                        ## skip saving current alert if photometry only has 1 point 
-                        if len(photo_ready) <=1:
-                            print(f"{obj_id} failed min photometry requirements. skip alert at index {i}!")
-                            continue
-                        if photo_ready is None:
-                            print(f"{obj_id} FAILED. BREAK!")
-                            break
-                        
-                        ## get matching index for metadata, image    
-                        get_index = metadata_df_norm.iloc[i].name
+                    ## get matching index for metadata, image    
+                    get_index = metadata_df_norm.iloc[i].name
                        
-                        if self.include_spectra:
-                            ## get wavelength, flux from spectra.csv
-                            spectra = SpectraProcessor.read_spectra_csv(obj_id, base_path)
-                            spectra = SpectraProcessor.preprocess_spectra(spectra)
-                            
-                            self.data_preprocess.append({
-                                    'obj_id': obj_id,
-                                    'alerte': i,
-                                    'photometry': photo_ready,
-                                    'metadata': metadata_df_norm.iloc[i],
-                                    'images': images[get_index],
-                                    'spectra': spectra,
-                                    'target': target})
+                    if self.include_spectra:
+                        ## get wavelength, flux from spectra.csv
+                        spectra = SpectraProcessor.read_spectra_csv(obj_id, base_path)
+                        spectra = SpectraProcessor.preprocess_spectra(spectra)
                         
-                        else:
-                            self.data_preprocess.append({
-                                    'obj_id': obj_id,
-                                    'alerte': i,
-                                    'photometry': photo_ready,
-                                    'metadata': metadata_df_norm.iloc[i],
-                                    'images': images[get_index],
-                                    'target': target})
+                        self.data_preprocess.append({
+                                'obj_id': obj_id,
+                                'alerte': i,
+                                'photometry': photo_ready,
+                                'metadata': metadata_df_norm.iloc[i],
+                                'images': images[get_index],
+                                'spectra': spectra,
+                                'target': target})
+                    
+                    else:
+                        self.data_preprocess.append({
+                                'obj_id': obj_id,
+                                'alerte': i,
+                                'photometry': photo_ready,
+                                'metadata': metadata_df_norm.iloc[i],
+                                'images': images[get_index],
+                                'target': target})
 
+            
             except Exception as e:
                 print(f"Error processing {obj_id} at index {idx}: {e}")
 
