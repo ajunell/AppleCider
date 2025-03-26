@@ -171,11 +171,6 @@ class PhotometryProcessor:
         return len(df)
     
     def normalize_light_curve(df):
-        #valid_index = find_valid_alert_index(df)
-        #flux_data = df.loc[:valid_index, ['flux_ztfg', 'flux_ztfr', 'flux_ztfi']]
-        #scaler = StandardScaler() # standardizes by removing mean, scaling to unit variance
-        #normalized_flux = scaler.fit_transform(flux_data)
-        #df.loc[:valid_index, ['flux_ztfg', 'flux_ztfr','flux_ztfi']] = normalized_flux
         
         flux_data = df.loc[:len(df), ['flux_ztfg', 'flux_ztfr', 'flux_ztfi']]
         scaler = StandardScaler() # standardizes by removing mean, scaling to unit variance
@@ -251,45 +246,7 @@ class DataSorter:
     
         return obj_sedm_list
 
-    #def remove_test_data(df, test_df):
-    #    ''' ☆ remove objects from test dataset ☆ '''
-    #    test_object_ids = test_df['obj_id'].to_list()
-    #    train_df = df[~df['obj_id'].isin(test_object_ids)]
-    #    return train_df
-#
-    #def sample_objects_from_df(df, type_col, class_list, data_dir, n_test=20, n_train=40, sedm_spec_only=True, downsample_SNIa=True):
-     #   
-     #   if sedm_spec_only:
-     #       obj_with_sedm_spec = DataSorter.get_obj_wSEDM_spectra(df['obj_id'].to_list(), data_dir)
-     #       ## remove objects without sedm spectra
-     #       df = df[df['obj_id'].isin(obj_with_sedm_spec)]
-     #   if downsample_SNIa: # redunant since dataset.py does this
-     #       sn_ia = df[df['type'] == 'SN Ia'].sample(n=600, random_state=42)
-     #       df = pd.concat([df[df['type'] != 'SN Ia'], sn_ia])
-    #
-     #   ## remove objects not in the acceptable class list (class_list)
-     #   df = df[df[type_col].isin(class_list)]
-     #   
-     #   ## TEST
-     #   test_df_total = df.sample(n=n_test, random_state=42)
-     #   ## randomly sample 1 object from every class
-     #   test_df_random = df.sample(frac=1).drop_duplicates(type_col).sort_index()
-     #   ## force sample more TDE:
-     #   TDE_ = ['Tidal Disruption Event'] ; SN_ = ['SN IIb'] ; SN__ = ['SN Ib']
-     #   test_df_TDE = df.query(f'type=={TDE_}').sample(n=8) ; test_df_SNIb = df.query(f'type=={SN__}').sample(n=8) ; test_df_SNIIb = df.query(f'type=={SN_}').sample(n=8)
-     #   test_data_df = pd.concat([test_df_total, test_df_random, test_df_TDE, test_df_SNIb, test_df_SNIIb])
-     #   test_data_df = test_data_df.drop_duplicates('obj_id')
-#
-     #   ## TRAIN
-     #   train_data_df = DataSorter.remove_test_data(df, test_data_df)
-     #   train_data_df = train_data_df.drop_duplicates('obj_id')
-     #   train_data_df.reset_index(drop=True)
-     #   
-     #   print("train: ",len(train_data_df), "objects")
-     #   print("test: ",len(test_data_df), "objects")
-    #
-     #   return test_data_df.reset_index(drop=True),  train_data_df.reset_index(drop=True)
-    
+ 
     
     def create_df_of_object_alerts_in_dataset(test_df, train_df, test_data_dir, train_data_dir):
         '''  ☆ creates df for testing and training sets that has the object IDs, alerts for each object ID, classification ☆
@@ -344,54 +301,6 @@ class DataSorter:
         return test_data, train_data
     
     
-    
-    #def split_train_validation_files(df, label_col, split_ratio=0.8, random_seed=42, nb=None, verbose=False):
-    #    '''
-    #    Train, Validation files and class weights for dataset
-    #    Parameters
-    #    ----------
-    #    df : DataFrame
-    #        dataframe with ZTF IDs, and classifications of each object
-    #    label_col : 'type'
-    #        name of your "type/classification" column in df 
-    #    Returns
-    #    ----------
-    #    train files, validation files
-    #    '''
- 
-    #    str_label = df[label_col].value_counts(dropna=False).keys().tolist()
-    #    types_dict = { label_col : str_label}
- 
-    #    if nb is not None:
-    #        df = df.groupby(label_col).head(nb)
- 
-    #    train_df_list, val_df_list = [], []
-    #    unique_labels = df[label_col].unique()
- 
-    #    for label in unique_labels:
-    #        df_filtered = df[df[label_col] == label]
-    #        unique_obj_ids = df_filtered['name'].unique()
-    #        random.seed(random_seed)
-    #        random.shuffle(unique_obj_ids)
-    #        split_idx = int(len(unique_obj_ids) * split_ratio)
-    #        train_obj_ids = unique_obj_ids[:split_idx]
-    #        val_obj_ids = unique_obj_ids[split_idx:]
-    #        train_df_list.append(df_filtered[df_filtered['name'].isin(train_obj_ids)])
-    #        val_df_list.append(df_filtered[df_filtered['name'].isin(val_obj_ids)])
- 
-    #    train_df = pd.concat(train_df_list).reset_index(drop=True)
-    #    val_df = pd.concat(val_df_list).reset_index(drop=True)
- 
-    #    train_obj_ids = train_df['name'].unique()
-    #    val_obj_ids = val_df['name'].unique()
- 
-    #    assert len(set(train_obj_ids).intersection(set(val_obj_ids))) == 0
- 
-    #    train_files = train_df['file'].tolist()
-    #    val_files = val_df['file'].tolist()
-
-    #   return train_files, val_files        
-
 
 class DataPreprocessor:
     

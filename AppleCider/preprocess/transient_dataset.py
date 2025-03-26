@@ -47,24 +47,21 @@ class TransientDataset():
                 metadata_df = DataPreprocessor.preprocess_metadata(metadata_df)
                 metadata_df_norm = metadata_df.drop(columns=['jd'])
                 
-               
                 start_index = PhotometryProcessor.get_first_valid_index(photo_df)
-                
                 if start_index == -1:
                     print(f"{obj_id} start_index == -1")
                     continue    
             
-                ## list of valid alert index for 10 days of photometry
+                ## list of valid alert index for [max_mjd] days of photometry
                 alert_indices = list(range(start_index, len(metadata_df)))
                 ## get last valid alert index
                 last_alert = alert_indices[-1]
-                print(f"{obj_id}: alert {last_alert}")
                 
-                  if len(photo_df) <= 1:
+                if len(photo_df) <= 1:
                     print(f"Failed min photometry requirement. No alert saved for {obj_id} at {last_alert}.")
                 
                 else:
-                    photo_ready = DataPreprocessor.cut_photometry(photo_df, metadata_df, i, max_mjd)
+                    photo_ready = DataPreprocessor.cut_photometry(photo_df, metadata_df, last_alert, max_mjd)
                     ## skip saving current alert if photometry only has 1 point 
                     if len(photo_ready) <=1:
                         print(f"{obj_id} failed min photometry requirements. skip alert at index {i}!")
@@ -111,7 +108,7 @@ class TransientDataset():
         
         sample, save_dir, include_spectra, normalize_light_curve = args
         obj_id = sample['obj_id']
-        alerte = sample['alerte']    ## keep it in french
+        alerte = sample['alerte']    ## keep in french
         type_obj = sample['target']
         
         photometry = sample['photometry']
@@ -131,14 +128,12 @@ class TransientDataset():
         res_df = pd.concat([res_df, photometry])
         res_df = res_df.reset_index(drop=True, inplace=True)
               
-        ## if you want flux error sometime, don't forget to add back in to column list
         columns = ['flux_ztfg', 'flux_ztfr', 'flux_ztfi']
         
         for col in columns:
             if col not in photometry.columns:
                 photometry[col] = 0.
         
-        ## if you want flux error sometime, don't forget to add back in to column list
         photometry = photometry[['obj_id', 'mjd', 'flux_ztfg', 'flux_ztfr', 'flux_ztfi']]
         photometry = photometry.fillna(0)
         
@@ -173,9 +168,12 @@ class TransientDataset():
         
     def preprocess_and_save(self):
         os.makedirs(self.preprocessed_path, exist_ok=True)
+        
         args = [(sample, self.preprocessed_path, self.include_spectra, self.normalize_light_curve) for sample in self.data_preprocess]
- 
-        [TransientDataset.process_and_save_sample(args) for args in tqdm(args, desc="Processing Objects", leave=True)]
+            
+        num_workers = multiprocessing.cpu_count() - 1
+        with multiprocessing.Pool(num_workers) as pool:
+            list(tqdm(pool.imap(TransientDataset.process_and_save_sample, args), total=len(self.data_preprocess), desc="Preprocessing", leave=True))
     
       
     

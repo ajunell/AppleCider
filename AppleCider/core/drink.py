@@ -6,6 +6,7 @@ import optuna
 from scipy import stats
 
 from tqdm.auto import tqdm
+from datetime import datetime
 import wandb
 import numpy as np
 import pickle
@@ -19,13 +20,10 @@ from torch.utils.data import DataLoader
 from torch.utils.data import Dataset
 import torch.nn.functional as F
 
-from datetime import datetime
-
-from AppleCider.core.dataset import DataGenerator
-from AppleCider.core.model import Informer, GalSpecNet, MetaModel, BTSModel, AstroM4
+from AppleCider.core.dataset_multi import DataGenerator
+from AppleCider.core.model import Informer, GalSpecNet, MetaModel, BTSModel, AppleCider, ZwickyCider
 from AppleCider.models.Informer import DataEmbedding, EncoderLayer, AttentionLayer, ProbAttention, Encoder
 from AppleCider.util.early_stopping import EarlyStopping
-
 
 
 def get_model(config):
@@ -38,8 +36,15 @@ def get_model(config):
         model = MetaModel(config)
     elif config['mode'] == 'image':
         model = BTSModel(config)
+    # ztf mode has photometry, images, metadata only
+    elif config['mode'] == 'ztf':
+        model = ZwickyCider(config)
+    
+    elif config['mode'] == 'all':
+        model = AppleCider(config)
+    
     else:
-        model = AstroM4(config)
+        raise ValueError("no model mode selected!")
 
     if config['use_pretrain'] and config['use_pretrain'].startswith('CLIP'):
         weights = torch.load(config['use_pretrain'][4:], weights_only=True)
@@ -62,7 +67,6 @@ def get_model(config):
     return model
 
 
-
 def get_schedulers(config, optimizer):
     
     if config['scheduler'] == 'ExponentialLR':
@@ -83,13 +87,14 @@ def get_schedulers(config, optimizer):
 
 
 class Trainer:
-    def __init__(self, model, optimizer, scheduler, warmup_scheduler, criterion, device, config, trial=None):
+    def __init__(self, model, optimizer, scheduler, warmup_scheduler, criterion, criterion_val, device, config, trial=None):
         
         self.model = model
         self.optimizer = optimizer
         self.scheduler = scheduler
         self.warmup_scheduler = warmup_scheduler
         self.criterion = criterion
+        self.criterion_val = criterion_val
         self.device = device
         self.trial = trial
 
@@ -105,10 +110,29 @@ class Trainer:
         self.total_loss = []
         self.total_correct_predictions = 0
         self.total_predictions = 0
-
+        
+        self.custom_weight_path = config['custom_weight_path']
+        self.custom_weight_name = config['custom_weight_name']
+        
+        if self.use_wandb:
+            self.run_id = config['run_id']
+  
     def store_weights(self, epoch):
-        torch.save(self.model.state_dict(), os.path.join(self.weights_path, f'weights-{datetime.now().strftime("%Y-%m-%d-%H-%M")}-{epoch}.pth'))
-        torch.save(self.model.state_dict(), os.path.join(self.weights_path, f'weights-{datetime.now().strftime("%Y-%m-%d-%H-%M")}-best.pth'))
+        
+        if self.use_wandb:
+            torch.save(self.model.state_dict(), os.path.join(self.weights_path, f'weights-{datetime.now().strftime("%Y-%m-%d-%H-%M")}-{epoch}-{self.run_id}.pth'))
+            torch.save(self.model.state_dict(), os.path.join(self.weights_path, f'weights-{datetime.now().strftime("%Y-%m-%d-%H-%M")}-best-{self.run_id}.pth'))
+            
+        else:
+            if self.custom_weight_path:
+                
+                torch.save(self.model.state_dict(), os.path.join(self.weights_path, f'weights-{datetime.now().strftime("%Y-%m-%d-%H-%M")}-{epoch}-{self.custom_weight_name}.pth'))
+                torch.save(self.model.state_dict(), os.path.join(self.weights_path, f'weights-{datetime.now().strftime("%Y-%m-%d-%H-%M")}-best-{self.custom_weight_name}.pth'))
+            
+            else:
+            
+                torch.save(self.model.state_dict(), os.path.join(self.weights_path, f'weights-{datetime.now().strftime("%Y-%m-%d-%H-%M")}-{epoch}-.pth'))
+                torch.save(self.model.state_dict(), os.path.join(self.weights_path, f'weights-{datetime.now().strftime("%Y-%m-%d-%H-%M")}-best.pth'))
 
     def zero_stats(self):
         self.total_loss = []
@@ -153,6 +177,8 @@ class Trainer:
             logits = self.model(metadata)
         elif self.mode == 'image':
             logits = self.model(images)
+        elif self.mode == 'ztf':
+            logits = self.model(photometry, photometry_mask, metadata, images)
         else:  # all 4 modalities
             logits = self.model(photometry, photometry_mask, metadata, images, spectra)
 
@@ -169,6 +195,17 @@ class Trainer:
         self.update_stats_clip(loss, logits_ps, logits_sm, logits_mp)
 
         return loss, loss_ps, loss_sm, loss_mp
+    
+    def step_val_clip(self, photometry, photometry_mask, spectra, metadata):
+        """Perform a training step for the CLIP pretraining model"""
+        logits_ps, logits_sm, logits_mp = self.model(photometry, photometry_mask, spectra, metadata)
+        
+        loss_ps, loss_sm, loss_mp = self.criterion_val(logits_ps, logits_sm, logits_mp)
+        loss = loss_ps + loss_sm + loss_mp
+
+        self.update_stats_clip(loss, logits_ps, logits_sm, logits_mp)
+
+        return loss, loss_ps, loss_sm, loss_mp
 
     def step(self, photometry, photometry_mask, metadata, images, spectra, labels):
         """Perform a training step for the classification model"""
@@ -176,6 +213,16 @@ class Trainer:
         
         loss = self.criterion(logits, labels)
 
+        self.update_stats(loss, logits, labels)
+
+        return loss
+    
+    def step_val(self, photometry, photometry_mask, metadata, images, spectra, labels):
+        """Perform a training step for the classification model"""
+        logits = self.get_logits(photometry, photometry_mask, metadata, images, spectra)    
+        
+        loss = self.criterion_val(logits, labels)
+        
         self.update_stats(loss, logits, labels)
 
         return loss
@@ -194,7 +241,7 @@ class Trainer:
         self.model.train()
         self.zero_stats()
         
-        for photometry, photometry_mask, metadata, images, spectra, labels in tqdm(train_dataloader, desc='Train'):
+        for photometry, photometry_mask, metadata, images, spectra, labels in tqdm(train_dataloader, total=len(train_dataloader), desc='Train', colour='#9ACD32',leave=True):
             photometry, photometry_mask = photometry.to(self.device), photometry_mask.to(self.device)
             metadata, images, spectra = metadata.to(self.device), images.to(self.device), spectra.to(self.device)
             labels = labels.to(self.device)    
@@ -239,15 +286,15 @@ class Trainer:
         self.zero_stats()
 
         with torch.no_grad():
-            for photometry, photometry_mask, metadata, images, spectra, labels in tqdm(val_dataloader, desc='Validation'):
+            for photometry, photometry_mask, metadata, images, spectra, labels in tqdm(val_dataloader, total=len(val_dataloader), desc='Validation', colour='#9ACD32', leave=True):
                 photometry, photometry_mask = photometry.to(self.device), photometry_mask.to(self.device)
                 metadata, images, spectra = metadata.to(self.device), images.to(self.device), spectra.to(self.device)
                 labels = labels.to(self.device)
 
                 if self.mode == 'clip':
-                    self.step_clip(photometry, photometry_mask, spectra, metadata)
+                    self.step_val_clip(photometry, photometry_mask, spectra, metadata)
                 else:
-                    self.step(photometry, photometry_mask, metadata, images, spectra, labels)
+                    self.step_val(photometry, photometry_mask, metadata, images, spectra, labels)
 
         loss, acc = self.calculate_stats()
 
@@ -308,7 +355,7 @@ class Trainer:
         all_predicted_labels = []
         
         
-        for photometry, photometry_mask, metadata, images, spectra, labels in tqdm(val_dataloader, desc='validation'):
+        for photometry, photometry_mask, metadata, images, spectra, labels in tqdm(val_dataloader, total=len(val_dataloader), desc='validation', colour='#9ACD32',leave=True):
             with torch.no_grad():
                 photometry, photometry_mask = photometry.to(self.device), photometry_mask.to(self.device)
                 metadata, images, spectra = metadata.to(self.device), images.to(self.device), spectra.to(self.device)
@@ -324,47 +371,70 @@ class Trainer:
         conf_matrix_percent = 100 * conf_matrix / conf_matrix.sum(axis=1)[:, np.newaxis]
 
         labels = [id2target[i] for i in range(len(conf_matrix))]
-        fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(20, 7))
+        fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(40, 15))
 
+        sns.set(font_scale=2.7) 
+        label_font = {'size':'35'}
+        
+        axes[0].tick_params(labelsize=25)
         # Plot absolute values confusion matrix
-        sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', xticklabels=labels, yticklabels=labels, ax=axes[0])
-        axes[0].set_xlabel('Predicted')
-        axes[0].set_ylabel('True')
-        axes[0].set_title('Confusion Matrix - Absolute Values')
+        sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='BuPu', xticklabels=labels, yticklabels=labels, ax=axes[0])
+        axes[0].set_xlabel('Predicted', fontdict=label_font)
+        axes[0].set_ylabel('True',  fontdict=label_font)
+        axes[0].set_title('Confusion Matrix - Absolute Values', fontsize=35)
 
         # Plot percentage values confusion matrix
-        sns.heatmap(conf_matrix_percent, annot=True, fmt='.0f', cmap='Blues', xticklabels=labels, yticklabels=labels,
-                    ax=axes[1])
-        axes[1].set_xlabel('Predicted')
-        axes[1].set_ylabel('True')
-        axes[1].set_title('Confusion Matrix - Percentages')
+        sns.heatmap(conf_matrix_percent, annot=True, fmt='.0f', cmap='BuPu', xticklabels=labels, yticklabels=labels,
+            ax=axes[1])
+        axes[1].tick_params(labelsize=25)
+        axes[1].set_xlabel('Predicted', fontdict=label_font)
+        axes[1].set_title('Confusion Matrix - %', fontsize=35)
 
         if self.use_wandb:
             wandb.log({'conf_matrix': wandb.Image(fig)})
+            
+            artifact_m = wandb.Artifact("matrix", type="dataset")
+            matrix_table = wandb.Table(columns=["SN Ia","SN Ic","SN Ib", "SN II", "SN IIP", "SN IIn", "SN IIb", "CV", "AGN", "TDE"], data=conf_matrix)
+            artifact_m.add(matrix_table, "(matrix) confusion matrix")
+            wandb.log_artifact(artifact_m)
 
         return conf_matrix
     
     
     
 def collate_func(data):
-    
     photometry, metadata, images, spectra, labels = zip(*data)
     
     labels = torch.tensor(labels, dtype=torch.int64)
     
     photometry = torch.stack(photometry)
     photometry_mask = torch.ones((photometry.size(0), photometry.size(1)))
-    
     metadata = torch.stack(metadata)
     images = torch.stack(images)
     spectra = torch.stack(spectra)
     
-    
     return photometry, photometry_mask, metadata, images, spectra, labels
     
     
-def run(config):
+def run(config, add_notes=None, tags_list=None):
+    
+    if config['use_wandb']:
+        
+        if config['use_notes_tags']:
+        
+            wandb_run = wandb.init(project=config['project'], config=config, notes= config['wandb_notes'], tags=config['wandb_tags'])
+            config['run_id'] = wandb_run.id
+            config.update(wandb.config)
+            print('run name',wandb_run.name)
+            print('run id', wandb_run.id)
 
+        else:
+            wandb_run = wandb.init(project=config['project'], config=config)
+            config['run_id'] = wandb_run.id
+            config.update(wandb.config)
+            print('run name',wandb_run.name)
+            print('run id', wandb_run.id)
+    
     train_dataset = DataGenerator(config, split='train')
     val_dataset = DataGenerator(config, split='val')
     
@@ -377,6 +447,9 @@ def run(config):
     model = get_model(config)
     model = model.to(device)
     
+    if config['use_wandb']:
+        wandb.log({'model': model})
+        
     optimizer = Adam(model.parameters(), lr=config['lr'], betas=(config['beta1'], config['beta2'] ))
     warmup_scheduler = LinearLR(optimizer, start_factor=1e-5, end_factor=1, total_iters=config['warmup_epochs'])
     
@@ -384,22 +457,25 @@ def run(config):
     
     if config['class_weights']:
         if os.path.isfile(config['class_weights_path']):
-            # open the weights pkl
+            ## weights
             with open(config['class_weights_path'], 'rb') as file:
                 weights = pickle.load(file)
-            weight_tensor = torch.tensor(weights, dtype=torch.float32)
+            weight_sorted = dict(sorted(weights.items(), key=lambda item: item))
+            weight_sorted_list = list(weight_sorted.values())
+            weight_tensor = torch.tensor(weight_sorted_list, dtype=torch.float32)
             criterion = torch.nn.CrossEntropyLoss(weight=weight_tensor)
+            criterion_val = torch.nn.CrossEntropyLoss()
+            
         else:
-            raise ValueError(f'class weights=True, but no class weight file at {config['class_weights_path']} exists')
+            raise ValueError(f'class weights=True, but no class weight file at config[class_weights_path] exists')
+        
     else:
         criterion = torch.nn.CrossEntropyLoss()
+        criterion_val = torch.nn.CrossEntropyLoss()
     
-    
-    trainer = Trainer(model=model, optimizer=optimizer, scheduler=scheduler, warmup_scheduler=warmup_scheduler,
-                      criterion=criterion, device=device, config=config)
+    trainer = Trainer(model=model, optimizer=optimizer, scheduler=scheduler, warmup_scheduler=warmup_scheduler, criterion=criterion, criterion_val = criterion_val, device=device, config=config)
     trainer.train(train_dataloader, val_dataloader, epochs=config['epochs'])
     
     if config['mode'] != 'clip':
-        #trainer.evaluate(val_dataloader, id2target=train_dataset.id2target)
         trainer.evaluate(val_dataloader, id2target=train_dataset.target2id) 
 

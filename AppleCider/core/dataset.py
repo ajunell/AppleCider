@@ -5,37 +5,42 @@ from torch.utils.data import Dataset
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from scipy.interpolate import interp1d
-from scipy import stats
 import os
 import joblib
 import pickle
 import random
 from tqdm.auto import tqdm
 from sklearn.utils.class_weight import compute_class_weight
+import wandb
     
+def split_and_compute_class_weights(df, max_samples, step, group_labels=False, save_files=True, save_train_files_path= None, save_val_files_path=None, save_class_weights_path = None, split_ratio=0.8, random_seed=42, nb=None, verbose=False):
     
-def split_and_compute_class_weights(df, step, group_labels=False, save_files=True, save_train_files_path= None, save_val_files_path=None, save_class_weights_path = None, split_ratio=0.8, random_seed=42, nb=None, verbose=False):
+    """ create train files, val files + class weight dictionary and save them
+    """
     
     if group_labels:
-        group_labels = {'SN Ia': 0, 'SN Ic': 0, 'SN Ib': 0, 'SN II': 1, 'SN IIP': 1, 'SN IIn': 1,
-                        'SN IIb': 1, 'Cataclysmic': 2, 'AGN': 3, 'Tidal Disruption Event': 4}
+        group_labels = {'SN Ia': 0, 'SN Ic': 0, 'SN Ib': 0, 'SN II': 1, 'SN IIP': 1, 'SN IIn': 1, 'SN IIb': 1, 'Cataclysmic': 2, 'AGN': 3, 'Tidal Disruption Event': 4}
         df.replace({step:group_labels})
    
     else:
-        id2target = {'SN Ia':0 ,'SN Ic':1,  'SN Ib':2 , 'SN II': 3, 'SN IIP': 4, 'SN IIn': 5,
-                    'SN IIb': 6, 'Cataclysmic': 7, 'AGN': 8, 'Tidal Disruption Event': 9}
+        id2target = {'SN Ia':0 ,'SN Ic':1,  'SN Ib':2 , 'SN II': 3, 'SN IIP': 4, 'SN IIn': 5,'SN IIb': 6, 'Cataclysmic': 7, 'AGN': 8, 'Tidal Disruption Event': 9}
         target2id = {v: k for k, v in id2target.items()}
         
-        #df = df.replace({step: target2id})
         df = df.replace({step: id2target})
     
-    if nb is not None:
-        df = df.groupby(step).head(nb)
-
     train_df_list, val_df_list = [], []
-    unique_labels = df[step].unique()
+    
+    for cls in df[step].unique():
+        df_cls = df[df[step] == cls]
+        df_not_cls = df[df[step] != cls]
 
+        if len(df_cls) > max_samples:
+            print(f'Down sampled class {cls} from {len(df_cls)} to {max_samples}')
+            df_cls_down = df_cls.sample(n=max_samples, random_state=random_seed)
+            df = pd.concat([df_not_cls, df_cls_down], ignore_index=True)
+    
+    unique_labels = df[step].unique()
+    
     for label in unique_labels:
         df_filtered = df[df[step] == label]
         unique_obj_ids = df_filtered['name'].unique()
@@ -56,34 +61,23 @@ def split_and_compute_class_weights(df, step, group_labels=False, save_files=Tru
     assert len(set(train_obj_ids).intersection(set(val_obj_ids))) == 0
 
     class_weights = compute_class_weight(class_weight='balanced', classes=unique_labels, y=train_df[step])
-   
     class_weight_dict = dict(zip(unique_labels, class_weights))
-
+    
     train_files = train_df['file'].tolist()
     val_files = val_df['file'].tolist()
-
-    if verbose:
-        print_types(train_df, columns=[label_col])
-        print_types(val_df, columns=[label_col])
-        
-        
+   
     if save_files:
         with open(os.path.join(save_train_files_path), 'wb') as file:
             pickle.dump(train_files, file)
-            print(f"saved train files to {save_train_files_path}.")
-            
+            print(f"saved train files to {save_train_files_path}.")  
         with open(os.path.join(save_val_files_path), 'wb') as file:
             pickle.dump(val_files, file)
             print(f"saved val files to {save_val_files_path}.")
-            
-        
         with open(os.path.join(save_class_weights_path), 'wb') as file:
-            pickle.dump(weights, file)
+            pickle.dump(class_weight_dict, file)
             print(f"saved weights to {save_class_weights_path}.")
     
     return train_files, val_files, class_weight_dict
-
-
 
 class DataGenerator(Dataset):
 
@@ -98,24 +92,24 @@ class DataGenerator(Dataset):
         self.max_samples = config['max_samples']
         self.mode = config['mode']
         self.group_labels = config['group_labels']
-        
         self.generate_train_val_files = config['generate_train_val_files']
         self.train_files = config['train_files_path']
         self.val_files = config['val_files_path']
         self.weights = config['class_weights_path']
+    
 
-        if self.mode == 'meta' or self.mode == 'all':
+        if self.mode == 'meta' or self.mode == 'ztf' or self.mode == 'all':
             self.scaler = joblib.load(config['scaler_path'])
             if self.scaler is None:
                 raise ValueError('No scaler path. Add path.')
          
         if self.split == 'train' or self.split == 'val':
             self.df = pd.read_csv(config['df_path'])
-    
         else:
             ## TODO Fix later
             raise ValueError('Split must be either train or val.')
-        
+            
+        self._limit_samples()
         self._split()
 
         ## create convenient mapping for label from str to int and from int to str
@@ -129,7 +123,21 @@ class DataGenerator(Dataset):
             self.target2id = {v: k for k, v in self.id2target.items()}
 
         self.num_classes = len(self.id2target)
+    
+    ## not actually in use... still relying on function before DataGenerator
+    def _limit_samples(self):
+        """ downsample samples for each class if max_samples is set """
+        if self.max_samples:
+            for cls in self.df[self.step].unique():
+                df_cls = self.df[self.df[self.step] == cls]
+                df_not_cls = self.df[self.df[self.step] != cls]
 
+                if len(df_cls) > self.max_samples:
+                    print(f'Down sampled class {cls} from {len(df_cls)} to {self.max_samples}')
+                    df_cls_down = df_cls.sample(n=self.max_samples, random_state=self.random_seed)
+                    self.df = pd.concat([df_not_cls, df_cls_down], ignore_index=True)
+
+    
     def _split(self):
         """ sort train, val based on alert names in already created pkl from preprocessing steps """
         
@@ -147,20 +155,20 @@ class DataGenerator(Dataset):
             else:
                 print("Something went wrong with train, val split.")
         
-        else: ## w/o pre-saved train, val files, generate & optionally save them + class weights
-            try:
-                train_files, val_files, class_weight_dict = split_and_compute_class_weights(self.df, self.step, group_labels=self.group_labels, save_files=self.generate_train_val_files, save_train_files_path=self.train_files, save_val_files_path=self.val_files, class_weights_path=self.weights)
-                if self.split == 'train':
-                    self.df = self.df[self.df['file'].isin(train_files)]
-                
-                elif self.split == 'val':
-                    self.df = self.df[self.df['file'].isin(val_files)]
-                else:
-                    raise ValueError("uhhh something happened with split_compute_class_weights, try again?")
-            
-            except NameError:
-                raise NameError(f"NameError: {self.train_files} and {self.val_files} DO NOT exist!\n You need to generate train, val files. Fix train, val paths or create files with config['generate_train_val_files'] = True.")
-                                                                      
+        #else: ## w/o pre-saved train, val files, generate & optionally save them  
+        #    try:
+        #        train_files, val_files, class_weight_dict = split_and_compute_class_weights(self.df, self.step, group_labels=self.group_labels, save_files=self.generate_train_val_files, save_train_files_path=self.train_files, save_val_files_path=self.val_files, class_weights_path=self.weights)
+        #        if self.split == 'train':
+        #            self.df = self.df[self.df['file'].isin(train_files)]
+        #        
+        #        elif self.split == 'val':
+        #            self.df = self.df[self.df['file'].isin(val_files)]
+        #        else:
+        #            raise ValueError("uhhh something happened with split_compute_class_weights, try again?")
+        #    
+        #    except NameError:
+        #        raise NameError(f"NameError: {self.train_files} and {self.val_files} DO NOT exist!\n You need to generate train, val files. Fix train, val paths or create files with config['generate_train_val_files'] = True.")
+    
                                                                       
     def __len__(self):
         return len(self.df)
@@ -169,34 +177,41 @@ class DataGenerator(Dataset):
         """ load processed object alerts to get photometry, metadata, images, spectra """
         
         el = self.df.iloc[index]
-        target = self.target2id[el[self.step]]
+        target = self.id2target[el[self.step]]
 
         file_path = os.path.join(self.preprocessed_path, el['file'])
         sample = np.load(file_path, allow_pickle=True).item()
-        
-         ## photometry formating: mjd, ztf-g, ztf-r, ztf-i
+
+        ## photometry formating: mjd, ztf-g, ztf-r, ztf-i
         photometry = sample['photometry']
         photometry_tensor = torch.tensor(photometry, dtype=torch.float32)
         photo_len = len(photometry_tensor)
-        max_photo = 230  ## maximum photometry length from an alert
+        max_photo = 275  ## maximum photometry length from an alert
         ## padded photometry
         if photo_len < max_photo:
-            photometry_padded = nn.ConstantPad1d((0, 0, 0, max_photo - photo_len), 0)(photometry_tensor)
-        else: 
-            raise ValueError("Reset max photometry length") 
-
+                photometry_padded = nn.ConstantPad1d((0, 0, 0, max_photo - photo_len), 0)(photometry_tensor)
+        else:
+            raise ValueError("Reset max photometry length")
+            
+        ## metadata
         metadata = sample['metadata'].to_numpy()
-        if self.mode == 'meta' or self.mode == 'all':
+        if self.mode == 'meta' or self.mode == 'ztf' or self.mode == 'all':
             metadata = self.scaler.transform(metadata.reshape(1, -1))[0]
             metadata = metadata.astype(np.float32)
         metadata = torch.tensor(metadata)
-
+        
+        ## images
         images = sample['images']
         images = np.transpose(images, (2, 0, 1))
         images = images.astype(np.float32)
-        images = torch.tensor(images)
+        images = torch.tensor(images)   
         
-        spectra = sample['spectra']
-        spectra = torch.tensor(spectra)
+        ## spectra
+        if self.mode == 'spectra' or self.mode == 'all':
+            spectra = sample['spectra']
+            spectra = torch.tensor(spectra)
+        else:
+            ## blank spectra
+            spectra = torch.ones(1, 3481)
 
         return photometry_padded, metadata, images, spectra, target
