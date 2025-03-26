@@ -20,7 +20,7 @@ from torch.utils.data import DataLoader
 from torch.utils.data import Dataset
 import torch.nn.functional as F
 
-from AppleCider.core.dataset_multi import DataGenerator
+from AppleCider.core.dataset import DataGenerator
 from AppleCider.core.model import Informer, GalSpecNet, MetaModel, BTSModel, AppleCider, ZwickyCider
 from AppleCider.models.Informer import DataEmbedding, EncoderLayer, AttentionLayer, ProbAttention, Encoder
 from AppleCider.util.early_stopping import EarlyStopping

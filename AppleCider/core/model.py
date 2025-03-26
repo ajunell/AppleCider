@@ -229,7 +229,7 @@ class AppleCider(nn.Module):
     """
     
     def __init__(self, config):
-        super(AppleCider self).__init__()
+        super(AppleCider, self).__init__()
 
         self.classification = True if config['mode'] == 'all' else False
 
