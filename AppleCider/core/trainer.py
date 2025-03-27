@@ -85,8 +85,9 @@ class Trainer:
             logits = self.model(metadata)
         elif self.mode == 'image':
             logits = self.model(images)
+        elif self.mode == 'ztf':
+            logits = self.model(photometry, photometry_mask, metadata, images)
         else:  # all 4 modalities
-            #logits = self.model(photometry, metadata, images, spectra)
             logits = self.model(photometry, photometry_mask, metadata, images, spectra)
 
         return logits

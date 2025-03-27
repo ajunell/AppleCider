@@ -8,6 +8,9 @@ from AppleCider.preprocess.data_preprocessor import PhotometryProcessor
 from AppleCider.preprocess.data_preprocessor import SpectraProcessor
 from AppleCider.preprocess.data_preprocessor import DataPreprocessor
 
+import multiprocessing
+import pickle
+
             
 class TransientDataset():
     
@@ -39,40 +42,48 @@ class TransientDataset():
                 ## convert magnitude to flux, flux error
                 photo_df = DataPreprocessor.convert_photometry(photo_df)
 
-                ## cut photometry down to max_mjd
+                ## cut metadata to max_mjd
                 max_ = min(photo_df['mjd'].max(), max_mjd)
                 photo_df = photo_df[photo_df['mjd'] <= max_]
                 metadata_df = metadata_df[metadata_df['jd'] <= photo_df['jd'].max()]
+                
+                ## no metadata <= max_mjd
+                ## objects that fail req here usually have metadata at higher max_mjd
+                if len(metadata_df) == 0:
+                    print(f"Metadata unavailable at max_mjd = {max_mjd}. No alert saved for {obj_id}.")
+                    continue
 
                 metadata_df = DataPreprocessor.preprocess_metadata(metadata_df)
                 metadata_df_norm = metadata_df.drop(columns=['jd'])
                 
                 start_index = PhotometryProcessor.get_first_valid_index(photo_df)
+                
                 if start_index == -1:
                     print(f"{obj_id} start_index == -1")
-                    continue    
-            
-                ## list of valid alert index for [max_mjd] days of photometry
+                    continue
+                
+                ## list of valid alert index for 10 days of photometry
                 alert_indices = list(range(start_index, len(metadata_df)))
                 ## get last valid alert index
                 last_alert = alert_indices[-1]
-                
+
                 if len(photo_df) <= 1:
                     print(f"Failed min photometry requirement. No alert saved for {obj_id} at {last_alert}.")
                 
-                else:
+                else: 
+                    
                     photo_ready = DataPreprocessor.cut_photometry(photo_df, metadata_df, last_alert, max_mjd)
-                    ## skip saving current alert if photometry only has 1 point 
+                    ## skip saving alert if photometry only has 1 point 
                     if len(photo_ready) <=1:
-                        print(f"{obj_id} failed min photometry requirements. skip alert at index {i}!")
+                        print(f"{obj_id} Failed photometry requirement after time cuts. Skip {obj_id} at index {last_alert}!")
                         continue
                     if photo_ready is None:
                         print(f"{obj_id} FAILED. BREAK!")
                         break
                     
                     ## get matching index for metadata, image    
-                    get_index = metadata_df_norm.iloc[i].name
-                       
+                    get_index = metadata_df_norm.iloc[last_alert].name
+                    
                     if self.include_spectra:
                         ## get wavelength, flux from spectra.csv
                         spectra = SpectraProcessor.read_spectra_csv(obj_id, base_path)
@@ -80,9 +91,9 @@ class TransientDataset():
                         
                         self.data_preprocess.append({
                                 'obj_id': obj_id,
-                                'alerte': i,
+                                'alerte': last_alert,
                                 'photometry': photo_ready,
-                                'metadata': metadata_df_norm.iloc[i],
+                                'metadata': metadata_df_norm.iloc[last_alert],
                                 'images': images[get_index],
                                 'spectra': spectra,
                                 'target': target})
@@ -90,16 +101,14 @@ class TransientDataset():
                     else:
                         self.data_preprocess.append({
                                 'obj_id': obj_id,
-                                'alerte': i,
+                                'alerte': last_alert,
                                 'photometry': photo_ready,
-                                'metadata': metadata_df_norm.iloc[i],
+                                'metadata': metadata_df_norm.iloc[last_alert],
                                 'images': images[get_index],
                                 'target': target})
-
             
             except Exception as e:
                 print(f"Error processing {obj_id} at index {idx}: {e}")
-
                  
     def process_and_save_sample(args):
         ''' save dictionary w/processed photometry, metadata, images to .npy at desired path '''
@@ -108,7 +117,7 @@ class TransientDataset():
         
         sample, save_dir, include_spectra, normalize_light_curve = args
         obj_id = sample['obj_id']
-        alerte = sample['alerte']    ## keep in french
+        alerte = sample['alerte'] ## keep in french
         type_obj = sample['target']
         
         photometry = sample['photometry']
@@ -128,12 +137,14 @@ class TransientDataset():
         res_df = pd.concat([res_df, photometry])
         res_df = res_df.reset_index(drop=True, inplace=True)
               
+        ## if you want flux error sometime, don't forget to add back in to column list
         columns = ['flux_ztfg', 'flux_ztfr', 'flux_ztfi']
         
         for col in columns:
             if col not in photometry.columns:
                 photometry[col] = 0.
         
+        ## if you want flux error sometime, don't forget to add back in to column list
         photometry = photometry[['obj_id', 'mjd', 'flux_ztfg', 'flux_ztfr', 'flux_ztfi']]
         photometry = photometry.fillna(0)
         
@@ -170,10 +181,8 @@ class TransientDataset():
         os.makedirs(self.preprocessed_path, exist_ok=True)
         
         args = [(sample, self.preprocessed_path, self.include_spectra, self.normalize_light_curve) for sample in self.data_preprocess]
-            
+    
         num_workers = multiprocessing.cpu_count() - 1
         with multiprocessing.Pool(num_workers) as pool:
             list(tqdm(pool.imap(TransientDataset.process_and_save_sample, args), total=len(self.data_preprocess), desc="Preprocessing", leave=True))
-    
-      
     

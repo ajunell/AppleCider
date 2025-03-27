@@ -1,11 +1,15 @@
 obj_id,type
-ZTF18aatfxtd,SN Ia
-ZTF18aawppyt,SN Ia
+ZTF18aakpnyt,AGN
+ZTF18adjoimi,AGN
+ZTF18aamyexb,AGN
 ZTF18aasxwhv,SN Ia
 ZTF21abetapt,SN Ia
+ZTF18aavohdq,AGN
 ZTF19aaxzdtw,SN Ic
+ZTF18abvnsmh,AGN
 ZTF18aceexmi,SN Ia
 ZTF23aaenexu,SN Ia
+ZTF19aalbaff,AGN
 ZTF22aadepde,SN Ia
 ZTF22aanczjk,SN Ia
 ZTF18aajjhkq,SN Ia
@@ -19,7 +23,6 @@ ZTF20aarasxl,SN Ia
 ZTF18aaxjuwy,SN IIn
 ZTF23aadrtlp,SN Ia
 ZTF18acnbptb,SN IIP
-ZTF22aabomyi,SN IIn
 ZTF20ackhzba,SN Ia
 ZTF20aafjjqj,SN Ia
 ZTF21aaplooj,SN Ia
@@ -29,6 +32,7 @@ ZTF19aamhhgu,SN Ia
 ZTF21aaaosmn,SN Ia
 ZTF20abplamr,SN Ia
 ZTF19aaraxhh,SN Ia
+ZTF18abqarng,AGN
 ZTF20acqksdi,SN Ia
 ZTF22aakqruk,SN Ia
 ZTF18abcdzyc,SN Ia
@@ -42,6 +46,7 @@ ZTF20abswjae,SN Ia
 ZTF23aaemepn,SN Ia
 ZTF19aanbpus,SN IIb
 ZTF18acsremz,SN Ia
+ZTF18abvklbt,QSO
 ZTF23abjrdne,SN Ia
 ZTF22abtbijr,SN Ia
 ZTF19acfqtej,SN Ia
@@ -49,7 +54,6 @@ ZTF21aaaaddl,SN Ia
 ZTF21abfxibf,SN Ia
 ZTF23aaptfsu,SN Ia
 ZTF21aaxwcgj,SN Ia
-ZTF21acdalyp,SN Ia-91T
 ZTF20acwofhd,SN Ic
 ZTF20abnmahn,SN Ia
 ZTF21abukwfl,SN Ia
@@ -60,19 +64,16 @@ ZTF22aamrhna,SN Ia
 ZTF21abybnni,SN Ia
 ZTF18acdzpgs,SN Ia
 ZTF22aazuuin,SN IIb
-ZTF22abkxbeo,SN Ia-pec
 ZTF18abqyaix,SN Ia
 ZTF20abxezim,SN Ia
-ZTF20aahhvci,SN I
 ZTF19abgqwed,SN Ia
 ZTF24aarxxmm,SN II
 ZTF18aaqnxjb,SN Ia
-ZTF22abubrek,SN Ia-91T
 ZTF24aacgrqp,SN Ia
 ZTF18abquxjv,SN Ia
+ZTF18abuwcul,AGN
 ZTF20acqzpta,SN Ia
 ZTF19abisbgx,SN Ia
-ZTF19ablesob,SN Ic-BL
 ZTF19abnhegb,SN Ia
 ZTF23absapsv,SN Ia
 ZTF21abebgfr,SN IIn
@@ -85,6 +86,7 @@ ZTF18aatpqxq,SN Ia
 ZTF18abmogag,SN Ia
 ZTF21aciwkzc,SN Ia
 ZTF19absymnz,SN Ia
+ZTF18aamxzjx,AGN
 ZTF18abmoung,SN Ia
 ZTF18abjtgdo,SN Ia
 ZTF18aaqpeoq,SN Ia
@@ -108,10 +110,10 @@ ZTF19acxowwt,SN Ia
 ZTF20aagloch,SN Ia
 ZTF18acqsfxh,SN Ia
 ZTF21abalnud,SN Ia
-ZTF24aaidwhg,SN Ia-91T
+ZTF18aachojf,AGN
 ZTF19aaknvlv,SN Ia
-ZTF21abcpbqd,SN II
 ZTF20aanvliy,SN Ia
+ZTF20acxffhe,AGN
 ZTF24aahdfdo,SN IIn
 ZTF19aaojnrx,SN Ia
 ZTF22aaezdtd,SN Ibn
@@ -122,6 +124,7 @@ ZTF21abizxkw,SN Ia
 ZTF18aamxads,SN Ia
 ZTF20aavfwdo,SN Ia
 ZTF22aalzyzl,SN Ia
+ZTF18abhbjyy,QSO
 ZTF20acvebcu,SN Ib
 ZTF20aadyukn,SN Ia
 ZTF18acsucef,SN Ia
@@ -172,22 +175,22 @@ ZTF21aahptas,SN Ia
 ZTF20aajvcwd,SN Ia
 ZTF21aagyhax,SN Ia
 ZTF23aauzxfh,SN Ia
-ZTF21abkinhh,SN Ia
-ZTF19aanjyrn,SN
 ZTF22aaputwp,SN Ia
 ZTF20abbpkng,SN Ib
 ZTF18abbikrz,SN Ia
 ZTF20aafcjln,SN Ia
 ZTF24aajnwwr,SN Ia
 ZTF23aafhfwx,SN Ia
-ZTF18aasypqx,SN Ia
 ZTF18aauvnhh,SN Ia
 ZTF20aauombk,SN Ia
 ZTF23aaeqhkx,SN Ia
 ZTF20aayqjpv,SN Ia
 ZTF22abxlqvc,SN Ia
 ZTF18aaxnqjb,SN IIP
+ZTF18aavskyg,AGN
 ZTF19aatnfvj,SN Ia
+ZTF20acvamwo,QSO
+ZTF18aamfsxv,AGN
 ZTF24aaosqgf,SN II
 ZTF20aahpxzz,SN Ia
 ZTF20abdxffu,SN Ia
@@ -208,10 +211,10 @@ ZTF18aahshhp,SN Ia
 ZTF22aanmhsi,SN Ia
 ZTF20aazycgy,SN IIP
 ZTF18aakkrjm,SN Ib
+ZTF18aajnqmp,AGN
 ZTF18aaxokeg,SN Ia
 ZTF23aakbqgc,SN Ia
 ZTF20aatqidk,SN IIP
-ZTF19aawupxb,SN Ia
 ZTF20aazgtmp,SN Ia
 ZTF22aabyzwm,SN Ia
 ZTF23aaiypww,SN Ia
@@ -227,14 +230,15 @@ ZTF20acpylns,SN Ia
 ZTF19aatgaiq,SN Ia
 ZTF18accnnyu,SN Ia
 ZTF23abgnxri,SN IIn
+ZTF18aaflcyp,AGN
 ZTF22aahieds,SN Ia
 ZTF18abavruc,SN Ia
 ZTF23abcqwkn,SN Ia
 ZTF18aboztku,SN Ia
-ZTF19aaxffum,SN Ia-91T
 ZTF22abakeha,SN Ia
 ZTF20aazkxcw,SN Ia
 ZTF24aangsva,SN Ia-norm
+ZTF18aatxsvu,AGN
 ZTF18aaklpdo,SN Ia
 ZTF20acpbboa,SN II
 ZTF20aayknlo,SN Ia
@@ -242,16 +246,19 @@ ZTF19acytidb,SN Ia
 ZTF22aatlhve,SN Ia
 ZTF19aanfyey,SN Ia
 ZTF23abovaur,SN Ib
+ZTF19aacwjfb,AGN
 ZTF20acbiwri,SN IIP
 ZTF19adcbpcj,SN Ia
 ZTF19aamgttu,SN Ia
 ZTF21aaqwbgq,SN Ia
 ZTF21acipmgw,SN Ia
 ZTF18acvwhaz,SN Ia
+ZTF18aaabltn,AGN
 ZTF23absouua,SN Ia
 ZTF23aackdlm,SN Ia
 ZTF18acrdlrp,SN Ia
 ZTF23abptnaj,SN Ia
+ZTF18aaxzpyh,AGN
 ZTF19acmblbi,SN Ia
 ZTF20adaftef,SN Ia
 ZTF23aadxrid,SN Ia
@@ -264,12 +271,10 @@ ZTF22aabnvrz,SN Ia
 ZTF22aacgcwv,Tidal Disruption Event
 ZTF18acqxsyi,SN Ia
 ZTF22aajrdad,SN Ia
-ZTF21aagpbkj,SN Ia-91T
-ZTF18abwlopg,SN Ia
 ZTF19aaklqod,SN Ia
-ZTF18acafztq,SN Ia
 ZTF18abwlonm,SN Ia
 ZTF22aaahtqz,Tidal Disruption Event
+ZTF20acnviht,AGN
 ZTF19aalxcyo,SN Ia
 ZTF18acuqskr,SN IIP
 ZTF22acaeaok,SN Ia
@@ -294,6 +299,7 @@ ZTF22aajrrzz,SN Ia
 ZTF23aailodz,SN Ia
 ZTF21abdcauj,SN Ia-norm
 ZTF24aakrsww,SN Ia
+ZTF18aaylbyr,AGN
 ZTF20aadccel,SN Ia
 ZTF18aazhwnh,SN Ia
 ZTF22aaohmcv,SN Ia
@@ -313,6 +319,7 @@ ZTF20abefbpl,SN Ic
 ZTF22aajnffd,SN Ia
 ZTF19acspfcb,SN Ia
 ZTF18aayivoq,SN Ia
+ZTF23absjgzg,AGN
 ZTF21aaaotku,SN Ia
 ZTF22abxlfpl,SN Ic
 ZTF21abkajar,SN IIP
@@ -320,6 +327,7 @@ ZTF21aaabvjk,SN Ia
 ZTF21aaxyecd,SN Ia
 ZTF21aajgdpo,SN II
 ZTF21acudpir,SN Ia
+ZTF17aaajnki,AGN
 ZTF24aasgohq,SN Ia
 ZTF19aalveag,SN Ia
 ZTF21aaekvbn,SN Ia
@@ -327,7 +335,6 @@ ZTF19aauvjws,SN Ia
 ZTF20aakyqlh,SN Ia
 ZTF18aavryhc,SN Ia
 ZTF19aauishy,SN IIP
-ZTF20aawbzlo,SN II
 ZTF21acqzsml,SN Ia
 ZTF21aajgdeu,SN IIP
 ZTF23aacmdcv,SN Ia
@@ -341,7 +348,6 @@ ZTF21acnfoqn,SN IIn
 ZTF18aaegvyd,SN IIP
 ZTF24aaabbse,SN II
 ZTF18aaezzww,SN Ia
-ZTF18acvdstg,SN
 ZTF24aahoihk,SN Ia
 ZTF19acxlcdz,SN Ia
 ZTF23aaagncz,SN Ia
@@ -353,7 +359,9 @@ ZTF24aafqxyz,SN Ia
 ZTF20achpcvt,Tidal Disruption Event
 ZTF23aaxvgor,SN Ia
 ZTF19aazgdvh,SN Ia
+ZTF19aaryexs,AGN
 ZTF22aaoskwd,SN Ia
+ZTF18aailsee,AGN
 ZTF18aaquvvq,SN IIb
 ZTF20abdxoeu,SN IIP
 ZTF23aadqctr,SN Ia
@@ -372,8 +380,6 @@ ZTF19aaujiwc,SN Ia
 ZTF23aaraamx,SN II
 ZTF23aaqmauw,SN IIn
 ZTF18acqsztr,SN Ia
-ZTF19acnskyy,Galactic Nuclei
-ZTF19abacxwt,SN Ia
 ZTF20acrcewc,SN Ia
 ZTF24aajvmgm,SN Ia
 ZTF20aatwisu,SN IIP
@@ -388,7 +394,6 @@ ZTF20acwpaov,SN Ia
 ZTF21acqwbsn,SN Ia
 ZTF18aawpbgm,SN Ia-norm
 ZTF19acjnaxa,SN Ia
-ZTF18aahpouv,SN I
 ZTF20aaynavi,SN Ia
 ZTF20aayngca,SN Ia
 ZTF21abbzhvg,SN Ia
@@ -397,18 +402,16 @@ ZTF19aarinmw,SN Ia
 ZTF20aaurfwa,SN IIn
 ZTF20aaruwbp,SN Ia
 ZTF20aarvpbq,SN Ia
-ZTF21abbxdcm,SN Ia-91T
 ZTF19aavlfvn,SN I
 ZTF19aawgfnn,SN Ia
 ZTF18aasycak,SN Ia
-ZTF24aagterj,SN Ic-SLSN
 ZTF19aamhqow,SN Ia
 ZTF18abkhcrj,SN Ia
 ZTF21ablrhtk,SN Ia
 ZTF21abvqrln,SN Ia
 ZTF23aavaaox,SN Ia
 ZTF18aazijke,SN Ia
-ZTF18aahatvc,SN Ia
+ZTF18aaylcgr,AGN
 ZTF18aaovbiy,SN Ia
 ZTF21abowpnd,SN Ia
 ZTF21aajvvbn,SN Ia
@@ -420,6 +423,7 @@ ZTF19aarfksi,SN Ia
 ZTF18abcryxz,SN Ia
 ZTF21acngvxd,SN Ia
 ZTF20aaowuim,SN Ia
+ZTF18aahfjdt,AGN
 ZTF22abuafhn,SN Ia
 ZTF21aawlwoy,SN Ia
 ZTF22aacwsjl,SN Ia
@@ -439,7 +443,6 @@ ZTF20abyxjvm,SN IIn
 ZTF18acynmcp,SN Ia
 ZTF20acwetyh,SN Ia
 ZTF21abjbrrj,SN Ia
-ZTF19aaputrv,SN Ia-02cx
 ZTF22aafnqfz,SN Ia
 ZTF21abhqhqb,SN II
 ZTF18aayiono,SN Ia
@@ -457,6 +460,7 @@ ZTF22aagsmli,SN Ia
 ZTF23aabnyfa,SN II
 ZTF23abcegak,SN Ia
 ZTF20aaifyfx,SN Ia
+ZTF18aagrkwn,AGN
 ZTF18abifioh,SN Ia
 ZTF19abgppki,SN Ia
 ZTF20abguygh,SN Ia
@@ -467,7 +471,6 @@ ZTF19aaziick,SN Ia
 ZTF19aalfsqm,SN Ic
 ZTF20abeeahl,SN Ia
 ZTF20aauwhyi,SN Ia
-ZTF19aawwlxc,SN Ia
 ZTF18aaxvpsw,SN Ia
 ZTF18aaiiigm,SN Ia
 ZTF22abanxam,SN Ia
@@ -483,18 +486,18 @@ ZTF20acpbbqf,SN Ia
 ZTF19aavnwtf,SN Ia
 ZTF18aamvfeb,SN Ia
 ZTF23aaiwlzm,SN Ia
+ZTF18aamgcbt,AGN
 ZTF18abetejo,SN Ia
 ZTF19aayogzn,SN Ia
 ZTF22aaqzqzk,SN Ia
 ZTF18abwmuua,SN Ia
 ZTF23aaqnhjp,SN Ia
 ZTF20aaqtlwo,SN Ic
-ZTF20abcjdwu,SN Ic-BL
 ZTF18aawgrxz,SN II
 ZTF23aaakutq,SN Ia
 ZTF19aanxnkd,SN Ia
 ZTF18aaqkjuw,SN Ia
-ZTF20abzumlr,SLSN-I
+ZTF18aahpbal,AGN
 ZTF18aazjflo,SN II
 ZTF18aaqehoc,SN Ia
 ZTF21aagtcgb,SN Ia
@@ -503,6 +506,7 @@ ZTF18aahwhbk,SN Ia
 ZTF19actfxcd,SN IIP
 ZTF21acpocmd,SN Ia
 ZTF23aaahegu,SN Ia
+ZTF18aafeiiy,AGN
 ZTF19abylxyt,SN Ia
 ZTF23aavxvsz,SN Ia
 ZTF23aaaypgq,SN Ia
@@ -514,11 +518,11 @@ ZTF20aaupkac,SN Ia
 ZTF21acefbte,SN Ia
 ZTF17aadlxmv,SN Ia
 ZTF20aawjbsf,SN IIP
-ZTF23aaelgnd,SN Ia
 ZTF24aaabybk,SN Ic
 ZTF24aasmghi,SN Ia
 ZTF21abxzzys,SN Ia
 ZTF20aafclqz,SN IIP
+ZTF18aanlzzf,AGN
 ZTF18abobkii,SN Ia
 ZTF19abzmpvb,SN Ia
 ZTF18aatezaj,SN Ia
@@ -529,7 +533,6 @@ ZTF22abarhid,SN Ia
 ZTF23abhyxpr,SN Ib
 ZTF22abxmdxh,SN Ia
 ZTF23abqbjjb,SN II
-ZTF24aazqavh,SN Ic-BL
 ZTF19acfuzwh,SN Ib/c
 ZTF18aaunfqq,SN Ia
 ZTF24aamilir,SN Ia
@@ -541,9 +544,7 @@ ZTF18aaizerg,SN Ia
 ZTF22abfvxlz,SN Ia
 ZTF20ablqbvc,SN Ia
 ZTF19aamtwwv,SN Ia
-ZTF18aavrmlf,SN Ia
 ZTF24aakfgvg,SN Ia
-ZTF20acgkbkm,SN IIb
 ZTF19adcetym,SN Ia
 ZTF21acidhhs,SN Ia
 ZTF22aahwcya,SN Ia
@@ -551,39 +552,59 @@ ZTF23aaczpmh,SN Ia
 ZTF22abnmpwx,SN Ia
 ZTF21aavhnpk,SN II
 ZTF22abfuoce,SN Ia
+ZTF18aasszwr,AGN
+ZTF18aahfohe,AGN
 ZTF18aabdajx,Tidal Disruption Event
+ZTF19aaoiawb,QSO
+ZTF18aarbgrh,AGN
 ZTF22aaopawk,SN Ia
 ZTF21aantxma,SN Ia
 ZTF20acphdbu,SN Ia
 ZTF22abyszwg,SN Ia
 ZTF20acvkqxy,SN Ia
 ZTF22aabqtrq,SN Ia
-ZTF18aafzers,SN Ia-pec
 ZTF21aamkxbl,SN Ia
 ZTF20aacedmi,SN Ia
 ZTF22aaafnry,SN Ia
 ZTF19aanbojt,SN Ia
 ZTF20aahdwze,SN Ia
+ZTF19aakxogv,AGN
 ZTF24aaeczdw,SN Ib
 ZTF20aalejtl,SN Ia
 ZTF23aadmwpn,SN Ia
+ZTF17aaaobyl,Cataclysmic
+ZTF17aaaukqn,Cataclysmic
+ZTF17aaawgkc,Cataclysmic
+ZTF17aaburzk,Cataclysmic
 ZTF17aacldgo,SN Ia
+ZTF17aadcbei,Cataclysmic
+ZTF18aaadtdc,AGN
+ZTF18aaakpbx,Cataclysmic
+ZTF18aaakpsa,AGN
+ZTF18aaaokus,AGN
+ZTF18aabfxpw,Cataclysmic
+ZTF18aabicqe,AGN
+ZTF18aabiwhf,Cataclysmic
 ZTF18aabssth,SN IIP
 ZTF18aabtxvd,Tidal Disruption Event
+ZTF18aabvpbb,Cataclysmic
 ZTF18aabxlsv,SN Ib
+ZTF18aadkjmo,AGN
+ZTF18aadnqwz,AGN
 ZTF18aadxnul,SN Ia-norm
-ZTF18aaexyql,SN Ib
+ZTF18aaenfaa,AGN
 ZTF18aafdigb,SN Ia
 ZTF18aafpfwr,SN Ia
 ZTF18aagpzjk,SN IIP
 ZTF18aagrdcs,SN Ib
 ZTF18aagrtxs,SN Ia
 ZTF18aagstdc,SN Ia
+ZTF18aagteoy,AGN
 ZTF18aahesrp,SN Ia
 ZTF18aahfzea,SN Ia
 ZTF18aahhqih,SN IIP
 ZTF18aahhzqn,SN Ib
-ZTF18aahmhxu,SN II
+ZTF18aahijwe,AGN
 ZTF18aahpbwz,SN Ib
 ZTF18aahptcq,SN Ia
 ZTF18aahqmsr,SN Ia
@@ -591,27 +612,35 @@ ZTF18aailmnv,SN Ia
 ZTF18aaisyyp,SLSN-I
 ZTF18aaiwzie,SN Ia
 ZTF18aajivpr,SN Ia
+ZTF18aajrwju,AGN
+ZTF18aajswer,AGN
 ZTF18aakecej,SN Ia
 ZTF18aakiwbs,SN Ia
 ZTF18aamftst,SN IIn
+ZTF18aammlba,Cataclysmic
 ZTF18aanjzkp,SN Ib
 ZTF18aankxqv,SN Ia
 ZTF18aanygjk,SN Ia
+ZTF18aaoecso,AGN
+ZTF18aaojsvk,AGN
 ZTF18aaoxrup,SN Ia
-ZTF18aapgrxo,SLSN-I
 ZTF18aapifti,SN IIP
+ZTF18aapzqup,AGN
 ZTF18aaqcugm,SN Ia
+ZTF18aaqduja,AGN
 ZTF18aaqfqaa,SN IIP
-ZTF18aaqjovh,SN Ic-BL
+ZTF18aaqiivp,Seyfert
+ZTF18aaqikyu,Cataclysmic
 ZTF18aaqkcso,SN Ia
 ZTF18aaqldvl,SN Ia
 ZTF18aaqskoy,SN Ia
+ZTF18aaqznkg,Cataclysmic
+ZTF18aaraifg,Cataclysmic
 ZTF18aarasof,SN IIn
 ZTF18aarbaba,SN Ia
 ZTF18aarnbhk,SN Ia
 ZTF18aaroihe,SN Ia
 ZTF18aartjmf,SN Ia
-ZTF18aartjod,SN II
 ZTF18aarunub,SN Ia
 ZTF18aarwxum,SN Ia
 ZTF18aarxzmv,SN Ia
@@ -626,16 +655,17 @@ ZTF18aatrtkc,SN Ia
 ZTF18aatyqds,SN IIP
 ZTF18aauenwu,SN IIn
 ZTF18aauizcr,SN Ia
-ZTF18aaumeys,SN Ia
 ZTF18aauvmnq,SN Ia
 ZTF18aauworo,SN Ia
 ZTF18aauxltf,SN Ia
 ZTF18aauxzle,SN IIP
 ZTF18aavjnfx,SN Ia
 ZTF18aavnvmp,SN Ia
+ZTF18aavoyoq,Cataclysmic
 ZTF18aavrwhu,SN Ia
 ZTF18aavrzxp,SN Ia
 ZTF18aavskep,SN IIn
+ZTF18aavtklk,AGN
 ZTF18aavuzhe,SN Ia
 ZTF18aavvnzu,SN Ia
 ZTF18aawczad,SN Ia
@@ -646,8 +676,10 @@ ZTF18aawjywv,SN Ia
 ZTF18aawlfnj,SN Ia
 ZTF18aawmeiw,SN Ia
 ZTF18aawpcel,SN Ia
+ZTF18aawrmhl,Cataclysmic
 ZTF18aawseij,SN Ia
 ZTF18aawurud,SN Ia
+ZTF18aawuzxa,AGN
 ZTF18aawxlxf,SN Ia
 ZTF18aawyjjq,SN IIP
 ZTF18aawzens,SN Ia
@@ -663,29 +695,41 @@ ZTF18aaxkqgy,SN IIP
 ZTF18aaxmhvk,SN Ic
 ZTF18aaxmixe,SN Ia
 ZTF18aaxnkos,SN Ia
+ZTF18aaxryfw,AGN
 ZTF18aaxtcdm,SN Ia
 ZTF18aaxwjmp,SN Ia
 ZTF18aaxxewy,SN Ia
 ZTF18aaxxfah,SN Ia
 ZTF18aaxxfgs,SN IIn
+ZTF18aaxxyhp,AGN
+ZTF18aaybtnt,Cataclysmic
+ZTF18aaydbyc,Cataclysmic
 ZTF18aaygwqd,SN Ib
 ZTF18aayiahw,SN Ia
 ZTF18aayivxm,SN Ia
 ZTF18aayjvve,SN Ia
-ZTF18aaykmzg,SN Ia
 ZTF18aaylbjm,SN Ia
 ZTF18aaylcvo,SN Ia
-ZTF18aaytovs,SN Ia
+ZTF18aayoxjs,Cataclysmic
 ZTF18aayxupv,SN Ia
 ZTF18aayyxxp,SN IIP
+ZTF18aazcuno,AGN
+ZTF18aazhkfk,Cataclysmic
+ZTF18aazndjw,Cataclysmic
+ZTF18aazrdpr,Cataclysmic
 ZTF18aazxthg,SN Ia
 ZTF18abaelhi,SN IIP
+ZTF18abajlni,Cataclysmic
 ZTF18abakjgq,SN Ia
+ZTF18abbcyzh,Cataclysmic
 ZTF18abbodly,SN Ia
 ZTF18abbpeqo,SN Ia
 ZTF18abbpxik,SN IIP
 ZTF18abbqjds,SN Ia
 ZTF18abbvsiv,SN Ia
+ZTF18abbxisr,Blazar
+ZTF18abcbwnd,AGN
+ZTF18abccqmd,Cataclysmic
 ZTF18abceakp,SN IIP
 ZTF18abcecfi,SN Ia
 ZTF18abcezmh,SN IIP
@@ -694,6 +738,7 @@ ZTF18abcfdzu,SN IIn
 ZTF18abcflnz,SN Ia
 ZTF18abcicrq,SN Ia
 ZTF18abckujg,SN Ia
+ZTF18abckxfb,Cataclysmic
 ZTF18abclfee,SN Ia-02cx
 ZTF18abcpmwh,SN IIP
 ZTF18abcpolh,SN Ia
@@ -705,9 +750,10 @@ ZTF18abcsgvj,SN Ia
 ZTF18abcvush,SN Ia
 ZTF18abcxyjp,SN Ia
 ZTF18abcyhju,SN IIb
-ZTF18abcyilc,SN Ia
 ZTF18abcysdx,SN Ia
 ZTF18abcyues,SN IIP
+ZTF18abcyzif,Cataclysmic
+ZTF18abdbgza,Cataclysmic
 ZTF18abdbuty,SN Ia
 ZTF18abdcfgz,SN Ia
 ZTF18abdcudb,SN Ia
@@ -719,7 +765,6 @@ ZTF18abdffeo,SN Ib/c
 ZTF18abdfwur,SN Ia
 ZTF18abdfydj,SN Ia
 ZTF18abdgwxn,SN Ia
-ZTF18abdhsfc,SN Ia
 ZTF18abdiqdh,SN Ia
 ZTF18abdiwpt,SN Ia
 ZTF18abdjmfh,SN IIP
@@ -735,6 +780,7 @@ ZTF18abebzog,SN Ia
 ZTF18abecbks,SN Ic
 ZTF18abeecwe,SN Ia
 ZTF18abeegsl,SN Ia
+ZTF18abehrdw,Cataclysmic
 ZTF18abespgb,SN Ia
 ZTF18abesqnb,SN IIb
 ZTF18abetehf,SN Ia
@@ -742,7 +788,6 @@ ZTF18abetewu,SN Ia
 ZTF18abeyqpr,SN Ic
 ZTF18abfbbyh,SN Ia
 ZTF18abfchzq,SN Ia
-ZTF18abfcsjs,SN Ia-91T
 ZTF18abfdupq,SN Ia
 ZTF18abfeyey,SN Ia
 ZTF18abffdpa,SN Ia
@@ -757,13 +802,12 @@ ZTF18abgledy,SN Ia
 ZTF18abgosbg,SN Ia
 ZTF18abgrbjb,SN IIb
 ZTF18abgxvra,SN Ia
+ZTF18abgxyfz,Cataclysmic
 ZTF18abgzkmf,SN IIP
-ZTF18abhgrff,SN Ia
-ZTF18abhhnnv,SN Ic-BL
 ZTF18abhhxcp,SN Ia
 ZTF18abhpzig,SN Ia
+ZTF18abhqaxd,Cataclysmic
 ZTF18abhqdpv,SN Ia
-ZTF18abhxhtu,Stellar variable
 ZTF18abhxidv,SN Ia
 ZTF18abiczpm,SN Ia
 ZTF18abiinnl,SN Ia
@@ -773,16 +817,23 @@ ZTF18abimhfu,SN IIP
 ZTF18abimsyv,SN Ia
 ZTF18abixkdo,SN Ia-91bg
 ZTF18abixkjh,SN Ia
+ZTF18abiyatb,Cataclysmic
 ZTF18abiybfq,SN Ia
-ZTF18abjdjge,SN Ia
+ZTF18abjdnoh,AGN
 ZTF18abjgyyr,SN Ia
+ZTF18abjhbss,AGN
 ZTF18abjijwk,SN Ia
 ZTF18abjkryl,SN IIP
+ZTF18abjlyzc,Cataclysmic
 ZTF18abjqmqt,SN Ia
 ZTF18abjrbza,SN Ic
+ZTF18abjrdzt,Cataclysmic
 ZTF18abjrfqx,SN Ia
-ZTF18abjrznx,SN Ia-91bg
+ZTF18abjsdwi,Cataclysmic
+ZTF18abjsjyx,Cataclysmic
+ZTF18abjsrdz,Cataclysmic
 ZTF18abjstcm,SN Ia
+ZTF18abjsybd,Cataclysmic
 ZTF18abjtger,SN Ia
 ZTF18abjvhec,SN Ia
 ZTF18abjvzxx,SN Ia
@@ -790,74 +841,114 @@ ZTF18abjwahi,SN Ia
 ZTF18abjyime,SN Ia
 ZTF18abjyjdz,SN Ib
 ZTF18abjyuoj,SN Ia
+ZTF18abjzaic,Cataclysmic
 ZTF18abkhbra,SN Ia
 ZTF18abkhcwl,SN Ia
+ZTF18abkhqhk,Cataclysmic
 ZTF18abkifng,SN Ia
+ZTF18abkijlr,Cataclysmic
 ZTF18abkjnqy,SN Ic
-ZTF18abklarx,SN Ic-BL
-ZTF18abkmbpy,SN
+ZTF18abkojhi,AGN
+ZTF18abktleu,Cataclysmic
 ZTF18abktmfz,SN Ib
 ZTF18abktphg,SN Ia
 ZTF18abkudjo,SN Ia
+ZTF18abkxfou,Cataclysmic
+ZTF18ablerlf,Cataclysmic
+ZTF18ablfqxm,Cataclysmic
+ZTF18ablgnrw,Cataclysmic
+ZTF18ablgqyq,Cataclysmic
+ZTF18ablgtdi,Cataclysmic
 ZTF18ablhvfr,SN Ia
+ZTF18abllrvn,Cataclysmic
 ZTF18ablmflp,SN Ia
+ZTF18ablovbj,Cataclysmic
+ZTF18ablpmiy,Cataclysmic
 ZTF18ablqjul,SN Ia
 ZTF18ablqkud,SN Ia
 ZTF18ablqqqp,SN Ia
+ZTF18ablrlbm,AGN
+ZTF18ablrlog,Cataclysmic
 ZTF18abltaxf,SN Ia
-ZTF18abltdfj,SN Ia-91bg
 ZTF18abltdkd,SN Ia
-ZTF18ablwafp,SLSN-I
+ZTF18ablusuz,Cataclysmic
+ZTF18ablvazp,Cataclysmic
+ZTF18ablvxdg,AGN
+ZTF18ablvxkh,Cataclysmic
+ZTF18ablwhde,Cataclysmic
+ZTF18ablwrch,Cataclysmic
 ZTF18ablwtkf,SN Ia
+ZTF18abmbdbg,Cataclysmic
+ZTF18abmdoni,Cataclysmic
 ZTF18abmdpwe,SN IIP
 ZTF18abmjvpb,SN Ia
 ZTF18abmjyvo,SN Ia
-ZTF18abmkaps,SN Ia
 ZTF18abmmdif,SN Ia
 ZTF18abmmkaz,SN Ia
 ZTF18abmnrgb,SN Ia
+ZTF18abmqrwk,Cataclysmic
 ZTF18abmrhom,SN Ia
 ZTF18abmwnov,SN Ia
+ZTF18abmwszl,AGN
 ZTF18abmxahs,SN Ia
+ZTF18abmxatl,Cataclysmic
 ZTF18abmxdhb,SN Ia
 ZTF18abmxfrc,SN Ia
 ZTF18abmxmsv,SN Ia
+ZTF18abnbldg,Cataclysmic
+ZTF18abnbxsy,Cataclysmic
 ZTF18abncdhd,SN Ia
 ZTF18abncimo,SN Ia
+ZTF18abnnnzk,AGN
+ZTF18abnoonq,Cataclysmic
 ZTF18abntsgz,SN Ia
+ZTF18abnuark,Cataclysmic
+ZTF18abnuhuy,AGN
+ZTF18abnurff,Cataclysmic
 ZTF18abnuzzt,Novae
 ZTF18abnxhmc,SN Ia
 ZTF18abnygkb,SN Ia
+ZTF18abnyktn,Cataclysmic
 ZTF18abnzlai,SN IIP
+ZTF18abobvym,Cataclysmic
 ZTF18aboebsg,SN Ia
+ZTF18aboerpp,AGN
 ZTF18abojpnr,SN IIb
+ZTF18abojrnv,Cataclysmic
+ZTF18abokhip,Cataclysmic
 ZTF18abokpvh,SN Ia
-ZTF18abomklq,SN Ia
 ZTF18aboqykf,SN Ia
+ZTF18aboronz,Cataclysmic
 ZTF18abosrco,SN Ia
 ZTF18abotcjv,SN Ia
 ZTF18abotdef,SN Ia
 ZTF18abpamut,SN Ia
 ZTF18abpaywm,SN Ia
 ZTF18abpmmpo,SN Ia
+ZTF18abpmwfx,Cataclysmic
+ZTF18abpmwlt,Cataclysmic
 ZTF18abpttky,SN Ia
+ZTF18abptzkg,Cataclysmic
 ZTF18abqbuaj,SN Ibn
 ZTF18abqdadp,SN Ia
 ZTF18abqjurg,SN Ia
 ZTF18abqlpgq,SN Ia
-ZTF18abqtnbk,SN Ic-BL
 ZTF18abqxaqe,SN Ia
 ZTF18abqyvzy,SN IIP
 ZTF18abrcvbu,SN Ia
 ZTF18abrfchj,SN Ic
 ZTF18abrlljc,SN IIP
 ZTF18abrqedj,SN Ia
+ZTF18abrqfjs,Cataclysmic
+ZTF18abrwwzs,Cataclysmic
+ZTF18abrxrms,Cataclysmic
 ZTF18abryqnn,SN Ia
 ZTF18abrytwr,SN Ia
 ZTF18abrzbum,SN IIP
 ZTF18abrzbyt,SN Ia
 ZTF18abrzcgl,SN Ia
 ZTF18abrzeym,SN Ia
+ZTF18absanfq,Cataclysmic
 ZTF18absbgqd,SN IIP
 ZTF18absclsr,SN IIP
 ZTF18abscyji,SN IIP
@@ -866,13 +957,17 @@ ZTF18absdgon,SN Ia
 ZTF18absdxpk,SN Ia
 ZTF18absgnbm,SN IIP
 ZTF18absgnio,SN Ia
-ZTF18abshezu,SLSN-I
 ZTF18abshtdj,SN Ia
+ZTF18absjiej,Cataclysmic
+ZTF18abskbng,Cataclysmic
 ZTF18abskove,SN Ia
 ZTF18abskoyh,SN IIP
 ZTF18abskzjm,SN Ia
 ZTF18absldfl,SN IIP
 ZTF18absliyc,SN Ic
+ZTF18absltuj,AGN
+ZTF18absmoql,Cataclysmic
+ZTF18absnibc,Cataclysmic
 ZTF18absnqyo,SN Ia
 ZTF18absoomk,SN Ia
 ZTF18abspqsn,SN Ia
@@ -880,53 +975,69 @@ ZTF18absqhza,SN Ia
 ZTF18absspcp,SN Ia
 ZTF18absstyb,SN Ia
 ZTF18abssuxz,SN Ia
+ZTF18absunxx,Cataclysmic
+ZTF18absxczg,Cataclysmic
 ZTF18absyyig,SN Ia
 ZTF18abtfrbf,SN Ia
 ZTF18abtfvsk,SN Ia
+ZTF18abtgnxs,AGN
+ZTF18abthqde,Cataclysmic
+ZTF18abthvpk,Cataclysmic
+ZTF18abtizrj,Cataclysmic
 ZTF18abtmbaz,SN Ia
 ZTF18abtmtfy,SN Ia
 ZTF18abtnlik,SN Ia
 ZTF18abtogdl,SN Ia
 ZTF18abtrknw,SN IIP
 ZTF18abtrvkm,SN Ia
+ZTF18abtslka,AGN
 ZTF18abtswjk,SN IIn
+ZTF18abtuzwc,Cataclysmic
+ZTF18abtvlxd,Cataclysmic
 ZTF18abtxvhy,SN Ia
-ZTF18abtzzka,SN Ia
+ZTF18abucoyd,Cataclysmic
 ZTF18abucvbf,SN Ia
 ZTF18abugthp,SN Ia
 ZTF18abuhzfc,SN Ia
-ZTF18abuicad,SN II
 ZTF18abujbio,SN Ia
 ZTF18abujnlz,SN Ia
+ZTF18abujubn,AGN
 ZTF18abulkrl,SN Ia
+ZTF18abumesx,Cataclysmic
 ZTF18abuncpe,SN Ia
-ZTF18abupgps,SN Ia
 ZTF18abupiap,SN Ia
 ZTF18abuqhje,SN IIP
+ZTF18abuqkdh,AGN
 ZTF18abuykiu,SN Ia
+ZTF18abvassm,Cataclysmic
+ZTF18abvbesl,Cataclysmic
+ZTF18abvbqyo,Cataclysmic
 ZTF18abvejqt,SN IIP
 ZTF18abvfecb,SN IIP
-ZTF18abvfjwt,SN Ic-BL
+ZTF18abvgghe,Cataclysmic
 ZTF18abvgivy,SN IIP
 ZTF18abvgjft,SN IIP
 ZTF18abvgjgb,SN IIn
-ZTF18abvgjyl,SLSN-I
 ZTF18abvglon,SN Ia
 ZTF18abvkmgw,SN IIP
-ZTF18abvlchy,SN Ia
 ZTF18abvmlow,SN IIP
-ZTF18abvptts,SN Ia
+ZTF18abvoyen,Cataclysmic
+ZTF18abvpiim,Cataclysmic
 ZTF18abvsvjs,SN Ia
 ZTF18abvtrnc,SN Ia
 ZTF18abvvmdf,SN IIP
+ZTF18abvwpnt,Cataclysmic
+ZTF18abvwqtp,AGN
 ZTF18abvxoty,SN IIP
 ZTF18abvxqtp,SN Ia
 ZTF18abwbaim,SN Ia
+ZTF18abwcgrm,AGN
 ZTF18abwckzf,SN Ia
 ZTF18abwclem,SN Ia
 ZTF18abwdcdv,SN Ia
 ZTF18abwerpm,SN Ia
 ZTF18abwisaz,SN II
+ZTF18abwjzpq,Cataclysmic
 ZTF18abwkrbl,SN IIb
 ZTF18abwktmm,SN Ia
 ZTF18abwkzuc,SN Ia
@@ -935,48 +1046,55 @@ ZTF18abwwfyo,SN Ia
 ZTF18abwxhjo,SN Ia
 ZTF18abxbhov,SN IIn
 ZTF18abxbmcl,SN IIP
-ZTF18abxbmqh,SLSN-II
 ZTF18abxbugc,SN Ia
 ZTF18abxdkni,SN Ia
 ZTF18abxdtyz,SN IIP
 ZTF18abxftqm,Tidal Disruption Event
 ZTF18abxhaop,SN Ia
 ZTF18abxhsyn,SN Ia
+ZTF18abxkbzz,Cataclysmic
 ZTF18abxmxbh,SN Ia
 ZTF18abxoqkd,SN Ia
 ZTF18abxqemv,SN IIP
+ZTF18abxrngw,AGN
 ZTF18abxroxl,SN Ia
 ZTF18abxtvqc,SN Ia
 ZTF18abxxssh,SN Ia
 ZTF18abxygvv,SN Ia
-ZTF18abxzitr,SN Ia
+ZTF18abygcwk,Cataclysmic
+ZTF18abyjgcx,AGN
 ZTF18abykswp,SN Ia
+ZTF18abyukaz,Cataclysmic
 ZTF18abyvenk,SN IIP
 ZTF18abywcnl,SN Ia
+ZTF18abywcoi,Cataclysmic
 ZTF18abyxwrf,SN Ia
+ZTF18abyzkeq,Cataclysmic
 ZTF18abyzksx,SN Ia
 ZTF18abyzlhn,SN Ia
+ZTF18abyzmsb,Cataclysmic
 ZTF18abzbkby,SN Ia
 ZTF18abzpbpi,SN Ia
 ZTF18abzrgim,SN IIP
 ZTF18abzscns,SN IIP
+ZTF18abztcib,Cataclysmic
 ZTF18abzwdsj,SN Ia
 ZTF18abzzkyg,SN Ia
 ZTF18acacnmr,SN Ia
 ZTF18acaeous,SN Ia
 ZTF18acaezsx,SN Ia
-ZTF18acahuph,SN Ia
 ZTF18acahvwm,SN IIb
-ZTF18acaimrb,SN Ic-BL
-ZTF18acaipdc,SN Ia
+ZTF18acaisao,Cataclysmic
 ZTF18acajzuh,SN Ia
 ZTF18acakwsu,SN IIP
-ZTF18acapyww,SLSN-I
+ZTF18acapkod,Cataclysmic
 ZTF18acaqcdg,SN Ia
 ZTF18acaqdaa,Tidal Disruption Event
 ZTF18acarupz,SN Ia
 ZTF18acaszeh,SN Ia
 ZTF18acaucsw,SN Ia
+ZTF18acauijl,Cataclysmic
+ZTF18acauwik,AGN
 ZTF18acbudzh,SN Ia
 ZTF18acbudzo,SN Ia
 ZTF18acbuemc,SN IIP
@@ -987,19 +1105,16 @@ ZTF18acbvbox,SN Ia
 ZTF18acbvcmw,SN Ia
 ZTF18acbvgqw,SN Ia
 ZTF18acbvgtu,SN Ia
-ZTF18acbvhfl,SN II
 ZTF18acbvhit,SN IIP
+ZTF18acbvkwl,AGN
 ZTF18acbvnen,SN Ia
-ZTF18acbvpzj,SN Ic-BL
 ZTF18acbwaax,SN Ia
 ZTF18acbwasl,SN Ia
-ZTF18acbwavp,SN Ia
 ZTF18acbwaxk,SN IIP
-ZTF18acbwazl,SN Ca-rich
 ZTF18acbwchi,SN Ia
 ZTF18acbwglb,SN IIP
 ZTF18acbwglw,SN Ia
-ZTF18acbwiic,SN Ia
+ZTF18acbwkso,Cataclysmic
 ZTF18acbwlpj,SN Ia
 ZTF18acbwopo,SN IIP
 ZTF18acbwppb,SN Ia
@@ -1007,19 +1122,19 @@ ZTF18acbwtmf,SN Ia
 ZTF18acbwtng,SN IIP
 ZTF18acbwtnh,SN Ia
 ZTF18acbwvsp,SN IIn
-ZTF18acbwxcc,SN Ic-BL
 ZTF18acbwxgn,SN Ia
-ZTF18acbwxou,SN Ia
 ZTF18acbwymh,SN Ia
 ZTF18acbxhui,SN Ia
 ZTF18acbxkpa,SN Ia
 ZTF18acbxmvy,SN Ia
+ZTF18acbxphq,Cataclysmic
 ZTF18acbxrdw,SN Ia
 ZTF18acbxrrx,SN Ia
 ZTF18acbxsap,SN Ia
 ZTF18acbxsge,SN Ia
 ZTF18acbxudr,SN IIP
 ZTF18acbygcu,SN Ia
+ZTF18acbzitw,Cataclysmic
 ZTF18acbznkf,SN Ia
 ZTF18acbznvp,SN Ia
 ZTF18acbzvpg,SN IIb
@@ -1036,10 +1151,9 @@ ZTF18acchzkf,SN Ia
 ZTF18accjecm,SN Ia
 ZTF18accjqzu,SN Ia
 ZTF18acckoil,SN Ia
+ZTF18acckpzv,AGN
 ZTF18accmkud,SN IIP
-ZTF18accnbgw,SN Ia
 ZTF18accndxn,SN Ia
-ZTF18accngee,SN Ia
 ZTF18accngxc,SN IIP
 ZTF18accnlji,SN Ia
 ZTF18accnmri,SN IIP
@@ -1054,31 +1168,35 @@ ZTF18acdwazf,SN Ia
 ZTF18acdwuhy,SN Ia
 ZTF18acdxhus,SN Ia
 ZTF18acdzzyf,SN Ia
+ZTF18aceaape,AGN
 ZTF18aceathd,SN Ia
 ZTF18acebefc,SN Ia
 ZTF18acebssa,SN IIP
 ZTF18acehilk,SN Ia
 ZTF18acemhyb,SN Ia
-ZTF18acetmam,SN
 ZTF18aceyjco,SN Ia
 ZTF18aceynvm,SN Ia
+ZTF18acfvhko,AGN
 ZTF18acfwmqj,SN Ia
+ZTF18acgdepq,Cataclysmic
+ZTF18acgqweq,AGN
+ZTF18acgvhxo,AGN
 ZTF18achbllm,SN Ia
 ZTF18achcpwu,SN Ic
 ZTF18achjcwv,SN Ia
 ZTF18achmxsx,SN Ia
+ZTF18achrter,Cataclysmic
 ZTF18achtnvk,SN IIP
 ZTF18achxcsh,SN Ia
 ZTF18achyqcq,SN Ia
 ZTF18acisruf,SN Ib/c
-ZTF18acmvcme,SN Ia
 ZTF18acmwptq,SN Ia
 ZTF18acmxkzj,SN Ia
 ZTF18acmyxfx,SN Ia
 ZTF18acmznfc,SN Ia
 ZTF18acmzpbf,SN Ia
+ZTF18acnaicl,Cataclysmic
 ZTF18acnbeuu,SN Ia
-ZTF18acnbgpw,SN Ia
 ZTF18acnbgrb,SN Ia
 ZTF18acnbpkq,SN Ia
 ZTF18acnmifq,SN IIP
@@ -1086,10 +1204,8 @@ ZTF18acnncve,SN Ib
 ZTF18acnnxor,SN Ia
 ZTF18acpefgk,SN Ia
 ZTF18acpfwmm,SN Ia
-ZTF18acppddp,SN
 ZTF18acpscso,SN Ia
 ZTF18acqphpd,SN Ic-BL
-ZTF18acqpobb,SN Ia
 ZTF18acqppuj,SN IIP
 ZTF18acqpqph,SN Ia
 ZTF18acqqyah,SN Ia
@@ -1098,13 +1214,10 @@ ZTF18acqsqry,SN Ia
 ZTF18acqsroy,SN IIP
 ZTF18acqwdla,SN IIP
 ZTF18acqxcga,SN Ia
-ZTF18acqxwgl,SN Ia
-ZTF18acrcetn,SN Ia
 ZTF18acrcgyb,SN Ia
 ZTF18acrcizr,SN Ia
 ZTF18acrcogn,SN IIP
 ZTF18acrcyqw,SN IIP
-ZTF18acrdciw,SN Ia
 ZTF18acrfklz,SN Ia
 ZTF18acrflch,SN IIP
 ZTF18acrhehl,SN IIP
@@ -1115,6 +1228,7 @@ ZTF18acrnfww,SN Ia
 ZTF18acrtvmm,SN IIP
 ZTF18acrtykk,SN Ia
 ZTF18acrvakb,SN Ia
+ZTF18acrygfl,AGN
 ZTF18acrygtk,SN IIP
 ZTF18acskxpn,SN Ia
 ZTF18acslbve,SN Ia
@@ -1127,17 +1241,17 @@ ZTF18acsovsw,SN Ia
 ZTF18acsoyiu,SN Ia
 ZTF18acspjqd,SN Ia
 ZTF18acsvycn,SN IIP
+ZTF18acswkeb,Cataclysmic
+ZTF18acsxguy,Cataclysmic
 ZTF18acsxpmp,SN Ia
 ZTF18acsxusq,SN Ia
 ZTF18acsxvrp,SN Ia
-ZTF18acsxwdi,SLSN-II
 ZTF18acsyanq,SN Ia
 ZTF18acsyaye,SN IIP
 ZTF18acsycnc,SN Ia
 ZTF18acsyzca,SN Ia
 ZTF18acszayr,SN IIn
 ZTF18actacux,SN Ia
-ZTF18actxlzv,SN
 ZTF18acuefvt,SN Ia
 ZTF18acuimze,SN Ia
 ZTF18acuixmb,SN Ia
@@ -1151,26 +1265,28 @@ ZTF18acuscgc,SN Ia
 ZTF18acuscrr,SN Ia
 ZTF18acusegd,SN Ia
 ZTF18acusueb,SN Ia
+ZTF18acvbigh,AGN
+ZTF18acvbpcv,Cataclysmic
 ZTF18acvcxnc,SN Ia
 ZTF18acvguyi,SN Ia
+ZTF18acvhqfj,AGN
 ZTF18acvilwk,SN IIP
+ZTF18acvjhht,AGN
 ZTF18acvjnst,SN Ia
 ZTF18acvrfvv,SN Ia
 ZTF18acvwbos,SN Ia-02cx
-ZTF18acvwcgq,SN I
 ZTF18acvwchp,SN Ia
 ZTF18acvwcig,SN Ia
 ZTF18acvweal,SN Ia
 ZTF18acvwmpw,SN Ia
+ZTF18acwugwx,AGN
 ZTF18acwutbr,SN Ia
-ZTF18acwwkyu,SN
 ZTF18acwwonp,SN Ia
 ZTF18acwwowy,SN Ia
 ZTF18acwyowc,SN Ia
 ZTF18acwyqeg,SN Ia
 ZTF18acwzxhr,SN IIP
 ZTF18acwzyor,SN IIn
-ZTF18acxgoki,SN I
 ZTF18acxhvkv,SN Ia
 ZTF18acxijqw,SN Ia
 ZTF18acxwtyx,SN Ia
@@ -1182,13 +1298,13 @@ ZTF18acyyhgi,SN Ia
 ZTF18aczbgpm,SN Ia
 ZTF18aczbkqp,S Doradus
 ZTF18aczcumi,SN Ib
-ZTF18aczdtgn,SN Ia
 ZTF18aczeesl,SN Ia
 ZTF18aczemzj,SN Ia
-ZTF18aczeraq,SN Ia
+ZTF18aczexlh,AGN
 ZTF18aczotxi,SN Ia
 ZTF18aczpgmi,SN Ia
 ZTF18aczqtpt,SN Ia
+ZTF18aczquaa,Cataclysmic
 ZTF18aczqzrj,SN Ic
 ZTF18aczzrkn,SN Ia
 ZTF18adachwf,SN IIP
@@ -1196,6 +1312,7 @@ ZTF18adacicy,SN IIP
 ZTF18adaimlf,SN Ia
 ZTF18adalgmc,SN Ia
 ZTF18adalhga,SN IIP
+ZTF18adalhzq,AGN
 ZTF18adathpb,SN Ia-91bg
 ZTF18adaykvg,SN Ic
 ZTF18adazblo,SN IIP
@@ -1204,20 +1321,26 @@ ZTF18adbadqp,SN Ia
 ZTF18adbbhww,SN Ia
 ZTF18adbckox,SN Ia
 ZTF18adbclkd,SN IIP
+ZTF18adbcqwv,Cataclysmic
+ZTF18adbinya,AGN
 ZTF18adbntwo,SN Ia
 ZTF18adcdcrd,SN Ia
+ZTF18adiaqui,Cataclysmic
 ZTF19aaagfme,SN Ia
+ZTF19aaaizjh,Cataclysmic
+ZTF19aabhktg,Cataclysmic
+ZTF19aaciohh,AGN
 ZTF19aacnxvc,SN IIP
-ZTF19aacxrab,SLSN-I
+ZTF19aadggnt,AGN
 ZTF19aadnmgf,SN Ia
 ZTF19aadnxnl,SN IIP
 ZTF19aadooun,SN Ia
 ZTF19aadyiao,SN IIb
 ZTF19aadypig,SN IIP
-ZTF19aaeopgw,SN II
-ZTF19aaevbqz,AGN
 ZTF19aaezale,SN IIn
 ZTF19aaezwmr,SN Ia
+ZTF19aaflcgn,AGN
+ZTF19aafltef,AGN
 ZTF19aafmhcl,SN Ia
 ZTF19aafncsv,SN Ia
 ZTF19aafnend,SN IIn
@@ -1228,6 +1351,7 @@ ZTF19aahuian,SN Ia
 ZTF19aahulyd,SN Ia
 ZTF19aailltc,SN Ia
 ZTF19aailqli,SN Ia
+ZTF19aaiohcc,AGN
 ZTF19aajwdqt,SN Ia
 ZTF19aajwhbc,SN Ia
 ZTF19aajxhwa,SN Ia
@@ -1243,11 +1367,10 @@ ZTF19aaklbok,SN Ia
 ZTF19aaklquv,SN Ia
 ZTF19aaknate,SN IIb
 ZTF19aaknemm,SN Ia
-ZTF19aaknqmp,SLSN-I
 ZTF19aakoasy,SN Ia
 ZTF19aakocxy,SN Ia
 ZTF19aakpcfi,SN Ia
-ZTF19aakphow,SLSN-II
+ZTF19aakpkto,Cataclysmic
 ZTF19aakpmqg,SN IIP
 ZTF19aakpmry,SN Ia
 ZTF19aakrawk,SN Ia
@@ -1260,10 +1383,9 @@ ZTF19aakswrb,Tidal Disruption Event
 ZTF19aaksxgp,SN IIn
 ZTF19aaktdid,SN Ia
 ZTF19aakthjl,SN Ia
-ZTF19aaktpns,SN Ia
+ZTF19aaktorq,AGN
 ZTF19aakxwqu,SN Ia
 ZTF19aakzash,SN IIP
-ZTF19aaladlt,SN II-pec
 ZTF19aalafip,SN Ia
 ZTF19aalahqa,SN Ib
 ZTF19aalckuo,SN Ia
@@ -1283,7 +1405,6 @@ ZTF19aalzmio,SN Ia
 ZTF19aalzmiu,SN Ia
 ZTF19aalzrrz,SN Ia
 ZTF19aalztms,SN IIP
-ZTF19aamfxby,SN Ia
 ZTF19aamgghn,SN Ib
 ZTF19aamggmk,SN IIP
 ZTF19aamggnw,SN IIP
@@ -1303,11 +1424,11 @@ ZTF19aamljom,SN IIP
 ZTF19aamoidt,SN Ia
 ZTF19aamoqxy,SN Ia
 ZTF19aamowaf,SN IIP
+ZTF19aampokl,Cataclysmic
 ZTF19aampqcq,SN Ia
 ZTF19aampyum,SN Ia
 ZTF19aamqebl,SN Ia
 ZTF19aamqlyl,SN Ia
-ZTF19aamrais,SLSN-II
 ZTF19aamsetj,SN Ic
 ZTF19aamsnhu,SN Ia
 ZTF19aamtima,SN Ia
@@ -1320,9 +1441,9 @@ ZTF19aanejfr,SN Ia
 ZTF19aanesxt,SN Ia
 ZTF19aanfnvl,SN IIP
 ZTF19aanfqug,SN IIn
+ZTF19aanfrmq,AGN
 ZTF19aanfukh,SN Ic
 ZTF19aangier,SN Ia
-ZTF19aanhgqg,SN Ia
 ZTF19aanhhal,SN IIP
 ZTF19aanhlxe,SN Ia
 ZTF19aanhlzi,SN Ia
@@ -1355,7 +1476,9 @@ ZTF19aanydko,SN Ia
 ZTF19aanyubf,SN Ia
 ZTF19aanyuyh,SN Ia
 ZTF19aaoaaap,SN Ia
-ZTF19aaocbes,SN Ia
+ZTF19aaocejx,Cataclysmic
+ZTF19aaodojg,Cataclysmic
+ZTF19aaodsna,AGN
 ZTF19aaohyqj,SN Ia
 ZTF19aaokist,SN Ia
 ZTF19aaomkvl,SN Ia
@@ -1372,7 +1495,6 @@ ZTF19aapbfot,SN IIP
 ZTF19aapbgmp,SN Ia
 ZTF19aapbgty,SN Ia
 ZTF19aapceyj,SN Ic
-ZTF19aapcftv,SN Ia
 ZTF19aapcnzi,SN IIP
 ZTF19aapcoqg,SN Ia
 ZTF19aapcvxi,SN Ia
@@ -1392,7 +1514,6 @@ ZTF19aapqrsh,SN Ia
 ZTF19aapreis,Tidal Disruption Event
 ZTF19aapreza,SN IIP
 ZTF19aaprvar,SN IIP
-ZTF19aaprzcr,SN Ia-91T
 ZTF19aapszzy,SN Ia
 ZTF19aaptwpu,SN Ia
 ZTF19aaptzar,SN Ia
@@ -1400,6 +1521,7 @@ ZTF19aapuohr,SN Ia
 ZTF19aapvhhp,SN Ia
 ZTF19aapvogv,SN Ia
 ZTF19aapwbvm,SN Ia
+ZTF19aapwlhg,Cataclysmic
 ZTF19aapwnmb,SN Ibn
 ZTF19aapxocr,SN Ia
 ZTF19aaqasrq,SN IIn
@@ -1415,7 +1537,6 @@ ZTF19aardunx,SN Ia
 ZTF19aarfkch,SN IIb
 ZTF19aarfnmb,SN IIP
 ZTF19aarfyvc,SN Ic
-ZTF19aarifvr,SN Ia
 ZTF19aarilal,SN Ia
 ZTF19aarioci,Tidal Disruption Event
 ZTF19aaripqw,SN Ia
@@ -1429,7 +1550,7 @@ ZTF19aarmznp,SN Ia
 ZTF19aarnqys,SN Ib
 ZTF19aarnqzw,SN Ia
 ZTF19aarnrbw,SN Ia
-ZTF19aarprog,SN Ia
+ZTF19aarpymc,AGN
 ZTF19aarstfg,SN Ia
 ZTF19aartuev,SN Ia
 ZTF19aarxrem,SN IIn
@@ -1448,15 +1569,17 @@ ZTF19aathllr,SN IIP
 ZTF19aatmgjs,SN IIP
 ZTF19aatmkll,SN Ibn
 ZTF19aatqzim,SN IIP
+ZTF19aattvhh,Cataclysmic
 ZTF19aatvljp,SN Ia
-ZTF19aatvmbo,SN Ia
 ZTF19aatvvvu,SN Ia
+ZTF19aatyrpj,Cataclysmic
 ZTF19aaugoig,SN Ia
 ZTF19aauguzk,SN Ia
 ZTF19aauhwbp,SN Ia
 ZTF19aauivtj,SN Ia
 ZTF19aaujzqh,SN Ia
 ZTF19aaulzvc,SN Ia
+ZTF19aaumtxz,Cataclysmic
 ZTF19aaumvig,SN Ia
 ZTF19aauoiow,SN IIP
 ZTF19aaupkev,SN Ia
@@ -1477,7 +1600,6 @@ ZTF19aavhwxs,SN Ia
 ZTF19aavhxby,SN Ia
 ZTF19aavhypb,SN Ia
 ZTF19aavhzsc,SN Ia
-ZTF19aavidqf,SN Ia-91T
 ZTF19aavissk,SN Ia
 ZTF19aavivbl,SN Ia
 ZTF19aavjukt,SN IIn
@@ -1485,11 +1607,12 @@ ZTF19aavjzrz,SN IIP
 ZTF19aavjztg,SN IIP
 ZTF19aavjzwm,SN IIP
 ZTF19aavkhuy,SN Ia
-ZTF19aavkvpw,SN Ic-BL
 ZTF19aavmlqh,SN Ia
 ZTF19aavnuur,SN IIP
 ZTF19aavnwxf,SN Ia
 ZTF19aavnzti,SN Ia
+ZTF19aavolzm,U Gem
+ZTF19aavomif,Cataclysmic
 ZTF19aavounq,SN Ia
 ZTF19aavoweu,SN Ic
 ZTF19aavqics,SN IIP
@@ -1502,7 +1625,6 @@ ZTF19aavsahh,SN Ia
 ZTF19aavsyhq,SN Ia
 ZTF19aavtcjs,SN IIP
 ZTF19aavvozj,SN Ia
-ZTF19aavwbxs,Stellar variable
 ZTF19aavweum,SN Ia
 ZTF19aavxikq,SN Ia
 ZTF19aavxpbx,SN Ia
@@ -1512,21 +1634,21 @@ ZTF19aawafvn,SN Ia
 ZTF19aawblge,SN Ia
 ZTF19aawbsek,SN Ia
 ZTF19aawethv,SN IIb
-ZTF19aawfbtg,SLSN-I
 ZTF19aawfcgp,SN Ia
 ZTF19aawfkeg,SN IIP
 ZTF19aawgxdn,SN IIP
 ZTF19aawmkja,SN Ia
 ZTF19aawmqtd,SN Ia
 ZTF19aawnqoj,SN Ia
-ZTF19aawqcgy,SN Ic-BL
 ZTF19aawqckx,SN Ia
+ZTF19aawrpwn,Cataclysmic
 ZTF19aawrumx,SN Ia
 ZTF19aawscnp,SN Ia
 ZTF19aawsday,SN Ic
 ZTF19aawsdlq,SN IIP
 ZTF19aawtqdv,SN Ia
 ZTF19aawyepw,SN Ia
+ZTF19aaxbzqp,Cataclysmic
 ZTF19aaxdzqt,SN Ib/c
 ZTF19aaxeaag,SN IIn
 ZTF19aaxfzao,SN Ia
@@ -1534,8 +1656,10 @@ ZTF19aaxhysx,SN Ia
 ZTF19aaxibby,SN Ia
 ZTF19aaxibpz,SN Ia
 ZTF19aaxkhxw,SN IIP
+ZTF19aaxnrkb,Cataclysmic
 ZTF19aaxptsd,SN Ia
 ZTF19aaxqsbn,SN Ia
+ZTF19aaxugwk,Cataclysmic
 ZTF19aaxyukr,SN Ia
 ZTF19aayabqe,SN Ia-91bg
 ZTF19aayckwk,SN Ia
@@ -1546,6 +1670,7 @@ ZTF19aaydtur,SN IIP
 ZTF19aayfaum,SN Ia
 ZTF19aayjqpa,SN Ia
 ZTF19aaykugs,SN Ia
+ZTF19aaynnae,AGN
 ZTF19aaynskj,SN Ia
 ZTF19aaynsws,SN Ia
 ZTF19aaypehm,SN Ia
@@ -1555,6 +1680,8 @@ ZTF19aayrosj,SN IIP
 ZTF19aaysfbn,SN IIP
 ZTF19aayshvd,SN Ia
 ZTF19aayslow,SN Ia
+ZTF19aaytisr,Cataclysmic
+ZTF19aayurjv,Cataclysmic
 ZTF19aayveer,SN Ia
 ZTF19aaywatq,SN Ia
 ZTF19aaywazj,SN Ia
@@ -1562,11 +1689,12 @@ ZTF19aaywlmi,SN Ia
 ZTF19aayxlma,SN Ia
 ZTF19aazdcmj,SN Ia
 ZTF19aazdirb,SN Ia
+ZTF19aazdroc,AGN
 ZTF19aazdsgo,SN Ib
 ZTF19aazfvhh,SN IIP
+ZTF19aazgdlv,Cataclysmic
 ZTF19aazgpar,SN Ia
 ZTF19aazlsfj,SN Ia
-ZTF19aazpkyv,SN Ia
 ZTF19aazpvdy,SN IIP
 ZTF19aazpvyr,SN Ia
 ZTF19aazudta,SN IIP
@@ -1583,6 +1711,8 @@ ZTF19abaejto,SN Ia
 ZTF19abaeyln,SN Ia
 ZTF19abafmwj,SN Ic
 ZTF19abafrvy,SN Ia
+ZTF19abagewd,Cataclysmic
+ZTF19abahjuv,Cataclysmic
 ZTF19abahsdc,SN Ia
 ZTF19abahsgg,SN Ia
 ZTF19abahvdh,SN Ia
@@ -1609,6 +1739,7 @@ ZTF19abauzma,SN Ia
 ZTF19abbnamr,SN IIP
 ZTF19abbthwy,SN IIb
 ZTF19abbwfgp,SN IIP
+ZTF19abbwmem,Cataclysmic
 ZTF19abbxykm,SN IIP
 ZTF19abcegvm,SN Ib
 ZTF19abcejfo,SN IIn
@@ -1616,10 +1747,12 @@ ZTF19abcejlb,SN IIP
 ZTF19abcejlc,SN Ia
 ZTF19abcejoa,SN Ia
 ZTF19abcekty,SN IIP
+ZTF19abcemxn,Cataclysmic
 ZTF19abcfzdy,SN Ia
 ZTF19abcncdg,SN Ia
 ZTF19abcneik,SN IIP
 ZTF19abcnpkt,SN Ia
+ZTF19abcpiag,Cataclysmic
 ZTF19abctnpk,SN Ia
 ZTF19abcttsc,SN Ia
 ZTF19abctxhf,SN IIP
@@ -1628,11 +1761,9 @@ ZTF19abcyqqg,SN Ib
 ZTF19abddqhy,SN Ia
 ZTF19abdduix,SN Ia
 ZTF19abdgpuv,SN Ia
-ZTF19abdjwtv,SN Ia
 ZTF19abdkbwy,SN Ia
 ZTF19abdkcib,SN Ia
 ZTF19abdkcts,SN Ia
-ZTF19abdkdir,SN Ia
 ZTF19abdkdoz,SN Ia
 ZTF19abdkecj,SN Ia
 ZTF19abdkfqe,SN Ia
@@ -1661,10 +1792,8 @@ ZTF19abfibel,SN Ia
 ZTF19abfjjlk,SN Ia
 ZTF19abfloxk,SN IIP
 ZTF19abfqhis,SN Ia
-ZTF19abfsxpw,SN Ic-BL
 ZTF19abfvemi,SN Ia
 ZTF19abfvhlx,SN Ia
-ZTF19abfvnns,SLSN-I
 ZTF19abfvovo,SN Ia
 ZTF19abfvpkq,SN Ia
 ZTF19abfwdqv,SN IIP
@@ -1674,13 +1803,14 @@ ZTF19abgbbzy,SN IIb
 ZTF19abgbdcp,SN IIP
 ZTF19abgbkwv,SN Ia
 ZTF19abgcbey,SN Ia
+ZTF19abgcnzi,Cataclysmic
+ZTF19abgczul,Cataclysmic
 ZTF19abgfrbl,SN Ia
 ZTF19abgfuhh,SN IIb
 ZTF19abggnnp,SN Ia
 ZTF19abgiwkt,SN IIP
 ZTF19abgjlef,SN Ia
 ZTF19abglmpf,SN Ia
-ZTF19abgmjtu,SN Ia
 ZTF19abgmkef,SN IIP
 ZTF19abgmxwn,SN Ia
 ZTF19abgnbjr,SN Ib/c
@@ -1694,6 +1824,7 @@ ZTF19abgrchq,SN IIb
 ZTF19abgrcxs,SN Ia
 ZTF19abgrmfu,SN IIP
 ZTF19abgsyrp,SN Ia
+ZTF19abgueit,Cataclysmic
 ZTF19abguqsi,SN IIP
 ZTF19abguzsx,SN Ia
 ZTF19abhbjge,SN Ia
@@ -1705,7 +1836,6 @@ ZTF19abheamc,SN Ia
 ZTF19abhemuy,SN Ia
 ZTF19abhhocz,SN Ia
 ZTF19abhiayh,SN Ia
-ZTF19abhibzk,SN Ia
 ZTF19abhjhes,SN Ia
 ZTF19abhphah,SN Ia
 ZTF19abhpvfq,SN Ia
@@ -1729,11 +1859,11 @@ ZTF19abirbpd,SN Ia
 ZTF19abirmkt,Novae
 ZTF19abiszoe,SN IIn
 ZTF19abitbcj,SN Ia
+ZTF19abitexk,AGN
 ZTF19abitljz,SN Ia
 ZTF19abixauz,SN Ia
 ZTF19abjacdu,SN IIn
 ZTF19abjamgc,SN Ia
-ZTF19abjarhj,SN Ia
 ZTF19abjbtbm,SN IIP
 ZTF19abjgbmo,SN Ia
 ZTF19abjgdhb,SN IIP
@@ -1746,7 +1876,6 @@ ZTF19abjpntj,SN IIP
 ZTF19abjrjdw,SN IIP
 ZTF19abjrkqn,SN Ia
 ZTF19abjsmmv,SN IIP
-ZTF19abjswdz,SN Ia
 ZTF19abkdehm,SN Ia
 ZTF19abkdrir,SN Ia
 ZTF19abkfmjp,SN IIP
@@ -1760,12 +1889,15 @@ ZTF19abkxeft,SN II
 ZTF19ablekwo,SN Ia
 ZTF19ablfaey,SN Ia
 ZTF19ablfdwt,SN IIP
+ZTF19abllcvf,Cataclysmic
 ZTF19ablojrw,SN IIn
 ZTF19ablovot,SN Ia
 ZTF19ablpfhz,SN Ia
 ZTF19ablpnmk,SN Ia
 ZTF19ablpxtf,SN Ia
 ZTF19ablusdf,SN Ia
+ZTF19ablwwox,Cataclysmic
+ZTF19abmmksy,AGN
 ZTF19abmpoxa,SN Ia
 ZTF19abmqasg,SN Ia
 ZTF19abmtpvz,SN IIP
@@ -1773,6 +1905,7 @@ ZTF19abmugyh,SN Ia
 ZTF19abmylxw,SN Ia
 ZTF19abmzord,SN Ia
 ZTF19abnagzk,SN Ia
+ZTF19abndojo,AGN
 ZTF19abnggdt,SN Ia
 ZTF19abnishu,SN Ia
 ZTF19abnkrcd,SN Ia
@@ -1781,28 +1914,33 @@ ZTF19abnmrqt,SN Ia
 ZTF19abnoxud,SN Ia
 ZTF19abocled,SN Ia
 ZTF19abomiel,SN Ia
+ZTF19abonixj,Cataclysmic
 ZTF19abopflp,SN Ia
 ZTF19abopyyu,SN Ia
 ZTF19abormno,SN Ia
 ZTF19abornyn,SN Ia
+ZTF19aboueif,Cataclysmic
 ZTF19abovstj,SN IIP
 ZTF19abovtfk,SN Ia
 ZTF19abowcic,SN Ia
 ZTF19aboxjlj,SN Ia
 ZTF19abozuxh,SN Ia
-ZTF19abpangr,SN Ic-BL
+ZTF19abpaskr,Cataclysmic
 ZTF19abpbbxx,SN Ia
 ZTF19abpbmli,SN Ia
-ZTF19abpbopt,SLSN-I
 ZTF19abpbqor,SN Ia
 ZTF19abpfxfs,SN Ia
 ZTF19abpidqn,SN IIn
 ZTF19abplfxs,SN Ia
 ZTF19abpmetl,SN Ia
+ZTF19abpnpcy,Cataclysmic
 ZTF19abpnrqa,SN Ia
 ZTF19abpnrrf,SN IIP
 ZTF19abpnsck,SN Ia
+ZTF19abppewc,Cataclysmic
+ZTF19abpuyvi,Cataclysmic
 ZTF19abpveqn,SN Ia
+ZTF19abpwygn,Cataclysmic
 ZTF19abpxcaf,SN Ia
 ZTF19abpxiff,SN IIP
 ZTF19abpxttd,SN Ia
@@ -1831,10 +1969,7 @@ ZTF19abqqrgy,SN Ib
 ZTF19abqqvhd,SN Ia
 ZTF19abqrhvt,SN IIP
 ZTF19abqrhvy,SN IIP
-ZTF19abqrrto,SN Ia
 ZTF19abqrxhy,SN IIP
-ZTF19abqshry,SN Ic-BL
-ZTF19abqsojs,SN Ia
 ZTF19abqsvgf,SN Ia
 ZTF19abqviuy,SN Ia
 ZTF19abqwsuf,SN IIP
@@ -1846,7 +1981,6 @@ ZTF19abqyouo,SN IIP
 ZTF19abqyoxh,SN Ia
 ZTF19abqyoxj,SN IIP
 ZTF19abqyoxt,SN IIP
-ZTF19abqysic,SN Ia
 ZTF19abrbmvt,SN IIP
 ZTF19abrcvzz,SN Ia
 ZTF19abrdnty,SN Ia
@@ -1860,7 +1994,6 @@ ZTF19abrvagn,SN Ia
 ZTF19abstsvm,SN II-norm
 ZTF19abszdld,SN Ia
 ZTF19abtnbtt,SN Ia
-ZTF19abtrjqg,Novae
 ZTF19abtslqm,SN IIP
 ZTF19abtsnyy,SN Ic
 ZTF19abttrte,SN I
@@ -1881,9 +2014,10 @@ ZTF19abukakm,SN IIP
 ZTF19abulzhy,SN IIn
 ZTF19abulzlj,SN Ia
 ZTF19abuonnx,SN Ia
-ZTF19abupned,SN Ic-BL
+ZTF19abupyxe,Cataclysmic
 ZTF19aburnqh,SN Ia
 ZTF19abuxhqc,SN Ia
+ZTF19abuzjqa,Cataclysmic
 ZTF19abuzpmr,SN Ia
 ZTF19abvalfd,SN Ia
 ZTF19abvanim,SN Ia
@@ -1899,43 +2033,50 @@ ZTF19abwamby,SN IIP
 ZTF19abwaohs,SN Ia
 ZTF19abwnpus,SN Ia
 ZTF19abwouqp,SN Ia
+ZTF19abwrzqb,Cataclysmic
 ZTF19abwsagv,SN IIP
 ZTF19abwscog,SN Ia
 ZTF19abwsdic,SN Ia
 ZTF19abwsecm,SN Ia
+ZTF19abwsfsl,Cataclysmic
 ZTF19abwswzb,SN Ia
 ZTF19abwsxug,SN Ia
 ZTF19abxdnhr,SN Ia
 ZTF19abxdnzt,SN Ia
-ZTF19abxekxi,SN II
 ZTF19abxfeln,SN Ia
 ZTF19abxfhrq,SN Ia
 ZTF19abxfunp,SN Ia
-ZTF19abxgmzr,SLSN-I
 ZTF19abxigfc,SN Ia
 ZTF19abxihut,SN Ia
 ZTF19abxiqqm,SN Ia
 ZTF19abxiqve,SN Ia
+ZTF19abxivpg,Cataclysmic
 ZTF19abxjimu,SN Ia
 ZTF19abxjrge,SN IIb
 ZTF19abxmvcq,SN Ia
 ZTF19abxnycf,SN IIP
 ZTF19abxqppy,SN IIb
+ZTF19abxrdlu,Cataclysmic
 ZTF19abxtcio,SN IIb
 ZTF19abxtdgh,SN Ia
 ZTF19abxvjzn,SN Ia
+ZTF19abxvksn,Cataclysmic
+ZTF19abxvkvc,Cataclysmic
 ZTF19abxvtmn,SN IIP
 ZTF19abxvtmy,SN Ia
-ZTF19abxvtxk,SN Ia
 ZTF19abycslo,SN Ia
+ZTF19abyfazm,Cataclysmic
 ZTF19abyfbik,SN Ia
 ZTF19abyflzw,SN Ia
 ZTF19abyhxzp,SN Ia
 ZTF19abyigib,SN Ia
+ZTF19abyihtb,AGN
 ZTF19abyikbv,SN Ia
 ZTF19abyjgal,SN Ia
 ZTF19abyjhpz,SN Ia
 ZTF19abyjjxp,SN Ia
+ZTF19abykjhn,Cataclysmic
+ZTF19abylcik,Cataclysmic
 ZTF19abymhad,SN Ia
 ZTF19abymukc,SN IIP
 ZTF19abymvoy,SN Ia
@@ -1947,6 +2088,8 @@ ZTF19abzfmak,SN Ia
 ZTF19abzgdfu,SN IIP
 ZTF19abzhvxk,SN Ia
 ZTF19abzhzet,SN Ia
+ZTF19abzipjc,Cataclysmic
+ZTF19abzkdeo,Cataclysmic
 ZTF19abzkiuv,SN Ia
 ZTF19abzlmwn,SN Ia
 ZTF19abzlsbl,SN Ia
@@ -1955,6 +2098,7 @@ ZTF19abzmnrh,SN Ia
 ZTF19abzmnuk,SN Ia
 ZTF19abzmoov,SN IIP
 ZTF19abzmpku,SN Ia
+ZTF19abzpkss,Cataclysmic
 ZTF19abzplvm,SN Ia
 ZTF19abzprpk,SN Ia
 ZTF19abzpvaj,SN IIn
@@ -1967,46 +2111,45 @@ ZTF19abzsjpn,SN Ia
 ZTF19abzsnqm,Novae
 ZTF19abztknu,SN Ib
 ZTF19abzulhk,SN Ia
-ZTF19abzvvkb,SN Ia
 ZTF19abzvyew,SN Ia
-ZTF19abzwaen,SN Ic-BL
 ZTF19abzwtiu,SN Ia
 ZTF19abzyiba,SN Ia
 ZTF19abzyvfi,SN Ia
+ZTF19abzyxgz,Cataclysmic
 ZTF19abzzgec,SN Ia
 ZTF19abzzhgx,SN Ia
 ZTF19abzzhsa,SN Ia
+ZTF19abzzuin,AM CVn
+ZTF19acaiora,Cataclysmic
 ZTF19acaiylt,SN Ia
 ZTF19acajpre,SN Ia
 ZTF19acanzwg,SN IIP
 ZTF19acaotrk,SN Ia
 ZTF19acapech,SN IIn
 ZTF19acapeun,SN Ia
-ZTF19acaqqix,SN Ia
 ZTF19acaqqxo,SN IIP
 ZTF19acaqyjp,SN Ia
 ZTF19acardcs,SN Ia
 ZTF19acasiwm,SN Ia
+ZTF19acawgrs,Cataclysmic
 ZTF19acaxcwg,SN Ia
 ZTF19acazaug,SN Ia
 ZTF19acbacvu,SN Ia
 ZTF19acbhvgi,SN IIP
 ZTF19acbihyi,SN Ia
 ZTF19acbiwjk,SN Ia
-ZTF19acbjddp,SN Ia
-ZTF19acbjlnt,SN Ia
 ZTF19acbkczc,SN Ia
 ZTF19acbkyma,SN Ia
 ZTF19acblhxc,SN IIP
 ZTF19acblnop,SN Ia
 ZTF19acblzux,SN Ia
+ZTF19acbmilc,Cataclysmic
 ZTF19acbmjrp,SN Ia
 ZTF19acbmqpu,SN Ia
 ZTF19acbmwtc,SN Ia
 ZTF19acbmxky,SN IIP
 ZTF19acbmxxh,SN Ia
 ZTF19acbnhkd,SN Ia
-ZTF19acbonaa,SLSN-I
 ZTF19acbpnii,SN Ia
 ZTF19acbpqvc,SN Ia
 ZTF19acbpwwg,SN Ia
@@ -2028,11 +2171,13 @@ ZTF19acbwhqc,SN Ia
 ZTF19acbwilc,SN IIP
 ZTF19acbwjue,SN Ia
 ZTF19acbwmqd,SN IIP
+ZTF19acbwrsu,Cataclysmic
 ZTF19acbykmk,SN Ia
 ZTF19acbzgog,Novae
 ZTF19accbeju,SN IIP
 ZTF19acccyxx,SN IIP
 ZTF19accczor,SN Ia
+ZTF19accczvs,Cataclysmic
 ZTF19accdehb,SN Ia
 ZTF19acchaza,SN IIP
 ZTF19acchink,SN Ia
@@ -2040,15 +2185,18 @@ ZTF19acchtyp,SN Ia
 ZTF19accjfgv,SN IIb
 ZTF19acckggd,SN Ia
 ZTF19accloxh,SN Ia
+ZTF19acclxtn,Cataclysmic
 ZTF19acclzaw,SN Ia
 ZTF19accmxtw,SN Ia
 ZTF19accobqx,SN Ia
 ZTF19accstol,SN Ia
+ZTF19acctjxg,Cataclysmic
 ZTF19acctlps,SN IIP
 ZTF19acctpgd,SN Ia
 ZTF19acctwpz,SN IIP
 ZTF19accuyyg,SN Ia
 ZTF19acdabep,SN Ib
+ZTF19acdacji,Cataclysmic
 ZTF19acdgwhq,SN Ia
 ZTF19acdihrz,SN Ia
 ZTF19acdisjm,SN Ia
@@ -2063,29 +2211,37 @@ ZTF19acduloz,SN IIP
 ZTF19acduqvr,SN Ia
 ZTF19acdxkek,SN IIP
 ZTF19acdxlns,SN Ia
+ZTF19acdytef,Cataclysmic
 ZTF19acechlg,SN Ia
 ZTF19aceckdq,SN IIP
 ZTF19aceckmm,SN IIP
 ZTF19acecluy,SN IIP
+ZTF19acecvsm,Cataclysmic
 ZTF19aceidtc,SN Ia
+ZTF19aceifef,Cataclysmic
 ZTF19acekbyz,SN Ia
 ZTF19acekkts,SN Ia
 ZTF19acekreh,SN Ia
 ZTF19acelcan,SN Ia
+ZTF19acendsf,Cataclysmic
+ZTF19acenkuz,Cataclysmic
 ZTF19acennqf,SN Ia
 ZTF19acenveq,SN Ia
+ZTF19acenylz,Cataclysmic
 ZTF19aceqlxc,SN IIn
 ZTF19aceqvhl,SN Ic
 ZTF19aceqxtg,SN Ia
 ZTF19aceshib,SN IIP
 ZTF19acetwqh,SN Ia
 ZTF19acetxvq,SN Ia
+ZTF19acevlfc,Cataclysmic
 ZTF19acewuwn,SN IIP
 ZTF19acexijn,SN Ia
 ZTF19acfduxa,SN Ia
 ZTF19acfecsg,SN Ia
 ZTF19acfejbj,SN IIP
 ZTF19acfmwlh,SN Ia
+ZTF19acfrhnq,Cataclysmic
 ZTF19acfrntd,SN Ia
 ZTF19acfsbpa,SN IIP
 ZTF19acfsjcu,SN Ia
@@ -2095,16 +2251,16 @@ ZTF19acftaml,SN Ia
 ZTF19acftfav,SN IIP
 ZTF19acfthre,SN Ia
 ZTF19acftude,SN IIn
-ZTF19acfvqet,SN
+ZTF19acfvzmr,Cataclysmic
 ZTF19acgaxej,SN Ia
 ZTF19acgbkzr,SN IIP
 ZTF19acgbzam,SN Ia
 ZTF19acgcdas,SN Ia
+ZTF19acgcrhb,Cataclysmic
 ZTF19acgcshq,SN Ia
 ZTF19acgcxop,SN Ia
 ZTF19acgdfjt,SN Ia
 ZTF19acgeabh,SN Ia
-ZTF19acgemqj,SN Ia
 ZTF19acgemzm,SN Ia
 ZTF19acgfhfd,Novae
 ZTF19acgfowd,SN Ia
@@ -2113,7 +2269,6 @@ ZTF19acgjnis,SN Ia
 ZTF19acgjohb,SN Ia
 ZTF19acgjojy,SN Ia
 ZTF19acgjosf,SN Ib
-ZTF19acgjpgh,SLSN-I
 ZTF19acgjuua,SN Ia
 ZTF19acgmkrt,SN Ia
 ZTF19acgogcm,SN Ia
@@ -2131,21 +2286,23 @@ ZTF19achagst,SN Ia
 ZTF19achahea,SN Ia-91bg
 ZTF19achajnc,SN Ia
 ZTF19achaspq,SN Ia
+ZTF19achbhfc,Cataclysmic
+ZTF19achcdju,Cataclysmic
 ZTF19achejoc,SN Ia
-ZTF19achjpyc,SN Ia
 ZTF19achjqbk,SN IIP
 ZTF19achqzdy,SN Ia
 ZTF19achtewn,SN Ia
 ZTF19achticg,SN Ia
 ZTF19achtifr,SN IIP
+ZTF19acifjfp,Cataclysmic
 ZTF19acifuyf,SN Ia
-ZTF19acigkma,SN Ia
 ZTF19acignlo,SN IIP
 ZTF19acihfxz,SN Ia
 ZTF19acihgng,SN Ia
 ZTF19acihlft,SN Ia
 ZTF19acitkzs,SN Ia
 ZTF19acitnck,SN Ia
+ZTF19aciuhwi,Cataclysmic
 ZTF19acjdufa,SN Ia
 ZTF19acjdwqv,SN Ia
 ZTF19acjerdh,SN Ia
@@ -2168,7 +2325,6 @@ ZTF19ackjjwf,SN Ib
 ZTF19ackjlrd,SN Ia
 ZTF19ackjnuq,SN Ia
 ZTF19ackjozg,SN I
-ZTF19ackjrru,SLSN-I
 ZTF19ackjsys,SN Ia
 ZTF19ackjvjr,SN Ia
 ZTF19ackjvtl,SN IIP
@@ -2186,6 +2342,7 @@ ZTF19acmbhvv,SN Ia
 ZTF19acmbiad,SN Ia
 ZTF19acmbjvi,SN Ia
 ZTF19acmbkmr,SN Ia
+ZTF19acmdxbp,Cataclysmic
 ZTF19acmelor,SN Ib
 ZTF19acmgyka,SN Ia
 ZTF19acmvrsw,SN Ia
@@ -2202,28 +2359,33 @@ ZTF19acnfsij,Novae
 ZTF19acngsnb,SN Ia
 ZTF19acnjwgm,SN Ia
 ZTF19acnkeji,SN Ia
+ZTF19acnlgks,Cataclysmic
 ZTF19acnqsui,SN Ia
+ZTF19acnvejn,Cataclysmic
 ZTF19acoaoty,SN Ia
 ZTF19acojuzv,SN Ia
 ZTF19acojxzo,SN Ia
 ZTF19acokzjy,SN Ia
-ZTF19acordoi,SN Ia
+ZTF19acopsvd,Cataclysmic
 ZTF19acoxgqw,SN Ia
 ZTF19acoyxuv,SN Ia
 ZTF19acpfnth,SN Ia
 ZTF19acpgaet,SN Ia
 ZTF19acpmdzh,SN Ia
 ZTF19acpmuwu,SN Ia
+ZTF19acqdbad,Cataclysmic
 ZTF19acqehbt,SN Ia
 ZTF19acqmwtg,SN Ia
 ZTF19acqprad,Novae
 ZTF19acqypso,SN Ia
 ZTF19acrbyzj,SN Ia
+ZTF19acrbzdn,Cataclysmic
 ZTF19acrcupt,SN Ia
 ZTF19acrcxri,SN IIP
+ZTF19acrcznb,Cataclysmic
 ZTF19acrdcwh,SN Ia
-ZTF19acrddcz,SN Ia
 ZTF19acrdqej,SN Ia
+ZTF19acrdtah,Cataclysmic
 ZTF19acrenwk,SN Ia
 ZTF19acrichx,SN Ia
 ZTF19acrmmpq,SN Ia
@@ -2235,11 +2397,13 @@ ZTF19acrwzqs,SN Ia
 ZTF19acsbxgw,SN Ia
 ZTF19acsfpmi,SN Ia
 ZTF19acsfvog,SN Ia
+ZTF19acsghpg,Cataclysmic
 ZTF19acshfvz,SN Ia
 ZTF19acszmgx,SN IIP
 ZTF19actaiag,SN Ia
 ZTF19actfpma,SN Ia
 ZTF19actldas,SN Ia
+ZTF19actnqne,Cataclysmic
 ZTF19actnyae,SN IIP
 ZTF19acudiph,SN Ia
 ZTF19acuitcy,SN Ia
@@ -2260,6 +2424,7 @@ ZTF19acwqvvn,SN Ia
 ZTF19acwrqtv,SN Ia
 ZTF19acwrrvg,SN IIP
 ZTF19acwrujg,SN Ia
+ZTF19acwsajh,Cataclysmic
 ZTF19acxhkvc,SN Ia
 ZTF19acxldra,SN Ia
 ZTF19acxmfay,SN IIP
@@ -2295,6 +2460,7 @@ ZTF19acykjcw,SN Ia
 ZTF19acyksfd,SN Ia
 ZTF19acyldun,SN IIn
 ZTF19acylgic,SN Ia
+ZTF19acylgmg,Cataclysmic
 ZTF19acyndpl,SN Ia
 ZTF19acyobbu,SN IIb
 ZTF19acyogrm,SN Ic
@@ -2305,10 +2471,10 @@ ZTF19aczjsdy,SN Ia
 ZTF19aczjytt,SN IIP
 ZTF19aczjzev,SN Ia
 ZTF19aczkjxn,SN IIP
-ZTF19adaivcf,SLSN-I
 ZTF19adajqcq,SN Ia
 ZTF19adajqwl,SN Ia
 ZTF19adakmbh,SN IIP
+ZTF19adakybi,Cataclysmic
 ZTF19adalouc,SN Ia
 ZTF19adannbl,SN IIn
 ZTF19adaxzax,SN IIP
@@ -2317,6 +2483,7 @@ ZTF19adbmewx,SN Ia
 ZTF19adbmwto,SN Ia
 ZTF19adbnfne,SN Ia
 ZTF19adbpulv,SN Ia
+ZTF19adbqznr,Cataclysmic
 ZTF19adbricc,SN Ia
 ZTF19adbryab,SN IIP
 ZTF19adbsfpf,SN Ia
@@ -2324,7 +2491,6 @@ ZTF19adccrca,SN IIP
 ZTF19adcdrng,SN Ia
 ZTF19adcdtkw,SN Ia
 ZTF19adcdzjm,SN Ia
-ZTF19adcfsoc,SLSN-I
 ZTF19adcghvg,SN Ia
 ZTF20aaaboph,SN Ia
 ZTF20aaactgu,SN Ia
@@ -2360,7 +2526,6 @@ ZTF20aacgrql,SN IIP
 ZTF20aacwxut,SN Ia
 ZTF20aadcaop,SN Ia
 ZTF20aadcbux,SN Ia
-ZTF20aadcbvz,SN II
 ZTF20aadccda,SN Ia
 ZTF20aadchdd,SN IIP
 ZTF20aadcitq,SN Ia
@@ -2396,7 +2561,6 @@ ZTF20aafdeza,SN Ia
 ZTF20aafdglk,SN Ia
 ZTF20aaffgwg,SN Ia
 ZTF20aaflaug,SN Ia-91bg
-ZTF20aafmdzj,SN Ic-BL
 ZTF20aafrihv,SN Ia
 ZTF20aafrjqw,SN Ia
 ZTF20aafvzhu,SN Ia
@@ -2410,6 +2574,7 @@ ZTF20aaghpdc,SN Ia
 ZTF20aaglivt,SN Ia
 ZTF20aagmrid,SN Ia
 ZTF20aagnbes,SN IIP
+ZTF20aagqrbx,Cataclysmic
 ZTF20aagvvnr,SN Ia
 ZTF20aagyuvy,SN Ia
 ZTF20aagzchj,SN Ia
@@ -2417,7 +2582,8 @@ ZTF20aagzqsb,SN Ia
 ZTF20aagzzbi,SN Ia
 ZTF20aahapsq,SN Ia
 ZTF20aahbamv,SN IIP
-ZTF20aahbfmf,SLSN-I
+ZTF20aahcrjn,Cataclysmic
+ZTF20aahcslg,Cataclysmic
 ZTF20aahfobk,SN Ia
 ZTF20aahggbm,SN Ia
 ZTF20aahidph,SN Ia
@@ -2425,6 +2591,7 @@ ZTF20aahirfz,SN IIP
 ZTF20aahirqq,SN Ia
 ZTF20aahjymt,SN Ia
 ZTF20aahkgcz,SN Ia
+ZTF20aahklzo,Cataclysmic
 ZTF20aahpwym,SN Ia
 ZTF20aahqabk,SN Ia
 ZTF20aahqbib,SN Ia
@@ -2434,19 +2601,20 @@ ZTF20aahqcup,SN Ia
 ZTF20aahtjat,SN Ia
 ZTF20aahtral,SN Ia
 ZTF20aahzyep,SN Ia
-ZTF20aaiaaoi,SN Ia
 ZTF20aaiahra,SN Ib
 ZTF20aaideho,SN Ia
+ZTF20aaidnku,Cataclysmic
 ZTF20aaidnyk,SN Ia
+ZTF20aaifaqt,Blazar
 ZTF20aaifkyj,SN Ia
 ZTF20aaiftgi,SN Ic
 ZTF20aaifyab,SN Ia
-ZTF20aaifybu,SLSN-I
 ZTF20aaifyrs,SN Ia
 ZTF20aaifyvz,SN Ia
 ZTF20aaifzfk,SN IIP
 ZTF20aaiihky,SN Ia
-ZTF20aaiqiti,SN Ic-BL
+ZTF20aaimqhh,Cataclysmic
+ZTF20aaiomlf,Cataclysmic
 ZTF20aairvsi,SN Ia
 ZTF20aaivego,SN Ia
 ZTF20aaivjce,SN Ia-91bg
@@ -2456,11 +2624,11 @@ ZTF20aajjxwc,SN Ia-91T
 ZTF20aajystl,SN Ia
 ZTF20aakbtyz,SN Ia
 ZTF20aakdppm,Novae
+ZTF20aakficj,Cataclysmic
 ZTF20aakfofq,SN Ia
 ZTF20aakhpmp,SN Ia
 ZTF20aakndsn,SN Ia
 ZTF20aaknzba,SN Ia
-ZTF20aakodiq,SN Ia
 ZTF20aakodyh,SN Ib
 ZTF20aakxwgy,SN Ia
 ZTF20aakzbfh,SN IIP
@@ -2475,7 +2643,6 @@ ZTF20aalmeaj,SN Ia
 ZTF20aalrksw,SN Ia
 ZTF20aalrptc,SN Ia
 ZTF20aalrqbu,SN Ibn
-ZTF20aalxlis,SN Ic-BL
 ZTF20aalyeut,SN Ia
 ZTF20aamamnp,SN IIP
 ZTF20aamaqak,SN Ia
@@ -2486,7 +2653,6 @@ ZTF20aamdyal,SN Ia
 ZTF20aamdyln,SN Ic
 ZTF20aamenwg,SN Ia
 ZTF20aamerev,SN Ia
-ZTF20aamfpcj,SN Ia
 ZTF20aamgdkb,SN Ia
 ZTF20aamhocj,SN Ia
 ZTF20aamifit,SN Ia
@@ -2530,6 +2696,8 @@ ZTF20aanvpzo,SN Ia
 ZTF20aanvqbi,SN IIP
 ZTF20aanvqhk,SN Ia
 ZTF20aanvsds,SN Ia
+ZTF20aanwwhy,Cataclysmic
+ZTF20aanxcpf,Seyfert
 ZTF20aanyxvu,SN Ia
 ZTF20aaodkvl,SN Ia
 ZTF20aaoffej,SN IIP
@@ -2543,7 +2711,7 @@ ZTF20aaophpu,SN IIP
 ZTF20aaormnl,SN Ia
 ZTF20aaosuzy,SN Ia
 ZTF20aapadwx,SN Ia
-ZTF20aapcbmc,SN Ic-BL
+ZTF20aapcjjo,Cataclysmic
 ZTF20aapcmur,SN Ia
 ZTF20aapdgaw,SN Ia
 ZTF20aapjiwl,SN IIP
@@ -2563,7 +2731,6 @@ ZTF20aarenrz,SN II
 ZTF20aarkdoj,SN Ia
 ZTF20aarucek,SN Ia
 ZTF20aascttq,SN Ia
-ZTF20aasctts,SN Ia
 ZTF20aascwvz,SN Ia
 ZTF20aasfaxj,SN Ia
 ZTF20aasfhia,SN IIP
@@ -2583,9 +2750,9 @@ ZTF20aatpoeh,SN Ia
 ZTF20aatpqps,SN Ia
 ZTF20aatpwaf,SN Ia
 ZTF20aatpxkq,SN Ia
-ZTF20aatqene,SN II
 ZTF20aatqesi,SN IIP
 ZTF20aatqief,SN Ia
+ZTF20aatsjyu,Cataclysmic
 ZTF20aattoch,SN IIP
 ZTF20aattotq,SN Ia
 ZTF20aattqbi,SN Ia
@@ -2594,11 +2761,9 @@ ZTF20aattqle,SN IIP
 ZTF20aattqnm,SN Ia
 ZTF20aattqye,SN Ia
 ZTF20aattriw,SN Ia
-ZTF20aattyuz,SLSN-I
 ZTF20aattztb,SN IIn
 ZTF20aatulug,SN Ia
 ZTF20aatuqps,SN Ia
-ZTF20aatvqbu,SN
 ZTF20aatvupb,SN IIP
 ZTF20aatvzmm,SN Ia
 ZTF20aatxnxq,SN Ia
@@ -2623,7 +2788,6 @@ ZTF20aauqlwv,SN IIP
 ZTF20aauqoim,SN Ia
 ZTF20aauqrpe,SN Ia
 ZTF20aauqtcp,SN Ia
-ZTF20aaurexl,SN Ic-BL
 ZTF20aaurfcm,SN Ia
 ZTF20aaurfhs,SN IIP
 ZTF20aaurfnl,SN Ic
@@ -2648,20 +2812,21 @@ ZTF20aauvjws,SN IIP
 ZTF20aauvmix,SN Ia
 ZTF20aauwjla,SN Ia
 ZTF20aauwjmw,SN Ia
+ZTF20aauwysn,Cataclysmic
 ZTF20aauxgjf,SN Ia
 ZTF20aauzoca,SN Ia
-ZTF20aavcvrm,SN Ic-BL
 ZTF20aavdcxo,SN IIP
 ZTF20aavdgib,SN Ia
+ZTF20aavdoqi,AGN
 ZTF20aavgcnu,SN Ic
 ZTF20aavhire,SN Ia
 ZTF20aavhixe,SN IIn
 ZTF20aavhqvo,SN Ia
 ZTF20aavnnat,SN Ia
+ZTF20aavnnhs,Cataclysmic
 ZTF20aavnnkm,SN Ia
 ZTF20aavnnqo,SN Ia
 ZTF20aavnnzx,SN Ia-pec
-ZTF20aavogex,SN II
 ZTF20aavpnqt,SN Ia
 ZTF20aavptjf,SN IIP
 ZTF20aavpyxo,SN IIP
@@ -2671,11 +2836,14 @@ ZTF20aavrloz,SN Ia
 ZTF20aavrukn,SN Ia
 ZTF20aavrzha,SN Ia
 ZTF20aavtdxj,SN Ia
+ZTF20aavtfxl,Cataclysmic
 ZTF20aavvjie,SN Ia
 ZTF20aavvzlw,SN Ia
 ZTF20aavzffg,SN Ib
 ZTF20aavzlxm,SN Ia
 ZTF20aawadcp,SN Ia
+ZTF20aawbodq,Cataclysmic
+ZTF20aawbxmt,AGN
 ZTF20aawcjrx,SN Ia
 ZTF20aawdjlp,SN Ia
 ZTF20aawgrcu,SN IIP
@@ -2687,7 +2855,6 @@ ZTF20aawoojh,SN Ia
 ZTF20aawqywr,SN Ia
 ZTF20aawrmcm,SN II
 ZTF20aawxpru,SN IIP
-ZTF20aawxsit,SN Ia-02cx
 ZTF20aaxablt,SN Ia
 ZTF20aaxagnm,SN Ia
 ZTF20aaxahpk,SN Ia
@@ -2702,6 +2869,7 @@ ZTF20aaxunbm,SN IIP
 ZTF20aaxuwuh,SN Ia
 ZTF20aaxxcms,SN Ia
 ZTF20aaxxepr,SN Ia
+ZTF20aaxxhhi,Cataclysmic
 ZTF20aaxxhib,SN Ia
 ZTF20aaybvye,SN Ia
 ZTF20aaydgsu,SN Ia
@@ -2710,9 +2878,9 @@ ZTF20aayhacx,SN Ia-18byg
 ZTF20aayjxdv,SN Ia
 ZTF20aayjyhp,SN Ia
 ZTF20aaymbjk,SN Ia
-ZTF20aayprqz,SLSN-I
 ZTF20aayrobw,SN IIP
 ZTF20aayubpi,SN Ia
+ZTF20aayukfo,Cataclysmic
 ZTF20aayvmyh,SN IIn
 ZTF20aayvqhl,SN Ia
 ZTF20aayvubx,SN Ia
@@ -2730,7 +2898,6 @@ ZTF20aazgxgk,SN Ia
 ZTF20aazhtvi,SN Ia
 ZTF20aazhzna,SN Ia
 ZTF20aazjwgh,SN Ia
-ZTF20aazkjfv,SN Ic-BL
 ZTF20aazlvht,SN Ia
 ZTF20aazooyu,SN Ia
 ZTF20aazoqmh,SN Ia
@@ -2744,9 +2911,11 @@ ZTF20aazrxef,SN IIP
 ZTF20aazstdx,SN Ia
 ZTF20aazswwk,SN IIP
 ZTF20aazsyvu,SN Ia
+ZTF20aazvump,Cataclysmic
 ZTF20aazwuin,SN Ia
 ZTF20aazxvox,SN Ia
 ZTF20aazymxi,SN Ia
+ZTF20abafjtw,Cataclysmic
 ZTF20abafzxx,SN Ia
 ZTF20abahhml,SN Ia
 ZTF20abahpah,SN Ia
@@ -2767,21 +2936,23 @@ ZTF20abavxpk,SN Ia
 ZTF20abawgdl,SN Ia
 ZTF20abawtpy,SN Ia
 ZTF20abazekd,SN Ia
+ZTF20abazeye,Cataclysmic
 ZTF20abazgfi,SN Ia
 ZTF20abbblms,SN Ia
 ZTF20abbbumr,SN Ia
 ZTF20abbeeyt,SN Ia
+ZTF20abbeyob,Cataclysmic
 ZTF20abbhrrt,SN Ib
 ZTF20abbhyxu,SN Ia
 ZTF20abbihor,SN Ia
 ZTF20abbjwgc,SN Ia
 ZTF20abbozif,SN Ia
 ZTF20abbpkpa,SN IIP
-ZTF20abbplei,SN Ic-BL
 ZTF20abbpory,SN Ia
 ZTF20abbqfoi,SN IIP
 ZTF20abbrptu,SN Ia
-ZTF20abbumno,SN II
+ZTF20abbvnpr,Cataclysmic
+ZTF20abbvqww,Cataclysmic
 ZTF20abbzmue,SN Ia
 ZTF20abccixp,SN IIP
 ZTF20abcgjvq,SN Ia
@@ -2791,7 +2962,6 @@ ZTF20abchhuw,SN Ia
 ZTF20abcsbux,SN Ia
 ZTF20abcwuwg,SN Ia
 ZTF20abcxnbb,SN Ia
-ZTF20abcxnfl,SN I
 ZTF20abcxnkh,SN Ia
 ZTF20abdajyr,SN Ia
 ZTF20abdkdga,SN IIP
@@ -2800,6 +2970,7 @@ ZTF20abdsunu,SN Ia
 ZTF20abdtiti,SN Ia
 ZTF20abdxouw,SN Ia
 ZTF20abdxuew,SN Ia
+ZTF20abdxzlz,Cataclysmic
 ZTF20abdzrxo,SN Ia
 ZTF20abedygm,SN Ia
 ZTF20abedyov,SN Ia
@@ -2820,7 +2991,7 @@ ZTF20abegirf,SN IIP
 ZTF20abegiry,SN Ia
 ZTF20abeglzu,SN Ia-pec
 ZTF20abegoix,SN Ia
-ZTF20abegopd,SN Ia-91bg
+ZTF20abehusj,Cataclysmic
 ZTF20abehvas,SN Ia
 ZTF20abeimho,SN Ia
 ZTF20abejvpr,SN Ia
@@ -2834,9 +3005,11 @@ ZTF20abeolig,SN Ia
 ZTF20abeolsw,SN Ia
 ZTF20abepklv,SN IIP
 ZTF20abeqsrm,SN Ia
+ZTF20abexfvz,Cataclysmic
 ZTF20abexyxk,SN Ia
 ZTF20abeyqmx,SN Ia
 ZTF20abeyvwv,SN Ia
+ZTF20abezylf,Cataclysmic
 ZTF20abfadah,SN Ib
 ZTF20abfcrzj,SN IIb
 ZTF20abfcshg,SN Ia
@@ -2859,7 +3032,6 @@ ZTF20abgbfyk,SN Ia
 ZTF20abgbiet,SN Ia
 ZTF20abgbuly,SN IIb
 ZTF20abgbvgl,SN Ia
-ZTF20abgbvrf,SN
 ZTF20abgbwmt,SN Ia
 ZTF20abgbxfm,SN Ia
 ZTF20abgbxvb,SN Ib
@@ -2867,6 +3039,7 @@ ZTF20abgbxzn,SN Ia
 ZTF20abgdspk,SN Ia
 ZTF20abgdtmv,SN Ia
 ZTF20abgevcw,SN Ia
+ZTF20abgfegv,Cataclysmic
 ZTF20abgfekk,SN Ia
 ZTF20abgfljj,SN Ia
 ZTF20abgfvav,SN Ia
@@ -2874,19 +3047,20 @@ ZTF20abgijph,SN Ia
 ZTF20abglyot,SN Ia
 ZTF20abgoocl,SN IIn
 ZTF20abgpksj,SN Ia
+ZTF20abgrory,Cataclysmic
 ZTF20abgtran,SN Ia
 ZTF20abgtvhl,SN IIP
 ZTF20abgwffm,SN Ia
 ZTF20abgwgqj,SN Ia
+ZTF20abgxuqt,Cataclysmic
+ZTF20abgxwyt,Cataclysmic
 ZTF20abgzvff,SN Ia
+ZTF20abhfrxt,Cataclysmic
 ZTF20abhjghg,SN Ia
-ZTF20abhmawq,SN
 ZTF20abhmnom,SN Ia
 ZTF20abhrmxh,SN Ia
 ZTF20abhvnzc,SN Ia-91bg
 ZTF20abhzgly,SN Ia
-ZTF20abirxmf,SN Ia
-ZTF20abiscvb,SN I
 ZTF20abisvtr,SN Ia
 ZTF20abisysx,AGN
 ZTF20abixkhh,SN Ia
@@ -2897,22 +3071,25 @@ ZTF20abjbiqf,SN Ia
 ZTF20abjcuep,SN Ia
 ZTF20abjfufv,SN Ia
 ZTF20abjgfac,SN Ia
+ZTF20abjirmc,Cataclysmic
 ZTF20abjkvyt,SN Ia
 ZTF20abjkxwa,SN Ia
 ZTF20abjlaim,SN Ia
+ZTF20abjnqcj,Cataclysmic
 ZTF20abjonjs,SN IIP
 ZTF20abjpvce,SN Ib
 ZTF20abjrror,SN Ia
+ZTF20abjsyqu,Cataclysmic
 ZTF20abjubmm,SN Ia
 ZTF20abjuxoy,SN IIP
 ZTF20abjwuuv,SN Ia
-ZTF20abjwvae,Tidal Disruption Event
 ZTF20abjwvdh,SN Ia
 ZTF20abjxrhg,SN Ia
 ZTF20abjxwga,SN Ia
 ZTF20abjyorg,SN IIP
 ZTF20abjyoty,SN IIP
 ZTF20abkcril,SN Ia
+ZTF20abkcrzm,Cataclysmic
 ZTF20abkdxng,SN Ia
 ZTF20abkfhzy,SN Ia
 ZTF20abkgypx,SN Ia
@@ -2928,22 +3105,22 @@ ZTF20abkzhpk,SN Ia
 ZTF20ablagfg,SN Ia
 ZTF20ableiem,SN Ia
 ZTF20abliiex,SN IIP
+ZTF20ablimei,Cataclysmic
 ZTF20ablklei,SN IIP
 ZTF20ablkswc,SN Ia
 ZTF20ablnqzc,SN IIP
 ZTF20ablqacl,SN IIP
 ZTF20ablvukx,SN Ia
 ZTF20ablxtlp,SN Ia
+ZTF20ablyczu,Novae
 ZTF20abmapla,SN Ia
 ZTF20abmarcv,SN Ia
 ZTF20abmbxrq,SN Ia
 ZTF20abmbycd,SN Ia
 ZTF20abmcwtd,SN Ia
-ZTF20abmcxaf,SN IIP
 ZTF20abmdacd,SN Ib/c
 ZTF20abmectx,SN Ia
 ZTF20abmihnc,SN IIP
-ZTF20abmlxrx,SN Ia-CSM
 ZTF20abmmkyv,SN Ia
 ZTF20abmoakx,SN IIP
 ZTF20abmsppe,SN Ia
@@ -2962,12 +3139,13 @@ ZTF20abnlsww,SN Ia
 ZTF20abnnfpv,SN IIP
 ZTF20abnnftk,SN Ia
 ZTF20abnofwd,SN Ia
-ZTF20abnorit,Tidal Disruption Event
+ZTF20abnowvm,Cataclysmic
 ZTF20abnrdse,SN Ia
 ZTF20abnvdem,SN Ia
-ZTF20abobpcb,SLSN-I
 ZTF20abodgpt,SN Ia
+ZTF20abojvde,Cataclysmic
 ZTF20abonvte,SN IIn
+ZTF20abopngr,Cataclysmic
 ZTF20aborzxc,SN Ic
 ZTF20abowpvf,SN Ia
 ZTF20aboytzr,SN Ia-03fg
@@ -2976,6 +3154,7 @@ ZTF20abozqdj,SN Ic
 ZTF20abpeyat,SN Ia
 ZTF20abpglei,SN Ia
 ZTF20abpmqnr,SN IIn
+ZTF20abpqbgi,Cataclysmic
 ZTF20abpqdgh,SN Ia
 ZTF20abpqenl,SN Ia
 ZTF20abpsbyg,SN Ia
@@ -3002,10 +3181,11 @@ ZTF20abqetet,SN Ia
 ZTF20abqferm,SN IIP
 ZTF20abqfgee,SN Ia
 ZTF20abqgbum,SN IIn
+ZTF20abqgsah,Cataclysmic
 ZTF20abqgzhh,SN Ia
 ZTF20abqhnqq,SN Ia
 ZTF20abqhsxb,Novae
-ZTF20abqkbfx,SN Ia-CSM
+ZTF20abqkdcs,Cataclysmic
 ZTF20abqkmlp,SN Ia
 ZTF20abqlmwn,SN IIP
 ZTF20abqmmhn,SN Ia
@@ -3017,19 +3197,14 @@ ZTF20abqosnh,SN Ia
 ZTF20abqqwui,SN Ia
 ZTF20abrcnbr,SN Ib/c
 ZTF20abrdvpj,SN Ia
-ZTF20abrffom,SN Ia-02cx
 ZTF20abrgyhd,SN Ia
-ZTF20abrgzfn,SLSN-II
 ZTF20abrhlfb,SN Ia
-ZTF20abrmmah,SN Ic-BL
 ZTF20abrnavu,SN Ia
 ZTF20abrnklh,SN Ia
 ZTF20abrnvnn,SN IIP
 ZTF20abrnvwf,SN Ia
 ZTF20absfrbq,SN Ia
-ZTF20absgwch,SN II
 ZTF20absvwdh,SN Ia
-ZTF20abswdbg,SN Ic-BL
 ZTF20abswgbn,SN Ia
 ZTF20abszyjg,SN Ia
 ZTF20abszzlp,SN Ia
@@ -3039,6 +3214,7 @@ ZTF20abtfnpl,SN Ia
 ZTF20abthxfr,SN Ia
 ZTF20abtjjhb,SN IIn
 ZTF20abtkjfw,SN Ic
+ZTF20abtmfpq,Cataclysmic
 ZTF20abtnpwt,SN Ia
 ZTF20abtsecq,SN Ia
 ZTF20abucjsa,SN Ia
@@ -3053,7 +3229,6 @@ ZTF20abusrwm,SN Ic
 ZTF20abuusst,SN Ia
 ZTF20abvaida,SN Ia
 ZTF20abvowvw,SN Ia
-ZTF20abvqibv,SN Ia
 ZTF20abvquuo,SN Ib
 ZTF20abvtozi,SN Ia
 ZTF20abvtybi,SN IIP
@@ -3070,7 +3245,6 @@ ZTF20abwkqxd,SN Ia
 ZTF20abwktfx,SN Ia
 ZTF20abwrcmq,SN Ia
 ZTF20abwtifz,Tidal Disruption Event
-ZTF20abwvswy,SN I
 ZTF20abwxywy,SN Ic
 ZTF20abwynwj,SN Ia
 ZTF20abwyyjc,SN Ia
@@ -3094,14 +3268,13 @@ ZTF20abxyadt,SN Ia
 ZTF20abxyajd,SN Ia
 ZTF20abxyaje,SN IIP
 ZTF20abxyaqc,SN Ia
-ZTF20abxyauq,SN IIP
-ZTF20abxyddt,SN I
 ZTF20abxyfye,SN Ia
 ZTF20abxyggc,SN Ia
 ZTF20abxyifx,SN IIP
 ZTF20abxyiqi,SN IIP
 ZTF20abxyjfg,SN Ia
 ZTF20abybeex,SN IIP
+ZTF20abychpb,Cataclysmic
 ZTF20abydkrl,SN Ia
 ZTF20abyfgri,SN Ia
 ZTF20abygigy,SN Ia
@@ -3137,6 +3310,7 @@ ZTF20abyznqs,SN Ib
 ZTF20abyzomt,SN IIP
 ZTF20abyzprl,SN IIP
 ZTF20abzaknn,SN Ia
+ZTF20abzcokk,Cataclysmic
 ZTF20abzcokv,SN Ia
 ZTF20abzcsbt,SN Ia
 ZTF20abzetdf,SN Ia
@@ -3150,17 +3324,14 @@ ZTF20abzjpsv,SN Ia
 ZTF20abzjvse,SN Ia
 ZTF20abzoaas,SN IIP
 ZTF20abzpxxu,SN Ia
-ZTF20abztkiv,SN IIP
 ZTF20abzvxyk,SN Ia
 ZTF20acaczen,SN Ia
 ZTF20acauthg,SN Ia
 ZTF20acbakkg,SN Ia-91bg
-ZTF20acbcfaa,SN IIn
 ZTF20acbeanu,SN Ia
 ZTF20acbekkx,SN IIn
 ZTF20acberfr,SN Ia
 ZTF20acbnwyb,SN Ia
-ZTF20acbttnt,SN Ia
 ZTF20accagnf,SN Ia
 ZTF20accdijx,SN IIP
 ZTF20acchxpm,SN Ia
@@ -3178,7 +3349,6 @@ ZTF20acdalpf,SN Ia
 ZTF20acdqjeq,SN Ia
 ZTF20acduffd,SN Ia-91bg
 ZTF20acebgre,SN Ia
-ZTF20acebweq,SN Ia
 ZTF20acectxy,SN II
 ZTF20aceeeuz,Novae
 ZTF20acehyxd,SN Ia
@@ -3188,8 +3358,8 @@ ZTF20acezpem,SN Ia
 ZTF20acfaonm,SN Ia
 ZTF20acfasbq,SN Ia
 ZTF20acfkkyf,SN Ia
+ZTF20acfnnxv,Cataclysmic
 ZTF20acfnuee,SN Ia
-ZTF20acfqeve,SN IIn
 ZTF20acfqngt,SN Ic
 ZTF20acfvqdz,SN IIP
 ZTF20acfvqjl,SN Ia
@@ -3206,7 +3376,6 @@ ZTF20acghodf,SN IIn
 ZTF20acgided,SN IIP
 ZTF20acgiglu,SN IIb
 ZTF20acgkbjz,SN Ia
-ZTF20acgkuay,SN Ia
 ZTF20acgmqgv,SN Ia
 ZTF20acgmvsn,SN Ia
 ZTF20acgnbvv,SN Ia
@@ -3245,7 +3414,6 @@ ZTF20achksbc,SN Ia
 ZTF20achmgee,SN Ia
 ZTF20achmmex,SN II
 ZTF20achncqp,SN Ia
-ZTF20achncvv,SLSN-II
 ZTF20achncxi,SN Ia
 ZTF20achnfaa,SN IIP
 ZTF20achoqvb,SN Ia
@@ -3258,7 +3426,6 @@ ZTF20achtzug,SN Ia
 ZTF20achusux,SN IIP
 ZTF20achvdtx,SN IIP
 ZTF20achvere,SN Ia
-ZTF20achvlbs,SN Ic-BL
 ZTF20achvmjr,SN Ia
 ZTF20achvmoj,SN Ia
 ZTF20achwpvs,SN Ia
@@ -3270,6 +3437,9 @@ ZTF20aciigcw,SN Ia-91bg
 ZTF20acikuon,SN Ia
 ZTF20acikzzn,SN Ia
 ZTF20acimjmc,SN Ia-91bg
+ZTF20acioekr,Cataclysmic
+ZTF20acioiem,Cataclysmic
+ZTF20aciouqw,Cataclysmic
 ZTF20aciowcm,SN Ia
 ZTF20acisbek,SN Ia
 ZTF20acitbmh,SN Ia
@@ -3284,7 +3454,6 @@ ZTF20aciwrpn,SN IIn
 ZTF20acixidp,SN Ia
 ZTF20acizliy,SN Ia
 ZTF20acjbhhp,SN II
-ZTF20acjeflr,SLSN-I
 ZTF20acjetyf,SN Ia
 ZTF20acjfimy,SN Ia
 ZTF20acjhhqx,SN Ia
@@ -3307,13 +3476,13 @@ ZTF20aclkuqh,SN Ia
 ZTF20aclkvjy,SN IIn
 ZTF20aclnsts,SN Ia
 ZTF20aclvtnk,SN II
-ZTF20aclvvws,SN I
 ZTF20aclwclm,SN Ia
 ZTF20aclxbwk,SN Ia
 ZTF20acmafkf,SN Ia
 ZTF20acmddof,SN Ia
-ZTF20acmhmzl,SN II
+ZTF20acmhpvd,Cataclysmic
 ZTF20acmxpmg,SN Ia
+ZTF20acmyxdb,Cataclysmic
 ZTF20acmzoxo,SN Ia
 ZTF20acnigox,SN Ia
 ZTF20acnrphs,SN Ia
@@ -3324,7 +3493,6 @@ ZTF20acntqoh,SN Ia
 ZTF20acnviyk,SN Ia
 ZTF20acnvlgg,SN Ia
 ZTF20acnvniw,SN IIn
-ZTF20acnvnss,SN Ia
 ZTF20acnvtxy,SN II
 ZTF20acnvzga,SN Ia
 ZTF20acnwjwp,SN Ia
@@ -3334,7 +3502,6 @@ ZTF20acnzkxb,SN II
 ZTF20acnznol,SN Ia-91bg
 ZTF20acoaqpm,SN Ia
 ZTF20acobvxk,SN Ia
-ZTF20acobxlz,SN Ia
 ZTF20acocohy,SN II
 ZTF20acogesf,SN Ia
 ZTF20acogywb,SN Ia
@@ -3368,9 +3535,7 @@ ZTF20acpgokr,SN II
 ZTF20acpgzif,SN Ia
 ZTF20acphccy,SN Ia
 ZTF20acphcdv,SN Ia
-ZTF20acphvjk,SN Ia
 ZTF20acpjcoe,SN Ia
-ZTF20acpjqxp,SN Ib-p
 ZTF20acpkjsn,SN Ia
 ZTF20acpkled,SN Ia
 ZTF20acpklpq,SN Ia
@@ -3394,11 +3559,11 @@ ZTF20acpvxmk,SN Ia
 ZTF20acqelhh,SN Ia
 ZTF20acqexmr,SN II
 ZTF20acqgklx,SN IIn
-ZTF20acqikeh,SN Ia-CSM
 ZTF20acqlfwb,SN Ia
 ZTF20acqnfzn,SN II
 ZTF20acqntkr,SN Ia
 ZTF20acqqdkl,SN II
+ZTF20acqucpz,Cataclysmic
 ZTF20acquetr,SN Ia
 ZTF20acqvgav,SN Ia
 ZTF20acqvwzb,SN II
@@ -3414,7 +3579,6 @@ ZTF20acrseou,SN Ia
 ZTF20acrudzk,SN Ia
 ZTF20acrufey,SN Ia
 ZTF20acrxrfv,SN Ia
-ZTF20acrzuko,SN I
 ZTF20acsesce,SN Ia
 ZTF20acsfdnn,SN Ia
 ZTF20actawpa,SN II
@@ -3445,6 +3609,7 @@ ZTF20acuaqlf,SN II
 ZTF20acucbek,SN Ia
 ZTF20acudkao,SN Ia
 ZTF20acueziy,SN Ic-norm
+ZTF20acufmah,Novae
 ZTF20acufmte,SN II
 ZTF20acugxbm,SN Ia
 ZTF20acuhgar,SN II
@@ -3469,7 +3634,6 @@ ZTF20acuzjqk,SN Ia
 ZTF20acuzlib,SN Ia
 ZTF20acvagdq,SN Ia
 ZTF20acvbcrd,SN Ia
-ZTF20acvbrbv,SN Ia-91bg
 ZTF20acvchhw,SN Ia
 ZTF20acvdqtg,SN Ia
 ZTF20acveadu,SN II
@@ -3503,6 +3667,7 @@ ZTF20acwqqjs,SN IIb
 ZTF20acwujgz,SN Ia
 ZTF20acwxbyr,SN Ia
 ZTF20acwyihb,SN Ia
+ZTF20acwyoqx,AGN
 ZTF20acwytht,SN IIP
 ZTF20acwytmh,SN Ia
 ZTF20acwytxn,Tidal Disruption Event
@@ -3517,7 +3682,6 @@ ZTF20acxncha,SN Ia
 ZTF20acxooam,SN Ia
 ZTF20acxpurh,SN Ia
 ZTF20acxpvhu,SN Ia
-ZTF20acxqnhn,SN Ia-pec
 ZTF20acxsxac,SN Ia
 ZTF20acxtgek,SN II
 ZTF20acxvvnf,SN Ia
@@ -3540,7 +3704,6 @@ ZTF20acyybwo,SN Ia
 ZTF20acyzsol,SN Ia
 ZTF20aczacag,SN Ia
 ZTF20aczfwjj,SN Ia
-ZTF20aczgoml,SN Ia-91T
 ZTF20aczgvfe,SN II
 ZTF20aczhajq,SN Ia
 ZTF20aczsjzc,SN Ia
@@ -3563,7 +3726,6 @@ ZTF21aaabuoj,SN Ia
 ZTF21aaabviz,SN Ia
 ZTF21aaabvkj,SN Ia
 ZTF21aaabwfl,SN Ia
-ZTF21aaabwzx,SN Ia
 ZTF21aaabxbd,SN IIn
 ZTF21aaabxln,SN Ia
 ZTF21aaabzap,SN Ia
@@ -3575,12 +3737,10 @@ ZTF21aaagypx,SN II
 ZTF21aaagzee,SN Ia
 ZTF21aaahtln,SN Ia
 ZTF21aaahuox,SN Ia
-ZTF21aaahyjj,SN Ia-91T
 ZTF21aaaigfg,SN Ia
 ZTF21aaaldio,SN Ia
 ZTF21aaampui,SN Ia
 ZTF21aaaokyp,Tidal Disruption Event
-ZTF21aaaouyd,SN I
 ZTF21aaaoviv,SN Ia
 ZTF21aaarlbp,Novae
 ZTF21aaasxel,SN Ia
@@ -3607,7 +3767,6 @@ ZTF21aacwleg,SN II
 ZTF21aacxung,SN Ia
 ZTF21aaczpca,SN Ia
 ZTF21aadalct,SN Ia
-ZTF21aadatfg,SN Ic-BL
 ZTF21aadebss,SN Ia
 ZTF21aadkgpm,SN Ia
 ZTF21aadkhte,SN II
@@ -3615,6 +3774,7 @@ ZTF21aadkuko,SN Ia
 ZTF21aadoizf,SN II
 ZTF21aadtkki,SN Ia
 ZTF21aadzuil,SN Ia
+ZTF21aaeeuqz,Cataclysmic
 ZTF21aaejeyu,SN Ia
 ZTF21aaekeqv,SN II
 ZTF21aaekkbv,SN Ia
@@ -3628,7 +3788,6 @@ ZTF21aafkpnp,SN Ia
 ZTF21aafkwtk,SN II-norm
 ZTF21aaflcbk,SN Ia
 ZTF21aafnabs,SN Ia
-ZTF21aafnunh,SN Ic-BL
 ZTF21aagkhwf,SN Ia
 ZTF21aagkvqa,SN Ia
 ZTF21aaglgcb,SN Ia
@@ -3645,7 +3804,6 @@ ZTF21aagojfe,SN Ia
 ZTF21aagolae,SN Ia
 ZTF21aagoliy,SN Ia
 ZTF21aagolqa,SN Ia
-ZTF21aagpymw,SN Ic-SLSN
 ZTF21aagqbvp,SN II
 ZTF21aagqcfs,SN Ia
 ZTF21aagrjag,SN Ia
@@ -3656,12 +3814,9 @@ ZTF21aagteny,SN Ia
 ZTF21aagtexi,SN Ia
 ZTF21aagtoic,SN Ia
 ZTF21aagtpyw,SN Ia
-ZTF21aagtqgz,SN Ia-91T
 ZTF21aagtqna,SN II
 ZTF21aagtqpn,SN II
-ZTF21aagtqug,SN Ia-91bg
 ZTF21aagtuzm,SN Ia
-ZTF21aagxmfv,SN Ia-91T
 ZTF21aagycmk,SN Ia
 ZTF21aagyewh,SN Ia
 ZTF21aagygzv,SN Ia
@@ -3671,7 +3826,6 @@ ZTF21aagyvtq,SN Ia
 ZTF21aahccrk,SN Ia
 ZTF21aahdpqu,SN Ia
 ZTF21aahdqrg,SN Ic
-ZTF21aahfbkh,SN Ia-91bg
 ZTF21aahfjlo,SN Ia
 ZTF21aahfjrr,SLSN-II
 ZTF21aahgspm,SN II
@@ -3693,12 +3847,10 @@ ZTF21aajaljq,SN Ia
 ZTF21aajdbhw,SN Ia
 ZTF21aajfpwk,SN Ia
 ZTF21aajmkrd,SN Ia
-ZTF21aajtsba,SN Ia-91T
 ZTF21aajtszm,SN Ia
 ZTF21aajvtsq,SN Ia
 ZTF21aakbgpf,SN Ia
 ZTF21aakijia,SN Ia
-ZTF21aakjkec,SN Ic-BL
 ZTF21aaknzxo,SN Ia
 ZTF21aakupth,SN IIn
 ZTF21aakvhtz,SN Ia
@@ -3707,11 +3859,9 @@ ZTF21aakymbv,SN Ic
 ZTF21aakyqkb,SN Ia
 ZTF21aakzmaq,SN Ia
 ZTF21aalekwo,SN Ia
-ZTF21aalezap,SN Ia-pec
 ZTF21aalgszc,SN Ia
 ZTF21aalhrtk,SN Ia-91bg
 ZTF21aalimya,SN IIb
-ZTF21aalkhot,SN Ic-SLSN
 ZTF21aalkjbl,SN Ia-91bg
 ZTF21aalkknw,SN Ia
 ZTF21aalkltz,SN Ibn
@@ -3732,16 +3882,14 @@ ZTF21aamobbh,SN Ibn
 ZTF21aamqgid,SN II
 ZTF21aamsiqk,SN Ia
 ZTF21aamttit,SN Ia
-ZTF21aamucom,SN Ia-91T
 ZTF21aamwlzd,SN Ia
 ZTF21aamwqim,SN II
 ZTF21aamwyql,SN Ia
 ZTF21aamwzfi,SN Ia
 ZTF21aamzuxi,SN II
-ZTF21aanefkx,SLSN-II
+ZTF21aanehlz,U Gem
 ZTF21aanfuuk,SN II
 ZTF21aannoix,SN Ic
-ZTF21aanortq,SN Ia-pec
 ZTF21aanplys,SN II
 ZTF21aanrhag,SN IIb
 ZTF21aanswls,SN Ia
@@ -3761,7 +3909,6 @@ ZTF21aaoexgy,SN Ia
 ZTF21aaoexjt,SN Ia
 ZTF21aaogglh,SN Ia
 ZTF21aaoiaar,SN IIb
-ZTF21aaokvio,SN IIn
 ZTF21aaoppzc,SN Ia
 ZTF21aaoqbbw,SN IIn
 ZTF21aaoqvzv,SN Ia
@@ -3771,7 +3918,6 @@ ZTF21aapdmnr,SN Ia
 ZTF21aapduck,SN Ia
 ZTF21aapdumx,SN Ibn
 ZTF21aapdxxs,SN II
-ZTF21aapecxb,SN Ic-BL
 ZTF21aapegtd,SN II
 ZTF21aapehpx,SN Ia
 ZTF21aapejbx,SN Ia
@@ -3781,7 +3927,6 @@ ZTF21aapfime,SN Ia
 ZTF21aapfpod,SN Ia
 ZTF21aaphlty,SN Ia
 ZTF21aaphvyi,SN Ia
-ZTF21aapjmda,SN Ia-91bg
 ZTF21aapjmgf,SN II-norm
 ZTF21aapjphz,SN II
 ZTF21aapkhsc,SN Ia
@@ -3791,14 +3936,12 @@ ZTF21aaplnef,SN Ia
 ZTF21aaplnxw,SN Ia-03fg
 ZTF21aapnlfx,SN Ia
 ZTF21aapomdb,SN Ia
-ZTF21aappdnv,SN Ic-SLSN
 ZTF21aapqzxr,SN Ia
 ZTF21aaprddk,SN Ia
 ZTF21aaprevg,SN Ia
 ZTF21aaprfkc,SN Ia
 ZTF21aaptouk,SN Ia
 ZTF21aapvsxv,SN Ia
-ZTF21aapvxnf,SN Ia-91T
 ZTF21aapxtqg,SN Ia
 ZTF21aapyiku,SN Ia
 ZTF21aapzzgf,SN Ia
@@ -3806,7 +3949,6 @@ ZTF21aaqafcf,SN Ia
 ZTF21aaqdxzv,SN Ia
 ZTF21aaqecpl,SN Ia
 ZTF21aaqftpz,SN Ia
-ZTF21aaqftuq,SN Ia-91T
 ZTF21aaqhqke,SN IIn
 ZTF21aaqizwm,SN Ia
 ZTF21aaqjmps,SN II
@@ -3815,6 +3957,7 @@ ZTF21aaqldsk,SN Ic
 ZTF21aaqpykm,SN Ia
 ZTF21aaqqlfw,SN Ia
 ZTF21aaqqwln,SN Ia
+ZTF21aaqqwsa,AGN
 ZTF21aaqsprr,SN Ia
 ZTF21aaqugxm,SN II
 ZTF21aaquhqr,SN II
@@ -3833,7 +3976,6 @@ ZTF21aaraqpr,SN Ia
 ZTF21aarcobt,SN IIn
 ZTF21aardybv,SN Ia
 ZTF21aarejnt,SN Ia
-ZTF21aarenhl,SN Ia
 ZTF21aarhnwn,SN Ia
 ZTF21aarhzdh,SN Ia
 ZTF21aarigsr,SN Ia
@@ -3846,6 +3988,7 @@ ZTF21aarojxa,SN Ia
 ZTF21aarrplo,SN Ia
 ZTF21aarrwdu,SN Ia
 ZTF21aarskup,SN Ia
+ZTF21aarucpz,U Gem
 ZTF21aarwlht,SN Ia
 ZTF21aarybxo,SN Ia
 ZTF21aarzgql,SN Ia
@@ -3874,12 +4017,12 @@ ZTF21aatlbsi,SN Ia
 ZTF21aatlesr,SN Ia
 ZTF21aatpsky,SN II
 ZTF21aatsafx,SN Ia
+ZTF21aatscez,U Gem
 ZTF21aatvcdl,SN Ia
 ZTF21aatwkkt,SN Ibn
 ZTF21aatwlhj,SN Ia
 ZTF21aatyplr,SN Ia
 ZTF21aauamtx,SN Ia
-ZTF21aauapli,SN Ia
 ZTF21aaublej,SN Ia
 ZTF21aaufthj,SN Ia
 ZTF21aaufvpg,SN Ia
@@ -3893,7 +4036,6 @@ ZTF21aauuybx,Tidal Disruption Event
 ZTF21aauvmck,SN Ibn
 ZTF21aauzzny,SN Ia
 ZTF21aavbrwr,SN Ia
-ZTF21aavdqgf,SN I
 ZTF21aavheiv,SN Ia
 ZTF21aavhsdw,SN Ia
 ZTF21aavodst,SN Ia-norm
@@ -3903,6 +4045,7 @@ ZTF21aavotzn,SN Ia-02cx
 ZTF21aavqwhh,SN Ia
 ZTF21aavsbkt,SN Ia
 ZTF21aavuprl,SN Ia
+ZTF21aavuprt,Cataclysmic
 ZTF21aavuqzr,SN IIn
 ZTF21aavutkm,SN Ia
 ZTF21aavxruq,SN Ia
@@ -3910,7 +4053,6 @@ ZTF21aawgzda,SN II
 ZTF21aawlcwh,SN Ib/c
 ZTF21aawmdxw,SN Ib
 ZTF21aawmtug,SN II
-ZTF21aawmujq,SN IIb
 ZTF21aawogdl,SN Ib
 ZTF21aawqpuf,SN Ia
 ZTF21aawtazf,SN Ia
@@ -3932,15 +4074,12 @@ ZTF21aaxswlc,SN Ia
 ZTF21aaxtctv,SN Ic
 ZTF21aaxtdrs,SN Ia
 ZTF21aaxtije,SN IIn
-ZTF21aaxtrlt,SN Ia-91T
 ZTF21aaxubqf,SN Ia
 ZTF21aaxuywf,SN Ia
 ZTF21aaxvnjy,SN Ia
 ZTF21aaxvrva,SN Ia
 ZTF21aaxwnlr,SN Ia
-ZTF21aaxwpyv,SN Ic-SLSN
 ZTF21aaxwytv,SN Ia
-ZTF21aaxxihx,SN Ic-BL
 ZTF21aaxxmvs,SN IIb
 ZTF21aaxxoei,SN II
 ZTF21aaxycms,SN Ia
@@ -3954,11 +4093,13 @@ ZTF21aayddkn,SN Ib
 ZTF21aaydfro,SN Ia
 ZTF21aaydxoo,SN IIn
 ZTF21aayfnjz,SN II
+ZTF21aaygchh,Cataclysmic
 ZTF21aayggyo,SN Ia
 ZTF21aaygkfw,SN Ia
 ZTF21aaygmiu,SN Ia
 ZTF21aaygmrl,SN IIn
 ZTF21aaygqkb,SN Ic
+ZTF21aaylpht,U Gem
 ZTF21aaylweu,SN Ia
 ZTF21aaymnuc,SN Ia
 ZTF21aaynlsf,SN Ia
@@ -3978,14 +4119,15 @@ ZTF21aazfmxb,SN Ia
 ZTF21aazlxiw,SN Ia
 ZTF21aazqkeq,SN II
 ZTF21aazwtoz,SN Ia
+ZTF21aazyjlz,U Gem
 ZTF21abaaipx,SN Ia
 ZTF21abaakwd,SN Ia
+ZTF21ababatx,AGN
 ZTF21ababpoq,SN IIb
 ZTF21abaevgu,SN Ia
 ZTF21abahgst,SN Ia
 ZTF21abahiow,SN Ib
 ZTF21abaiicy,SN Ia
-ZTF21abaiono,SN Ic-SLSN
 ZTF21abameyr,SN Ia
 ZTF21abamotd,SN Ia
 ZTF21abaphri,SN Ia
@@ -3997,12 +4139,10 @@ ZTF21abbliav,SN Ia
 ZTF21abbodnh,SN Ia
 ZTF21abboibr,SN Ia
 ZTF21abbomrf,SN II
-ZTF21abbqeea,SN Ic-SLSN
 ZTF21abbsbov,SN Ia
 ZTF21abbtgsa,SN Ia
 ZTF21abbvkpr,SN Ia
 ZTF21abbvvmf,SN IIb
-ZTF21abbvzrd,SN II
 ZTF21abbwbja,SN Ia
 ZTF21abbxtwv,SN Ia
 ZTF21abbytmm,SN Ia
@@ -4020,7 +4160,6 @@ ZTF21abcgrcj,SN Ia
 ZTF21abcgufz,SN Ia
 ZTF21abcgxwy,SN Ia
 ZTF21abchdql,SN Ia
-ZTF21abchjer,SN Ic-BL
 ZTF21abcimwb,SN Ia
 ZTF21abcixor,SN II
 ZTF21abcjpnm,SN II
@@ -4032,11 +4171,11 @@ ZTF21abcmtev,SN II
 ZTF21abcmvci,SN Ia
 ZTF21abcmzvk,SN II
 ZTF21abcnkbe,SN Ia
+ZTF21abcnlpj,U Gem
 ZTF21abcnpnk,SN Ia
 ZTF21abconph,SN Ia
 ZTF21abcouxj,SN Ia
 ZTF21abcpazz,SN Ia
-ZTF21abcpsjy,SN Ic-SLSN
 ZTF21abcrhbt,SN Ia
 ZTF21abcrhpk,SN Ia
 ZTF21abctmnb,SN Ia
@@ -4051,6 +4190,7 @@ ZTF21abdahai,SN II
 ZTF21abdbodg,SN Ia
 ZTF21abdfdwi,SN Ia
 ZTF21abdhetx,SN Ia
+ZTF21abdiymf,Cataclysmic
 ZTF21abdkojo,SN Ib-norm
 ZTF21abdlrpr,SN Ia
 ZTF21abdlvxh,SN Ia
@@ -4063,14 +4203,13 @@ ZTF21abduoun,SN II
 ZTF21abdvcaf,SN Ia
 ZTF21abdveqn,SN Ia
 ZTF21abedvkp,SN Ia
-ZTF21abegynu,SN Ia-91T
 ZTF21abeokcr,SN Ia
 ZTF21abephjt,SN Ia
 ZTF21abepqyt,SN Ib/c
+ZTF21abezcph,Cataclysmic
 ZTF21abezlqc,SN Ia
 ZTF21abezono,SN II
 ZTF21abfaohe,SN Ia
-ZTF21abfflmp,SN Ia-91T
 ZTF21abfionl,SN II
 ZTF21abfiuqf,SN II
 ZTF21abfjgwr,SN Ia
@@ -4090,11 +4229,10 @@ ZTF21abfrbsj,SN II
 ZTF21abfxfqu,SN Ia
 ZTF21abfxhrn,SN II
 ZTF21abfxjkq,SN II
-ZTF21abfyxpf,SN Ia
 ZTF21abgcgem,SN Ia
 ZTF21abgdngg,SN Ia
 ZTF21abghumo,SN IIn
-ZTF21abghxht,SN II-pec
+ZTF21abgjdtt,U Gem
 ZTF21abgkipt,Novae
 ZTF21abgmyzw,SN Ia
 ZTF21abgywtg,SN Ia
@@ -4105,7 +4243,6 @@ ZTF21abgzphy,SN Ia
 ZTF21abgzpii,SN Ia-norm
 ZTF21abgzyvg,SN IIn
 ZTF21abhaqju,SN Ia
-ZTF21abhfzzs,SN Ia-91bg
 ZTF21abhhbmd,SN Ia
 ZTF21abhhrpj,SN II
 ZTF21abhkeak,SN Ia
@@ -4114,7 +4251,6 @@ ZTF21abhqqfa,SN II-pec
 ZTF21abhqqwq,SN Ia
 ZTF21abhrchb,Tidal Disruption Event
 ZTF21abhrmrv,SN Ia
-ZTF21abhshmt,SN Ia-91T
 ZTF21abhtafw,SN Ia
 ZTF21abhtaiv,SN Ia
 ZTF21abhtkiy,SN Ia
@@ -4126,14 +4262,12 @@ ZTF21abhyqlv,SN II
 ZTF21abiacmi,SN Ia
 ZTF21abiacoi,SN Ia
 ZTF21abiawpf,SN Ia
-ZTF21abibhpm,SN Ia-pec
 ZTF21abiblpl,SN II
 ZTF21abicabp,SN Ia
 ZTF21abicajm,SN Ia
 ZTF21abicgai,SN Ia
 ZTF21abidikc,SN Ia
 ZTF21abidrcn,SN IIb
-ZTF21abienbe,SN Ia-91T
 ZTF21abieuta,SN Ib
 ZTF21abifrsi,SN Ia
 ZTF21abifxhe,SN Ia
@@ -4186,10 +4320,10 @@ ZTF21ablwfcp,SN Ia
 ZTF21ablxfwc,SN Ia
 ZTF21abmcori,SN Ia
 ZTF21abmdhes,SN Ia
+ZTF21abmemav,Cataclysmic
 ZTF21abmfrad,SN Ia
 ZTF21abmgxyu,SN Ia
 ZTF21abmjivk,SN Ia-91bg
-ZTF21abmlldj,SN Ib-pec
 ZTF21abmsppx,SN Ia
 ZTF21abmwgdf,SN Ia
 ZTF21abmwghp,SN Ia
@@ -4200,7 +4334,6 @@ ZTF21abmxiuf,SN Ib
 ZTF21abmxkcq,SN IIb
 ZTF21abmzpmc,SN Ia
 ZTF21abmzrdz,SN Ia
-ZTF21abnfdqg,SN Ia-91bg
 ZTF21abngbrl,SN Ib
 ZTF21abnspht,SN Ia
 ZTF21abnudtb,SN II
@@ -4210,7 +4343,6 @@ ZTF21abnvsic,SN Ia
 ZTF21abothvq,SN Ia
 ZTF21abotuqo,SN Ia
 ZTF21abouexm,SN Ia
-ZTF21abourqt,SN Ia-91bg
 ZTF21abousyu,SN Ia
 ZTF21abouuat,SN II
 ZTF21abouuow,SN Ia
@@ -4224,14 +4356,12 @@ ZTF21abpivbd,SN Ia
 ZTF21abpjpxr,SN Ia
 ZTF21abplgag,SN Ia
 ZTF21abplsmq,SN Ia
-ZTF21abpltyn,SN Ia-03fg
 ZTF21abplypq,SN II
 ZTF21abpmlxu,SN IIn
 ZTF21abpryuv,SN Ia
 ZTF21abptxfk,SN II
 ZTF21abpuent,SN II
 ZTF21abpvrhn,SN Ia
-ZTF21abpvssa,SN Ia-pec
 ZTF21abpwtde,SN Ib/c
 ZTF21abpyauz,SN II
 ZTF21abqftqr,SN Ia
@@ -4239,7 +4369,6 @@ ZTF21abqikvn,SN Ia
 ZTF21abqixak,SN Ia
 ZTF21abqmrun,SN II
 ZTF21abqqcxf,SN Ia
-ZTF21abqsysj,SN Ia-91T
 ZTF21abqtckk,Tidal Disruption Event
 ZTF21abqvyyz,SN Ia
 ZTF21abqvzjy,SN II
@@ -4261,14 +4390,13 @@ ZTF21abrpdwb,SN II-norm
 ZTF21abrpeix,SN Ia
 ZTF21abrpkzp,SN Ia
 ZTF21abrpoaq,SN Ia
-ZTF21abrqria,SN Ic-SLSN
 ZTF21abrqrsz,SN Ib
 ZTF21abrskvb,SN Ia
 ZTF21abrssvd,SN Ia
+ZTF21abrthyb,Cataclysmic
 ZTF21abrxgiv,SN Ia
 ZTF21abrxoir,SN Ia
 ZTF21abrylwg,SN Ia
-ZTF21abrzsak,SN II-pec
 ZTF21abrzsol,SN Ia
 ZTF21absbrag,SN Ia
 ZTF21absbrbd,SN Ia
@@ -4276,7 +4404,6 @@ ZTF21absbujl,SN Ia
 ZTF21absbwyz,SN Ia
 ZTF21abscohx,SN Ia
 ZTF21abshszs,SN Ia
-ZTF21absjlur,SN Ia-91T
 ZTF21abskgap,SN Ia
 ZTF21absvlrr,SN Ia-norm
 ZTF21absxxew,SN II
@@ -4290,7 +4417,6 @@ ZTF21abtgbwr,SN Ia
 ZTF21abtorlk,SN IIn
 ZTF21abtsoky,SN Ia
 ZTF21abtucck,SN Ia
-ZTF21abtwvyl,SN Ia-02cx
 ZTF21abtxglm,SN Ia
 ZTF21abtxnir,SN Ia
 ZTF21abtxqza,SN Ia
@@ -4300,12 +4426,10 @@ ZTF21abtzmlz,SN Ia
 ZTF21abuetwv,SN Ia
 ZTF21abufayv,SN Ia
 ZTF21abuibjs,SN Ia
-ZTF21abujefa,SN Ia-91T
 ZTF21abujejr,SN Ia
 ZTF21abujgmr,SN IIn
 ZTF21abukrln,SN Ia
 ZTF21abulpnc,SN IIn
-ZTF21abulrsl,SN Ia
 ZTF21abultbr,SN II
 ZTF21abuuzrk,SN Ia-norm
 ZTF21abuxitb,SN II
@@ -4410,7 +4534,6 @@ ZTF21acbcfmh,Classical Nova
 ZTF21acbcjwa,SN Ia
 ZTF21acbjxhr,SN Ia
 ZTF21acbmxgn,SN Ia
-ZTF21acbnfos,SN Ic-BL
 ZTF21acbntop,SN Ia
 ZTF21acbpbia,SN Ia
 ZTF21acbpdlz,SN Ia
@@ -4429,7 +4552,6 @@ ZTF21accteto,SN Ia
 ZTF21acctrsp,SN Ia
 ZTF21accuexh,SN Ia
 ZTF21accwcrh,SN II
-ZTF21accwovq,SN Ic-SLSN
 ZTF21accyvil,SN Ia
 ZTF21accyxid,SN II
 ZTF21acdajtx,SN Ia
@@ -4446,7 +4568,6 @@ ZTF21acdoydr,SN Ia
 ZTF21acdphro,SN Ia
 ZTF21acdtosh,SN Ia
 ZTF21acdvban,SN Ia
-ZTF21acdvfjr,SN Ia-91bg
 ZTF21acdvkcj,SN Ia
 ZTF21acdvtmf,SN Ia
 ZTF21acdwhtf,SN Ia
@@ -4456,7 +4577,6 @@ ZTF21acdykpb,SN Ia
 ZTF21aceaiqm,SN Ia
 ZTF21aceccve,SN Ia
 ZTF21aceehxt,SN Ib
-ZTF21aceenyc,SN Ia-91bg
 ZTF21acefcnp,SN Ia
 ZTF21acefkpy,SN Ia
 ZTF21acenkuf,SN Ia
@@ -4476,8 +4596,8 @@ ZTF21acfgjiw,SN Ia
 ZTF21acfigoo,SN Ia
 ZTF21acfiqtd,SN Ia
 ZTF21acfkkad,SN Ia
-ZTF21acfqldh,SN Ia-91T
 ZTF21acfslmr,SN Ia
+ZTF21acgmvhs,Cataclysmic
 ZTF21acgnagk,SN Ia
 ZTF21acgqhru,SN II
 ZTF21acgrlmz,SN II
@@ -4488,14 +4608,12 @@ ZTF21acgumps,SN Ia
 ZTF21acgunkr,SN II
 ZTF21acgupte,SN Ia
 ZTF21acguqsc,SN Ia
-ZTF21acgxypn,SN Ic-BL
 ZTF21acgyywa,SN II
 ZTF21acgzgvm,SN Ia
 ZTF21acgzwsc,SN Ia
 ZTF21achaubw,SN Ia
 ZTF21achauvx,SN Ia
 ZTF21achaxmt,SN Ia
-ZTF21achdxdn,SN Ia
 ZTF21acheiti,SN II
 ZTF21achgfbk,SN Ib
 ZTF21achhwdz,SN Ia
@@ -4522,7 +4640,6 @@ ZTF21achzpyc,SN Ia
 ZTF21acigjrl,SN Ia
 ZTF21aciiaio,SN II
 ZTF21acimjvp,SN Ia
-ZTF21acincqb,SN Ia
 ZTF21acindcq,SN Ia
 ZTF21acinvvh,SN Ia
 ZTF21aciobmz,SN II
@@ -4538,8 +4655,7 @@ ZTF21acirtph,SN Ia
 ZTF21acisemu,SN Ia
 ZTF21acisqde,SN Ia
 ZTF21acissla,SN II
-ZTF21acitbcw,SN Ic
-ZTF21aciuhqw,SN Ic
+ZTF21aciubsk,AM CVn
 ZTF21aciuhyy,SN Ia
 ZTF21aciuriu,SN II
 ZTF21aciustc,SN Ib
@@ -4559,11 +4675,10 @@ ZTF21acjeegy,SN Ia
 ZTF21acjgafq,SN Ia
 ZTF21acjglei,SN II
 ZTF21acjgqjl,SN Ia
+ZTF21acjjtmh,Cataclysmic
 ZTF21acjjwmj,SN Ia
 ZTF21acjjxww,SN Ia
-ZTF21acjmvhx,SN Ic
 ZTF21acjnajt,SN Ia
-ZTF21acjndeu,SN I
 ZTF21acjnzdh,SN Ia
 ZTF21acjomly,SN Ia
 ZTF21acjoorl,SN Ic
@@ -4574,7 +4689,6 @@ ZTF21acjosti,SN Ia
 ZTF21acjotbf,SN Ia
 ZTF21acjotip,SN Ia
 ZTF21acjrfhr,SN Ia
-ZTF21acjtxgr,SN Ia-91T
 ZTF21acjurqj,SN Ia
 ZTF21acjvgxg,SN Ia
 ZTF21acjvjyk,SN Ia
@@ -4648,8 +4762,8 @@ ZTF21acqceqc,SN Ia-norm
 ZTF21acqcjjq,SN Ia
 ZTF21acqdedy,SN Ia
 ZTF21acqeseb,SN Ia
+ZTF21acqfzzw,U Gem
 ZTF21acqgbjs,SN Ia
-ZTF21acqpcmx,SN Ia-91T
 ZTF21acqspkc,SN Ia
 ZTF21acqstfo,SN Ia
 ZTF21acqtevy,SN Ia
@@ -4662,7 +4776,6 @@ ZTF22aaabmmc,SN II
 ZTF22aaabnan,SN Ia
 ZTF22aaabovl,Tidal Disruption Event
 ZTF22aaabpqn,SN II
-ZTF22aaacvyy,SN IIn
 ZTF22aaacxkp,SN II
 ZTF22aaaedov,SN Ia
 ZTF22aaaedpq,SN Ia
@@ -4689,27 +4802,25 @@ ZTF22aaaffer,SN Ia
 ZTF22aaafjir,SN II
 ZTF22aaafkpf,SN Ia
 ZTF22aaafmec,SN Ia
-ZTF22aaafmxf,SN Ia-pec
 ZTF22aaafmzj,SN Ia
 ZTF22aaafomy,SN Ia
 ZTF22aaafrcl,SN II
 ZTF22aaagqvw,SN Ic
 ZTF22aaagrce,SN Ib
 ZTF22aaagscm,SN Ia
+ZTF22aaagvdj,Cataclysmic
 ZTF22aaagxuu,SN Ia
 ZTF22aaahbrf,SN Ia
 ZTF22aaahesb,SN II
 ZTF22aaahhbo,SN II
 ZTF22aaahklt,SN Ia
 ZTF22aaahull,SN Ia
-ZTF22aaahuly,SN Ic-BL
 ZTF22aaaifcx,SN II
 ZTF22aaaivqj,SN Ia
 ZTF22aaaivxh,SN Ia
 ZTF22aaaiyzf,SN II
 ZTF22aaajife,SN Ia
 ZTF22aaajoxo,SN Ia
-ZTF22aaajrdf,SN Ia-91bg
 ZTF22aaajuiz,SN Ia
 ZTF22aaajuya,SN Ia
 ZTF22aaakxxu,SN Ia
@@ -4724,24 +4835,20 @@ ZTF22aaaxkar,SN Ia
 ZTF22aabbfre,SN Ia
 ZTF22aabfnnw,SN Ia
 ZTF22aabfuju,SN Ia
-ZTF22aabgazg,SN Ic-BL
 ZTF22aabgcuk,SN Ia
 ZTF22aabhtsw,SN Ia
-ZTF22aabimec,SN Ic-SLSN
 ZTF22aabitze,SN Ia
 ZTF22aabiyjw,SN Ia
 ZTF22aabjlih,SN Ia
 ZTF22aabnonm,SN Ia
 ZTF22aabnzsk,SN Ib
 ZTF22aaboeex,SN Ia
-ZTF22aabrffl,SN Ia-91T
 ZTF22aabrkjs,SN II
 ZTF22aabseql,SN Ia
 ZTF22aabvede,SN Ia
 ZTF22aabwfss,SN Ia
 ZTF22aabwfvz,SN Ia
 ZTF22aabwrov,SN Ia
-ZTF22aabwuwv,SN Ia-91T
 ZTF22aabwxnp,SN Ia
 ZTF22aabxuxf,SN IIn
 ZTF22aabzcoy,SN Ia
@@ -4758,6 +4865,7 @@ ZTF22aadedjt,SN Ia
 ZTF22aademuj,SN Ia
 ZTF22aadepkk,SN Ia
 ZTF22aadeqoe,SN Ia
+ZTF22aadesap,Tidal Disruption Event
 ZTF22aadeslb,SN Ia
 ZTF22aadetzg,SN Ia
 ZTF22aadetzs,SN Ia
@@ -4769,7 +4877,6 @@ ZTF22aadfecx,SN Ia
 ZTF22aadfgpu,SN Ia
 ZTF22aadfstk,SN Ia
 ZTF22aadghdv,SN Ia
-ZTF22aadgsdi,SN Ia-CSM
 ZTF22aadionf,SN Ia
 ZTF22aadiujq,SN Ia
 ZTF22aadizjf,SN Ia
@@ -4778,13 +4885,11 @@ ZTF22aadkowq,SN Ia
 ZTF22aadkxhp,SN Ia
 ZTF22aadliib,SN Ia
 ZTF22aadljkb,SN II
-ZTF22aadlmgg,SN Ia-91bg
 ZTF22aadlnaf,SN Ia
 ZTF22aadltbv,SN Ia
 ZTF22aadnjsh,SN Ib
 ZTF22aadolby,SN II
 ZTF22aadoypp,SN II
-ZTF22aadqlhy,SN Ib-pec
 ZTF22aadthro,SN Ia
 ZTF22aaeaktc,SN Ia
 ZTF22aaeaqmz,SN Ia
@@ -4807,7 +4912,6 @@ ZTF22aaemhwl,SN Ia
 ZTF22aaemoot,SN IIb
 ZTF22aaerfpk,SN Ia
 ZTF22aaetqzk,SN IIn
-ZTF22aaettxg,SN Ia-91T
 ZTF22aaevnvp,SN Ia
 ZTF22aaevwec,SN II
 ZTF22aaezjuu,SN Ia
@@ -4855,7 +4959,6 @@ ZTF22aaibhya,SN Ia
 ZTF22aaidexe,SN Ia
 ZTF22aaiiiho,SN Ia
 ZTF22aaiisww,SN Ia
-ZTF22aaijnqy,SN Ia
 ZTF22aaijrcl,SN Ia
 ZTF22aaijrul,SN Ia
 ZTF22aaimbfz,SN Ia
@@ -4876,9 +4979,9 @@ ZTF22aajivyw,SN II
 ZTF22aajiynq,SN Ia
 ZTF22aajjasl,SN Ia
 ZTF22aajjawt,SN II
-ZTF22aajjdkr,SN Ia-91bg
 ZTF22aajjlin,SN Ia
 ZTF22aajjojx,SN IIn
+ZTF22aajjqti,Cataclysmic
 ZTF22aajlruz,SN Ia
 ZTF22aajlzbs,SN Ia-91bg
 ZTF22aajowwt,SN II
@@ -4901,7 +5004,6 @@ ZTF22aakanzk,SN Ia
 ZTF22aakcvbr,SN Ia
 ZTF22aaketce,SN Ia
 ZTF22aakethm,SN Ia
-ZTF22aakitdm,SN Ia
 ZTF22aakjjjj,SN Ia
 ZTF22aakkfre,SN Ia
 ZTF22aaklhfg,SN Ia
@@ -4921,6 +5023,7 @@ ZTF22aakrnjw,SN Ia
 ZTF22aaksdvi,SN Ia
 ZTF22aakynop,SN Ia
 ZTF22aakzred,SN Ia
+ZTF22aakzsrj,Cataclysmic
 ZTF22aalaajn,SN Ia
 ZTF22aalfezf,SN Ia
 ZTF22aalfmec,SN Ic
@@ -4978,7 +5081,6 @@ ZTF22aaoemmz,SN Ia
 ZTF22aaoewrn,SN Ia
 ZTF22aaofpts,SN Ia
 ZTF22aaogkzb,SN Ia
-ZTF22aaogwbd,SN Ia
 ZTF22aaogyhz,SN Ia
 ZTF22aaohpmz,SN Ia
 ZTF22aaoiddx,SN Ia
@@ -5001,7 +5103,6 @@ ZTF22aaorbxb,SN Ia
 ZTF22aaorjov,SN Ia
 ZTF22aaorkwk,SN Ia
 ZTF22aaotgrc,SN IIb
-ZTF22aaovsee,SN Ia
 ZTF22aaowhti,SN Ia
 ZTF22aaowkts,SN Ia
 ZTF22aaoxiux,SN Ia
@@ -5020,14 +5121,12 @@ ZTF22aapuvqy,SN Ia
 ZTF22aaqfuhm,SN Ia
 ZTF22aaqhirm,SN Ia
 ZTF22aaqlfwe,SN Ia
-ZTF22aaqpwef,SN II
 ZTF22aaqrflg,SN Ia
 ZTF22aaqrszt,SN Ia
 ZTF22aaqwdjw,SN Ia
 ZTF22aaqyiqm,SN Ia
 ZTF22aarbard,SN Ib
 ZTF22aarlppe,SN Ia
-ZTF22aarqrxf,SN Ic-SLSN
 ZTF22aarqzls,SN Ia
 ZTF22aarrawv,SN IIn
 ZTF22aarrbne,SN Ia
@@ -5039,7 +5138,6 @@ ZTF22aasfzzf,SN Ia
 ZTF22aashqrd,SN Ia
 ZTF22aasjwqv,SN IIb
 ZTF22aaskqie,SN Ia
-ZTF22aaskqqq,SN Ia
 ZTF22aaslyzf,SN II
 ZTF22aaslyzj,SN Ia
 ZTF22aasmjxf,SN Ia
@@ -5048,11 +5146,9 @@ ZTF22aasoali,SN IIn
 ZTF22aasojye,SN II
 ZTF22aaspijs,SN Ia
 ZTF22aaspkif,SN II
-ZTF22aasppdz,SN Ia-91T
 ZTF22aasrmim,SN Ia
 ZTF22aasthrj,SN Ia
 ZTF22aasxakz,SN Ia
-ZTF22aasxgjp,SN Ic
 ZTF22aasyada,SN Ia
 ZTF22aasycgf,SN Ia
 ZTF22aasygdq,SN Ia
@@ -5060,7 +5156,6 @@ ZTF22aasyitj,SN Ia
 ZTF22aaszlph,SN Ia
 ZTF22aataizc,SN Ia
 ZTF22aatbtqn,SN Ia
-ZTF22aatcpoo,SN Ia-91bg
 ZTF22aatemqx,SN Ia
 ZTF22aatghyo,SN Ia
 ZTF22aatgiuw,SN Ia
@@ -5149,9 +5244,7 @@ ZTF22abaadbc,SN Ia
 ZTF22ababhmy,SN II
 ZTF22abaette,SN Ia
 ZTF22abafbzv,SN Ia
-ZTF22abafcrf,SN Ia-91T
 ZTF22abahblc,SN Ia
-ZTF22abaiyaf,SN Ia
 ZTF22abaiyyz,SN Ia
 ZTF22abajudi,Tidal Disruption Event
 ZTF22abajyqm,SN IIn
@@ -5205,6 +5298,7 @@ ZTF22abdtpru,SN Ia
 ZTF22abdvqqn,SN Ia-norm
 ZTF22abdxbyh,SN Ia
 ZTF22abdxjhr,SN Ia
+ZTF22abebxpb,QSO
 ZTF22abecbbd,SN Ia
 ZTF22abedoyq,SN Ia
 ZTF22abegjtx,Tidal Disruption Event
@@ -5222,6 +5316,7 @@ ZTF22abemgfd,SN Ia
 ZTF22abemgir,SN Ia
 ZTF22abepfmn,SN II
 ZTF22abevcjl,SN Ia
+ZTF22abevczq,Cataclysmic
 ZTF22abexkqi,SN Ic.5-SLSN
 ZTF22abeyzcl,SN IIn
 ZTF22abfbjem,SN Ia
@@ -5252,7 +5347,6 @@ ZTF22abfwbgr,SN Ia
 ZTF22abfwchw,SN II
 ZTF22abfweew,SN Ia
 ZTF22abfwign,SN II
-ZTF22abfwihc,SN Ia-91bg
 ZTF22abfwxtr,SN II
 ZTF22abfxmiu,SN Ia
 ZTF22abfxmpc,Novae
@@ -5286,7 +5380,6 @@ ZTF22abgeluw,SN Ia
 ZTF22abgepyb,SN Ia
 ZTF22abggmae,SN Ia
 ZTF22abggmtd,SN Ia
-ZTF22abghdno,SN Ia-91T
 ZTF22abgheca,SN IIP
 ZTF22abghgca,SN Ia
 ZTF22abgiayt,SN Ia
@@ -5295,7 +5388,6 @@ ZTF22abgndif,SN Ia
 ZTF22abgteub,SN Ia
 ZTF22abgvdis,SN Ia
 ZTF22abgveih,SN II
-ZTF22abhcqrr,SN Ia
 ZTF22abhcrfy,SN Ia
 ZTF22abhencl,SN Ia
 ZTF22abhjdlx,SN Ia
@@ -5303,7 +5395,6 @@ ZTF22abhjuqr,SN Ia
 ZTF22abhjvmr,SN Ia
 ZTF22abhldat,SN Ia
 ZTF22abhodtl,SN Ia
-ZTF22abhrjld,SN Ia-pec
 ZTF22abhsrll,SN Ia
 ZTF22abhsxkn,SN Ia
 ZTF22abhuvug,SN Ia
@@ -5323,7 +5414,6 @@ ZTF22abipidm,SN Ia
 ZTF22abipthl,SN Ia
 ZTF22abiqxao,SN Ia
 ZTF22abitewv,SN Ia
-ZTF22abivebe,SN Ic-BL
 ZTF22abivkuq,SN Ia
 ZTF22abivrnq,SN Ia
 ZTF22abiwpck,SN Ia
@@ -5344,7 +5434,6 @@ ZTF22abjrpmv,SN Ia
 ZTF22abjrqxz,SN Ia
 ZTF22abjvyib,SN IIn
 ZTF22abkaaje,SN Ia
-ZTF22abkbmob,SN Ic-SLSN
 ZTF22abkdzvi,SN Ia
 ZTF22abkfgrt,SN Ia
 ZTF22abkisoc,SN Ia
@@ -5362,7 +5451,6 @@ ZTF22ablnrcv,SN II
 ZTF22ablviyf,SN Ia
 ZTF22abmcfrc,SN Ia
 ZTF22abmcnmz,SN Ia
-ZTF22abmdqzf,SN Ia-91bg
 ZTF22abmicob,SN Ia
 ZTF22abmifhv,SN Ia
 ZTF22abmiohu,SN Ia
@@ -5376,17 +5464,14 @@ ZTF22abmucza,SN Ia
 ZTF22abmwonm,SN Ia
 ZTF22abmxsoc,SN Ic
 ZTF22abmxzxm,SN Ia
-ZTF22abmygmc,SN Ia-91T
 ZTF22abmynyd,SN Ia
 ZTF22abmzdzr,SN Ia
 ZTF22abmzete,SN Ia
-ZTF22abnehge,SN Ia-91T
 ZTF22abneima,SN Ia
 ZTF22abnelse,SN Ia
 ZTF22abnemvx,SN Ia
 ZTF22abnfgcn,SN Ia
 ZTF22abnfjsm,SN IIn
-ZTF22abnfsjo,SN Ia-91T
 ZTF22abngjlt,SN Ia
 ZTF22abniami,SN Ia
 ZTF22abnlwjv,SN Ia
@@ -5400,7 +5485,6 @@ ZTF22abnvmzz,SN Ia
 ZTF22abnvncn,SN IIb
 ZTF22abnvzhx,SN Ia
 ZTF22abnwpmq,SN Ia
-ZTF22abnxovx,SN Ia-91T
 ZTF22aboawxv,SN Ia-02cx
 ZTF22abobobs,SN Ia
 ZTF22abodqjf,SN Ia
@@ -5415,7 +5499,6 @@ ZTF22abpydmh,SN Ia
 ZTF22abpzyzz,SN Ia
 ZTF22abqaeac,SN Ia
 ZTF22abqdmwt,SN Ia
-ZTF22abqfekp,SN Ia
 ZTF22abqiyik,SN Ia
 ZTF22abqkzuq,SN Ia
 ZTF22abqpflu,SN Ia
@@ -5461,7 +5544,6 @@ ZTF22abtbjbo,SN Ia
 ZTF22abtciik,SN Ia
 ZTF22abtcphd,SN II
 ZTF22abtcpig,SN IIn
-ZTF22abtcsar,SN Ia-91bg
 ZTF22abtctfn,SN Ia
 ZTF22abtctzp,SN II
 ZTF22abtcyhv,SN II
@@ -5511,7 +5593,6 @@ ZTF22abvasxc,SN Ia
 ZTF22abvcdmu,SN II
 ZTF22abvciba,SN Ia
 ZTF22abvebdc,SN Ia
-ZTF22abveefy,SN Ia
 ZTF22abvkkgu,SN Ia
 ZTF22abvkpbj,SN Ia
 ZTF22abvmasw,SN II
@@ -5592,7 +5673,6 @@ ZTF22abzadkd,SN Ia
 ZTF22abzaduz,SN Ia-91bg
 ZTF22abzaijw,SN Ia-91bg
 ZTF22abzaiuz,SN Ia
-ZTF22abzbqxx,SN Ia
 ZTF22abzdnij,SN Ic
 ZTF22abzejiv,SN Ic
 ZTF22abzgbtq,SN IIn
@@ -5707,14 +5787,10 @@ ZTF23aabutwh,SN Ia
 ZTF23aabutzu,SN II
 ZTF23aabvcmb,SN IIn
 ZTF23aabwfkc,SN Ia
-ZTF23aabwvfn,SN Ia
 ZTF23aabxqtq,SN Ia
 ZTF23aabyiby,SN Ia
-ZTF23aacafoi,SN Ia
-ZTF23aacafsp,SN Ia
 ZTF23aacaftn,SN Ia
 ZTF23aacbziz,SN Ia
-ZTF23aaccacy,SN Ic-SLSN
 ZTF23aacceix,SN Ia
 ZTF23aacdggx,SN Ia
 ZTF23aacdiao,SN Ia
@@ -5725,17 +5801,14 @@ ZTF23aacfkak,SN II
 ZTF23aacggqz,SN Ia
 ZTF23aacggrh,SN Ia
 ZTF23aacgjgl,SN II
-ZTF23aacilmp,SN Ia
 ZTF23aaciosd,SN Ia
 ZTF23aacjetk,SN II
 ZTF23aacjjdz,SN Ia
-ZTF23aackjhs,SN II
 ZTF23aacopzi,SN Ia
 ZTF23aacosic,SN Ia
 ZTF23aacozdn,SN Ia
 ZTF23aacxofz,SN Ia
 ZTF23aacxtsd,SN Ib
-ZTF23aacxwpc,SN Ia
 ZTF23aacyeaq,SN Ia
 ZTF23aacyxot,SN Ia
 ZTF23aaczaua,SN Ia
@@ -5747,7 +5820,6 @@ ZTF23aadbbxv,SN II
 ZTF23aadbrci,SN Ia
 ZTF23aadbrdk,SN Ia
 ZTF23aadbwtw,SN II
-ZTF23aadbxsz,SN Ia-91T
 ZTF23aadbzqx,SN Ia
 ZTF23aadcalf,SN Ia
 ZTF23aadcavq,SN Ia
@@ -5760,12 +5832,10 @@ ZTF23aadgjcc,SN Ia
 ZTF23aadjhwn,SN Ia
 ZTF23aadjoew,SN Ic
 ZTF23aadjqvm,SN Ia
-ZTF23aadjssg,SN Ia-91T
 ZTF23aadjsyj,SN Ia
 ZTF23aadjwkw,SN Ia
 ZTF23aadndfn,SN II
 ZTF23aadnpbq,SN Ia
-ZTF23aadozop,SN Ia-91T
 ZTF23aadpbvm,SN Ia
 ZTF23aadqalu,SN Ia
 ZTF23aadqhae,SN Ia
@@ -5776,7 +5846,6 @@ ZTF23aadtfgp,SN Ia
 ZTF23aadtrzd,SN Ib
 ZTF23aadtvmb,SN IIn
 ZTF23aadtzse,SN II
-ZTF23aadvpwt,SN Ia-91T
 ZTF23aadvtxf,SN Ia-91bg
 ZTF23aadvulr,SN Ia
 ZTF23aadvxih,SN Ia
@@ -5798,7 +5867,6 @@ ZTF23aaedvtn,SN II
 ZTF23aaeeawl,SN Ia
 ZTF23aaeeugd,SN II
 ZTF23aaehsgs,SN Ia
-ZTF23aaeieqk,SN Ia-91T
 ZTF23aaeinqq,SN Ia
 ZTF23aaejvro,SN Ia-norm
 ZTF23aaejvsg,SN Ia
@@ -5849,15 +5917,12 @@ ZTF23aagcicf,SN Ia
 ZTF23aagdamr,SN Ia
 ZTF23aagdebl,SN Ia
 ZTF23aagfpxq,SN Ia
-ZTF23aaghvsv,SN Ia
 ZTF23aagkgnz,SN Ia
-ZTF23aagklwb,SN II
 ZTF23aagkutf,SN II
 ZTF23aaglprc,SN Ia
 ZTF23aagmbuf,SN Ia
 ZTF23aagnpbz,SN Ia
 ZTF23aagphxh,SN Ia
-ZTF23aagpjyp,SN Ia-CSM
 ZTF23aagygjg,SN Ia
 ZTF23aahfxpr,SN Ia
 ZTF23aahnabd,SN Ia
@@ -5894,7 +5959,6 @@ ZTF23aaiytpy,SN Ia
 ZTF23aaiyuae,SN Ia
 ZTF23aaizgvi,SN Ia
 ZTF23aaizmza,SN Ia
-ZTF23aaizygy,SN Ia
 ZTF23aajahua,SN Ia
 ZTF23aajaygo,SN Ia
 ZTF23aajbejz,SN Ia
@@ -5928,7 +5992,6 @@ ZTF23aakidwn,SN Ia
 ZTF23aakmqlj,SN Ia
 ZTF23aakmsiy,SN Ia
 ZTF23aakokgz,SN Ia
-ZTF23aakprat,SN Ia-91T
 ZTF23aakxqrp,SN Ia
 ZTF23aaldvnc,SN Ia
 ZTF23aaldwgw,SN Ia
@@ -5951,7 +6014,6 @@ ZTF23aamqycj,SN II
 ZTF23aamqzyz,SN Ia
 ZTF23aamsarj,SN II
 ZTF23aamsddm,SN Ia
-ZTF23aamsekn,SN Ia-CSM
 ZTF23aamsfav,SN Ia
 ZTF23aamskdj,SN II
 ZTF23aamtyjs,SN Ia
@@ -5973,7 +6035,6 @@ ZTF23aanivnc,SN Ia
 ZTF23aanlmst,SN Ia
 ZTF23aanpqba,SN Ia
 ZTF23aanptmz,SN Ia
-ZTF23aanptpp,SLSN-II
 ZTF23aanpxyp,SN Ia
 ZTF23aanpyeb,SN Ia
 ZTF23aanpyuy,SN Ia
@@ -6018,7 +6079,6 @@ ZTF23aapphlk,SN Ia
 ZTF23aapqkvw,Classical Nova
 ZTF23aaprwrn,SN Ia
 ZTF23aapsuva,SN IIn
-ZTF23aaptflh,SN Ia-91T
 ZTF23aapthmh,SN Ia
 ZTF23aapuknd,SN II
 ZTF23aapvrkk,SN Ia
@@ -6068,7 +6128,6 @@ ZTF23aarjxfj,SN Ia
 ZTF23aarlcue,SN Ia
 ZTF23aarqyio,SN Ia
 ZTF23aarriri,SN Ia
-ZTF23aarrwwl,SN Ia-03fg
 ZTF23aarvjaf,SN Ia
 ZTF23aarvrvd,SN Ia
 ZTF23aarxtku,SN Ia
@@ -6087,7 +6146,6 @@ ZTF23aasyrup,SN II
 ZTF23aasyshb,SN Ia
 ZTF23aasyslb,SN Ia
 ZTF23aasyvbf,SN II
-ZTF23aatabje,SN Ia-CSM
 ZTF23aatajah,SN Ia
 ZTF23aatdcey,SN II
 ZTF23aatukpx,SN Ia
@@ -6151,8 +6209,6 @@ ZTF23aaxuvkn,SN Ib
 ZTF23aaxzhor,SN Ia
 ZTF23aaylkdm,SN Ia
 ZTF23aaymoki,SN Ia
-ZTF23aaynddf,SN Ia
-ZTF23aaynmrz,SN Ia-CSM
 ZTF23aaynwdt,SN Ia
 ZTF23aayocyn,SN Ia
 ZTF23aazfapq,SN Ia
@@ -6163,9 +6219,7 @@ ZTF23aazltms,SN II
 ZTF23aazmkjh,SN Ia
 ZTF23aazmqkn,SN Ia
 ZTF23aaznifc,SN Ia
-ZTF23aaznqky,SN II
 ZTF23aaznywn,SN Ia
-ZTF23aazodoj,SN Ic-SLSN
 ZTF23aazprcc,SN II
 ZTF23aazqikj,SN Ia
 ZTF23aazrbus,SN Ia
@@ -6177,14 +6231,12 @@ ZTF23aazysgv,SN Ia
 ZTF23abaactr,SN Ia
 ZTF23abaalvd,SN Ia
 ZTF23abaderr,SN Ia
-ZTF23abadhsw,SN Ic-BL
 ZTF23abaebbd,SN II
 ZTF23abaeenk,SN II
 ZTF23abahief,SN Ia
 ZTF23abahmkx,SN II
 ZTF23abandhi,SN Ia
 ZTF23abankea,SN Ia
-ZTF23abankfn,SN Ia-91T
 ZTF23abanqhu,SN Ia
 ZTF23abaqzym,SN Ia
 ZTF23abascqa,SN II
@@ -6238,8 +6290,6 @@ ZTF23abcnhzq,SN Ia
 ZTF23abcqzvm,SN Ia
 ZTF23abcsrwv,SN Ia
 ZTF23abcufxh,SN Ia
-ZTF23abcvbqq,Tidal Disruption Event
-ZTF23abcvqkd,SN Ia
 ZTF23abczkxz,SN Ia
 ZTF23abdefkq,SN Ia
 ZTF23abdgswy,SN II
@@ -6259,7 +6309,6 @@ ZTF23abeudve,SN Ia
 ZTF23abeuope,SN Ia
 ZTF23abexebx,SN Ia
 ZTF23abezmku,SN Ia
-ZTF23abffvrm,SN Ia
 ZTF23abfpegt,SN IIb
 ZTF23abfroaw,SN Ia
 ZTF23abfubfc,SN Ia
@@ -6321,7 +6370,6 @@ ZTF23abjexnw,SN Ia
 ZTF23abjfpng,SN II
 ZTF23abjfrbi,SN Ia
 ZTF23abjfuhi,SN Ia
-ZTF23abjhbcr,SN Ic-SLSN
 ZTF23abjhvzr,SN Ia
 ZTF23abjhwem,SN IIn
 ZTF23abjieca,SN Ia
@@ -6336,10 +6384,8 @@ ZTF23abjstcg,SN II
 ZTF23abjthou,SN II
 ZTF23abjtozz,SN Ia
 ZTF23abjunlm,SN Ia-02cx
-ZTF23abjuxso,SN Ic-SLSN
 ZTF23abjvuwc,SN IIn
 ZTF23abjwegr,SN Ia
-ZTF23abjxqwr,SN Ia
 ZTF23abjyjpb,SN Ia
 ZTF23abjyups,SN Ia-91T
 ZTF23abjzcde,SN II
@@ -6347,7 +6393,6 @@ ZTF23abjzkqu,SN Ia
 ZTF23abkaijq,SN Ia
 ZTF23abkbieh,SN Ia
 ZTF23abkdzxh,SN II
-ZTF23abkfsny,SN Ia
 ZTF23abkhwgb,SN IIn
 ZTF23abkixdb,Tidal Disruption Event
 ZTF23abkixfb,SN II
@@ -6357,10 +6402,8 @@ ZTF23abktfjr,SN Ia
 ZTF23ablavhx,SN Ia
 ZTF23ablaxwm,SN II
 ZTF23ablimhl,SN Ia
-ZTF23ablkbom,SN Ia-03fg
 ZTF23ablnqxh,SN Ia
 ZTF23ablpfnb,SN Ia
-ZTF23ablrwcj,SN Ia-91bg
 ZTF23abluzif,SN Ia
 ZTF23abmoxlu,SN II
 ZTF23abmpqvv,SN Ia
@@ -6375,14 +6418,10 @@ ZTF23abnivuj,SN Ia
 ZTF23abnjxml,SN Ib/c
 ZTF23abnmdqn,SN Ia
 ZTF23abnogui,SN IIP
-ZTF23abnoilr,SN Ia
-ZTF23abnpynv,microlensing
 ZTF23abnqbkx,SN Ia
 ZTF23abnreud,SN Ia
 ZTF23abnydbs,SN Ia
-ZTF23abochfb,SN Ic-BL
 ZTF23abodvms,SN Ia
-ZTF23aboebgh,SN Ic-SLSN
 ZTF23abogwmg,SN Ia
 ZTF23aboicxj,SN Ia
 ZTF23abojjkh,SN Ia-02cx
@@ -6408,7 +6447,6 @@ ZTF23abpuxjl,SN Ia
 ZTF23abpznvm,SN IIn
 ZTF23abqbuft,SN Ia
 ZTF23abqcuvw,SN Ia
-ZTF23abqiykq,SN Ic-BL
 ZTF23abqkppm,SN IIP
 ZTF23abrqzjb,SN Ia
 ZTF23abrrlrf,SN II-norm
@@ -6443,9 +6481,7 @@ ZTF23absfszz,SN II
 ZTF23absgcqv,SN Ia
 ZTF23absguth,SN Ia
 ZTF23abshiqq,SN II
-ZTF23abshmtt,SN Ia-03fg
 ZTF23absirul,SN IIP
-ZTF23absizez,SN Ia-91T
 ZTF23absjgik,SN Ia
 ZTF23absjgou,SN II
 ZTF23absjgsh,SN Ib
@@ -6461,7 +6497,6 @@ ZTF23absvnkc,SN Ia
 ZTF23abswflc,SN Ib
 ZTF23abtcveg,SN Ia
 ZTF23abtdizt,SN IIb
-ZTF23abtjdtm,SN Ic-BL
 ZTF23abtjrbz,SN Ic
 ZTF23abtlnrc,SN Ia
 ZTF23abtnhva,SN Ia
@@ -6478,7 +6513,6 @@ ZTF23abvgvab,SN II
 ZTF23abvnahb,SN Ia
 ZTF23abvnhfx,SN Ia
 ZTF23abvnmam,SN II
-ZTF23abvokyz,SN Ic-SLSN
 ZTF23abvommm,SN II
 ZTF23abvoqio,SN Ia
 ZTF23abvoynt,SN Ia
@@ -6508,7 +6542,6 @@ ZTF24aaahxwr,Tidal Disruption Event
 ZTF24aaaibep,SN II
 ZTF24aaaieeg,SN II
 ZTF24aaaimpu,SN Ia
-ZTF24aaaiocv,SN Ia
 ZTF24aaaisri,SN Ia
 ZTF24aaajtzg,SN Ia
 ZTF24aaamktr,SN Ia
@@ -6528,18 +6561,15 @@ ZTF24aabwuok,SN Ia
 ZTF24aabwuul,SN Ia
 ZTF24aabwvcl,SN Ia
 ZTF24aabwvws,SN Ibn
-ZTF24aacaosi,SN Ib
 ZTF24aacayhd,SN Ia
 ZTF24aaceash,SN Ia
 ZTF24aacivdo,SN Ia
 ZTF24aacluoy,SN Ia
-ZTF24aacrbua,SN Ic-SLSN
 ZTF24aacrfok,SN Ia
 ZTF24aacxzca,SN II
 ZTF24aacyttg,SN Ia
 ZTF24aaczgax,SN II
 ZTF24aadegsz,SN Ia
-ZTF24aadfmaf,SN Ic-SLSN
 ZTF24aadkwol,SN Ia
 ZTF24aadltss,SN Ia
 ZTF24aadlwsg,SN Ia
@@ -6548,7 +6578,6 @@ ZTF24aadsehp,SN Ia
 ZTF24aadxdqn,SN Ia
 ZTF24aaeanrr,SN Ia
 ZTF24aaecxun,SN Ia
-ZTF24aaedncr,SN Ia
 ZTF24aaeecuf,SN Ia
 ZTF24aaefwoh,SN II-norm
 ZTF24aaegskb,SN Ia
@@ -6574,7 +6603,6 @@ ZTF24aaekkjv,SN Ia
 ZTF24aaekmnz,SN II
 ZTF24aaekobc,SN Ia
 ZTF24aaekphr,SN Ia
-ZTF24aaelebm,SN Ic-BL
 ZTF24aaemydm,SN II
 ZTF24aaeopqq,SN Ia
 ZTF24aaerzgo,SN II
@@ -6589,7 +6617,6 @@ ZTF24aagchqx,SN II-norm
 ZTF24aagfewl,SN Ia
 ZTF24aagiouv,SN Ia-norm
 ZTF24aagirej,SN Ia
-ZTF24aagkqat,SN Ia-91T
 ZTF24aagkuss,SN II
 ZTF24aagndyg,SN Ia
 ZTF24aagolgy,SN Ia-norm
@@ -6599,18 +6626,14 @@ ZTF24aagoxws,SN Ia
 ZTF24aagozfg,SN Ia-norm
 ZTF24aagpwsh,SN Ia
 ZTF24aagssbr,SN Ia
-ZTF24aagtldn,SN Ia-pec
 ZTF24aagtllm,SN Ia
 ZTF24aagtlpi,SN Ia
 ZTF24aagvvun,SN II
-ZTF24aagxdol,SN Ia-91T
 ZTF24aahctgm,SN Ia
 ZTF24aahdikd,SN Ia
 ZTF24aahdpki,SN Ia
 ZTF24aaheedw,SN Ia
-ZTF24aaheeel,SN Ia-91T
 ZTF24aahefwy,SN Ia
-ZTF24aahepdc,SN Ia
 ZTF24aaheqkp,SN Ia
 ZTF24aahggdt,SN Ia
 ZTF24aahgidl,SN Ia
@@ -6623,22 +6646,17 @@ ZTF24aahiabd,SN II
 ZTF24aahicbz,SN Ia
 ZTF24aahiewj,SN Ia
 ZTF24aahkesn,SN Ia
-ZTF24aahlctw,SN Ic-SLSN
 ZTF24aahlvez,SN Ia
 ZTF24aahmqzq,SN Ia
 ZTF24aahmyct,SN II
 ZTF24aahnefg,SN II
-ZTF24aahnnsa,SN Ia-91T
-ZTF24aahnutv,SN Ic-SLSN
 ZTF24aahphdh,SN Ia
-ZTF24aahsmkt,SN II
 ZTF24aahsuoj,SN Ia
 ZTF24aahsupm,SN Ia
 ZTF24aahswbd,SN Ia
 ZTF24aahtqlp,SN Ia
 ZTF24aahuoam,SN Ia
 ZTF24aahuulq,SN Ia
-ZTF24aahuzig,SN Ic-BL
 ZTF24aahvyso,SN Ia
 ZTF24aahwcei,SN II
 ZTF24aahwulu,SN Ia-norm
@@ -6646,7 +6664,6 @@ ZTF24aahxgoa,SN II
 ZTF24aahxmew,SN Ia
 ZTF24aahxokj,SN II
 ZTF24aahxyrp,SN Ia-pec
-ZTF24aahybvf,SN Ib/c
 ZTF24aahzezk,SN Ia
 ZTF24aahzfwk,SN Ia
 ZTF24aahznij,SN Ia
@@ -6740,7 +6757,6 @@ ZTF24aamtvxb,SN Ia
 ZTF24aamtwya,SN Ia
 ZTF24aamvzfc,SN Ia
 ZTF24aanbjel,SN II
-ZTF24aancgyl,SN Ic-BL
 ZTF24aancjzy,SN Ia
 ZTF24aandhbr,SN Ia
 ZTF24aaneoyr,SN Ibn
@@ -6749,25 +6765,20 @@ ZTF24aankvon,SN Ia
 ZTF24aanmrts,SN Ia
 ZTF24aanngpp,SN II
 ZTF24aanppvy,SN II
-ZTF24aantppw,SN Ic-BL
 ZTF24aanvvqn,SN Ia
 ZTF24aanyhwz,SN Ia
 ZTF24aaocmqx,SN Ia
-ZTF24aaomuhe,SN Ia-02cx
 ZTF24aaoosca,SN IIb
 ZTF24aaooxcd,SN II
 ZTF24aaormag,SN Ia
-ZTF24aaostbr,SN Ia-91bg
 ZTF24aaotmdk,SN Ia
 ZTF24aaotzpd,SN II
-ZTF24aaoudyz,SN Ia-91bg
 ZTF24aaoupgb,SN II
 ZTF24aaovaxw,SN Ia
 ZTF24aaovokk,SN Ia
 ZTF24aaovqaq,SN Ia
 ZTF24aaoyfpn,SN IIb
 ZTF24aaozxhx,SN IIP
-ZTF24aapadbb,SN Ic-SLSN
 ZTF24aapeorz,SN Ia
 ZTF24aapeoye,SN Ia-norm
 ZTF24aaphwtj,SN Ia
@@ -6776,7 +6787,6 @@ ZTF24aaplfkj,SN II
 ZTF24aappkyo,SN Ia
 ZTF24aappljp,SN Ia
 ZTF24aaprkyz,SN Ia
-ZTF24aaqaroi,SN Ia-91bg
 ZTF24aaqgfrp,SN Ia
 ZTF24aaqiqpw,SN II
 ZTF24aaqkvyl,SN II
@@ -6789,7 +6799,6 @@ ZTF24aaqxkvr,SN Ia
 ZTF24aaqxwvt,SN Ia-norm
 ZTF24aaqzkpr,SN II
 ZTF24aaqzpbo,SN Ia
-ZTF24aaqzycc,SN Ia
 ZTF24aarafaw,SN Ia
 ZTF24aarecvo,SN Ia
 ZTF24aaredhj,SN Ia
@@ -6813,14 +6822,12 @@ ZTF24aaskxde,SN Ia
 ZTF24aasntvs,SN Ia
 ZTF24aasokij,SN Ia
 ZTF24aasqcng,SN II
-ZTF24aasqeih,SN Ic-SLSN
 ZTF24aasvdze,SN II
 ZTF24aasvscv,SN Ia
 ZTF24aaswnkx,SN Ia
 ZTF24aataxft,SN II
 ZTF24aatccmo,SN Ia
 ZTF24aatgvrs,SN Ia
-ZTF24aathuwg,SN Ia-91T
 ZTF24aathzox,SN Ia
 ZTF24aatieok,SN IIb
 ZTF24aatifzm,SN II
@@ -6847,22 +6854,18 @@ ZTF24aaumfvx,SN II
 ZTF24aaumhmm,SN Ia
 ZTF24aaumzhf,SN Ia
 ZTF24aaunxxm,SN II
-ZTF24aaupnbu,SN Ia-91T
 ZTF24aaupoie,SN Ia
 ZTF24aauuiva,SN Ia
 ZTF24aauuovk,SN Ia
-ZTF24aauvgjm,SN Ia-91T
 ZTF24aauypjo,SN Ia
 ZTF24aauyupk,SN Ia
 ZTF24aavbrtq,SN Ia
 ZTF24aavcfby,SN Ia
-ZTF24aavdccv,SN Ia-91bg
 ZTF24aavghxs,SN Ia
 ZTF24aavhseb,SN II
 ZTF24aavkhwi,SN Ia
 ZTF24aavpxsr,SN Ia
 ZTF24aavrdir,SN Ia
-ZTF24aavsmbp,SN Ia-pec
 ZTF24aavvypx,SN Ia
 ZTF24aavydau,SN Ia
 ZTF24aavzglr,SN Ia
@@ -6906,7 +6909,6 @@ ZTF24aaybeda,SN Ia
 ZTF24aaydpre,SN Ia
 ZTF24aayfivu,SN Ia
 ZTF24aaygegk,SN Ia
-ZTF24aaygtcf,SN Ia-03fg
 ZTF24aayimjt,SN Ic
 ZTF24aayjrde,SN Ia
 ZTF24aaymkrs,SN Ib
@@ -6939,3 +6941,4 @@ ZTF24abbenwl,SN II
 ZTF24abbiqob,SN Ia
 ZTF24abbrcrq,SN Ia
 ZTF24abbsboo,SN Ia
+ZTF19aafmwcu,AGN
