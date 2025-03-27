@@ -1,14 +1,16 @@
-# AppleCider:
-AppleCider (applying multimodal Learning to classify transient detections early): a multimodal transient classifer that uses photometry, images, spectra, and metadata. architecture based on [AstroM3](https://arxiv.org/abs/2411.08842) & [BTSbot](https://iopscience.iop.org/article/10.3847/1538-4357/ad5666)
+<h1> :green_apple: <code style="color : grey"> AppleCiDEr </code> :green_apple: <br> </h1> 
+<h4> <code style="color : grey">APPlying multimodaL lEarning to Classify transIent Detections EaRly </code></h4>
 
-(logo coming soon)
+`AppleCiDEr` is an (in progress) multimodal transient classifer that uses photometry, images, spectra, and metadata. architecture based on [AstroM3](https://arxiv.org/abs/2411.08842) & [BTSbot](https://iopscience.iop.org/article/10.3847/1538-4357/ad5666). <sup><i>(logo coming in the near-ish future)</i></sup>
 
-<i>AppleCider's name was inspired by [University of Minnesota's](https://mnhardy.umn.edu/apples) development of iconic apple cultivars. s/o Honeycrisp. </i>
+<br>
 
+> <i>`AppleCiDEr`'s name was inspired by [University of Minnesota's](https://mnhardy.umn.edu/apples) development of iconic apple cultivars. s/o Honeycrisp. </i><br>
+
+the public version of `AppleCiDEr` (this repo) makes use of objects from the [ZTF Bright Transient Survey](https://sites.astro.caltech.edu/ztf/bts/bts.php).<br>
 
 ## guide for guests:
-public version of AppleCider (this repo) makes use of objects from the [ZTF Bright Transient Survey](https://sites.astro.caltech.edu/ztf/bts/bts.php)<br><br>
-
+$${\color{red}note:}$$ $${\color{red}this}$$ $${\color{red}repo}$$ $${\color{red}is}$$ $${\color{red}under}$$ $${\color{red}construction}$$ $${\color{red}as}$$ $${\color{red}of}$$ $${\color{red}3/27}$$. see `intro_notebook.ipynb` for a general overview of things. right now, the contents of `/notebooks` is out of date and only for viewing purposes.
 
 <ins>What do I really need to download from this repo?</ins>
 - everything in the`AppleCider` folder (core, models, preprocess)
